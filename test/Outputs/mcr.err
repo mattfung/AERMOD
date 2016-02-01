@@ -1,0 +1,23 @@
+  
+    ************ Error Message List *************
+  
+    PW     --- Pathway                           
+    Code   --- Error Type + Error Code           
+    L#     --- The Line Number Where Error Occurs
+    ModNam --- Module Name In Which Error Occurs 
+    Hints  --- Hints For The Possible Solution   
+    *********************************************
+  
+PW CODE    L#      MODNAM                       ERROR MESSAGES                      HINTS
+-- ---- ------- ------------  -------------------------------------------------- ------------
+  
+SO W320      27        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      28        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      29        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      30        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      31        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      32        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      33        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+SO W320      34        PPARM: Input Parameter May Be Out-of-Range for Parameter            QS
+MX I440    4128       CHKCLM: Calm Hour Identified in Meteorology Data File at     1992101901
+MX I440    4128       CHKCLM: Calm Hour Identified in Meteorology Data File at     1992101903

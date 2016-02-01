@@ -1,0 +1,1347 @@
+CO STARTING
+   TITLEONE  AERMOD Test Case - Lovett Complex Terrain Study
+   MODELOPT  CONC    DFAULT
+   AVERTIME  1  3  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   EVENTFIL  lovett_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+** Source location and elevation from AERMAP output
+   INCLUDED  lovett_src.dat
+** Point Source       QS     HS     TS    VS   DS
+** Parameters:       -----  ----   ----  ----  ---
+   SRCPARAM  STK4N5  312.6  145.   382.  23.1  4.5
+   HOUREMIS  lvthemis.dat STK4N5
+   SRCGROUP  ALL
+SO FINISHED
+ 
+RE STARTING
+** Receptor locations and elevations from AERMAP output
+   INCLUDED  lovett_rec.dat
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  lovett.sfc  free
+   PROFFILE  lovett.pfl  free
+   SURFDATA  14735  1988  albany
+   UAIRDATA  14735  1988  albany
+   SITEDATA  00000  1988  LOVETT
+   STARTEND  88 01 01  88 12 31
+   PROFBASE  1.8
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE ALLAVE FIRST-SECOND
+   MAXTABLE ALLAVE 400
+   POSTFILE  24    all  plot   lovett24.pst
+   PLOTFILE  period   all      lovettan.plt
+   RANKFILE  1 100 LOVETT1.RNK
+   RANKFILE  3 100 LOVETT3.RNK
+   RANKFILE 24 100 LOVETT24.RNK
+   SUMMFILE LOVETT.SUM
+OU FINISHED
+
+
+  *** Message Summary For AERMOD Model Setup ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            3 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361       9       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ CO W362       9       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
+ CO W362       9       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   1
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Uses Regulatory DEFAULT Options:
+         1. Stack-tip Downwash.
+         2. Model Accounts for ELEVated Terrain Effects.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+
+ **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
+         User has specified non-standard averaging periods:    3-HR  24-HR                
+         High ranked 1-hour values are NOT averaged across the number of years modeled, and
+         complete years of data are NOT required.
+  
+ **Model Calculates  3 Short Term Average(s) of:   1-HR   3-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and      11 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Concurrent Values for Postprocessing (POSTFILE Keyword)
+          Model Outputs External File(s) of High Values for Plotting (PLOTFILE Keyword)
+          Model Outputs External File(s) of Ranked Values (RANKFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     1.80 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  lovett_evt.inp                                                                                  
+ **File for Summary of Results:   LOVETT.SUM                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   2
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STK4N5           0   0.31260E+03    5510.0   67960.0     3.2   145.00   382.00    23.10     4.50    NO      NO    NO  HOURLY 
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   3
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STK4N5      ,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   4
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                             *** DISCRETE CARTESIAN RECEPTORS ***
+                                           (X-COORD, Y-COORD, ZELEV, ZHILL, ZFLAG)
+                                                           (METERS)
+
+     (   3500.0,   67750.0,     237.5,     239.3,       0.0);         (   3600.0,   69700.0,     319.3,     330.7,       0.0);      
+     (   4520.0,   69780.0,     296.7,     296.7,       0.0);         (   5500.0,   70450.0,     234.9,     329.8,       0.0);      
+     (   4780.0,   70700.0,     324.8,     329.0,       0.0);         (   5110.0,   70850.0,     319.8,     322.7,       0.0);      
+     (   5810.0,   70900.0,     253.2,     323.1,       0.0);         (   5860.0,   71340.0,     161.0,     341.0,       0.0);      
+     (   6250.0,   71070.0,     276.6,     276.6,       0.0);         (   6930.0,   71300.0,     156.8,     276.7,       0.0);      
+     (   7870.0,   69130.0,      26.1,      26.1,       0.0);                                                                       
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   5
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   1  1  1
+                                                           AND END DATE: 1988  12 31 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   6
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   lovett.sfc                                                                         Met Version:  14134
+   Profile file:   lovett.pfl                                                                      
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14735                  Upper air station no.:    14735
+                  Name: ALBANY                                     Name: ALBANY                                  
+                  Year:   1988                                     Year:   1988
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 88 01 01   1 01   -0.1  0.011 -9.000 -9.000 -999.    3.      2.1  0.00   0.10   1.00    0.60   35.   50.0  273.8   10.0
+ 88 01 01   1 02   -0.1  0.015 -9.000 -9.000 -999.    4.      2.8  0.00   0.10   1.00    0.80  168.   50.0  274.2   10.0
+ 88 01 01   1 03    0.0  0.009 -9.000 -9.000 -999.    2.      1.8  0.00   0.10   1.00    0.50  136.   50.0  274.5   10.0
+ 88 01 01   1 04    0.0  0.009 -9.000 -9.000 -999.    2.      1.8  0.00   0.10   1.00    0.50  157.   50.0  274.0   10.0
+ 88 01 01   1 05    0.0  0.009 -9.000 -9.000 -999.    2.      1.7  0.00   0.10   1.00    0.50   56.   50.0  273.8   10.0
+ 88 01 01   1 06   -0.2  0.024 -9.000 -9.000 -999.    9.      7.2  0.75   1.50   1.00    0.50  197.   50.0  274.3   10.0
+ 88 01 01   1 07    0.0  0.007 -9.000 -9.000 -999.    2.      1.1  0.00   0.10   1.00    0.40  170.   50.0  274.5   10.0
+ 88 01 01   1 08   -0.3  0.033 -9.000 -9.000 -999.   15.     10.1  0.75   1.50   0.93    0.70  222.   50.0  274.3   10.0
+ 88 01 01   1 09   -0.6  0.048 -9.000 -9.000 -999.   25.     16.3  0.75   1.50   0.68    1.00  213.   50.0  274.7   10.0
+ 88 01 01   1 10   -0.3  0.043 -9.000 -9.000 -999.   21.     23.0  0.75   1.50   0.58    0.90  222.   50.0  275.2   10.0
+ 88 01 01   1 11   38.0  0.167  0.605  0.011  210.  163.    -11.0  0.75   1.50   0.55    1.00  212.   50.0  275.7   10.0
+ 88 01 01   1 12   14.2  0.030  0.440  0.011  216.   53.     -1.0  0.00   0.10   0.25    0.40  158.   10.0  276.3   10.0
+ 88 01 01   1 13   46.4  0.119  0.673  0.009  236.   99.     -3.3  0.30   0.80   0.39    0.60   66.   10.0  276.8   10.0
+ 88 01 01   1 14   52.9  0.121  0.723  0.008  257.  101.     -3.0  0.75   1.15   0.41    0.40    2.   10.0  277.5   10.0
+ 88 01 01   1 15   15.9  0.085  0.488  0.007  263.   60.     -3.5  0.75   1.50   0.58    0.40  180.   50.0  277.7   10.0
+ 88 01 01   1 16    0.2  0.024  0.108  0.007  263.   12.     -6.8  0.00   0.10   0.43    0.50  138.   50.0  277.7   10.0
+ 88 01 01   1 17   -1.8  0.067 -9.000 -9.000 -999.   41.     14.6  0.75   1.50   0.94    1.40  222.   50.0  277.7   10.0
+ 88 01 01   1 18   -1.1  0.039 -9.000 -9.000 -999.   18.      4.8  0.75   1.50   1.00    0.50  194.   10.0  278.0   10.0
+ 88 01 01   1 19  -14.8  0.200 -9.000 -9.000 -999.  214.     48.4  1.50   1.50   1.00    3.50  268.   50.0  278.2   10.0
+ 88 01 01   1 20   -8.1  0.148 -9.000 -9.000 -999.  138.     36.6  1.50   1.50   1.00    2.60  265.   50.0  276.8   10.0
+ 88 01 01   1 21   -8.7  0.154 -9.000 -9.000 -999.  145.     37.9  1.50   1.50   1.00    2.70  258.   50.0  275.3   10.0
+ 88 01 01   1 22   -5.3  0.085 -9.000 -9.000 -999.   61.     10.5  0.75   1.50   1.00    1.10  218.   10.0  274.3   10.0
+ 88 01 01   1 23   -5.5  0.093 -9.000 -9.000 -999.   68.     13.1  0.75   1.50   1.00    1.20  219.   10.0  274.0   10.0
+ 88 01 01   1 24   -8.7  0.171 -9.000 -9.000 -999.  170.     52.2  1.50   1.50   1.00    3.00  270.   50.0  273.8   10.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 88 01 01 01   10.0 0  286.    0.50   273.8   57.2    0.02    0.31
+ 88 01 01 01   50.0 0   35.    0.60   274.5   31.3  -99.00    0.28
+ 88 01 01 01  100.0 1  146.    1.30   274.5   46.4    0.14    0.77
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   7
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE PERIOD (  8784 HRS) AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+       X-COORD (M)   Y-COORD (M)        CONC                       X-COORD (M)   Y-COORD (M)        CONC
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+           3500.00      67750.00        0.76692                        3600.00      69700.00        2.26281                         
+           4520.00      69780.00        4.12253                        5500.00      70450.00        2.45778                         
+           4780.00      70700.00        4.22242                        5110.00      70850.00        4.28199                         
+           5810.00      70900.00        2.92850                        5860.00      71340.00        1.13645                         
+           6250.00      71070.00        3.49257                        6930.00      71300.00        0.99010                         
+           7870.00      69130.00        0.55765                                                                                     
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   8
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   1ST HIGHEST  1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00       60.75721  (88072310)                  3600.00     69700.00      131.72875  (88011815)          
+          4520.00     69780.00      252.35667  (88040308)                  5500.00     70450.00      264.87354  (88071406)          
+          4780.00     70700.00      293.02376  (88020124)                  5110.00     70850.00      260.82840  (88011708)          
+          5810.00     70900.00      269.47389  (88071406)                  5860.00     71340.00      129.94883  (88022913)          
+          6250.00     71070.00      249.10904  (88022909)                  6930.00     71300.00      137.16040  (88011612)          
+          7870.00     69130.00       56.09476  (88052114)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE   9
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   2ND HIGHEST  1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00       60.52487  (88032911)                  3600.00     69700.00      109.52629  (88032408)          
+          4520.00     69780.00      217.05031  (88110417)                  5500.00     70450.00      241.03021  (88022908)          
+          4780.00     70700.00      264.40593  (88011708)                  5110.00     70850.00      246.14229  (88111623)          
+          5810.00     70900.00      182.05747  (88011311)                  5860.00     71340.00       96.10834  (88011612)          
+          6250.00     71070.00      234.65182  (88022912)                  6930.00     71300.00       85.91491  (88071409)          
+          7870.00     69130.00       54.80565  (88052111)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  10
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   1ST HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00       37.52341  (88082403)                  3600.00     69700.00       58.95633  (88011712)          
+          4520.00     69780.00      134.48826  (88082321)                  5500.00     70450.00      105.51144  (88022909)          
+          4780.00     70700.00      173.70834  (88011709)                  5110.00     70850.00      179.48461  (88081412)          
+          5810.00     70900.00      113.35361  (88111703)                  5860.00     71340.00       47.64289  (88081409)          
+          6250.00     71070.00      120.14585  (88022912)                  6930.00     71300.00       61.91390  (88011615)          
+          7870.00     69130.00       30.87191  (88052112)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  11
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   2ND HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00       24.89188  (88072312)                  3600.00     69700.00       58.74723  (88011815)          
+          4520.00     69780.00      114.46881  (88110418)                  5500.00     70450.00       89.42605  (88071406)          
+          4780.00     70700.00      166.11889  (88041421)                  5110.00     70850.00      158.27505  (88011709)          
+          5810.00     70900.00       95.41954  (88071406)                  5860.00     71340.00       44.60642m (88022915)          
+          6250.00     71070.00      102.26187  (88111706)                  6930.00     71300.00       61.12167  (88071409)          
+          7870.00     69130.00       30.39642  (88052115)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  12
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   1ST HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00        7.21844  (88082424)                  3600.00     69700.00       16.47922  (88040124)          
+          4520.00     69780.00       44.43789  (88040324)                  5500.00     70450.00       26.02097  (88071424)          
+          4780.00     70700.00       44.97425  (88032524)                  5110.00     70850.00       51.35891  (88011724)          
+          5810.00     70900.00       26.25344  (88071424)                  5860.00     71340.00       12.53422  (88011624)          
+          6250.00     71070.00       32.64869  (88101024)                  6930.00     71300.00       17.55626  (88011624)          
+          7870.00     69130.00        7.88314  (88052124)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  13
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE   2ND HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+      X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)              X-COORD (M)  Y-COORD (M)        CONC     (YYMMDDHH)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+          3500.00     67750.00        5.55634  (88102124)                  3600.00     69700.00       14.40695  (88011724)          
+          4520.00     69780.00       42.56525  (88110424)                  5500.00     70450.00       21.81745m (88022924)          
+          4780.00     70700.00       44.84223  (88011724)                  5110.00     70850.00       44.27905  (88032524)          
+          5810.00     70900.00       25.85249m (88022924)                  5860.00     71340.00       11.99713  (88071424)          
+          6250.00     71070.00       32.18616m (88022924)                  6930.00     71300.00        9.68318  (88071424)          
+          7870.00     69130.00        6.07428  (88081524)                                                                           
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  14
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     293.02376 (88020124) AT (   4780.00,   70700.00)  DC       41.     173.45215 (88010104) AT (   4520.00,   69780.00)  DC
+    2.     269.47389 (88071406) AT (   5810.00,   70900.00)  DC       42.     173.41456 (88032401) AT (   5810.00,   70900.00)  DC
+    3.     264.87354 (88071406) AT (   5500.00,   70450.00)  DC       43.     173.10594 (88050921) AT (   4780.00,   70700.00)  DC
+    4.     264.40593 (88011708) AT (   4780.00,   70700.00)  DC       44.     173.07720 (88022909) AT (   5810.00,   70900.00)  DC
+    5.     260.82840 (88011708) AT (   5110.00,   70850.00)  DC       45.     173.01248 (88032509) AT (   5110.00,   70850.00)  DC
+    6.     252.35667 (88040308) AT (   4520.00,   69780.00)  DC       46.     172.46596 (88032405) AT (   4780.00,   70700.00)  DC
+    7.     249.10904 (88022909) AT (   6250.00,   71070.00)  DC       47.     171.89525 (88030624) AT (   5110.00,   70850.00)  DC
+    8.     246.14229 (88111623) AT (   5110.00,   70850.00)  DC       48.     171.71632 (88030621) AT (   5110.00,   70850.00)  DC
+    9.     243.32910 (88011707) AT (   4780.00,   70700.00)  DC       49.     171.69369 (88011710) AT (   4780.00,   70700.00)  DC
+   10.     242.42707 (88081411) AT (   4780.00,   70700.00)  DC       50.     170.75950 (88050919) AT (   4520.00,   69780.00)  DC
+   11.     241.74220 (88022908) AT (   5110.00,   70850.00)  DC       51.     169.51864 (88031218) AT (   4520.00,   69780.00)  DC
+   12.     241.03021 (88022908) AT (   5500.00,   70450.00)  DC       52.     168.40288 (88081408) AT (   5110.00,   70850.00)  DC
+   13.     240.98275 (88041421) AT (   4780.00,   70700.00)  DC       53.     166.16809 (88051621) AT (   4780.00,   70700.00)  DC
+   14.     236.26073 (88121003) AT (   4780.00,   70700.00)  DC       54.     165.50210 (88010103) AT (   4780.00,   70700.00)  DC
+   15.     234.65182 (88022912) AT (   6250.00,   71070.00)  DC       55.     164.85621 (88022913) AT (   5810.00,   70900.00)  DC
+   16.     233.08277 (88081410) AT (   5110.00,   70850.00)  DC       56.     163.40671 (88081007) AT (   4780.00,   70700.00)  DC
+   17.     221.23412 (88032512) AT (   4780.00,   70700.00)  DC       57.     163.35510 (88092009) AT (   5110.00,   70850.00)  DC
+   18.     217.05031 (88110417) AT (   4520.00,   69780.00)  DC       58.     162.84557 (88082319) AT (   4520.00,   69780.00)  DC
+   19.     216.93727 (88032404) AT (   4780.00,   70700.00)  DC       59.     159.82399 (88090820) AT (   4780.00,   70700.00)  DC
+   20.     214.76620 (88111706) AT (   6250.00,   71070.00)  DC       60.     158.99827 (88081004) AT (   5110.00,   70850.00)  DC
+   21.     214.46273 (88123123) AT (   4520.00,   69780.00)  DC       61.     158.83175 (88010115) AT (   4780.00,   70700.00)  DC
+   22.     210.70718 (88041420) AT (   4780.00,   70700.00)  DC       62.     157.30839 (88032511) AT (   5110.00,   70850.00)  DC
+   23.     208.24465 (88081007) AT (   5110.00,   70850.00)  DC       63.     156.09047 (88032403) AT (   4780.00,   70700.00)  DC
+   24.     207.28163 (88072420) AT (   5110.00,   70850.00)  DC       64.     155.96966 (88032522) AT (   4780.00,   70700.00)  DC
+   25.     203.42787 (88092008) AT (   4780.00,   70700.00)  DC       65.     155.24172 (88022919) AT (   4780.00,   70700.00)  DC
+   26.     198.55076 (88122711) AT (   6250.00,   71070.00)  DC       66.     155.15514 (88071821) AT (   4520.00,   69780.00)  DC
+   27.     197.06390 (88032319) AT (   4520.00,   69780.00)  DC       67.     152.56468 (88123111) AT (   5110.00,   70850.00)  DC
+   28.     192.21882 (88081003) AT (   4780.00,   70700.00)  DC       68.     151.89670 (88041423) AT (   4780.00,   70700.00)  DC
+   29.     191.31507 (88092007) AT (   4780.00,   70700.00)  DC       69.     149.80502 (88120910) AT (   4520.00,   69780.00)  DC
+   30.     190.70403 (88022009) AT (   6250.00,   71070.00)  DC       70.     149.11898 (88082607) AT (   5110.00,   70850.00)  DC
+   31.     190.50210 (88123110) AT (   5110.00,   70850.00)  DC       71.     148.61926 (88030619) AT (   4780.00,   70700.00)  DC
+   32.     190.30585 (88032512) AT (   5110.00,   70850.00)  DC       72.     148.53056 (88041724) AT (   5810.00,   70900.00)  DC
+   33.     189.69591 (88052321) AT (   5110.00,   70850.00)  DC       73.     147.50753 (88081409) AT (   5110.00,   70850.00)  DC
+   34.     183.97293 (88051621) AT (   5110.00,   70850.00)  DC       74.     147.40531 (88110419) AT (   4520.00,   69780.00)  DC
+   35.     183.50349 (88081411) AT (   5110.00,   70850.00)  DC       75.     147.03944 (88111703) AT (   5810.00,   70900.00)  DC
+   36.     182.75742 (88122416) AT (   4520.00,   69780.00)  DC       76.     146.76930 (88011212) AT (   4520.00,   69780.00)  DC
+   37.     182.05747 (88011311) AT (   5810.00,   70900.00)  DC       77.     146.37118 (88071823) AT (   5110.00,   70850.00)  DC
+   38.     180.49949 (88021506) AT (   6250.00,   71070.00)  DC       78.     144.43639 (88041722) AT (   6250.00,   71070.00)  DC
+   39.     178.35246 (88112803) AT (   6250.00,   71070.00)  DC       79.     143.75363 (88011113) AT (   4520.00,   69780.00)  DC
+   40.     174.24060 (88080619) AT (   4780.00,   70700.00)  DC       80.     143.42135 (88011710) AT (   5110.00,   70850.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  15
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   81.     141.49667 (88111623) AT (   4780.00,   70700.00)  DC      121.     125.44915 (88090319) AT (   5110.00,   70850.00)  DC
+   82.     141.48895 (88071823) AT (   4780.00,   70700.00)  DC      122.     125.38176 (88032309) AT (   4780.00,   70700.00)  DC
+   83.     140.36298 (88010413) AT (   4520.00,   69780.00)  DC      123.     124.29488 (88111702) AT (   6250.00,   71070.00)  DC
+   84.     139.91181 (88011702) AT (   6250.00,   71070.00)  DC      124.     124.25137 (88011310) AT (   6250.00,   71070.00)  DC
+   85.     139.52353 (88051221) AT (   5110.00,   70850.00)  DC      125.     124.01605 (88110412) AT (   4520.00,   69780.00)  DC
+   86.     139.02290 (88011815) AT (   4520.00,   69780.00)  DC      126.     124.01190 (88081408) AT (   5500.00,   70450.00)  DC
+   87.     138.87935 (88032309) AT (   5110.00,   70850.00)  DC      127.     123.47186 (88112806) AT (   6250.00,   71070.00)  DC
+   88.     138.63132 (88040115) AT (   4520.00,   69780.00)  DC      128.     122.66745 (88032513) AT (   4520.00,   69780.00)  DC
+   89.     138.62486 (88010111) AT (   5500.00,   70450.00)  DC      129.     122.45503 (88112724) AT (   5110.00,   70850.00)  DC
+   90.     138.55243 (88040110) AT (   4520.00,   69780.00)  DC      130.     122.07933 (88092918) AT (   5110.00,   70850.00)  DC
+   91.     137.91452 (88022910) AT (   5810.00,   70900.00)  DC      131.     121.86756 (88081412) AT (   5110.00,   70850.00)  DC
+   92.     137.61894 (88112723) AT (   4780.00,   70700.00)  DC      132.     121.82098 (88032619) AT (   4780.00,   70700.00)  DC
+   93.     137.60469 (88120320) AT (   5110.00,   70850.00)  DC      133.     121.61058 (88011612) AT (   6250.00,   71070.00)  DC
+   94.     137.16040 (88011612) AT (   6930.00,   71300.00)  DC      134.     121.44236 (88052723) AT (   5110.00,   70850.00)  DC
+   95.     136.83001 (88032318) AT (   4520.00,   69780.00)  DC      135.     121.43048 (88080519) AT (   5110.00,   70850.00)  DC
+   96.     136.40036 (88030620) AT (   5110.00,   70850.00)  DC      136.     121.23946 (88040609) AT (   4520.00,   69780.00)  DC
+   97.     136.32858 (88081410) AT (   4780.00,   70700.00)  DC      137.     121.05291 (88040321) AT (   4520.00,   69780.00)  DC
+   98.     135.52410 (88111704) AT (   5500.00,   70450.00)  DC      138.     120.73044 (88081507) AT (   5110.00,   70850.00)  DC
+   99.     135.44725 (88011212) AT (   4780.00,   70700.00)  DC      139.     120.72364 (88082322) AT (   4520.00,   69780.00)  DC
+  100.     135.14843 (88010102) AT (   5110.00,   70850.00)  DC      140.     120.55016 (88081409) AT (   5500.00,   70450.00)  DC
+  101.     134.72547 (88110414) AT (   4520.00,   69780.00)  DC      141.     120.47696 (88011215) AT (   4520.00,   69780.00)  DC
+  102.     133.90895 (88040613) AT (   4520.00,   69780.00)  DC      142.     120.29873 (88112716) AT (   4780.00,   70700.00)  DC
+  103.     133.34247 (88032509) AT (   4780.00,   70700.00)  DC      143.     120.14111 (88072420) AT (   4780.00,   70700.00)  DC
+  104.     133.22893 (88032523) AT (   5110.00,   70850.00)  DC      144.     119.80087 (88111701) AT (   5500.00,   70450.00)  DC
+  105.     131.90001 (88011515) AT (   4520.00,   69780.00)  DC      145.     119.23678 (88123110) AT (   5500.00,   70450.00)  DC
+  106.     131.72875 (88011815) AT (   3600.00,   69700.00)  DC      146.     118.40087 (88110410) AT (   5810.00,   70900.00)  DC
+  107.     131.58140 (88081002) AT (   5110.00,   70850.00)  DC      147.     117.92527 (88040119) AT (   4780.00,   70700.00)  DC
+  108.     131.29173 (88111622) AT (   5110.00,   70850.00)  DC      148.     117.56430 (88032320) AT (   4780.00,   70700.00)  DC
+  109.     131.25619 (88080620) AT (   5110.00,   70850.00)  DC      149.     117.41258 (88081508) AT (   4780.00,   70700.00)  DC
+  110.     130.69820 (88082320) AT (   4520.00,   69780.00)  DC      150.     117.08200 (88101508) AT (   6250.00,   71070.00)  DC
+  111.     130.59859 (88033003) AT (   4520.00,   69780.00)  DC      151.     116.53690 (88011309) AT (   5810.00,   70900.00)  DC
+  112.     130.49125 (88041422) AT (   4780.00,   70700.00)  DC      152.     116.31462 (88011719) AT (   5110.00,   70850.00)  DC
+  113.     129.94883 (88022913) AT (   5860.00,   71340.00)  DC      153.     115.62632 (88111701) AT (   5810.00,   70900.00)  DC
+  114.     129.04652 (88051222) AT (   5110.00,   70850.00)  DC      154.     115.21322 (88041512) AT (   4520.00,   69780.00)  DC
+  115.     127.79536 (88120920) AT (   4520.00,   69780.00)  DC      155.     114.93677 (88110410) AT (   5500.00,   70450.00)  DC
+  116.     127.75338 (88041511) AT (   4780.00,   70700.00)  DC      156.     114.59865 (88011212) AT (   5110.00,   70850.00)  DC
+  117.     126.85413 (88011216) AT (   4520.00,   69780.00)  DC      157.     114.45194 (88022910) AT (   5500.00,   70450.00)  DC
+  118.     126.82175 (88032320) AT (   5110.00,   70850.00)  DC      158.     114.38488 (88082721) AT (   4780.00,   70700.00)  DC
+  119.     126.60846 (88010413) AT (   4780.00,   70700.00)  DC      159.     114.14921 (88123110) AT (   5810.00,   70900.00)  DC
+  120.     126.10361 (88081507) AT (   4780.00,   70700.00)  DC      160.     113.91040 (88081003) AT (   5110.00,   70850.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  16
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  161.     113.75209 (88112722) AT (   5110.00,   70850.00)  DC      201.     105.32190 (88111705) AT (   5810.00,   70900.00)  DC
+  162.     113.40910 (88120818) AT (   6250.00,   71070.00)  DC      202.     104.75401 (88030618) AT (   5110.00,   70850.00)  DC
+  163.     113.29105 (88122006) AT (   4520.00,   69780.00)  DC      203.     104.51720 (88080220) AT (   4780.00,   70700.00)  DC
+  164.     113.28287 (88050924) AT (   4520.00,   69780.00)  DC      204.     103.98054 (88021503) AT (   6250.00,   71070.00)  DC
+  165.     112.93192 (88090821) AT (   4780.00,   70700.00)  DC      205.     103.60394 (88101007) AT (   6250.00,   71070.00)  DC
+  166.     112.69819 (88022910) AT (   6250.00,   71070.00)  DC      206.     103.38782 (88051302) AT (   5810.00,   70900.00)  DC
+  167.     112.65935 (88112721) AT (   5110.00,   70850.00)  DC      207.     103.16807 (88101023) AT (   5810.00,   70900.00)  DC
+  168.     112.35395 (88011311) AT (   6250.00,   71070.00)  DC      208.     103.06386 (88040408) AT (   6250.00,   71070.00)  DC
+  169.     112.31138 (88112805) AT (   6250.00,   71070.00)  DC      209.     102.92747 (88092010) AT (   5110.00,   70850.00)  DC
+  170.     112.03744 (88111624) AT (   5810.00,   70900.00)  DC      210.     102.87822 (88032613) AT (   3600.00,   69700.00)  DC
+  171.     111.93311 (88011707) AT (   5110.00,   70850.00)  DC      211.     102.81390 (88090819) AT (   4780.00,   70700.00)  DC
+  172.     110.49529 (88032511) AT (   6250.00,   71070.00)  DC      212.     102.73093 (88123111) AT (   4780.00,   70700.00)  DC
+  173.     110.45580 (88022010) AT (   5810.00,   70900.00)  DC      213.     102.69768 (88102405) AT (   4780.00,   70700.00)  DC
+  174.     110.19355 (88011311) AT (   5500.00,   70450.00)  DC      214.     102.67593 (88011712) AT (   3600.00,   69700.00)  DC
+  175.     110.12271 (88011114) AT (   5500.00,   70450.00)  DC      215.     102.56125 (88122711) AT (   5810.00,   70900.00)  DC
+  176.     110.11004 (88122019) AT (   4780.00,   70700.00)  DC      216.     102.50988 (88081506) AT (   5110.00,   70850.00)  DC
+  177.     110.08139 (88101020) AT (   6250.00,   71070.00)  DC      217.     102.16104 (88112719) AT (   6250.00,   71070.00)  DC
+  178.     109.92101 (88082321) AT (   4520.00,   69780.00)  DC      218.     102.06364 (88011709) AT (   5110.00,   70850.00)  DC
+  179.     109.72495 (88122011) AT (   4780.00,   70700.00)  DC      219.     101.81367 (88011711) AT (   4520.00,   69780.00)  DC
+  180.     109.55957 (88102406) AT (   4780.00,   70700.00)  DC      220.     101.77418 (88032918) AT (   4520.00,   69780.00)  DC
+  181.     109.52629 (88032408) AT (   3600.00,   69700.00)  DC      221.     101.68108 (88010106) AT (   4780.00,   70700.00)  DC
+  182.     109.38659 (88032512) AT (   4520.00,   69780.00)  DC      222.     101.00160 (88032409) AT (   5810.00,   70900.00)  DC
+  183.     109.35384 (88112719) AT (   5810.00,   70900.00)  DC      223.     100.82227 (88032604) AT (   4520.00,   69780.00)  DC
+  184.     109.21956 (88071822) AT (   4780.00,   70700.00)  DC      224.     100.66784 (88032521) AT (   5110.00,   70850.00)  DC
+  185.     108.94705 (88080919) AT (   5110.00,   70850.00)  DC      225.     100.52377 (88022908) AT (   5810.00,   70900.00)  DC
+  186.     108.53438 (88082724) AT (   4780.00,   70700.00)  DC      226.     100.44211 (88041507) AT (   4780.00,   70700.00)  DC
+  187.     108.29091 (88020101) AT (   6250.00,   71070.00)  DC      227.      99.88078 (88051303) AT (   6250.00,   71070.00)  DC
+  188.     107.93226 (88041511) AT (   5110.00,   70850.00)  DC      228.      99.30491 (88120922) AT (   5110.00,   70850.00)  DC
+  189.     107.86689 (88032919) AT (   5110.00,   70850.00)  DC      229.      99.30486 (88102801) AT (   5110.00,   70850.00)  DC
+  190.     107.36377 (88032002) AT (   5810.00,   70900.00)  DC      230.      99.21198 (88082723) AT (   4780.00,   70700.00)  DC
+  191.     107.34895 (88081407) AT (   6250.00,   71070.00)  DC      231.      99.02964 (88011612) AT (   5810.00,   70900.00)  DC
+  192.     107.31795 (88040221) AT (   4780.00,   70700.00)  DC      232.      98.14673 (88111617) AT (   4780.00,   70700.00)  DC
+  193.     107.23134 (88091709) AT (   6250.00,   71070.00)  DC      233.      97.73195 (88033002) AT (   3600.00,   69700.00)  DC
+  194.     106.66935 (88081508) AT (   4520.00,   69780.00)  DC      234.      97.39684 (88032603) AT (   4780.00,   70700.00)  DC
+  195.     106.55710 (88013124) AT (   6250.00,   71070.00)  DC      235.      97.12537 (88082910) AT (   4780.00,   70700.00)  DC
+  196.     106.54490 (88102808) AT (   6250.00,   71070.00)  DC      236.      96.99919 (88101803) AT (   5500.00,   70450.00)  DC
+  197.     106.27084 (88102407) AT (   5110.00,   70850.00)  DC      237.      96.10834 (88011612) AT (   5860.00,   71340.00)  DC
+  198.     105.99161 (88032514) AT (   4520.00,   69780.00)  DC      238.      96.09901 (88032403) AT (   5110.00,   70850.00)  DC
+  199.     105.78601 (88112802) AT (   3600.00,   69700.00)  DC      239.      95.74265 (88101510) AT (   5110.00,   70850.00)  DC
+  200.     105.71351 (88091911) AT (   3600.00,   69700.00)  DC      240.      95.67592 (88081021) AT (   4780.00,   70700.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  17
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  241.      95.30607 (88032521) AT (   4780.00,   70700.00)  DC      281.      88.84536 (88040102) AT (   3600.00,   69700.00)  DC
+  242.      95.29191 (88012112) AT (   4520.00,   69780.00)  DC      282.      88.69636 (88051220) AT (   4780.00,   70700.00)  DC
+  243.      95.05907 (88071411) AT (   4520.00,   69780.00)  DC      283.      88.44341 (88102404) AT (   5110.00,   70850.00)  DC
+  244.      94.99770 (88081408) AT (   5810.00,   70900.00)  DC      284.      87.99530 (88040220) AT (   4520.00,   69780.00)  DC
+  245.      94.93624 (88041513) AT (   3600.00,   69700.00)  DC      285.      87.97936 (88032409) AT (   5500.00,   70450.00)  DC
+  246.      94.88448 (88012011) AT (   3600.00,   69700.00)  DC      286.      87.90194 (88042721) AT (   4520.00,   69780.00)  DC
+  247.      94.58264 (88011217) AT (   4780.00,   70700.00)  DC      287.      87.64547 (88040318) AT (   4520.00,   69780.00)  DC
+  248.      94.42396 (88111621) AT (   6250.00,   71070.00)  DC      288.      87.45362 (88120820) AT (   6250.00,   71070.00)  DC
+  249.      94.09903 (88012111) AT (   6250.00,   71070.00)  DC      289.      87.10823 (88032409) AT (   5860.00,   71340.00)  DC
+  250.      94.05243 (88101805) AT (   5810.00,   70900.00)  DC      290.      87.10101 (88052321) AT (   4780.00,   70700.00)  DC
+  251.      93.84569 (88011123) AT (   6250.00,   71070.00)  DC      291.      87.09472 (88080422) AT (   5110.00,   70850.00)  DC
+  252.      93.34387 (88121003) AT (   5110.00,   70850.00)  DC      292.      86.98443 (88112724) AT (   4780.00,   70700.00)  DC
+  253.      93.15553 (88041723) AT (   6250.00,   71070.00)  DC      293.      86.96466 (88102320) AT (   6250.00,   71070.00)  DC
+  254.      93.00248 (88050923) AT (   4520.00,   69780.00)  DC      294.      86.60493 (88011219) AT (   6250.00,   71070.00)  DC
+  255.      92.85855 (88032409) AT (   6250.00,   71070.00)  DC      295.      86.50026 (88082519) AT (   5110.00,   70850.00)  DC
+  256.      92.81354 (88052721) AT (   6250.00,   71070.00)  DC      296.      86.42822 (88032404) AT (   5110.00,   70850.00)  DC
+  257.      92.72210 (88082609) AT (   4780.00,   70700.00)  DC      297.      86.35204 (88110413) AT (   4520.00,   69780.00)  DC
+  258.      92.29485 (88020317) AT (   4520.00,   69780.00)  DC      298.      86.28110 (88051216) AT (   3600.00,   69700.00)  DC
+  259.      92.23193 (88101510) AT (   4780.00,   70700.00)  DC      299.      86.20822 (88112716) AT (   5110.00,   70850.00)  DC
+  260.      91.88147 (88040120) AT (   5110.00,   70850.00)  DC      300.      86.15660 (88072312) AT (   4520.00,   69780.00)  DC
+  261.      91.70784 (88041418) AT (   4520.00,   69780.00)  DC      301.      86.02729 (88011721) AT (   5110.00,   70850.00)  DC
+  262.      91.66711 (88120910) AT (   4780.00,   70700.00)  DC      302.      85.91491 (88071409) AT (   6930.00,   71300.00)  DC
+  263.      91.62983 (88012422) AT (   5110.00,   70850.00)  DC      303.      85.64993 (88102801) AT (   4780.00,   70700.00)  DC
+  264.      91.58159 (88081412) AT (   5500.00,   70450.00)  DC      304.      85.20460 (88051003) AT (   4520.00,   69780.00)  DC
+  265.      91.49650 (88111705) AT (   6250.00,   71070.00)  DC      305.      85.02687 (88120823) AT (   6250.00,   71070.00)  DC
+  266.      91.34394 (88122008) AT (   4780.00,   70700.00)  DC      306.      84.94950 (88052820) AT (   4520.00,   69780.00)  DC
+  267.      91.17567 (88082801) AT (   5110.00,   70850.00)  DC      307.      84.75046 (88032310) AT (   3600.00,   69700.00)  DC
+  268.      91.16318 (88082719) AT (   4520.00,   69780.00)  DC      308.      84.66879 (88062008) AT (   6250.00,   71070.00)  DC
+  269.      90.89914 (88112723) AT (   5110.00,   70850.00)  DC      309.      84.59699 (88071710) AT (   4780.00,   70700.00)  DC
+  270.      90.71402 (88101720) AT (   4780.00,   70700.00)  DC      310.      84.46518 (88011618) AT (   5110.00,   70850.00)  DC
+  271.      90.61345 (88081410) AT (   5500.00,   70450.00)  DC      311.      84.24055 (88110608) AT (   5810.00,   70900.00)  DC
+  272.      89.75323 (88052322) AT (   5810.00,   70900.00)  DC      312.      83.89811 (88011516) AT (   6250.00,   71070.00)  DC
+  273.      89.29671 (88081002) AT (   4780.00,   70700.00)  DC      313.      83.82855 (88082502) AT (   6250.00,   71070.00)  DC
+  274.      89.24975 (88021504) AT (   5810.00,   70900.00)  DC      314.      83.50891 (88062008) AT (   5860.00,   71340.00)  DC
+  275.      89.16158 (88110418) AT (   4520.00,   69780.00)  DC      315.      83.33084 (88081409) AT (   5810.00,   70900.00)  DC
+  276.      89.01793 (88020201) AT (   4520.00,   69780.00)  DC      316.      83.29245 (88011516) AT (   6930.00,   71300.00)  DC
+  277.      88.98571 (88081408) AT (   4780.00,   70700.00)  DC      317.      83.05938 (88081110) AT (   3600.00,   69700.00)  DC
+  278.      88.95729 (88090409) AT (   4520.00,   69780.00)  DC      318.      82.95269 (88071410) AT (   5110.00,   70850.00)  DC
+  279.      88.95264 (88011114) AT (   5810.00,   70900.00)  DC      319.      82.90927 (88041510) AT (   4520.00,   69780.00)  DC
+  280.      88.87155 (88082602) AT (   5110.00,   70850.00)  DC      320.      82.82081 (88040304) AT (   4520.00,   69780.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  18
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  321.      82.37852 (88101709) AT (   5110.00,   70850.00)  DC      361.      78.36374 (88120908) AT (   6250.00,   71070.00)  DC
+  322.      82.29397 (88010111) AT (   5810.00,   70900.00)  DC      362.      78.32629 (88120513) AT (   4520.00,   69780.00)  DC
+  323.      82.20036 (88090211) AT (   4520.00,   69780.00)  DC      363.      78.05462 (88040322) AT (   4520.00,   69780.00)  DC
+  324.      82.16832 (88062008) AT (   5810.00,   70900.00)  DC      364.      77.94194 (88040116) AT (   4520.00,   69780.00)  DC
+  325.      81.59201 (88082609) AT (   5110.00,   70850.00)  DC      365.      77.77616 (88041808) AT (   5500.00,   70450.00)  DC
+  326.      81.51449 (88111016) AT (   4780.00,   70700.00)  DC      366.      77.75549 (88122018) AT (   6250.00,   71070.00)  DC
+  327.      81.30059 (88111624) AT (   5500.00,   70450.00)  DC      367.      77.71583 (88122010) AT (   4780.00,   70700.00)  DC
+  328.      81.21836 (88041507) AT (   5110.00,   70850.00)  DC      368.      77.43806 (88011214) AT (   5110.00,   70850.00)  DC
+  329.      81.06153 (88112705) AT (   5110.00,   70850.00)  DC      369.      77.39506 (88111702) AT (   5810.00,   70900.00)  DC
+  330.      81.02134 (88110524) AT (   4780.00,   70700.00)  DC      370.      77.36657 (88081919) AT (   5110.00,   70850.00)  DC
+  331.      80.85308 (88032520) AT (   5110.00,   70850.00)  DC      371.      77.34278 (88032511) AT (   5810.00,   70900.00)  DC
+  332.      80.83165 (88032410) AT (   5110.00,   70850.00)  DC      372.      76.97227 (88112615) AT (   6250.00,   71070.00)  DC
+  333.      80.76455 (88032309) AT (   5500.00,   70450.00)  DC      373.      76.93004 (88011722) AT (   5110.00,   70850.00)  DC
+  334.      80.73647 (88032603) AT (   5110.00,   70850.00)  DC      374.      76.88251 (88011716) AT (   4780.00,   70700.00)  DC
+  335.      80.60950 (88012007) AT (   4780.00,   70700.00)  DC      375.      76.71931 (88111703) AT (   5500.00,   70450.00)  DC
+  336.      80.21546 (88010412) AT (   4520.00,   69780.00)  DC      376.      76.64118 (88032410) AT (   4780.00,   70700.00)  DC
+  337.      80.12495 (88021915) AT (   3600.00,   69700.00)  DC      377.      76.61947 (88041509) AT (   4520.00,   69780.00)  DC
+  338.      80.10920 (88111522) AT (   6250.00,   71070.00)  DC      378.      76.60979 (88010103) AT (   5110.00,   70850.00)  DC
+  339.      80.10652 (88101006) AT (   4780.00,   70700.00)  DC      379.      76.58859 (88032322) AT (   5810.00,   70900.00)  DC
+  340.      79.99465 (88032605) AT (   4520.00,   69780.00)  DC      380.      76.49347 (88052721) AT (   5810.00,   70900.00)  DC
+  341.      79.96729 (88032516) AT (   4520.00,   69780.00)  DC      381.      76.37368 (88101101) AT (   5810.00,   70900.00)  DC
+  342.      79.92626 (88021914) AT (   5110.00,   70850.00)  DC      382.      76.17678 (88011311) AT (   5110.00,   70850.00)  DC
+  343.      79.89089 (88011612) AT (   5500.00,   70450.00)  DC      383.      76.11880 (88040222) AT (   5110.00,   70850.00)  DC
+  344.      79.87306 (88010412) AT (   4780.00,   70700.00)  DC      384.      75.89913 (88082910) AT (   5110.00,   70850.00)  DC
+  345.      79.84436 (88050922) AT (   4520.00,   69780.00)  DC      385.      75.82380 (88041221) AT (   4520.00,   69780.00)  DC
+  346.      79.76843 (88072121) AT (   5810.00,   70900.00)  DC      386.      75.75690 (88091912) AT (   5860.00,   71340.00)  DC
+  347.      79.68852 (88040114) AT (   4520.00,   69780.00)  DC      387.      75.74751 (88080420) AT (   4780.00,   70700.00)  DC
+  348.      79.56495 (88123124) AT (   4520.00,   69780.00)  DC      388.      75.73046 (88111621) AT (   5810.00,   70900.00)  DC
+  349.      79.52936 (88111620) AT (   6250.00,   71070.00)  DC      389.      75.45307 (88021503) AT (   5810.00,   70900.00)  DC
+  350.      79.51632 (88070520) AT (   4780.00,   70700.00)  DC      390.      75.42170 (88022909) AT (   5500.00,   70450.00)  DC
+  351.      79.49982 (88120318) AT (   6250.00,   71070.00)  DC      391.      75.25290 (88120817) AT (   6250.00,   71070.00)  DC
+  352.      79.27770 (88071410) AT (   5500.00,   70450.00)  DC      392.      75.19380 (88011624) AT (   6250.00,   71070.00)  DC
+  353.      79.22514 (88011703) AT (   5110.00,   70850.00)  DC      393.      75.13128 (88020101) AT (   5810.00,   70900.00)  DC
+  354.      79.05681 (88101022) AT (   6250.00,   71070.00)  DC      394.      75.00468 (88090309) AT (   5110.00,   70850.00)  DC
+  355.      78.94477 (88052923) AT (   4520.00,   69780.00)  DC      395.      74.85511 (88091912) AT (   5810.00,   70900.00)  DC
+  356.      78.93484 (88101804) AT (   6250.00,   71070.00)  DC      396.      74.85030 (88082713) AT (   4520.00,   69780.00)  DC
+  357.      78.82669 (88062008) AT (   6930.00,   71300.00)  DC      397.      74.84377 (88120816) AT (   4780.00,   70700.00)  DC
+  358.      78.66036 (88032408) AT (   4520.00,   69780.00)  DC      398.      74.67931 (88121123) AT (   6250.00,   71070.00)  DC
+  359.      78.65416 (88123113) AT (   6250.00,   71070.00)  DC      399.      74.62829 (88110609) AT (   6250.00,   71070.00)  DC
+  360.      78.43798 (88101008) AT (   5110.00,   70850.00)  DC      400.      74.59911 (88020210) AT (   6250.00,   71070.00)  DC
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  19
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     179.48461 (88081412) AT (   5110.00,   70850.00)  DC       41.      87.45519 (88080621) AT (   4780.00,   70700.00)  DC
+    2.     173.70834 (88011709) AT (   4780.00,   70700.00)  DC       42.      86.82955 (88021506) AT (   6250.00,   71070.00)  DC
+    3.     166.11889 (88041421) AT (   4780.00,   70700.00)  DC       43.      86.58172 (88052321) AT (   5110.00,   70850.00)  DC
+    4.     158.27505 (88011709) AT (   5110.00,   70850.00)  DC       44.      86.49773 (88092009) AT (   5110.00,   70850.00)  DC
+    5.     145.46227 (88081412) AT (   4780.00,   70700.00)  DC       45.      86.10050 (88082609) AT (   5110.00,   70850.00)  DC
+    6.     138.18480 (88092009) AT (   4780.00,   70700.00)  DC       46.      84.92060 (88032521) AT (   5110.00,   70850.00)  DC
+    7.     134.48826 (88082321) AT (   4520.00,   69780.00)  DC       47.      83.56950 (88071824) AT (   4780.00,   70700.00)  DC
+    8.     134.07093 (88111624) AT (   5110.00,   70850.00)  DC       48.      83.20084 (88080621) AT (   5110.00,   70850.00)  DC
+    9.     133.26328 (88032406) AT (   4780.00,   70700.00)  DC       49.      82.90038 (88011312) AT (   6250.00,   71070.00)  DC
+   10.     127.47856 (88032512) AT (   5110.00,   70850.00)  DC       50.      82.36731 (88081003) AT (   5110.00,   70850.00)  DC
+   11.     125.18994 (88090821) AT (   4780.00,   70700.00)  DC       51.      81.59597 (88112806) AT (   6250.00,   71070.00)  DC
+   12.     120.20350 (88030621) AT (   5110.00,   70850.00)  DC       52.      81.34565 (88030621) AT (   4780.00,   70700.00)  DC
+   13.     120.14585 (88022912) AT (   6250.00,   71070.00)  DC       53.      81.23616 (88081509) AT (   4780.00,   70700.00)  DC
+   14.     115.67022 (88123112) AT (   5110.00,   70850.00)  DC       54.      80.65683 (88041724) AT (   6250.00,   71070.00)  DC
+   15.     115.44948 (88020124) AT (   4780.00,   70700.00)  DC       55.      78.92710 (88121003) AT (   4780.00,   70700.00)  DC
+   16.     114.46881 (88110418) AT (   4520.00,   69780.00)  DC       56.      78.46251 (88032606) AT (   4520.00,   69780.00)  DC
+   17.     113.35361 (88111703) AT (   5810.00,   70900.00)  DC       57.      78.16214 (88010103) AT (   4780.00,   70700.00)  DC
+   18.     109.03542 (88112724) AT (   5110.00,   70850.00)  DC       58.      77.98147 (88031218) AT (   4520.00,   69780.00)  DC
+   19.     108.12092 (88040309) AT (   4520.00,   69780.00)  DC       59.      77.84370 (88102406) AT (   4780.00,   70700.00)  DC
+   20.     107.74945 (88032512) AT (   4780.00,   70700.00)  DC       60.      77.62397 (88081409) AT (   5810.00,   70900.00)  DC
+   21.     106.63032 (88081409) AT (   5110.00,   70850.00)  DC       61.      76.19893 (88040121) AT (   4780.00,   70700.00)  DC
+   22.     105.51144 (88022909) AT (   5500.00,   70450.00)  DC       62.      75.63463 (88041509) AT (   4780.00,   70700.00)  DC
+   23.     103.60829 (88022909) AT (   5110.00,   70850.00)  DC       63.      75.61562 (88011515) AT (   4520.00,   69780.00)  DC
+   24.     102.26187 (88111706) AT (   6250.00,   71070.00)  DC       64.      75.52577 (88122012) AT (   4780.00,   70700.00)  DC
+   25.     101.84839 (88041424) AT (   4780.00,   70700.00)  DC       65.      74.34074 (88111621) AT (   6250.00,   71070.00)  DC
+   26.     101.37417 (88022909) AT (   6250.00,   71070.00)  DC       66.      73.92561 (88082724) AT (   4780.00,   70700.00)  DC
+   27.     101.28713 (88123124) AT (   4520.00,   69780.00)  DC       67.      72.75361 (88051221) AT (   5110.00,   70850.00)  DC
+   28.     101.28300 (88032524) AT (   4780.00,   70700.00)  DC       68.      72.12001 (88010103) AT (   5110.00,   70850.00)  DC
+   29.     100.48228 (88032515) AT (   4520.00,   69780.00)  DC       69.      71.98679 (88032318) AT (   4520.00,   69780.00)  DC
+   30.      96.44637 (88112724) AT (   4780.00,   70700.00)  DC       70.      71.87349 (88050921) AT (   4780.00,   70700.00)  DC
+   31.      95.67096 (88110415) AT (   4520.00,   69780.00)  DC       71.      71.26070 (88011815) AT (   4520.00,   69780.00)  DC
+   32.      95.41954 (88071406) AT (   5810.00,   70900.00)  DC       72.      71.04494 (88101806) AT (   5810.00,   70900.00)  DC
+   33.      95.37657 (88050924) AT (   4520.00,   69780.00)  DC       73.      70.92302 (88011712) AT (   4780.00,   70700.00)  DC
+   34.      94.90926 (88122418) AT (   4520.00,   69780.00)  DC       74.      70.80402 (88010106) AT (   4520.00,   69780.00)  DC
+   35.      94.05956 (88081003) AT (   4780.00,   70700.00)  DC       75.      70.65891 (88042721) AT (   4520.00,   69780.00)  DC
+   36.      91.55015 (88022909) AT (   5810.00,   70900.00)  DC       76.      70.52888 (88050921) AT (   4520.00,   69780.00)  DC
+   37.      89.66967 (88011312) AT (   5810.00,   70900.00)  DC       77.      70.30395m(88081009) AT (   5110.00,   70850.00)  DC
+   38.      89.42605 (88071406) AT (   5500.00,   70450.00)  DC       78.      70.18517 (88032518) AT (   4520.00,   69780.00)  DC
+   39.      88.13765 (88040115) AT (   4520.00,   69780.00)  DC       79.      70.00161 (88052924) AT (   4520.00,   69780.00)  DC
+   40.      87.45906 (88081409) AT (   5500.00,   70450.00)  DC       80.      69.16833 (88072421) AT (   5110.00,   70850.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  20
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   81.      69.12335 (88101021) AT (   6250.00,   71070.00)  DC      121.      59.51126 (88082721) AT (   4780.00,   70700.00)  DC
+   82.      68.69362 (88111703) AT (   5500.00,   70450.00)  DC      122.      59.07190 (88011212) AT (   4520.00,   69780.00)  DC
+   83.      68.51227 (88011703) AT (   6250.00,   71070.00)  DC      123.      58.95633 (88011712) AT (   3600.00,   69700.00)  DC
+   84.      68.46393 (88101721) AT (   4780.00,   70700.00)  DC      124.      58.81446 (88101803) AT (   5500.00,   70450.00)  DC
+   85.      68.39569 (88011721) AT (   5110.00,   70850.00)  DC      125.      58.74723 (88011815) AT (   3600.00,   69700.00)  DC
+   86.      68.34696 (88041512) AT (   4520.00,   69780.00)  DC      126.      58.50988 (88032921) AT (   5110.00,   70850.00)  DC
+   87.      68.05501 (88102406) AT (   5110.00,   70850.00)  DC      127.      58.49138 (88081409) AT (   6250.00,   71070.00)  DC
+   88.      67.77670 (88090212) AT (   4520.00,   69780.00)  DC      128.      58.28160 (88020318) AT (   4520.00,   69780.00)  DC
+   89.      67.58376 (88040321) AT (   4520.00,   69780.00)  DC      129.      58.20973 (88081509) AT (   4520.00,   69780.00)  DC
+   90.      67.52489 (88010112) AT (   5500.00,   70450.00)  DC      130.      58.08067 (88040615) AT (   4520.00,   69780.00)  DC
+   91.      67.24039 (88081412) AT (   5500.00,   70450.00)  DC      131.      58.01119 (88051221) AT (   4780.00,   70700.00)  DC
+   92.      66.87716 (88030612) AT (   4520.00,   69780.00)  DC      132.      57.85020 (88011624) AT (   6250.00,   71070.00)  DC
+   93.      66.60070 (88013124) AT (   6250.00,   71070.00)  DC      133.      57.49290 (88030624) AT (   5110.00,   70850.00)  DC
+   94.      66.52521 (88122712) AT (   6250.00,   71070.00)  DC      134.      57.39196 (88021424) AT (   6250.00,   71070.00)  DC
+   95.      66.33295 (88051224) AT (   5110.00,   70850.00)  DC      135.      56.86757 (88032603) AT (   5110.00,   70850.00)  DC
+   96.      65.88709 (88032321) AT (   4520.00,   69780.00)  DC      136.      56.86687 (88123112) AT (   5500.00,   70450.00)  DC
+   97.      65.57242 (88022009) AT (   6250.00,   71070.00)  DC      137.      56.73057 (88111706) AT (   5500.00,   70450.00)  DC
+   98.      65.29085 (88032403) AT (   5810.00,   70900.00)  DC      138.      56.55739 (88123112) AT (   5810.00,   70900.00)  DC
+   99.      65.25471 (88120912) AT (   4520.00,   69780.00)  DC      139.      56.51936 (88010415) AT (   4520.00,   69780.00)  DC
+  100.      65.03649 (88081509) AT (   5110.00,   70850.00)  DC      140.      56.44008 (88110412) AT (   4520.00,   69780.00)  DC
+  101.      64.26321 (88042621) AT (   4780.00,   70700.00)  DC      141.      56.42081 (88041424) AT (   5110.00,   70850.00)  DC
+  102.      63.86023 (88112803) AT (   6250.00,   71070.00)  DC      142.      56.29433m(88022915) AT (   5810.00,   70900.00)  DC
+  103.      63.84860 (88120821) AT (   6250.00,   71070.00)  DC      143.      56.20055 (88081006) AT (   5110.00,   70850.00)  DC
+  104.      63.18812 (88040306) AT (   4520.00,   69780.00)  DC      144.      55.86431 (88040112) AT (   4520.00,   69780.00)  DC
+  105.      63.14609 (88120818) AT (   6250.00,   71070.00)  DC      145.      55.83670 (88112718) AT (   4780.00,   70700.00)  DC
+  106.      63.02339 (88082603) AT (   5110.00,   70850.00)  DC      146.      55.46134 (88051621) AT (   4780.00,   70700.00)  DC
+  107.      62.91101 (88111624) AT (   5500.00,   70450.00)  DC      147.      55.32329 (88111621) AT (   5810.00,   70900.00)  DC
+  108.      62.84505 (88010112) AT (   5110.00,   70850.00)  DC      148.      55.27097 (88110524) AT (   4780.00,   70700.00)  DC
+  109.      62.51819 (88032321) AT (   5110.00,   70850.00)  DC      149.      55.21895 (88051303) AT (   6250.00,   71070.00)  DC
+  110.      62.07443 (88032509) AT (   5110.00,   70850.00)  DC      150.      55.15760 (88010115) AT (   4780.00,   70700.00)  DC
+  111.      61.91390 (88011615) AT (   6930.00,   71300.00)  DC      151.      55.11761 (88011615) AT (   6250.00,   71070.00)  DC
+  112.      61.39676 (88051621) AT (   5110.00,   70850.00)  DC      152.      54.66799m(88081009) AT (   4780.00,   70700.00)  DC
+  113.      61.33921 (88071821) AT (   4520.00,   69780.00)  DC      153.      54.36682 (88101803) AT (   5810.00,   70900.00)  DC
+  114.      61.12167 (88071409) AT (   6930.00,   71300.00)  DC      154.      53.92213 (88011712) AT (   5110.00,   70850.00)  DC
+  115.      61.00308 (88110609) AT (   6250.00,   71070.00)  DC      155.      53.71136 (88041724) AT (   5810.00,   70900.00)  DC
+  116.      60.98739 (88111624) AT (   4780.00,   70700.00)  DC      156.      53.56497 (88081506) AT (   5110.00,   70850.00)  DC
+  117.      60.93770 (88111703) AT (   6250.00,   71070.00)  DC      157.      53.52721 (88011212) AT (   4780.00,   70700.00)  DC
+  118.      59.88228 (88080421) AT (   4780.00,   70700.00)  DC      158.      53.52084 (88082324) AT (   4520.00,   69780.00)  DC
+  119.      59.71717 (88032524) AT (   5110.00,   70850.00)  DC      159.      53.49612 (88041418) AT (   4520.00,   69780.00)  DC
+  120.      59.58734 (88051003) AT (   4520.00,   69780.00)  DC      160.      53.22875 (88022012) AT (   5810.00,   70900.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  21
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  161.      53.07270 (88010415) AT (   4780.00,   70700.00)  DC      201.      48.58398m(88070521) AT (   4780.00,   70700.00)  DC
+  162.      52.91411 (88051303) AT (   5810.00,   70900.00)  DC      202.      48.30694 (88040103) AT (   3600.00,   69700.00)  DC
+  163.      52.72645 (88020321) AT (   4520.00,   69780.00)  DC      203.      48.21400 (88091912) AT (   3600.00,   69700.00)  DC
+  164.      52.64219 (88070712) AT (   5500.00,   70450.00)  DC      204.      47.96469 (88111624) AT (   5810.00,   70900.00)  DC
+  165.      52.62202 (88011715) AT (   4520.00,   69780.00)  DC      205.      47.89749 (88122012) AT (   5110.00,   70850.00)  DC
+  166.      52.30068 (88041512) AT (   4780.00,   70700.00)  DC      206.      47.73951 (88041509) AT (   5110.00,   70850.00)  DC
+  167.      52.18027 (88032403) AT (   4780.00,   70700.00)  DC      207.      47.72443 (88101009) AT (   6250.00,   71070.00)  DC
+  168.      52.00272 (88110421) AT (   4520.00,   69780.00)  DC      208.      47.67069 (88101509) AT (   6250.00,   71070.00)  DC
+  169.      51.90314 (88112721) AT (   5110.00,   70850.00)  DC      209.      47.64289 (88081409) AT (   5860.00,   71340.00)  DC
+  170.      51.89216 (88022921) AT (   4780.00,   70700.00)  DC      210.      47.58418 (88091709) AT (   6250.00,   71070.00)  DC
+  171.      51.74967 (88123112) AT (   4780.00,   70700.00)  DC      211.      47.57371 (88101806) AT (   6250.00,   71070.00)  DC
+  172.      51.29577 (88111618) AT (   4780.00,   70700.00)  DC      212.      47.17942 (88011612) AT (   6250.00,   71070.00)  DC
+  173.      51.24224 (88011221) AT (   6250.00,   71070.00)  DC      213.      47.09762 (88011215) AT (   4780.00,   70700.00)  DC
+  174.      50.79973 (88070624) AT (   4780.00,   70700.00)  DC      214.      46.91860 (88082609) AT (   4780.00,   70700.00)  DC
+  175.      50.48744 (88081409) AT (   4780.00,   70700.00)  DC      215.      46.80878 (88111618) AT (   5110.00,   70850.00)  DC
+  176.      50.27204 (88032512) AT (   6250.00,   71070.00)  DC      216.      46.72760 (88032324) AT (   5810.00,   70900.00)  DC
+  177.      50.24822 (88090212) AT (   4780.00,   70700.00)  DC      217.      46.71963 (88071409) AT (   6250.00,   71070.00)  DC
+  178.      50.20170 (88011712) AT (   4520.00,   69780.00)  DC      218.      46.71418 (88101512) AT (   5110.00,   70850.00)  DC
+  179.      50.19438 (88011612) AT (   6930.00,   71300.00)  DC      219.      46.71259 (88020203) AT (   4520.00,   69780.00)  DC
+  180.      50.18119 (88120321) AT (   5110.00,   70850.00)  DC      220.      46.69606 (88111706) AT (   5810.00,   70900.00)  DC
+  181.      50.10286 (88022912) AT (   5810.00,   70900.00)  DC      221.      46.67586 (88032512) AT (   4520.00,   69780.00)  DC
+  182.      49.99462 (88071412) AT (   5110.00,   70850.00)  DC      222.      46.59402 (88070621) AT (   4520.00,   69780.00)  DC
+  183.      49.94590 (88032309) AT (   5110.00,   70850.00)  DC      223.      46.56047 (88110609) AT (   5810.00,   70900.00)  DC
+  184.      49.90571 (88021503) AT (   6250.00,   71070.00)  DC      224.      46.33929 (88072312) AT (   4520.00,   69780.00)  DC
+  185.      49.80580 (88011218) AT (   4780.00,   70700.00)  DC      225.      46.31730 (88011212) AT (   5110.00,   70850.00)  DC
+  186.      49.61789 (88102321) AT (   6250.00,   71070.00)  DC      226.      46.19448 (88012424) AT (   4780.00,   70700.00)  DC
+  187.      49.55167 (88080421) AT (   5110.00,   70850.00)  DC      227.      46.02502 (88070712) AT (   5810.00,   70900.00)  DC
+  188.      49.39482 (88080521) AT (   5110.00,   70850.00)  DC      228.      46.01485 (88020212) AT (   6250.00,   71070.00)  DC
+  189.      49.33545 (88041809) AT (   5500.00,   70450.00)  DC      229.      45.97073 (88080221) AT (   4780.00,   70700.00)  DC
+  190.      49.30444 (88040612) AT (   4520.00,   69780.00)  DC      230.      45.83388 (88033003) AT (   4520.00,   69780.00)  DC
+  191.      49.30441 (88113009) AT (   6250.00,   71070.00)  DC      231.      45.78906 (88011124) AT (   6250.00,   71070.00)  DC
+  192.      49.28957 (88011115) AT (   4520.00,   69780.00)  DC      232.      45.78365 (88032309) AT (   4780.00,   70700.00)  DC
+  193.      49.28158 (88032509) AT (   4780.00,   70700.00)  DC      233.      45.67834 (88052821) AT (   4520.00,   69780.00)  DC
+  194.      49.21901 (88071824) AT (   5110.00,   70850.00)  DC      234.      45.54095 (88021503) AT (   5810.00,   70900.00)  DC
+  195.      49.11264 (88101024) AT (   5810.00,   70900.00)  DC      235.      45.52899 (88041515) AT (   3600.00,   69700.00)  DC
+  196.      49.05234 (88040118) AT (   4520.00,   69780.00)  DC      236.      45.49152 (88011215) AT (   4520.00,   69780.00)  DC
+  197.      49.00480 (88080921) AT (   5110.00,   70850.00)  DC      237.      45.31825 (88101512) AT (   4780.00,   70700.00)  DC
+  198.      48.98333 (88122009) AT (   4780.00,   70700.00)  DC      238.      45.17765 (88052321) AT (   4780.00,   70700.00)  DC
+  199.      48.82330 (88120824) AT (   6250.00,   71070.00)  DC      239.      45.04775 (88081312) AT (   3600.00,   69700.00)  DC
+  200.      48.77247 (88011312) AT (   5500.00,   70450.00)  DC      240.      44.97538 (88080512) AT (   5500.00,   70450.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  22
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  241.      44.95667 (88032321) AT (   4780.00,   70700.00)  DC      281.      42.59537 (88120909) AT (   6250.00,   71070.00)  DC
+  242.      44.94061 (88070712) AT (   5110.00,   70850.00)  DC      282.      42.45021 (88062424) AT (   5110.00,   70850.00)  DC
+  243.      44.89883 (88042321) AT (   4520.00,   69780.00)  DC      283.      42.43591 (88091709) AT (   5810.00,   70900.00)  DC
+  244.      44.66867 (88122009) AT (   4520.00,   69780.00)  DC      284.      42.39121 (88082012) AT (   4520.00,   69780.00)  DC
+  245.      44.60701 (88032603) AT (   4780.00,   70700.00)  DC      285.      42.30686 (88101718) AT (   4520.00,   69780.00)  DC
+  246.      44.60642m(88022915) AT (   5860.00,   71340.00)  DC      286.      42.21448 (88011618) AT (   5110.00,   70850.00)  DC
+  247.      44.57703 (88010112) AT (   5810.00,   70900.00)  DC      287.      42.19787 (88040609) AT (   4520.00,   69780.00)  DC
+  248.      44.53698 (88011615) AT (   5810.00,   70900.00)  DC      288.      42.17631 (88052724) AT (   5110.00,   70850.00)  DC
+  249.      44.49858 (88082809) AT (   5810.00,   70900.00)  DC      289.      42.14988 (88032403) AT (   5110.00,   70850.00)  DC
+  250.      44.48352 (88052721) AT (   6250.00,   71070.00)  DC      290.      42.02778 (88032521) AT (   4780.00,   70700.00)  DC
+  251.      44.30501 (88030612) AT (   3600.00,   69700.00)  DC      291.      41.95184 (88120912) AT (   4780.00,   70700.00)  DC
+  252.      44.18495 (88021506) AT (   5810.00,   70900.00)  DC      292.      41.91900 (88112718) AT (   4520.00,   69780.00)  DC
+  253.      44.17365 (88123115) AT (   6250.00,   71070.00)  DC      293.      41.88502 (88070712) AT (   5860.00,   71340.00)  DC
+  254.      44.11564 (88082806) AT (   5110.00,   70850.00)  DC      294.      41.85843 (88082809) AT (   6250.00,   71070.00)  DC
+  255.      44.04832 (88101806) AT (   5500.00,   70450.00)  DC      295.      41.79570 (88101803) AT (   5110.00,   70850.00)  DC
+  256.      43.98343 (88112806) AT (   5810.00,   70900.00)  DC      296.      41.78316 (88061912) AT (   4520.00,   69780.00)  DC
+  257.      43.79308 (88011309) AT (   5810.00,   70900.00)  DC      297.      41.55868 (88022309) AT (   5810.00,   70900.00)  DC
+  258.      43.78910 (88070724) AT (   5110.00,   70850.00)  DC      298.      41.54194 (88101018) AT (   6250.00,   71070.00)  DC
+  259.      43.70283 (88053021) AT (   4520.00,   69780.00)  DC      299.      41.48936 (88091915) AT (   4520.00,   69780.00)  DC
+  260.      43.56586 (88032412) AT (   5110.00,   70850.00)  DC      300.      41.34883 (88070324) AT (   6250.00,   71070.00)  DC
+  261.      43.55934 (88090409) AT (   4520.00,   69780.00)  DC      301.      41.23829 (88032521) AT (   5500.00,   70450.00)  DC
+  262.      43.53668 (88082318) AT (   4520.00,   69780.00)  DC      302.      41.11943 (88032312) AT (   3600.00,   69700.00)  DC
+  263.      43.47475 (88082312) AT (   4520.00,   69780.00)  DC      303.      41.00729 (88052024) AT (   4520.00,   69780.00)  DC
+  264.      43.40862 (88070421) AT (   4520.00,   69780.00)  DC      304.      40.94581 (88052012) AT (   4520.00,   69780.00)  DC
+  265.      43.37726 (88090415) AT (   3600.00,   69700.00)  DC      305.      40.85364 (88092918) AT (   5110.00,   70850.00)  DC
+  266.      43.33966 (88071412) AT (   5500.00,   70450.00)  DC      306.      40.80846 (88032621) AT (   4780.00,   70700.00)  DC
+  267.      43.32488 (88090321) AT (   5110.00,   70850.00)  DC      307.      40.61083 (88082721) AT (   4520.00,   69780.00)  DC
+  268.      43.32227 (88032412) AT (   5810.00,   70900.00)  DC      308.      40.47547 (88032412) AT (   4780.00,   70700.00)  DC
+  269.      43.21382 (88042621) AT (   5110.00,   70850.00)  DC      309.      40.46172 (88110412) AT (   5810.00,   70900.00)  DC
+  270.      43.12233 (88032412) AT (   5500.00,   70450.00)  DC      310.      40.40650 (88101724) AT (   5110.00,   70850.00)  DC
+  271.      43.00158 (88082715) AT (   4520.00,   69780.00)  DC      311.      40.26819 (88040409) AT (   6250.00,   71070.00)  DC
+  272.      42.98290 (88112718) AT (   5110.00,   70850.00)  DC      312.      40.24675 (88112803) AT (   3600.00,   69700.00)  DC
+  273.      42.93192m(88062009) AT (   6250.00,   71070.00)  DC      313.      40.17512 (88011615) AT (   5860.00,   71340.00)  DC
+  274.      42.91421 (88101024) AT (   6250.00,   71070.00)  DC      314.      40.15983 (88120924) AT (   5110.00,   70850.00)  DC
+  275.      42.89665 (88050918) AT (   4520.00,   69780.00)  DC      315.      40.11845 (88072421) AT (   4780.00,   70700.00)  DC
+  276.      42.88506 (88072103) AT (   6250.00,   71070.00)  DC      316.      39.95344 (88102803) AT (   5110.00,   70850.00)  DC
+  277.      42.86113 (88120921) AT (   4520.00,   69780.00)  DC      317.      39.78672 (88012112) AT (   6250.00,   71070.00)  DC
+  278.      42.78149 (88081112) AT (   3600.00,   69700.00)  DC      318.      39.77711 (88082512) AT (   5810.00,   70900.00)  DC
+  279.      42.74618 (88011218) AT (   4520.00,   69780.00)  DC      319.      39.58587 (88032918) AT (   4520.00,   69780.00)  DC
+  280.      42.61811 (88120921) AT (   5110.00,   70850.00)  DC      320.      39.48221 (88032512) AT (   5500.00,   70450.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  23
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  321.      39.46470 (88012012) AT (   3600.00,   69700.00)  DC      361.      37.65228 (88032409) AT (   6250.00,   71070.00)  DC
+  322.      39.43524 (88081021) AT (   4520.00,   69780.00)  DC      362.      37.63295 (88120812) AT (   5810.00,   70900.00)  DC
+  323.      39.39289 (88032412) AT (   6250.00,   71070.00)  DC      363.      37.62805 (88122021) AT (   4780.00,   70700.00)  DC
+  324.      39.35250 (88032512) AT (   5810.00,   70900.00)  DC      364.      37.61958 (88011615) AT (   5500.00,   70450.00)  DC
+  325.      39.34893 (88061512) AT (   4520.00,   69780.00)  DC      365.      37.52341 (88082403) AT (   3500.00,   67750.00)  DC
+  326.      39.34476 (88032409) AT (   3600.00,   69700.00)  DC      366.      37.52249 (88092018) AT (   4780.00,   70700.00)  DC
+  327.      39.30391 (88082603) AT (   4780.00,   70700.00)  DC      367.      37.46749m(88062009) AT (   5810.00,   70900.00)  DC
+  328.      39.23686 (88070412) AT (   3600.00,   69700.00)  DC      368.      37.39872 (88011115) AT (   5500.00,   70450.00)  DC
+  329.      39.22167 (88040318) AT (   4520.00,   69780.00)  DC      369.      37.36687 (88090915) AT (   4520.00,   69780.00)  DC
+  330.      39.21644 (88112721) AT (   5810.00,   70900.00)  DC      370.      37.27861 (88062012) AT (   3600.00,   69700.00)  DC
+  331.      39.11564 (88032412) AT (   5860.00,   71340.00)  DC      371.      37.15305 (88072312) AT (   3600.00,   69700.00)  DC
+  332.      39.11206 (88110412) AT (   5500.00,   70450.00)  DC      372.      37.12339 (88082315) AT (   4520.00,   69780.00)  DC
+  333.      39.05953 (88122015) AT (   4780.00,   70700.00)  DC      373.      36.97330 (88041512) AT (   5110.00,   70850.00)  DC
+  334.      39.03528 (88020103) AT (   6250.00,   71070.00)  DC      374.      36.76741 (88082903) AT (   6250.00,   71070.00)  DC
+  335.      38.98804 (88051306) AT (   6250.00,   71070.00)  DC      375.      36.66364 (88011718) AT (   4780.00,   70700.00)  DC
+  336.      38.85566 (88030612) AT (   4780.00,   70700.00)  DC      376.      36.60271 (88080212) AT (   4520.00,   69780.00)  DC
+  337.      38.82070 (88120921) AT (   5500.00,   70450.00)  DC      377.      36.56319 (88120903) AT (   5810.00,   70900.00)  DC
+  338.      38.79230 (88122424) AT (   5810.00,   70900.00)  DC      378.      36.54521 (88011612) AT (   5860.00,   71340.00)  DC
+  339.      38.70048 (88080512) AT (   5810.00,   70900.00)  DC      379.      36.50997 (88080912) AT (   4520.00,   69780.00)  DC
+  340.      38.57775 (88032409) AT (   5110.00,   70850.00)  DC      380.      36.49222 (88082512) AT (   5860.00,   71340.00)  DC
+  341.      38.55750 (88071403) AT (   6250.00,   71070.00)  DC      381.      36.46283 (88071412) AT (   4780.00,   70700.00)  DC
+  342.      38.49306 (88010106) AT (   4780.00,   70700.00)  DC      382.      36.40849 (88082512) AT (   5500.00,   70450.00)  DC
+  343.      38.47925 (88032409) AT (   5810.00,   70900.00)  DC      383.      36.38270 (88022309) AT (   6250.00,   71070.00)  DC
+  344.      38.42629 (88081406) AT (   6250.00,   71070.00)  DC      384.      36.29306 (88082512) AT (   6250.00,   71070.00)  DC
+  345.      38.41455 (88011612) AT (   5810.00,   70900.00)  DC      385.      36.26895 (88120812) AT (   5860.00,   71340.00)  DC
+  346.      38.41158 (88120812) AT (   5500.00,   70450.00)  DC      386.      36.26346 (88011518) AT (   6250.00,   71070.00)  DC
+  347.      38.40700 (88070724) AT (   4780.00,   70700.00)  DC      387.      36.24181 (88070321) AT (   6250.00,   71070.00)  DC
+  348.      38.36558 (88040221) AT (   4520.00,   69780.00)  DC      388.      36.24088 (88112721) AT (   5500.00,   70450.00)  DC
+  349.      38.29362 (88071412) AT (   4520.00,   69780.00)  DC      389.      36.22206 (88102803) AT (   4780.00,   70700.00)  DC
+  350.      38.23203 (88022912) AT (   5500.00,   70450.00)  DC      390.      36.21441 (88052324) AT (   5810.00,   70900.00)  DC
+  351.      38.17477 (88040221) AT (   4780.00,   70700.00)  DC      391.      36.19708 (88032003) AT (   5810.00,   70900.00)  DC
+  352.      38.16772 (88122006) AT (   4520.00,   69780.00)  DC      392.      36.07704 (88112721) AT (   6250.00,   71070.00)  DC
+  353.      38.04559 (88080409) AT (   4780.00,   70700.00)  DC      393.      36.02626 (88062003) AT (   5110.00,   70850.00)  DC
+  354.      38.03975 (88061912) AT (   4780.00,   70700.00)  DC      394.      36.00837 (88032406) AT (   5110.00,   70850.00)  DC
+  355.      38.00627 (88070712) AT (   4780.00,   70700.00)  DC      395.      35.99629 (88102809) AT (   6250.00,   71070.00)  DC
+  356.      37.89859 (88120318) AT (   6250.00,   71070.00)  DC      396.      35.97235 (88041809) AT (   5110.00,   70850.00)  DC
+  357.      37.89229 (88040121) AT (   5110.00,   70850.00)  DC      397.      35.95897 (88011312) AT (   5110.00,   70850.00)  DC
+  358.      37.76047 (88120812) AT (   5110.00,   70850.00)  DC      398.      35.88780 (88082803) AT (   5110.00,   70850.00)  DC
+  359.      37.71541 (88022306) AT (   6250.00,   71070.00)  DC      399.      35.87515 (88092012) AT (   5110.00,   70850.00)  DC
+  360.      37.69988 (88090506) AT (   5110.00,   70850.00)  DC      400.      35.85881 (88101009) AT (   5110.00,   70850.00)  DC
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  24
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.      51.35891 (88011724) AT (   5110.00,   70850.00)  DC       41.      21.75925 (88082624) AT (   5110.00,   70850.00)  DC
+    2.      44.97425 (88032524) AT (   4780.00,   70700.00)  DC       42.      21.41415 (88111724) AT (   6250.00,   71070.00)  DC
+    3.      44.84223 (88011724) AT (   4780.00,   70700.00)  DC       43.      21.00936 (88111724) AT (   5810.00,   70900.00)  DC
+    4.      44.43789 (88040324) AT (   4520.00,   69780.00)  DC       44.      20.97307 (88101824) AT (   5500.00,   70450.00)  DC
+    5.      44.27905 (88032524) AT (   5110.00,   70850.00)  DC       45.      20.64799 (88011224) AT (   4780.00,   70700.00)  DC
+    6.      42.56525 (88110424) AT (   4520.00,   69780.00)  DC       46.      20.54515 (88081424) AT (   5500.00,   70450.00)  DC
+    7.      39.96735 (88082324) AT (   4520.00,   69780.00)  DC       47.      20.52398 (88082724) AT (   4780.00,   70700.00)  DC
+    8.      37.85393 (88081424) AT (   5110.00,   70850.00)  DC       48.      20.32812 (88032424) AT (   5810.00,   70900.00)  DC
+    9.      36.79296 (88041424) AT (   4780.00,   70700.00)  DC       49.      20.21992 (88071424) AT (   6250.00,   71070.00)  DC
+   10.      35.10499 (88032424) AT (   4780.00,   70700.00)  DC       50.      20.02524 (88011224) AT (   4520.00,   69780.00)  DC
+   11.      33.79209 (88092024) AT (   4780.00,   70700.00)  DC       51.      19.94431 (88011624) AT (   5810.00,   70900.00)  DC
+   12.      33.50319m(88081024) AT (   5110.00,   70850.00)  DC       52.      19.88422m(88022924) AT (   5110.00,   70850.00)  DC
+   13.      32.74908 (88030624) AT (   5110.00,   70850.00)  DC       53.      19.88189 (88021524) AT (   6250.00,   71070.00)  DC
+   14.      32.64869 (88101024) AT (   6250.00,   71070.00)  DC       54.      19.71460 (88052324) AT (   5110.00,   70850.00)  DC
+   15.      32.46884 (88112724) AT (   5110.00,   70850.00)  DC       55.      19.60625 (88041524) AT (   4780.00,   70700.00)  DC
+   16.      32.18616m(88022924) AT (   6250.00,   71070.00)  DC       56.      19.41982 (88012424) AT (   4780.00,   70700.00)  DC
+   17.      31.12403 (88032524) AT (   4520.00,   69780.00)  DC       57.      19.38925 (88040624) AT (   4520.00,   69780.00)  DC
+   18.      30.34512 (88050924) AT (   4520.00,   69780.00)  DC       58.      19.21523 (88030624) AT (   4780.00,   70700.00)  DC
+   19.      28.55284 (88122024) AT (   4780.00,   70700.00)  DC       59.      18.88592 (88051224) AT (   5110.00,   70850.00)  DC
+   20.      28.39306 (88011624) AT (   6250.00,   71070.00)  DC       60.      18.83395 (88011324) AT (   5810.00,   70900.00)  DC
+   21.      28.13561 (88040124) AT (   4520.00,   69780.00)  DC       61.      18.66085 (88011724) AT (   4520.00,   69780.00)  DC
+   22.      28.05374 (88120824) AT (   6250.00,   71070.00)  DC       62.      18.38220 (88070624) AT (   4520.00,   69780.00)  DC
+   23.      27.96868 (88112724) AT (   4780.00,   70700.00)  DC       63.      18.37592 (88112824) AT (   6250.00,   71070.00)  DC
+   24.      27.85577 (88092024) AT (   5110.00,   70850.00)  DC       64.      18.29518 (88082724) AT (   4520.00,   69780.00)  DC
+   25.      27.75315m(88081024) AT (   4780.00,   70700.00)  DC       65.      18.04520 (88120924) AT (   5810.00,   70900.00)  DC
+   26.      26.96519 (88111624) AT (   5110.00,   70850.00)  DC       66.      17.96684 (88123124) AT (   5110.00,   70850.00)  DC
+   27.      26.25344 (88071424) AT (   5810.00,   70900.00)  DC       67.      17.82052 (88032324) AT (   5110.00,   70850.00)  DC
+   28.      26.11141 (88032324) AT (   4520.00,   69780.00)  DC       68.      17.66396 (88033024) AT (   4520.00,   69780.00)  DC
+   29.      26.02097 (88071424) AT (   5500.00,   70450.00)  DC       69.      17.65840 (88042724) AT (   4520.00,   69780.00)  DC
+   30.      25.95976m(88020124) AT (   4780.00,   70700.00)  DC       70.      17.62702 (88081424) AT (   5810.00,   70900.00)  DC
+   31.      25.85249m(88022924) AT (   5810.00,   70900.00)  DC       71.      17.59009 (88111624) AT (   4780.00,   70700.00)  DC
+   32.      25.54575 (88081424) AT (   4780.00,   70700.00)  DC       72.      17.55626 (88011624) AT (   6930.00,   71300.00)  DC
+   33.      25.05842 (88010124) AT (   4780.00,   70700.00)  DC       73.      17.52550 (88120924) AT (   6250.00,   71070.00)  DC
+   34.      24.01455 (88010124) AT (   5110.00,   70850.00)  DC       74.      17.44768 (88122024) AT (   5110.00,   70850.00)  DC
+   35.      23.44319 (88101824) AT (   5810.00,   70900.00)  DC       75.      17.15938 (88101024) AT (   5810.00,   70900.00)  DC
+   36.      22.72519 (88032424) AT (   5110.00,   70850.00)  DC       76.      17.00489 (88072124) AT (   6250.00,   71070.00)  DC
+   37.      22.68749 (88032624) AT (   4520.00,   69780.00)  DC       77.      16.99576m(88020324) AT (   4520.00,   69780.00)  DC
+   38.      21.88310 (88090824) AT (   4780.00,   70700.00)  DC       78.      16.67187 (88010124) AT (   4520.00,   69780.00)  DC
+   39.      21.87475 (88032624) AT (   4780.00,   70700.00)  DC       79.      16.60816 (88111724) AT (   5500.00,   70450.00)  DC
+   40.      21.81745m(88022924) AT (   5500.00,   70450.00)  DC       80.      16.53961 (88070424) AT (   4520.00,   69780.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  25
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   81.      16.48722 (88113024) AT (   6250.00,   71070.00)  DC      121.      14.24608 (88120924) AT (   5500.00,   70450.00)  DC
+   82.      16.47922 (88040124) AT (   3600.00,   69700.00)  DC      122.      14.20653 (88080624) AT (   5110.00,   70850.00)  DC
+   83.      16.45408 (88080524) AT (   6250.00,   71070.00)  DC      123.      14.19556 (88053024) AT (   4520.00,   69780.00)  DC
+   84.      16.42543 (88111624) AT (   5810.00,   70900.00)  DC      124.      14.11787 (88032324) AT (   4780.00,   70700.00)  DC
+   85.      16.35570 (88122424) AT (   4520.00,   69780.00)  DC      125.      14.10288 (88011724) AT (   5500.00,   70450.00)  DC
+   86.      16.33964 (88082824) AT (   6250.00,   71070.00)  DC      126.      14.09891 (88011624) AT (   5110.00,   70850.00)  DC
+   87.      16.33036 (88081424) AT (   6250.00,   71070.00)  DC      127.      14.01445 (88032424) AT (   4520.00,   69780.00)  DC
+   88.      16.31548 (88051324) AT (   6250.00,   71070.00)  DC      128.      14.00168 (88011224) AT (   6250.00,   71070.00)  DC
+   89.      16.19947 (88011224) AT (   5110.00,   70850.00)  DC      129.      13.96646 (88082524) AT (   6250.00,   71070.00)  DC
+   90.      16.16280 (88111624) AT (   6250.00,   71070.00)  DC      130.      13.95395 (88111624) AT (   5500.00,   70450.00)  DC
+   91.      16.10783 (88032424) AT (   5500.00,   70450.00)  DC      131.      13.75640 (88011624) AT (   5500.00,   70450.00)  DC
+   92.      16.03545 (88080524) AT (   5110.00,   70850.00)  DC      132.      13.72669 (88120924) AT (   4520.00,   69780.00)  DC
+   93.      15.99811 (88122024) AT (   4520.00,   69780.00)  DC      133.      13.69437 (88052024) AT (   4520.00,   69780.00)  DC
+   94.      15.81608 (88012424) AT (   4520.00,   69780.00)  DC      134.      13.68587 (88041224) AT (   4520.00,   69780.00)  DC
+   95.      15.72886 (88080424) AT (   5110.00,   70850.00)  DC      135.      13.63179 (88102424) AT (   5110.00,   70850.00)  DC
+   96.      15.64036 (88030624) AT (   4520.00,   69780.00)  DC      136.      13.60645 (88011524) AT (   4520.00,   69780.00)  DC
+   97.      15.62791 (88011824) AT (   4520.00,   69780.00)  DC      137.      13.53406 (88080524) AT (   5810.00,   70900.00)  DC
+   98.      15.58447m(88042624) AT (   4780.00,   70700.00)  DC      138.      13.45960 (88101724) AT (   4780.00,   70700.00)  DC
+   99.      15.38950 (88040124) AT (   4780.00,   70700.00)  DC      139.      13.43895m(88042624) AT (   5110.00,   70850.00)  DC
+  100.      15.24042 (88080324) AT (   5110.00,   70850.00)  DC      140.      13.30721 (88101824) AT (   6250.00,   71070.00)  DC
+  101.      15.01637 (88123124) AT (   4520.00,   69780.00)  DC      141.      13.29976 (88070424) AT (   3600.00,   69700.00)  DC
+  102.      15.00537m(88080224) AT (   4520.00,   69780.00)  DC      142.      13.27025m(88070724) AT (   4780.00,   70700.00)  DC
+  103.      14.99536 (88012424) AT (   5110.00,   70850.00)  DC      143.      13.25198 (88101724) AT (   5110.00,   70850.00)  DC
+  104.      14.99338 (88081524) AT (   5110.00,   70850.00)  DC      144.      13.21296 (88112724) AT (   5500.00,   70450.00)  DC
+  105.      14.99304 (88082624) AT (   4780.00,   70700.00)  DC      145.      13.17670 (88031224) AT (   4520.00,   69780.00)  DC
+  106.      14.92600 (88080424) AT (   4780.00,   70700.00)  DC      146.      13.11478 (88041524) AT (   5110.00,   70850.00)  DC
+  107.      14.89598 (88032624) AT (   5110.00,   70850.00)  DC      147.      13.10916 (88112724) AT (   6250.00,   71070.00)  DC
+  108.      14.87336 (88072324) AT (   4520.00,   69780.00)  DC      148.      13.09947 (88050924) AT (   4780.00,   70700.00)  DC
+  109.      14.79888 (88120924) AT (   5110.00,   70850.00)  DC      149.      13.01349m(88052724) AT (   6250.00,   71070.00)  DC
+  110.      14.74072 (88101724) AT (   4520.00,   69780.00)  DC      150.      12.97930 (88080524) AT (   5500.00,   70450.00)  DC
+  111.      14.73283 (88080624) AT (   4780.00,   70700.00)  DC      151.      12.96841 (88052324) AT (   4780.00,   70700.00)  DC
+  112.      14.72174 (88051324) AT (   5810.00,   70900.00)  DC      152.      12.83991 (88052324) AT (   5810.00,   70900.00)  DC
+  113.      14.70298 (88091724) AT (   6250.00,   71070.00)  DC      153.      12.81859 (88080324) AT (   4780.00,   70700.00)  DC
+  114.      14.63390 (88041524) AT (   4520.00,   69780.00)  DC      154.      12.81467 (88072324) AT (   3600.00,   69700.00)  DC
+  115.      14.62178 (88082824) AT (   5110.00,   70850.00)  DC      155.      12.79771 (88090324) AT (   5110.00,   70850.00)  DC
+  116.      14.49146 (88011324) AT (   6250.00,   71070.00)  DC      156.      12.74683 (88041424) AT (   4520.00,   69780.00)  DC
+  117.      14.49039m(88081024) AT (   6250.00,   71070.00)  DC      157.      12.74002 (88051024) AT (   4520.00,   69780.00)  DC
+  118.      14.44307 (88021524) AT (   5810.00,   70900.00)  DC      158.      12.71286 (88070624) AT (   4780.00,   70700.00)  DC
+  119.      14.40695 (88011724) AT (   3600.00,   69700.00)  DC      159.      12.64373m(88081024) AT (   5810.00,   70900.00)  DC
+  120.      14.33309m(88070724) AT (   5110.00,   70850.00)  DC      160.      12.56521m(88020124) AT (   5110.00,   70850.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  26
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  161.      12.53422 (88011624) AT (   5860.00,   71340.00)  DC      201.      11.37272 (88071624) AT (   4520.00,   69780.00)  DC
+  162.      12.52890 (88091924) AT (   4520.00,   69780.00)  DC      202.      11.35387m(88081024) AT (   5500.00,   70450.00)  DC
+  163.      12.48763 (88080924) AT (   5110.00,   70850.00)  DC      203.      11.34996 (88042324) AT (   4520.00,   69780.00)  DC
+  164.      12.44746 (88110624) AT (   6250.00,   71070.00)  DC      204.      11.34788 (88032324) AT (   5500.00,   70450.00)  DC
+  165.      12.38348m(88070524) AT (   4780.00,   70700.00)  DC      205.      11.34443 (88070324) AT (   6250.00,   71070.00)  DC
+  166.      12.35997 (88011724) AT (   6250.00,   71070.00)  DC      206.      11.31273m(88121024) AT (   4780.00,   70700.00)  DC
+  167.      12.35342 (88071424) AT (   5110.00,   70850.00)  DC      207.      11.28718m(88062024) AT (   5110.00,   70850.00)  DC
+  168.      12.35081 (88022024) AT (   6250.00,   71070.00)  DC      208.      11.25320 (88011724) AT (   5810.00,   70900.00)  DC
+  169.      12.31858 (88021924) AT (   3600.00,   69700.00)  DC      209.      11.24990 (88122424) AT (   5810.00,   70900.00)  DC
+  170.      12.13467 (88032524) AT (   5500.00,   70450.00)  DC      210.      11.23371 (88052224) AT (   4780.00,   70700.00)  DC
+  171.      12.09904 (88041824) AT (   5810.00,   70900.00)  DC      211.      11.23244m(88010424) AT (   4780.00,   70700.00)  DC
+  172.      12.09103 (88081224) AT (   6250.00,   71070.00)  DC      212.      11.20828 (88052324) AT (   6250.00,   71070.00)  DC
+  173.      12.01319 (88032324) AT (   5810.00,   70900.00)  DC      213.      11.17688m(88070724) AT (   4520.00,   69780.00)  DC
+  174.      12.00219 (88032924) AT (   4520.00,   69780.00)  DC      214.      11.12466 (88040224) AT (   4780.00,   70700.00)  DC
+  175.      11.99713 (88071424) AT (   5860.00,   71340.00)  DC      215.      11.11095m(88081024) AT (   4520.00,   69780.00)  DC
+  176.      11.98217 (88092024) AT (   4520.00,   69780.00)  DC      216.      11.08351 (88070824) AT (   4520.00,   69780.00)  DC
+  177.      11.95042m(88020124) AT (   4520.00,   69780.00)  DC      217.      11.07828 (88112624) AT (   6250.00,   71070.00)  DC
+  178.      11.86374m(88020124) AT (   5810.00,   70900.00)  DC      218.      11.05507 (88102424) AT (   4780.00,   70700.00)  DC
+  179.      11.85288 (88091924) AT (   3600.00,   69700.00)  DC      219.      10.95779 (88030624) AT (   3600.00,   69700.00)  DC
+  180.      11.81254 (88112724) AT (   4520.00,   69780.00)  DC      220.      10.83442 (88123124) AT (   4780.00,   70700.00)  DC
+  181.      11.81035 (88011824) AT (   3600.00,   69700.00)  DC      221.      10.83227 (88110424) AT (   4780.00,   70700.00)  DC
+  182.      11.76941 (88051224) AT (   4780.00,   70700.00)  DC      222.      10.79092 (88041824) AT (   6250.00,   71070.00)  DC
+  183.      11.72677 (88071824) AT (   4780.00,   70700.00)  DC      223.      10.75710m(88052724) AT (   5810.00,   70900.00)  DC
+  184.      11.68561 (88082824) AT (   5810.00,   70900.00)  DC      224.      10.71642 (88080324) AT (   5500.00,   70450.00)  DC
+  185.      11.67597 (88120824) AT (   4780.00,   70700.00)  DC      225.      10.65446m(88022924) AT (   4780.00,   70700.00)  DC
+  186.      11.62734 (88112724) AT (   5810.00,   70900.00)  DC      226.      10.58979 (88052224) AT (   5110.00,   70850.00)  DC
+  187.      11.62653 (88011324) AT (   5500.00,   70450.00)  DC      227.      10.58359 (88080624) AT (   6250.00,   71070.00)  DC
+  188.      11.61581m(88010424) AT (   4520.00,   69780.00)  DC      228.      10.57269 (88061924) AT (   4520.00,   69780.00)  DC
+  189.      11.57114 (88090224) AT (   4520.00,   69780.00)  DC      229.      10.50462 (88010124) AT (   5500.00,   70450.00)  DC
+  190.      11.54864 (88041824) AT (   5500.00,   70450.00)  DC      230.      10.49087 (88090224) AT (   4780.00,   70700.00)  DC
+  191.      11.54528 (88120824) AT (   5110.00,   70850.00)  DC      231.      10.47160 (88032424) AT (   5860.00,   71340.00)  DC
+  192.      11.53869m(88020124) AT (   6250.00,   71070.00)  DC      232.      10.43182 (88102824) AT (   5110.00,   70850.00)  DC
+  193.      11.51275 (88110624) AT (   5810.00,   70900.00)  DC      233.      10.41205 (88082924) AT (   6250.00,   71070.00)  DC
+  194.      11.49963 (88011124) AT (   6250.00,   71070.00)  DC      234.      10.31071 (88071624) AT (   4780.00,   70700.00)  DC
+  195.      11.49056 (88081524) AT (   4780.00,   70700.00)  DC      235.      10.29215m(88090424) AT (   3600.00,   69700.00)  DC
+  196.      11.48052m(88080224) AT (   4780.00,   70700.00)  DC      236.      10.28696 (88123124) AT (   5810.00,   70900.00)  DC
+  197.      11.46076 (88091724) AT (   5810.00,   70900.00)  DC      237.      10.28546 (88011624) AT (   4780.00,   70700.00)  DC
+  198.      11.40901 (88032424) AT (   6250.00,   71070.00)  DC      238.      10.26081 (88101824) AT (   5110.00,   70850.00)  DC
+  199.      11.38973 (88052324) AT (   5500.00,   70450.00)  DC      239.      10.24162 (88052924) AT (   4520.00,   69780.00)  DC
+  200.      11.38632 (88120824) AT (   5810.00,   70900.00)  DC      240.      10.21797 (88041724) AT (   6250.00,   71070.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  27
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  241.      10.19424 (88032924) AT (   5110.00,   70850.00)  DC      281.       9.11098 (88032924) AT (   4780.00,   70700.00)  DC
+  242.      10.17254 (88111024) AT (   5110.00,   70850.00)  DC      282.       9.10003 (88082624) AT (   5500.00,   70450.00)  DC
+  243.      10.14034 (88081124) AT (   3600.00,   69700.00)  DC      283.       9.09248 (88080524) AT (   5860.00,   71340.00)  DC
+  244.      10.06403 (88110524) AT (   4780.00,   70700.00)  DC      284.       9.08948 (88102824) AT (   6250.00,   71070.00)  DC
+  245.       9.98644 (88081124) AT (   4520.00,   69780.00)  DC      285.       9.03216 (88011124) AT (   4520.00,   69780.00)  DC
+  246.       9.92601 (88033024) AT (   5110.00,   70850.00)  DC      286.       8.98944 (88020224) AT (   4520.00,   69780.00)  DC
+  247.       9.92491 (88080324) AT (   5810.00,   70900.00)  DC      287.       8.96885 (88011524) AT (   6250.00,   71070.00)  DC
+  248.       9.92115 (88051224) AT (   3600.00,   69700.00)  DC      288.       8.96129 (88020724) AT (   6250.00,   71070.00)  DC
+  249.       9.88338 (88082624) AT (   5810.00,   70900.00)  DC      289.       8.94614 (88040424) AT (   6250.00,   71070.00)  DC
+  250.       9.83687 (88022324) AT (   6250.00,   71070.00)  DC      290.       8.94429 (88112624) AT (   4780.00,   70700.00)  DC
+  251.       9.82181 (88101524) AT (   5110.00,   70850.00)  DC      291.       8.91763 (88082724) AT (   5110.00,   70850.00)  DC
+  252.       9.80156 (88072124) AT (   5810.00,   70900.00)  DC      292.       8.90298 (88072424) AT (   5110.00,   70850.00)  DC
+  253.       9.79266 (88071624) AT (   5110.00,   70850.00)  DC      293.       8.87014 (88110624) AT (   5500.00,   70450.00)  DC
+  254.       9.79085m(88080224) AT (   3600.00,   69700.00)  DC      294.       8.86421 (88080924) AT (   5500.00,   70450.00)  DC
+  255.       9.78426 (88123124) AT (   6250.00,   71070.00)  DC      295.       8.85222 (88112624) AT (   4520.00,   69780.00)  DC
+  256.       9.77423m(88062024) AT (   5810.00,   70900.00)  DC      296.       8.84621 (88051324) AT (   5500.00,   70450.00)  DC
+  257.       9.72796 (88032624) AT (   3600.00,   69700.00)  DC      297.       8.83787 (88082824) AT (   5500.00,   70450.00)  DC
+  258.       9.70474 (88041424) AT (   5110.00,   70850.00)  DC      298.       8.79586 (88033024) AT (   3600.00,   69700.00)  DC
+  259.       9.70071 (88091924) AT (   4780.00,   70700.00)  DC      299.       8.78764 (88122724) AT (   6250.00,   71070.00)  DC
+  260.       9.69205 (88082024) AT (   4520.00,   69780.00)  DC      300.       8.75722 (88012024) AT (   3600.00,   69700.00)  DC
+  261.       9.68318 (88071424) AT (   6930.00,   71300.00)  DC      301.       8.74807 (88061924) AT (   4780.00,   70700.00)  DC
+  262.       9.65144 (88053024) AT (   4780.00,   70700.00)  DC      302.       8.74445 (88082924) AT (   4780.00,   70700.00)  DC
+  263.       9.60909m(88051624) AT (   5110.00,   70850.00)  DC      303.       8.70200 (88123124) AT (   5500.00,   70450.00)  DC
+  264.       9.59173 (88040124) AT (   5110.00,   70850.00)  DC      304.       8.70084 (88061624) AT (   4780.00,   70700.00)  DC
+  265.       9.54482 (88102824) AT (   4780.00,   70700.00)  DC      305.       8.66771 (88112624) AT (   3600.00,   69700.00)  DC
+  266.       9.52658 (88122424) AT (   5500.00,   70450.00)  DC      306.       8.64090 (88080924) AT (   3600.00,   69700.00)  DC
+  267.       9.52424 (88061924) AT (   3600.00,   69700.00)  DC      307.       8.63237 (88082624) AT (   4520.00,   69780.00)  DC
+  268.       9.44811 (88090824) AT (   4520.00,   69780.00)  DC      308.       8.62430 (88071424) AT (   4780.00,   70700.00)  DC
+  269.       9.44129 (88052824) AT (   4520.00,   69780.00)  DC      309.       8.60969 (88110424) AT (   3600.00,   69700.00)  DC
+  270.       9.43980 (88111024) AT (   4780.00,   70700.00)  DC      310.       8.57819 (88120324) AT (   6250.00,   71070.00)  DC
+  271.       9.43312 (88011224) AT (   5810.00,   70900.00)  DC      311.       8.54377m(88062024) AT (   6250.00,   71070.00)  DC
+  272.       9.42908 (88122424) AT (   5110.00,   70850.00)  DC      312.       8.52347 (88032524) AT (   6250.00,   71070.00)  DC
+  273.       9.41984m(88070724) AT (   5500.00,   70450.00)  DC      313.       8.50981 (88081424) AT (   5860.00,   71340.00)  DC
+  274.       9.38377m(88051624) AT (   4780.00,   70700.00)  DC      314.       8.47480 (88011824) AT (   4780.00,   70700.00)  DC
+  275.       9.35009 (88071824) AT (   4520.00,   69780.00)  DC      315.       8.46982 (88071224) AT (   6250.00,   71070.00)  DC
+  276.       9.33262 (88090224) AT (   5110.00,   70850.00)  DC      316.       8.46307 (88021924) AT (   5110.00,   70850.00)  DC
+  277.       9.24307m(88052724) AT (   5110.00,   70850.00)  DC      317.       8.46188 (88120324) AT (   5110.00,   70850.00)  DC
+  278.       9.14705 (88061924) AT (   5110.00,   70850.00)  DC      318.       8.45944 (88081324) AT (   3600.00,   69700.00)  DC
+  279.       9.14581 (88011324) AT (   5110.00,   70850.00)  DC      319.       8.45784 (88122524) AT (   5810.00,   70900.00)  DC
+  280.       9.14450 (88040624) AT (   3600.00,   69700.00)  DC      320.       8.41646 (88022024) AT (   5810.00,   70900.00)  DC
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  28
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                              *** THE MAXIMUM  400  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STK4N5      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  321.       8.40968 (88122524) AT (   5110.00,   70850.00)  DC      361.       7.73814 (88110424) AT (   5110.00,   70850.00)  DC
+  322.       8.40523 (88112624) AT (   5110.00,   70850.00)  DC      362.       7.73560m(88090424) AT (   4780.00,   70700.00)  DC
+  323.       8.37848m(88070724) AT (   5810.00,   70900.00)  DC      363.       7.71473 (88031824) AT (   6250.00,   71070.00)  DC
+  324.       8.35838 (88052024) AT (   3600.00,   69700.00)  DC      364.       7.68593 (88011524) AT (   4780.00,   70700.00)  DC
+  325.       8.32585 (88082524) AT (   5110.00,   70850.00)  DC      365.       7.67809 (88011624) AT (   3600.00,   69700.00)  DC
+  326.       8.32509 (88013124) AT (   6250.00,   71070.00)  DC      366.       7.67496 (88071324) AT (   5810.00,   70900.00)  DC
+  327.       8.28137 (88091924) AT (   5110.00,   70850.00)  DC      367.       7.66167 (88090324) AT (   6250.00,   71070.00)  DC
+  328.       8.26998 (88040224) AT (   4520.00,   69780.00)  DC      368.       7.65744 (88041224) AT (   4780.00,   70700.00)  DC
+  329.       8.26103 (88082624) AT (   6250.00,   71070.00)  DC      369.       7.62404 (88020224) AT (   6250.00,   71070.00)  DC
+  330.       8.25694 (88041424) AT (   3600.00,   69700.00)  DC      370.       7.61982 (88082324) AT (   3600.00,   69700.00)  DC
+  331.       8.25089 (88071424) AT (   4520.00,   69780.00)  DC      371.       7.61353 (88041824) AT (   5110.00,   70850.00)  DC
+  332.       8.24241 (88112824) AT (   5810.00,   70900.00)  DC      372.       7.60664 (88011124) AT (   5810.00,   70900.00)  DC
+  333.       8.23498m(88121524) AT (   3600.00,   69700.00)  DC      373.       7.58342 (88080524) AT (   4780.00,   70700.00)  DC
+  334.       8.22884 (88101524) AT (   4780.00,   70700.00)  DC      374.       7.55141m(88090424) AT (   4520.00,   69780.00)  DC
+  335.       8.21464 (88020224) AT (   5110.00,   70850.00)  DC      375.       7.52528 (88020224) AT (   4780.00,   70700.00)  DC
+  336.       8.21336 (88112724) AT (   3600.00,   69700.00)  DC      376.       7.52459 (88082924) AT (   5110.00,   70850.00)  DC
+  337.       8.19227 (88122524) AT (   6250.00,   71070.00)  DC      377.       7.51414m(88080224) AT (   5110.00,   70850.00)  DC
+  338.       8.19176 (88091724) AT (   5500.00,   70450.00)  DC      378.       7.50222 (88021424) AT (   6250.00,   71070.00)  DC
+  339.       8.18526 (88011624) AT (   4520.00,   69780.00)  DC      379.       7.49566m(88022924) AT (   5860.00,   71340.00)  DC
+  340.       8.18049 (88032524) AT (   5810.00,   70900.00)  DC      380.       7.47790 (88081524) AT (   4520.00,   69780.00)  DC
+  341.       8.17476m(88092824) AT (   5110.00,   70850.00)  DC      381.       7.46244 (88052024) AT (   4780.00,   70700.00)  DC
+  342.       8.17373 (88080324) AT (   4520.00,   69780.00)  DC      382.       7.44595 (88081124) AT (   4780.00,   70700.00)  DC
+  343.       8.17318 (88021924) AT (   4780.00,   70700.00)  DC      383.       7.44395 (88021524) AT (   5500.00,   70450.00)  DC
+  344.       8.13445 (88080924) AT (   4520.00,   69780.00)  DC      384.       7.40501 (88020824) AT (   6250.00,   71070.00)  DC
+  345.       8.12012m(88062024) AT (   5500.00,   70450.00)  DC      385.       7.40120 (88061524) AT (   4520.00,   69780.00)  DC
+  346.       8.10966 (88061624) AT (   4520.00,   69780.00)  DC      386.       7.40098 (88081224) AT (   5110.00,   70850.00)  DC
+  347.       8.03965 (88080924) AT (   5810.00,   70900.00)  DC      387.       7.36312 (88071024) AT (   4780.00,   70700.00)  DC
+  348.       7.99553 (88101524) AT (   6250.00,   71070.00)  DC      388.       7.34855 (88012024) AT (   4520.00,   69780.00)  DC
+  349.       7.99320 (88090224) AT (   3600.00,   69700.00)  DC      389.       7.34757 (88071624) AT (   3600.00,   69700.00)  DC
+  350.       7.96214 (88061624) AT (   5110.00,   70850.00)  DC      390.       7.34447 (88040224) AT (   5110.00,   70850.00)  DC
+  351.       7.95202 (88092324) AT (   6250.00,   71070.00)  DC      391.       7.33849 (88050824) AT (   5810.00,   70900.00)  DC
+  352.       7.92680 (88080324) AT (   6250.00,   71070.00)  DC      392.       7.30638 (88052124) AT (   4780.00,   70700.00)  DC
+  353.       7.89368 (88033024) AT (   4780.00,   70700.00)  DC      393.       7.27574 (88071624) AT (   5500.00,   70450.00)  DC
+  354.       7.88876 (88032424) AT (   3600.00,   69700.00)  DC      394.       7.27536 (88071024) AT (   6250.00,   71070.00)  DC
+  355.       7.88314 (88052124) AT (   7870.00,   69130.00)  DC      395.       7.25457 (88080524) AT (   6930.00,   71300.00)  DC
+  356.       7.87233 (88082524) AT (   5810.00,   70900.00)  DC      396.       7.24827 (88101024) AT (   5500.00,   70450.00)  DC
+  357.       7.84620m(88010424) AT (   5110.00,   70850.00)  DC      397.       7.24650 (88071024) AT (   5110.00,   70850.00)  DC
+  358.       7.84356 (88020924) AT (   5110.00,   70850.00)  DC      398.       7.21844 (88082424) AT (   3500.00,   67750.00)  DC
+  359.       7.80694 (88062424) AT (   5110.00,   70850.00)  DC      399.       7.19516 (88120924) AT (   4780.00,   70700.00)  DC
+  360.       7.79312m(88051624) AT (   4520.00,   69780.00)  DC      400.       7.19033 (88072124) AT (   6930.00,   71300.00)  DC
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  29
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (  8784 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS       4.28199 AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+          2ND HIGHEST VALUE IS       4.22242 AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+          3RD HIGHEST VALUE IS       4.12253 AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+          4TH HIGHEST VALUE IS       3.49257 AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+          5TH HIGHEST VALUE IS       2.92850 AT (    5810.00,    70900.00,   253.17,   323.10,    0.00)  DC          
+          6TH HIGHEST VALUE IS       2.45778 AT (    5500.00,    70450.00,   234.88,   329.78,    0.00)  DC          
+          7TH HIGHEST VALUE IS       2.26281 AT (    3600.00,    69700.00,   319.31,   330.67,    0.00)  DC          
+          8TH HIGHEST VALUE IS       1.13645 AT (    5860.00,    71340.00,   160.97,   340.96,    0.00)  DC          
+          9TH HIGHEST VALUE IS       0.99010 AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+         10TH HIGHEST VALUE IS       0.76692 AT (    3500.00,    67750.00,   237.48,   239.26,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  30
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     293.02376  ON 88020124: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS     264.40593  ON 88011708: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  31
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     179.48461  ON 88081412: AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS     166.11889  ON 88041421: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  32
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      51.35891  ON 88011724: AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      44.84223  ON 88011724: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:22
+                                                                                                                       PAGE  33
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of           20 Warning Message(s)
+ A Total of          187 Informational Message(s)
+
+ A Total of         8784 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of          187 Missing Hours Identified (  2.13 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361       9       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ CO W362       9       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
+ CO W362       9       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+ MX W479     184       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.539
+ MX W479     185       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.556
+ MX W479     186       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.593
+ MX W479     187       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.552
+ MX W479     188       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.509
+ MX W479     594       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.506
+ MX W479     597       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.537
+ MX W479    1016       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.602
+ MX W479    1017       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.652
+ MX W479    1031       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.576
+ MX W479    1032       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.962
+ MX W479    1033       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.697
+ MX W479    2837       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.552
+ MX W479    4963       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.577
+ MX W479    5275       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.636
+ MX W479    5803       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.555
+ MX W479    7797       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.537
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

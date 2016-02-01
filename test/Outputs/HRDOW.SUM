@@ -1,0 +1,419 @@
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  OTHER   
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates ANNUAL Averages
+  
+ **This Run Includes:      6 Source(s);       6 Source Group(s); and     108 Receptor(s)
+
+                with:      6 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Values by Season and Hour-of-Day (SEASONHR Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+          NOTE: Option for EXPonential format used in formatted output result files (FILEFORM Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      4.2 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  hrdow_evt.inp                                                                                   
+ **File for Summary of Results:   HRDOW.SUM                                                                                       
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   houston.sfc                                                                        Met Version:  14134
+   Profile file:   houston.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:   722430                  Upper air station no.:     3937
+                  Name: HOUSTON                                    Name: LAKE_CHARLES                            
+                  Year:   1996                                     Year:   1996
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 96 01 01   1 01 -999.0 -9.000 -9.000 -9.000 -999. -999. -99999.0  0.15   0.70   1.00    0.00    0.    6.1  287.5    2.0
+ 96 01 01   1 02  -11.0  0.202 -9.000 -9.000 -999.  217.     66.2  0.15   0.70   1.00    2.10   28.    6.1  287.5    2.0
+ 96 01 01   1 03  -11.0  0.202 -9.000 -9.000 -999.  217.     66.2  0.15   0.70   1.00    2.10   44.    6.1  287.5    2.0
+ 96 01 01   1 04  -17.4  0.319 -9.000 -9.000 -999.  432.    165.9  0.15   0.70   1.00    3.10   73.    6.1  288.1    2.0
+ 96 01 01   1 05  -14.2  0.261 -9.000 -9.000 -999.  322.    111.5  0.15   0.70   1.00    2.60   83.    6.1  288.1    2.0
+ 96 01 01   1 06  -17.3  0.319 -9.000 -9.000 -999.  432.    165.9  0.15   0.70   1.00    3.10   82.    6.1  288.1    2.0
+ 96 01 01   1 07  -14.2  0.261 -9.000 -9.000 -999.  322.    111.8  0.15   0.70   1.00    2.60   85.    6.1  288.8    2.0
+ 96 01 01   1 08  -20.0  0.375 -9.000 -9.000 -999.  552.    234.6  0.15   0.70   0.74    3.60   83.    6.1  289.2    2.0
+ 96 01 01   1 09    0.7  0.389  0.071  0.005   18.  582.  -7501.7  0.15   0.70   0.41    3.60   97.    6.1  290.4    2.0
+ 96 01 01   1 10   11.9 -9.000 -9.000 -9.000   64. -999. -99999.0  0.15   0.70   0.31    0.00    0.    6.1  292.0    2.0
+ 96 01 01   1 11   20.4  0.345  0.391  0.005  103.  487.   -178.7  0.15   0.70   0.28    3.10  194.    6.1  293.1    2.0
+ 96 01 01   1 12   25.8  0.348  0.465  0.005  138.  492.   -144.7  0.15   0.70   0.27    3.10  226.    6.1  294.2    2.0
+ 96 01 01   1 13   27.5  0.620  0.506  0.005  167. 1172.   -771.0  0.15   0.70   0.26    5.70  273.    6.1  294.9    2.0
+ 96 01 01   1 14   25.6  0.620  0.517  0.005  190. 1172.   -824.2  0.15   0.70   0.27    5.70  349.    6.1  295.4    2.0
+ 96 01 01   1 15   41.4  0.676  0.678  0.005  267. 1330.   -659.9  0.15   0.70   0.28    6.20   12.    6.1  293.8    2.0
+ 96 01 01   1 16   10.4  0.617  0.442  0.005  295. 1170.  -2008.8  0.15   0.70   0.32    5.70  354.    6.1  292.5    2.0
+ 96 01 01   1 17   -9.6  0.949 -9.000 -9.000 -999. 2216.   7932.6  0.15   0.70   0.45    8.80   11.    6.1  290.4    2.0
+ 96 01 01   1 18  -42.3  0.771 -9.000 -9.000 -999. 1672.    962.1  0.15   0.70   1.00    7.20  347.    6.1  285.9    2.0
+ 96 01 01   1 19  -45.6  0.825 -9.000 -9.000 -999. 1795.   1098.4  0.15   0.70   1.00    7.70  324.    6.1  284.9    2.0
+ 96 01 01   1 20  -42.7  0.771 -9.000 -9.000 -999. 1631.    954.6  0.15   0.70   1.00    7.20  327.    6.1  283.8    2.0
+ 96 01 01   1 21  -42.9  0.771 -9.000 -9.000 -999. 1624.    950.5  0.15   0.70   1.00    7.20  320.    6.1  282.5    2.0
+ 96 01 01   1 22  -55.8  0.999 -9.000 -9.000 -999. 2386.   1594.0  0.15   0.70   1.00    9.30  302.    6.1  282.0    2.0
+ 96 01 01   1 23  -43.2  0.771 -9.000 -9.000 -999. 1698.    946.7  0.15   0.70   1.00    7.20  310.    6.1  281.4    2.0
+ 96 01 01   1 24  -37.3  0.661 -9.000 -9.000 -999. 1316.    693.6  0.15   0.70   1.00    6.20  310.    6.1  279.9    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 96 01 01 01    6.1 1 -999.  -99.00   287.6   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK1    1ST HIGHEST VALUE IS      12.71704 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.32253 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.92700 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.49950 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.88644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.53032 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       6.15020 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.05491 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.82353 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.45217 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK2    1ST HIGHEST VALUE IS      12.40798 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.14523 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.91529 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.16462 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.98644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.68675 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       5.89674 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.23772 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.55404 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.27782 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK3    1ST HIGHEST VALUE IS      12.40798 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.14523 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.91529 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.16462 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.98644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.68675 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       5.89674 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.23772 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.55404 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.27782 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK4    1ST HIGHEST VALUE IS      12.71704 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.32253 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.92700 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.49950 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.88644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.53032 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       6.15020 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.05491 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.82353 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.45217 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK5    1ST HIGHEST VALUE IS      12.40798 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.14523 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.91529 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.16462 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.98644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.68675 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       5.89674 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.23772 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.55404 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.27782 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK6    1ST HIGHEST VALUE IS      12.40798 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      12.14523 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       9.91529 AT (    -642.79,      766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       9.16462 AT (    -173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       8.98644 AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       7.68675 AT (    -866.03,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       5.89674 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       5.23772 AT (    -939.69,      342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.55404 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       4.27782 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     571.49783  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     562.39208  ON 96122220: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     609.59769  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     598.59442  ON 96112407: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     609.59769  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     598.59442  ON 96112407: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     571.49783  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     562.39208  ON 96122220: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK5   HIGH   1ST HIGH VALUE IS     609.59769  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     598.59442  ON 96112407: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK6   HIGH   1ST HIGH VALUE IS     609.59769  ON 96102705: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     598.59442  ON 96112407: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     515.79428  ON 96052603: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     495.77127  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     545.26365  ON 96112406: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     484.75413  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     545.26365  ON 96112406: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     484.75413  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     515.79428  ON 96052603: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     495.77127  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK5   HIGH   1ST HIGH VALUE IS     545.26365  ON 96112406: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     484.75413  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK6   HIGH   1ST HIGH VALUE IS     545.26365  ON 96112406: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     484.75413  ON 96042121: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     406.24541  ON 96042808: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     370.90547  ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     406.57187  ON 96112408: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     365.90680  ON 96112408: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     406.57187  ON 96112408: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     365.90680  ON 96112408: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     406.24541  ON 96042808: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     370.90547  ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK5   HIGH   1ST HIGH VALUE IS     406.57187  ON 96112408: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     365.90680  ON 96112408: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK6   HIGH   1ST HIGH VALUE IS     406.57187  ON 96112408: AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     365.90680  ON 96112408: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     239.86397c ON 96021824: AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     228.41614  ON 96042824: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     237.86167  ON 96102724: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     217.40695m ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     237.86167  ON 96102724: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     217.40695m ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     239.86397c ON 96021824: AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     228.41614  ON 96042824: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK5   HIGH   1ST HIGH VALUE IS     237.86167  ON 96102724: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     217.40695m ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK6   HIGH   1ST HIGH VALUE IS     237.86167  ON 96102724: AT (    -766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     217.40695m ON 96122224: AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for EMISFACT options including day-of-week                ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7                      ***        14:54:07
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of         1981 Informational Message(s)
+
+ A Total of         8784 Hours Were Processed
+
+ A Total of         1587 Calm Hours Identified
+
+ A Total of          394 Missing Hours Identified (  4.49 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  

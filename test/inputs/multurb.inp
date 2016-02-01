@@ -1,0 +1,42 @@
+** To run the example, copy the MULTURB.INP file to AERMOD.INP and type:                                                                                                        
+**                                                                                                                                  
+**    AERMOD
+**                                                                                                                                  
+** The results for this example problem are provided in file AERMOD.OUT.
+                                                                                                                                    
+CO STARTING                                                                                                                         
+   TITLEONE  Example Problem for the AERMOD Model with multiple urban areas
+   MODELOPT  CONC   FLAT
+   AVERTIME  1  3  8  24  PERIOD                                                                                                          
+   POLLUTID  SO2
+   URBANOPT  URBAREA1  2.5E6   Somewhere_in_USA  1.0
+   URBANOPT  URBAREA2  1.5E6   Somewhere_else_in_USA  1.0
+   URBANOPT  URBAREA3  0.5E6   Somewhere_else_still_in_USA  1.0
+   URBANOPT  URBAREA4  0.25E6  Somewhere_else_still_in_the_USA  1.0
+   RUNORNOT  RUN
+   EVENTFIL  multurb_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING
+SO INCLUDED multurb_sources.dat
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+RE INCLUDED multurb_gridpolr.dat
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+   SURFFILE  aermet2.sfc
+   PROFFILE  aermet2.pfl
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY                                                                                                 
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND                                                                                                   
+   MAXTABLE  ALLAVE  50
+   SUMMFILE  MULTURB.SUM
+OU FINISHED

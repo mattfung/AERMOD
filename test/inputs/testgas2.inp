@@ -1,0 +1,60 @@
+CO STARTING                                                                                                                         
+   TITLEONE  Test case for gaseous deposition based on Wesely, et. al. (2001)
+   TITLETWO  Gas deposition inputs are from App. C and App. D for Benzene
+**           With modifications for wet deposition per Chris Walcek
+   MODELOPT  CONC  DDEP   WDEP  FLAT
+   AVERTIME  1  3  8  24  MONTH  ANNUAL
+   POLLUTID  BENZENE
+   RUNORNOT  RUN                                                                                                                    
+   ERRORFIL  ERRORS.OUT
+   EVENTFIL  testgas2_evt.inp
+** Define Wesely Seasonal Categories for Each Calendar Month
+   GDSEASON  3  3  5  1  1  1  1  1  1  2  3  3
+** Define uniform land use category 4
+   GDLANUSE  36*4
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING                                                                                                                         
+   LOCATION  STACK1  POINT  0.0   0.0   0.0                                                                                         
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK1  100.0   35.   432.  11.7  2.4
+
+** Define source inputs for gas deposition (from App. C and D for Benzene):
+**           SrcID   Da (cm^2/s)  Dw (cm^2/s)  RcLipid (s/cm)  Henry (Pa-m^3/mol)
+   GASDEPOS  STACK1  0.08962      1.04E-5      2.51E4          557.0
+
+** Specify output units for deposition flux (MICROGRAMS/M**2)
+   DEPOUNIT  3.6E9   GRAM/SEC  MICROGRAMS/M**2
+   SRCGROUP  ALL                                                                                                                    
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+** Polar receptor grid with 7 rings from 100m to 20,000m
+   GRIDPOLR  POL1  STA
+   GRIDPOLR  POL1  ORIG  0.0  0.0
+   GRIDPOLR  POL1  DIST  100.  200. 500. 1000. 5000. 10000. 20000.
+   GRIDPOLR  POL1  GDIR   36   10.  10.
+   GRIDPOLR  POL1  END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+** Note that HOUSTON.SFC file includes a full year of data for Houston, TX
+   SURFFILE  houston.sfc
+   PROFFILE  houston.pfl
+   SURFDATA  722430  1996  HOUSTON
+   UAIRDATA  3937    1996  LAKE_CHARLES
+   PROFBASE  0.0
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SIXTH
+   MAXTABLE  ALLAVE  100
+   PLOTFILE   1      ALL  FIRST  GAS2_01H.PLT
+   PLOTFILE   3      ALL  FIRST  GAS2_03H.PLT
+   PLOTFILE   8      ALL  FIRST  GAS2_08H.PLT
+   PLOTFILE  24      ALL  FIRST  GAS2_24H.PLT
+   PLOTFILE  MONTH   ALL  FIRST  GAS2_MON.PLT
+   PLOTFILE  ANNUAL  ALL  GAS2ANN.PLT
+   SUMMFILE  TESTGAS2.SUM
+OU FINISHED

@@ -1,0 +1,510 @@
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+         6. Option for Capped & Horiz Stacks Selected With:
+  
+                 2 Capped Stack(s); and      2 Horizontal Stack(s)
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+
+ **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
+         User has specified non-standard averaging periods:    3-HR   8-HR  24-HR         
+         High ranked 1-hour values are NOT averaged across the number of years modeled, and
+         complete years of data are NOT required.
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      9 Source(s);       9 Source Group(s); and     288 Receptor(s)
+
+                with:      9 POINT(s), including
+                           2 POINTCAP(s) and      2 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      4.0 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  capped_evt.inp                                                                                  
+ **File for Summary of Results:   CAPPED.SUM                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   aermet2.sfc                                                                        Met Version:  14134
+   Profile file:   aermet2.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14735                  Upper air station no.:    14735
+                  Name: ALBANY,NY                                  Name: ALBANY,NY                               
+                  Year:   1988                                     Year:   1988
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 88 03 01  61 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+ 88 03 01  61 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+ 88 03 01  61 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+ 88 03 01  61 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+ 88 03 01  61 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+ 88 03 01  61 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+ 88 03 01  61 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+ 88 03 01  61 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+ 88 03 01  61 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+ 88 03 01  61 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+ 88 03 01  61 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ 88 03 01  61 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ 88 03 01  61 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ 88 03 01  61 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ 88 03 01  61 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ 88 03 01  61 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ 88 03 01  61 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+ 88 03 01  61 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+ 88 03 01  61 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+ 88 03 01  61 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+ 88 03 01  61 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+ 88 03 01  61 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+ 88 03 01  61 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+ 88 03 01  61 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 88 03 01 01   10.0 0  318.    0.80   273.8   48.7    0.11    0.48
+ 88 03 01 01   50.0 0  323.    2.00   275.0   14.7  -99.00    0.50
+ 88 03 01 01  100.0 1  320.    3.70   274.8    9.1    0.41    0.58
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK1    1ST HIGHEST VALUE IS      24.85172 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      23.13772 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      22.21264 AT (     606.22,     -350.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      21.03526 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      20.52365 AT (     657.78,     -239.41,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      19.33505 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      17.19043 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      16.86864 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      15.94426 AT (     536.23,     -449.95,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      15.01122 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK1C   1ST HIGHEST VALUE IS      35.61033 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      33.23426 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      31.83687 AT (     606.22,     -350.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      29.86562 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      29.80496 AT (     657.78,     -239.41,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      27.37469 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      24.81257 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      24.53790 AT (     -38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      24.22809 AT (     -32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      23.54134 AT (     -43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK1H   1ST HIGHEST VALUE IS     103.74646 AT (     -38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     102.31422 AT (     -32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      99.87050 AT (     -43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      95.14595 AT (     -25.00,      -43.30,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      92.56927 AT (     -46.98,      -17.10,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      83.89815 AT (     -49.24,       -8.68,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      82.95544 AT (     -17.10,      -46.98,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      76.34124 AT (     -50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      75.55752 AT (     -50.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      75.13022 AT (     -64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK1C0  1ST HIGHEST VALUE IS    8483.11241 AT (     -38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS    8370.78049 AT (     -43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS    8264.13099 AT (     -32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS    8001.08952 AT (     -46.98,      -17.10,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS    7714.52657 AT (     -25.00,      -43.30,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS    7483.02286 AT (     -49.24,       -8.68,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS    6914.92607 AT (     -50.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS    6894.78676 AT (     -17.10,      -46.98,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS    6355.90965 AT (     -49.24,        8.68,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    5939.95276 AT (      -8.68,      -49.24,     0.00,     0.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK2    1ST HIGHEST VALUE IS     169.92323 AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     156.14738 AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     148.56066 AT (     134.06,     -112.49,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     138.92194 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     129.65647 AT (     268.12,     -224.98,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     123.41425 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     113.29873 AT (     172.34,      -30.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     106.95033 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     104.50137 AT (     112.49,     -134.06,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     103.64048 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK2C   1ST HIGHEST VALUE IS     251.10232 AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     232.27011 AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     228.90340 AT (      86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     227.45435 AT (     134.06,     -112.49,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     210.73941 AT (      93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     195.66022 AT (      76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     178.41867 AT (     172.34,      -30.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     173.30947 AT (     112.49,     -134.06,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     166.05111 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     158.31315 AT (     268.12,     -224.98,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK2H   1ST HIGHEST VALUE IS     169.71558 AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     155.29922 AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     147.70445 AT (     134.06,     -112.49,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     140.51784 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     131.17106 AT (     268.12,     -224.98,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     124.81637 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     111.89136 AT (     172.34,      -30.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     107.74837 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     104.76796 AT (     112.49,     -134.06,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     104.40555 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK2C0  1ST HIGHEST VALUE IS   10491.25369 AT (     -17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS   10351.18170 AT (     -34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS    9903.65169 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS    9195.23610 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS    9180.31314 AT (      76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS    9106.03683 AT (     -50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS    8852.61591 AT (      86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS    8648.23970 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS    8545.62484 AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    8376.68510 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK2CE  1ST HIGHEST VALUE IS    1952.36143 AT (      38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS    1907.82245 AT (      43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS    1903.19173 AT (      32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS    1814.12296 AT (      25.00,      -43.30,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS    1802.65869 AT (      46.98,      -17.10,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS    1721.44238 AT (      17.10,      -46.98,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS    1667.05695 AT (      49.24,       -8.68,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS    1605.33312 AT (       8.68,      -49.24,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS    1493.87299 AT (      50.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    1473.67660 AT (       0.00,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C  HIGH   1ST HIGH VALUE IS    1015.23342  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     405.48659  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1H  HIGH   1ST HIGH VALUE IS    1660.95729  ON 88030217: AT (     -32.14,       38.30,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     916.24958  ON 88030311: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C0 HIGH   1ST HIGH VALUE IS   39733.31749  ON 88030220: AT (     -76.60,       64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   33090.48068  ON 88030212: AT (     -76.60,       64.28,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS    5029.47880  ON 88030111: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    1627.98633  ON 88030110: AT (     134.06,     -112.49,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C  HIGH   1ST HIGH VALUE IS    8853.68498  ON 88030111: AT (      86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    2654.62477  ON 88030114: AT (     172.34,      -30.39,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2H  HIGH   1ST HIGH VALUE IS    4398.63907  ON 88030111: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    1739.73021  ON 88030114: AT (     172.34,      -30.39,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C0 HIGH   1ST HIGH VALUE IS  123570.97644  ON 88030201: AT (      76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS  102924.36002  ON 88030409: AT (     -34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2CE HIGH   1ST HIGH VALUE IS   20952.78222  ON 88030113: AT (      38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   19711.09525  ON 88030111: AT (      43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C  HIGH   1ST HIGH VALUE IS     450.25406  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     351.49977  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1H  HIGH   1ST HIGH VALUE IS     788.73752  ON 88030218: AT (     -32.14,       38.30,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     546.96436  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C0 HIGH   1ST HIGH VALUE IS   26810.62075  ON 88030212: AT (     -93.97,       34.20,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   24570.93911  ON 88030324: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS    2429.40293  ON 88030112: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    1386.25983  ON 88030115: AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C  HIGH   1ST HIGH VALUE IS    3828.37129  ON 88030112: AT (      86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    2233.09073  ON 88030115: AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2H  HIGH   1ST HIGH VALUE IS    2260.37267  ON 88030112: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    1478.66540  ON 88030115: AT (     164.45,      -59.85,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C0 HIGH   1ST HIGH VALUE IS   58560.31539  ON 88030215: AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   46998.54480  ON 88030409: AT (     -17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2CE HIGH   1ST HIGH VALUE IS   18656.38262  ON 88030115: AT (      43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   14480.65386  ON 88030112: AT (      38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     264.11465  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      30.24001  ON 88030316: AT (     606.22,     -350.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C  HIGH   1ST HIGH VALUE IS     338.72013  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      89.84991  ON 88030316: AT (     657.78,     -239.41,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1H  HIGH   1ST HIGH VALUE IS     418.11885  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     335.05998  ON 88030416: AT (     -32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C0 HIGH   1ST HIGH VALUE IS   23343.81367  ON 88030408: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   18098.48410  ON 88030324: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS    1679.96940  ON 88030116: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     293.47445  ON 88030316: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C  HIGH   1ST HIGH VALUE IS    2432.51831  ON 88030116: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     364.66292  ON 88030316: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2H  HIGH   1ST HIGH VALUE IS    1667.59114  ON 88030116: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     299.44815  ON 88030316: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C0 HIGH   1ST HIGH VALUE IS   53617.58400  ON 88030416: AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   28634.66902  ON 88030116: AT (      43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2CE HIGH   1ST HIGH VALUE IS   15671.13033  ON 88030116: AT (      43.30,      -25.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    5240.56462  ON 88030216: AT (      17.10,       46.98,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS      88.89511  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      10.65730  ON 88030324: AT (     606.22,     -350.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C  HIGH   1ST HIGH VALUE IS     114.67106  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      30.49884  ON 88030324: AT (     657.78,     -239.41,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1H  HIGH   1ST HIGH VALUE IS     308.22645  ON 88030424: AT (     -32.14,      -38.30,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     104.56704  ON 88030324: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK1C0 HIGH   1ST HIGH VALUE IS   15160.21762  ON 88030424: AT (     -38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    8627.91861  ON 88030224: AT (     -50.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     579.36764  ON 88030124: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     114.82376  ON 88030324: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C  HIGH   1ST HIGH VALUE IS     850.96142  ON 88030124: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     144.16178  ON 88030324: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2H  HIGH   1ST HIGH VALUE IS     575.37813  ON 88030124: AT (     151.55,      -87.50,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     116.81295  ON 88030324: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2C0 HIGH   1ST HIGH VALUE IS   26873.83998  ON 88030424: AT (     -17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS   11127.07166  ON 88030424: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2CE HIGH   1ST HIGH VALUE IS    6077.42715  ON 88030124: AT (      38.30,      -32.14,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    2181.76989  ON 88030424: AT (      -8.68,      -49.24,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Cases with and without downwash using BETA options                  ***        14:52:28
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      BETA      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            5 Warning Message(s)
+ A Total of            0 Informational Message(s)
+
+ A Total of           96 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of            0 Missing Hours Identified (  0.00 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      16       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ CO W362      16       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
+ CO W362      16       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     8-hr Ave
+ CO W362      16       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+ SO W320     178        PPARM: Input Parameter May Be Out-of-Range for Parameter            DS

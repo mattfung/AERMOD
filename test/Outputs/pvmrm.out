@@ -1,0 +1,631 @@
+CO STARTING
+   TITLEONE AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM
+   MODELOPT CONC  FLAT  PVMRM  BETA
+   AVERTIME 1  Annual
+   POLLUTID NO2
+   OZONEVAL 40.  PPB
+   OZONEFIL ozone.dat  ppb  (i2,3i3,f9.3)
+   NO2STACK 0.10
+   EVENTFIL pvmrm_evt.inp
+   RUNORNOT RUN
+CO FINISHED
+ 
+SO STARTING
+   LOCATION STACK1 POINT 0.000 0.000 0.000
+   SRCPARAM STACK1 50.0  35.  432.  11.7  2.4
+ 
+SO SRCGROUP ALL
+SO FINISHED
+ 
+RE STARTING
+   GRIDPOLR POL1 STA
+            POL1 ORIG  STACK1
+            POL1 DIST   100.   300.  1000.   3000.
+            POL1 GDIR    36     10.    10.
+   GRIDPOLR POL1 END
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE anch-99.sfc
+   PROFFILE anch-99.pfl
+   SURFDATA 26451 1999 Anchorage,AK
+   UAIRDATA 26409 1999 Anchorage,AK
+   PROFBASE 35.0
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE ALLAVE FIRST SECOND
+   MAXTABLE ALLAVE 100
+   MAXIFILE 1 ALL 1.0 pvmrm_maxifile.dat
+   SUMMFILE PVMRM.SUM
+OU FINISHED
+
+
+  *** Message Summary For AERMOD Model Setup ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            1 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      11       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+         6. Plume Volume Molar Ratio Method (PVMRM) Used for NO2 Conversion
+            with an Equilibrium NO2/NOx Ratio of  0.900
+            and with a Default In-stack Ratio of  0.100
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  NO2     
+
+ **Note that special processing requirements apply for the 1-hour NO2 NAAQS - check available guidance.
+   Model will process user-specified ranks of daily maximum 1-hour values averaged across the number of years modeled.
+   For annual NO2 NAAQS modeling, the multi-year maximum of PERIOD values can be simulated using the MULTYEAR keyword.
+   Multi-year PERIOD and 1-hour values should only be done in a single model run using the MULTYEAR option with a
+   single multi-year meteorological data file using STARTEND keyword.
+  
+ **Model Calculates  1 Short Term Average(s) of:   1-HR
+     and Calculates ANNUAL Averages
+  
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and     144 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+
+ **This Run Includes OZONE    Values for a Single Sector
+              HOURLY OZONE    Values are Available
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Threshold Violations (MAXIFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =    35.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **File Created for Event Model:  pvmrm_evt.inp                                                                                   
+ **File for Summary of Results:   PVMRM.SUM                                                                                       
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK1           0   0.50000E+02       0.0       0.0    35.0    35.00   432.00    11.70     2.40    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STACK1      ,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+
+                                       *** IN-STACK NO2 RATIOS FOR OLM/PVMRM OPTIONS ***
+
+
+ SOURCE_ID    NO2_RATIO      SOURCE_ID    NO2_RATIO      SOURCE_ID    NO2_RATIO      SOURCE_ID    NO2_RATIO
+
+ STACK1          0.100
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                          *** ORIGIN FOR POLAR NETWORK ***
+                                X-ORIG =      0.00 ;   Y-ORIG =       0.00  (METERS)
+
+                                          *** DISTANCE RANGES OF NETWORK ***
+                                                    (METERS)
+
+          100.0,     300.0,    1000.0,    3000.0,
+
+                                          *** DIRECTION RADIALS OF NETWORK *** 
+                                                    (DEGREES)
+
+           10.0,      20.0,      30.0,      40.0,      50.0,      60.0,      70.0,      80.0,      90.0,     100.0,
+          110.0,     120.0,     130.0,     140.0,     150.0,     160.0,     170.0,     180.0,     190.0,     200.0,
+          210.0,     220.0,     230.0,     240.0,     250.0,     260.0,     270.0,     280.0,     290.0,     300.0,
+          310.0,     320.0,     330.0,     340.0,     350.0,     360.0,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   anch-99.sfc                                                                        Met Version:  14134
+   Profile file:   anch-99.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    26451                  Upper air station no.:    26409
+                  Name: ANCHORAGE,AK                               Name: ANCHORAGE,AK                            
+                  Year:   1999                                     Year:   1999
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 99 01 01   1 01  -14.8  0.247 -9.000 -9.000 -999.  294.     90.4  0.10   1.50   1.00    2.86    1.    7.0  262.5    2.0
+ 99 01 01   1 02  -20.9  0.347 -9.000 -9.000 -999.  491.    179.3  0.10   1.50   1.00    3.86  358.    7.0  262.5    2.0
+ 99 01 01   1 03  -14.8  0.247 -9.000 -9.000 -999.  299.     90.6  0.10   1.50   1.00    2.86    4.    7.0  263.1    2.0
+ 99 01 01   1 04  -20.7  0.347 -9.000 -9.000 -999.  491.    180.6  0.10   1.50   1.00    3.86  353.    7.0  264.2    2.0
+ 99 01 01   1 05  -17.8  0.298 -9.000 -9.000 -999.  391.    132.6  0.10   1.50   1.00    3.36  999.    7.0  264.2    2.0
+ 99 01 01   1 06  -27.9  0.394 -9.000 -9.000 -999.  593.    195.3  0.10   1.50   1.00    4.36  342.    7.0  264.9    2.0
+ 99 01 01   1 07  -23.6  0.396 -9.000 -9.000 -999.  599.    236.2  0.10   1.50   1.00    4.36  355.    7.0  265.4    2.0
+ 99 01 01   1 08  -14.6  0.247 -9.000 -9.000 -999.  310.     91.8  0.10   1.50   1.00    2.86  333.    7.0  265.9    2.0
+ 99 01 01   1 09  -20.6  0.347 -9.000 -9.000 -999.  491.    182.2  0.10   1.50   1.00    3.86  327.    7.0  266.4    2.0
+ 99 01 01   1 10  -14.6  0.247 -9.000 -9.000 -999.  300.     92.0  0.10   1.50   1.00    2.86  999.    7.0  266.4    2.0
+ 99 01 01   1 11  -23.4  0.396 -9.000 -9.000 -999.  599.    237.8  0.10   1.50   0.81    4.36  334.    7.0  267.0    2.0
+ 99 01 01   1 12  -22.2  0.397 -9.000 -9.000 -999.  601.    252.3  0.10   1.50   0.65    4.36  326.    7.0  267.5    2.0
+ 99 01 01   1 13  -26.2  0.504 -9.000 -9.000 -999.  859.    437.4  0.10   1.50   0.59    5.46  333.    7.0  267.5    2.0
+ 99 01 01   1 14  -15.5  0.300 -9.000 -9.000 -999.  432.    156.0  0.10   1.50   0.58    3.36  999.    7.0  268.1    2.0
+ 99 01 01   1 15  -16.5  0.299 -9.000 -9.000 -999.  393.    144.3  0.10   1.50   0.64    3.36  332.    7.0  268.1    2.0
+ 99 01 01   1 16  -17.5  0.298 -9.000 -9.000 -999.  390.    135.3  0.10   1.50   0.79    3.36  334.    7.0  268.8    2.0
+ 99 01 01   1 17  -20.3  0.348 -9.000 -9.000 -999.  492.    184.3  0.10   1.50   1.00    3.86  351.    7.0  269.2    2.0
+ 99 01 01   1 18  -23.2  0.397 -9.000 -9.000 -999.  599.    240.5  0.10   1.50   1.00    4.36  317.    7.0  269.9    2.0
+ 99 01 01   1 19  -20.3  0.348 -9.000 -9.000 -999.  494.    184.8  0.10   1.50   1.00    3.86  344.    7.0  269.9    2.0
+ 99 01 01   1 20  -20.3  0.348 -9.000 -9.000 -999.  492.    184.8  0.10   1.50   1.00    3.86  337.    7.0  269.9    2.0
+ 99 01 01   1 21  -17.4  0.298 -9.000 -9.000 -999.  392.    135.7  0.10   1.50   1.00    3.36  340.    7.0  269.9    2.0
+ 99 01 01   1 22  -17.4  0.298 -9.000 -9.000 -999.  390.    135.7  0.10   1.50   1.00    3.36  332.    7.0  269.9    2.0
+ 99 01 01   1 23  -20.3  0.348 -9.000 -9.000 -999.  492.    185.1  0.10   1.50   1.00    3.86  340.    7.0  270.4    2.0
+ 99 01 01   1 24   -7.0  0.121 -9.000 -9.000 -999.  167.     22.4  0.10   1.50   1.00    1.76  999.    7.0  270.4    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 99 01 01 01    7.0 1    1.    2.86   262.6   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   1 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       300.00      1000.00      3000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       0.00673      0.25504      0.64435      0.87512
+       20.00 |       0.00694      0.23195      0.56227      0.71799
+       30.00 |       0.00713      0.22064      0.49626      0.53696
+       40.00 |       0.00722      0.22214      0.47281      0.44202
+       50.00 |       0.00717      0.22839      0.48036      0.39918
+       60.00 |       0.00707      0.23552      0.49568      0.39954
+       70.00 |       0.00719      0.25124      0.52115      0.39997
+       80.00 |       0.00757      0.27088      0.53613      0.36799
+       90.00 |       0.00832      0.28768      0.54830      0.33997
+      100.00 |       0.01029      0.32726      0.60942      0.33599
+      110.00 |       0.01433      0.41158      0.74087      0.40728
+      120.00 |       0.01966      0.49806      0.86933      0.48607
+      130.00 |       0.02396      0.52825      0.89883      0.49812
+      140.00 |       0.02588      0.52194      0.89966      0.53729
+      150.00 |       0.02572      0.49601      0.88654      0.61025
+      160.00 |       0.02354      0.44413      0.84952      0.72283
+      170.00 |       0.01932      0.37663      0.86447      1.00297
+      180.00 |       0.01430      0.31458      0.94417      1.49767
+      190.00 |       0.01027      0.25227      0.86825      1.77248
+      200.00 |       0.00788      0.19466      0.58514      1.26285
+      210.00 |       0.00676      0.16601      0.38453      0.72075
+      220.00 |       0.00655      0.16883      0.34688      0.46873
+      230.00 |       0.00705      0.17821      0.35266      0.41265
+      240.00 |       0.00771      0.17341      0.32637      0.34315
+      250.00 |       0.00784      0.15467      0.28117      0.25871
+      260.00 |       0.00724      0.12410      0.22609      0.19834
+      270.00 |       0.00628      0.09137      0.16348      0.13914
+      280.00 |       0.00556      0.07003      0.11472      0.09375
+      290.00 |       0.00521      0.06312      0.10471      0.09875
+      300.00 |       0.00493      0.06393      0.11261      0.11500
+      310.00 |       0.00460      0.08607      0.17778      0.18989
+      320.00 |       0.00445      0.17923      0.46326      0.50199
+      330.00 |       0.00468      0.35961      1.04650      1.17403
+      340.00 |       0.00534      0.48624      1.41646      1.64116
+      350.00 |       0.00610      0.42891      1.20317      1.46809
+      360.00 |       0.00653      0.30974      0.81897      1.11106
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   1 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       300.00      1000.00      3000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       3.62498     19.98584     33.58935     37.38366
+       20.00 |       3.17094     20.34669     34.76888     41.45754
+       30.00 |       2.80804     21.01934     35.71819     37.02601
+       40.00 |       3.19553     18.51163     33.25723     39.86986
+       50.00 |       3.49249     24.87019     35.62392     37.53113
+       60.00 |       4.15235     22.60367     35.89068     34.63100
+       70.00 |       3.70227     22.60367     35.89068     37.00392
+       80.00 |       2.42852     21.17201     30.69682     36.70631
+       90.00 |       2.11444     19.56595     29.45308     35.88546
+      100.00 |       3.05651     23.91526     40.63468     36.49660
+      110.00 |       3.38067     24.82840     37.89449     38.69237
+      120.00 |       5.33847     26.29748     37.82443     36.88215
+      130.00 |       6.62768     25.52381     38.73249     39.96280
+      140.00 |       7.37169     24.11642     36.95905     36.88215
+      150.00 |       7.95402     29.49694     42.45816     42.26386
+      160.00 |       7.37169     28.18116     43.79703     36.53342
+      170.00 |       5.79524     26.32429     39.30272     39.01018
+      180.00 |       5.60955     23.01645     36.05417     38.72279
+      190.00 |       4.46253     21.03332     32.33650     39.44998
+      200.00 |       3.32872     20.71694     31.68836     36.33076
+      210.00 |       3.64269     19.98908     32.74261     36.79297
+      220.00 |       3.18598     17.52252     25.80968     35.75112
+      230.00 |       3.06987     20.15352     29.51993     35.74284
+      240.00 |       4.78928     19.29183     33.01217     36.20739
+      250.00 |       5.68243     20.87323     31.17707     37.52968
+      260.00 |       6.50690     23.04081     30.78964     28.88851
+      270.00 |       6.41165     20.81739     28.57095     33.78696
+      280.00 |       5.42416     15.79031     25.55701     22.59139
+      290.00 |       4.50390     18.53423     28.55333     30.00276
+      300.00 |       4.29129     18.51535     27.30378     34.88600
+      310.00 |       3.17550     24.40118     37.13854     35.60708
+      320.00 |       2.42172     23.68382     35.90891     37.25215
+      330.00 |       1.49989     24.93465     31.25448     38.20149
+      340.00 |       2.35548     26.75699     36.54267     39.38354
+      350.00 |       3.43986     21.13028     29.47391     38.40304
+      360.00 |       3.78856     19.89094     27.69729     39.27430
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+    *** THE   2ND-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   1 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       300.00      1000.00      3000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       3.26423     18.87620     31.16935     37.09057
+       20.00 |       2.10387     19.98584     30.71675     38.21187
+       30.00 |       2.17614     20.39175     32.25833     35.86146
+       40.00 |       2.15528     18.47111     28.25658     37.44371
+       50.00 |       2.62945     19.05823     28.90886     37.23732
+       60.00 |       2.13986     18.91649     28.64761     33.84402
+       70.00 |       2.13986     18.22599     25.55939     36.85887
+       80.00 |       1.99582     19.86040     27.25673     35.66959
+       90.00 |       1.98336     19.11533     28.18127     35.69688
+      100.00 |       2.38005     23.11076     36.23471     32.41350
+      110.00 |       3.26730     23.73866     33.37495     35.54414
+      120.00 |       4.50162     24.77010     37.15373     33.64716
+      130.00 |       5.79524     24.00703     37.30619     36.67086
+      140.00 |       6.47377     22.91809     33.67915     36.64376
+      150.00 |       4.95515     25.13969     40.44625     36.53750
+      160.00 |       4.22505     27.38523     41.00683     35.93829
+      170.00 |       5.47188     25.07141     38.24770     38.35168
+      180.00 |       3.92597     20.08538     30.97797     38.64593
+      190.00 |       2.70832     19.26255     29.41284     37.68326
+      200.00 |       2.65501     17.49823     29.34605     36.28744
+      210.00 |       3.45001     18.71435     31.85081     35.47807
+      220.00 |       3.17971     16.41451     23.60272     35.42386
+      230.00 |       2.44150     18.71419     28.27772     33.13371
+      240.00 |       4.18012     18.70083     29.05932     33.77786
+      250.00 |       5.28219     20.23479     30.83984     34.44259
+      260.00 |       4.19129     17.42966     29.60586     26.52672
+      270.00 |       2.30814     15.82767     27.25683     18.79801
+      280.00 |       3.70010     15.00193     24.40562     21.75989
+      290.00 |       3.82065     17.70422     22.48415     25.43910
+      300.00 |       2.63957     18.38590     27.21128     30.74526
+      310.00 |       2.52566     13.92554     24.18093     27.28758
+      320.00 |       2.07558     23.47704     28.15981     35.67619
+      330.00 |       1.44506     21.50953     30.51297     37.40338
+      340.00 |       2.22760     20.95266     29.48786     38.97973
+      350.00 |       3.18743     20.74467     25.04756     38.19507
+      360.00 |       3.69801     19.24695     27.35666     39.02524
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                              *** THE MAXIMUM  100   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , 
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.      43.79703 (99041513) AT (    342.02,    -939.69)  GP       41.      37.89449 (99042911) AT (    939.69,    -342.02)  GP
+    2.      42.45816 (99061215) AT (    500.00,    -866.03)  GP       42.      37.82443 (99051612) AT (    866.03,    -500.00)  GP
+    3.      42.26386 (99031313) AT (   1500.00,   -2598.08)  GP       43.      37.81461 (99041715) AT (    500.00,    -866.03)  GP
+    4.      41.45754 (99041809) AT (   1026.06,    2819.08)  GP       44.      37.68326 (99030606) AT (   -520.94,   -2954.42)  GP
+    5.      41.00683 (99051611) AT (    342.02,    -939.69)  GP       45.      37.66645 (99061217) AT (    500.00,    -866.03)  GP
+    6.      40.63468 (99060811) AT (    984.81,    -173.65)  GP       46.      37.55743 (99042023) AT (  -1026.06,    2819.08)  GP
+    7.      40.55660 (99051910) AT (    342.02,    -939.69)  GP       47.      37.53113 (99053022) AT (   2298.13,    1928.36)  GP
+    8.      40.44625 (99041712) AT (    500.00,    -866.03)  GP       48.      37.52968 (99021515) AT (  -2819.08,   -1026.06)  GP
+    9.      39.96280 (99042908) AT (   2298.13,   -1928.36)  GP       49.      37.45445 (99061218) AT (    500.00,    -866.03)  GP
+   10.      39.86986 (99051724) AT (   1928.36,    2298.13)  GP       50.      37.44371 (99060723) AT (   1928.36,    2298.13)  GP
+   11.      39.44998 (99102103) AT (   -520.94,   -2954.42)  GP       51.      37.41273 (99020822) AT (   -520.94,   -2954.42)  GP
+   12.      39.38354 (99042821) AT (  -1026.06,    2819.08)  GP       52.      37.40338 (99082921) AT (  -1500.00,    2598.08)  GP
+   13.      39.37958 (99042823) AT (  -1026.06,    2819.08)  GP       53.      37.38366 (99043024) AT (    520.94,    2954.42)  GP
+   14.      39.30272 (99041711) AT (    173.65,    -984.81)  GP       54.      37.32825 (99012320) AT (     -0.00,    3000.00)  GP
+   15.      39.27430 (99061103) AT (     -0.00,    3000.00)  GP       55.      37.30619 (99052012) AT (    766.04,    -642.79)  GP
+   16.      39.14362 (99052009) AT (    342.02,    -939.69)  GP       56.      37.25215 (99011212) AT (  -1928.36,    2298.13)  GP
+   17.      39.02524 (99070923) AT (     -0.00,    3000.00)  GP       57.      37.23732 (99050422) AT (   2298.13,    1928.36)  GP
+   18.      39.01018 (99030712) AT (    520.94,   -2954.42)  GP       58.      37.21581 (99040301) AT (     -0.00,    3000.00)  GP
+   19.      38.97973 (99042121) AT (  -1026.06,    2819.08)  GP       59.      37.19711 (99050322) AT (      0.00,   -3000.00)  GP
+   20.      38.95626 (99012405) AT (     -0.00,    3000.00)  GP       60.      37.18883 (99050420) AT (   2298.13,    1928.36)  GP
+   21.      38.73249 (99051610) AT (    766.04,    -642.79)  GP       61.      37.18214 (99060812) AT (    766.04,    -642.79)  GP
+   22.      38.72279 (99102104) AT (      0.00,   -3000.00)  GP       62.      37.15373 (99042912) AT (    866.03,    -500.00)  GP
+   23.      38.69237 (99032412) AT (   2819.08,   -1026.06)  GP       63.      37.13854 (99052415) AT (   -766.04,     642.79)  GP
+   24.      38.64593 (99030622) AT (      0.00,   -3000.00)  GP       64.      37.12384 (99012406) AT (     -0.00,    3000.00)  GP
+   25.      38.50087 (99041824) AT (  -1026.06,    2819.08)  GP       65.      37.09057 (99033121) AT (    520.94,    2954.42)  GP
+   26.      38.45134 (99030603) AT (      0.00,   -3000.00)  GP       66.      37.04465 (99110124) AT (   -520.94,   -2954.42)  GP
+   27.      38.43736 (99061403) AT (  -1026.06,    2819.08)  GP       67.      37.04270 (99110513) AT (   -520.94,   -2954.42)  GP
+   28.      38.40304 (99042101) AT (   -520.94,    2954.42)  GP       68.      37.02601 (99011609) AT (   1500.00,    2598.08)  GP
+   29.      38.36059 (99030607) AT (      0.00,   -3000.00)  GP       69.      37.01013 (99061110) AT (    173.65,    -984.81)  GP
+   30.      38.35168 (99030624) AT (    520.94,   -2954.42)  GP       70.      37.00686 (99052010) AT (    173.65,    -984.81)  GP
+   31.      38.24770 (99061214) AT (    173.65,    -984.81)  GP       71.      37.00392 (99032507) AT (   2819.08,    1026.06)  GP
+   32.      38.24770 (99061214) AT (    342.02,    -939.69)  GP       72.      36.97443 (99011309) AT (   -520.94,   -2954.42)  GP
+   33.      38.21187 (99011611) AT (   1026.06,    2819.08)  GP       73.      36.95905 (99061216) AT (    642.79,    -766.04)  GP
+   34.      38.20149 (99052902) AT (  -1500.00,    2598.08)  GP       74.      36.95798 (99052123) AT (   -520.94,    2954.42)  GP
+   35.      38.19507 (99061024) AT (   -520.94,    2954.42)  GP       75.      36.92381 (99030522) AT (   -520.94,   -2954.42)  GP
+   36.      38.08665 (99042122) AT (  -1026.06,    2819.08)  GP       76.      36.88215 (99021419) AT (   2598.08,   -1500.00)  GP
+   37.      38.08434 (99041513) AT (    500.00,    -866.03)  GP       77.      36.88215 (99011301) AT (   1928.36,   -2298.13)  GP
+   38.      38.01899 (99110220) AT (      0.00,   -3000.00)  GP       78.      36.86201 (99061423) AT (  -1026.06,    2819.08)  GP
+   39.      38.00849 (99012917) AT (      0.00,   -3000.00)  GP       79.      36.85887 (99072321) AT (   2819.08,    1026.06)  GP
+   40.      37.90487 (99030508) AT (      0.00,   -3000.00)  GP       80.      36.84945 (99030322) AT (      0.00,   -3000.00)  GP
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                              *** THE MAXIMUM  100   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , 
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   81.      36.83769 (99040208) AT (   1026.06,    2819.08)  GP       91.      36.73037 (99052202) AT (   -520.94,    2954.42)  GP
+   82.      36.82548 (99110506) AT (      0.00,   -3000.00)  GP       92.      36.70631 (99071321) AT (   2954.42,     520.94)  GP
+   83.      36.80351 (99030702) AT (   -520.94,   -2954.42)  GP       93.      36.68346 (99052421) AT (  -1500.00,    2598.08)  GP
+   84.      36.79861 (99022820) AT (   -520.94,   -2954.42)  GP       94.      36.67086 (99100120) AT (   2298.13,   -1928.36)  GP
+   85.      36.79297 (99041709) AT (  -1500.00,   -2598.08)  GP       95.      36.64376 (99050122) AT (   1928.36,   -2298.13)  GP
+   86.      36.76674 (99052023) AT (   2298.13,    1928.36)  GP       96.      36.61855 (99122510) AT (      0.00,   -3000.00)  GP
+   87.      36.76630 (99060206) AT (     -0.00,    3000.00)  GP       97.      36.58715 (99051221) AT (   -520.94,    2954.42)  GP
+   88.      36.75488 (99032620) AT (  -1500.00,    2598.08)  GP       98.      36.56232 (99091705) AT (   2298.13,   -1928.36)  GP
+   89.      36.74721 (99110221) AT (    520.94,   -2954.42)  GP       99.      36.54267 (99041913) AT (   -342.02,     939.69)  GP
+   90.      36.74454 (99110408) AT (   -520.94,   -2954.42)  GP      100.      36.53750 (99032910) AT (   1500.00,   -2598.08)  GP
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS       1.77248 AT (    -520.94,    -2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS       1.64116 AT (   -1026.06,     2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       1.49767 AT (       0.00,    -3000.00,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       1.46809 AT (    -520.94,     2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       1.41646 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       1.26285 AT (   -1026.06,    -2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       1.20317 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       1.17403 AT (   -1500.00,     2598.08,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       1.11106 AT (      -0.00,     3000.00,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       1.04650 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   1ST-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS      43.79703 AT (     342.02,     -939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      42.45816 AT (     500.00,     -866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      42.26386 AT (    1500.00,    -2598.08,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      41.45754 AT (    1026.06,     2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      40.63468 AT (     984.81,     -173.65,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      39.96280 AT (    2298.13,    -1928.36,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      39.86986 AT (    1928.36,     2298.13,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      39.44998 AT (    -520.94,    -2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      39.38354 AT (   -1026.06,     2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      39.30272 AT (     173.65,     -984.81,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   2ND-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS      41.00683 AT (     342.02,     -939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      40.44625 AT (     500.00,     -866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      39.02524 AT (      -0.00,     3000.00,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      38.97973 AT (   -1026.06,     2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      38.64593 AT (       0.00,    -3000.00,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      38.35168 AT (     520.94,    -2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      38.24770 AT (     173.65,     -984.81,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      38.21187 AT (    1026.06,     2819.08,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      38.19507 AT (    -520.94,     2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      37.68326 AT (    -520.94,    -2954.42,    35.00,    35.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD-PVMRM Test Case - 35m Stack, 50g/s - PVMRM                    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:59
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      PVMRM     BETA      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            1 Warning Message(s)
+ A Total of         1831 Informational Message(s)
+
+ A Total of         8760 Hours Were Processed
+
+ A Total of         1337 Calm Hours Identified
+
+ A Total of          494 Missing Hours Identified (  5.64 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      11       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

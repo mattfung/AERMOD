@@ -1,0 +1,711 @@
+CO STARTING
+   TITLEONE AERMOD model test case for OPENPIT sources; includes OPENPIT sources
+   TITLETWO for gaseous, particulate using Method 1, and particulate using Method 2
+   MODELOPT  CONC   FLAT   NODRYDPLT   NOWETDPLT
+   AVERTIME  3  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+   location  PITGAS   OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT1  OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT2  OPENPIT  -100.0 -100.0   0.0
+ 
+SO SRCPARAM  PITGAS    1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+SO SRCPARAM  PITPRT1   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   MASSFRAX  PITPRT1   1.0
+   PARTDENS  PITPRT1   1.0
+   PARTDIAM  PITPRT1   0.01
+SO SRCPARAM  PITPRT2   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   METHOD_2  PITPRT2   1.0  0.01
+ 
+   SRCGROUP  PITGAS   PITGAS
+   SRCGROUP  PITPRT1  PITPRT1
+   SRCGROUP  PITPRT2  PITPRT2
+ 
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  "aermet2 test met.sfc"
+   PROFFILE  "aermet2 test met.pfl"
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H03001   3  PITGAS     88030324         559.28449
+   EVENTLOC H001H03001 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03001   3  PITGAS     88030403         260.35587
+   EVENTLOC H002H03001 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H03002   3  PITPRT1    88030324         559.28221
+   EVENTLOC H001H03002 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03002   3  PITPRT1    88030403         260.35506
+   EVENTLOC H002H03002 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H03003   3  PITPRT2    88030324         559.28221
+   EVENTLOC H001H03003 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03003   3  PITPRT2    88030403         260.35506
+   EVENTLOC H002H03003 XR=       -0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24001  24  PITGAS     88030224         101.75303
+   EVENTLOC H001H24001 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24001  24  PITGAS     88030324          86.41290
+   EVENTLOC H002H24001 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24002  24  PITPRT1    88030224         101.75266
+   EVENTLOC H001H24002 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24002  24  PITPRT1    88030324          86.41259
+   EVENTLOC H002H24002 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24003  24  PITPRT2    88030224         101.75266
+   EVENTLOC H001H24003 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24003  24  PITPRT2    88030324          86.41259
+   EVENTLOC H002H24003 XR=      500.000000 YR=        0.000000     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+  
+ **Model Calculates  2 Short Term Average(s) of:   3-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      3 Source(s);       3 Source Group(s); and      12 Event(s)
+
+                with:      0 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      3 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+
+                                                  *** OPENPIT SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    VOLUME   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF PIT    OF PIT    OF PIT     OF PIT   SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)    (M**3)               BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ PITGAS           0   0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ PITPRT1          1   0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ PITPRT2       METH2  0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  PITGAS     PITGAS      ,
+
+  PITPRT1    PITPRT1     ,
+
+  PITPRT2    PITPRT2     ,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                                *** SOURCE PARTICULATE/GAS DATA ***
+
+
+
+
+        *** SOURCE ID = PITPRT1     ; SOURCE TYPE = OPENPIT  ***
+
+        MASS FRACTION =
+            1.00000, 
+
+        PARTICLE DIAMETER (MICRONS) =
+            0.01000, 
+
+        PARTICLE DENSITY (G/CM**3)  =
+            1.00000, 
+
+
+        *** SOURCE ID = PITPRT2     ; SOURCE TYPE = OPENPIT  ***
+
+        FINE PARTICLE MASS FRACTION =
+            1.00000, 
+
+        PARTICLE DIAMETER (MICRONS) =
+            0.01000, 
+
+        PARTICLE DENSITY (G/CM**3)  =
+            1.00000, 
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   3  2  0
+                                                           AND END DATE: 1988   3  4 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =      101.75303 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITGAS   OF PITGAS      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       28.66763      28.66763
+  2      138.69648     138.69648
+  3      171.17752     171.17752
+  4      254.37339     254.37339
+  5      250.31797     250.31797
+  6      208.95741     208.95741
+  7      310.88418     310.88418
+  8       52.87942      52.87942
+  9        0.00000       0.00000
+ 10        0.00000       0.00000
+ 11        0.00000       0.00000
+ 12        0.00000       0.00000
+ 13        0.00000       0.00000
+ 14        0.00000       0.00000
+ 15        0.00000       0.00000
+ 16        0.00000       0.00000
+ 17        0.00000       0.00000
+ 18      373.16895     373.16895
+ 19      304.14048     304.14048
+ 20      348.27996     348.27996
+ 21        0.52941       0.52941
+ 22        0.00000       0.00000
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     101.75303     101.75303
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+              88 03 02 09   30.8  0.157  0.443  0.016  100.  149.    -11.2  0.30   0.80   0.42    1.00  104.   10.0  268.4   10.0
+              88 03 02 10   70.1  0.172  0.806  0.020  267.  172.     -6.5  0.30   0.80   0.38    1.00  117.   10.0  270.2   10.0
+              88 03 02 11   93.6  0.179  0.967  0.022  345.  182.     -5.5  0.30   0.80   0.36    1.00  124.   10.0  272.2   10.0
+              88 03 02 12  107.8  0.182  1.081  0.022  418.  186.     -5.0  0.30   0.80   0.36    1.00  128.   10.0  274.9   10.0
+              88 03 02 13  102.1  0.214  1.110  0.022  478.  238.     -8.6  0.30   0.80   0.36    1.30  118.   10.0  278.6   10.0
+              88 03 02 14   84.2  0.272  1.070  0.022  519.  340.    -21.3  0.30   0.80   0.36    1.90  174.   10.0  283.0   10.0
+              88 03 02 15   67.4  0.287  1.012  0.022  547.  369.    -31.3  0.30   0.80   0.37    2.10  174.   10.0  284.2   10.0
+              88 03 02 16   34.3  0.262  0.815  0.022  561.  323.    -46.9  0.30   0.80   0.40    2.00  183.   10.0  284.5   10.0
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24002    GROUP VALUE =      101.75266 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITPRT1  OF PITPRT1     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       28.66760      28.66760
+  2      138.69615     138.69615
+  3      171.17707     171.17707
+  4      254.37262     254.37262
+  5      250.31720     250.31720
+  6      208.95684     208.95684
+  7      310.88297     310.88297
+  8       52.87921      52.87921
+  9        0.00000       0.00000
+ 10        0.00000       0.00000
+ 11        0.00000       0.00000
+ 12        0.00000       0.00000
+ 13        0.00000       0.00000
+ 14        0.00000       0.00000
+ 15        0.00000       0.00000
+ 16        0.00000       0.00000
+ 17        0.00000       0.00000
+ 18      373.16729     373.16729
+ 19      304.13909     304.13909
+ 20      348.27837     348.27837
+ 21        0.52941       0.52941
+ 22        0.00000       0.00000
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     101.75266     101.75266
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+              88 03 02 09   30.8  0.157  0.443  0.016  100.  149.    -11.2  0.30   0.80   0.42    1.00  104.   10.0  268.4   10.0
+              88 03 02 10   70.1  0.172  0.806  0.020  267.  172.     -6.5  0.30   0.80   0.38    1.00  117.   10.0  270.2   10.0
+              88 03 02 11   93.6  0.179  0.967  0.022  345.  182.     -5.5  0.30   0.80   0.36    1.00  124.   10.0  272.2   10.0
+              88 03 02 12  107.8  0.182  1.081  0.022  418.  186.     -5.0  0.30   0.80   0.36    1.00  128.   10.0  274.9   10.0
+              88 03 02 13  102.1  0.214  1.110  0.022  478.  238.     -8.6  0.30   0.80   0.36    1.30  118.   10.0  278.6   10.0
+              88 03 02 14   84.2  0.272  1.070  0.022  519.  340.    -21.3  0.30   0.80   0.36    1.90  174.   10.0  283.0   10.0
+              88 03 02 15   67.4  0.287  1.012  0.022  547.  369.    -31.3  0.30   0.80   0.37    2.10  174.   10.0  284.2   10.0
+              88 03 02 16   34.3  0.262  0.815  0.022  561.  323.    -46.9  0.30   0.80   0.40    2.00  183.   10.0  284.5   10.0
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24003    GROUP VALUE =      101.75266 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITPRT2  OF PITPRT2     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       28.66760      28.66760
+  2      138.69615     138.69615
+  3      171.17707     171.17707
+  4      254.37262     254.37262
+  5      250.31720     250.31720
+  6      208.95684     208.95684
+  7      310.88297     310.88297
+  8       52.87921      52.87921
+  9        0.00000       0.00000
+ 10        0.00000       0.00000
+ 11        0.00000       0.00000
+ 12        0.00000       0.00000
+ 13        0.00000       0.00000
+ 14        0.00000       0.00000
+ 15        0.00000       0.00000
+ 16        0.00000       0.00000
+ 17        0.00000       0.00000
+ 18      373.16729     373.16729
+ 19      304.13909     304.13909
+ 20      348.27837     348.27837
+ 21        0.52941       0.52941
+ 22        0.00000       0.00000
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     101.75266     101.75266
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+              88 03 02 09   30.8  0.157  0.443  0.016  100.  149.    -11.2  0.30   0.80   0.42    1.00  104.   10.0  268.4   10.0
+              88 03 02 10   70.1  0.172  0.806  0.020  267.  172.     -6.5  0.30   0.80   0.38    1.00  117.   10.0  270.2   10.0
+              88 03 02 11   93.6  0.179  0.967  0.022  345.  182.     -5.5  0.30   0.80   0.36    1.00  124.   10.0  272.2   10.0
+              88 03 02 12  107.8  0.182  1.081  0.022  418.  186.     -5.0  0.30   0.80   0.36    1.00  128.   10.0  274.9   10.0
+              88 03 02 13  102.1  0.214  1.110  0.022  478.  238.     -8.6  0.30   0.80   0.36    1.30  118.   10.0  278.6   10.0
+              88 03 02 14   84.2  0.272  1.070  0.022  519.  340.    -21.3  0.30   0.80   0.36    1.90  174.   10.0  283.0   10.0
+              88 03 02 15   67.4  0.287  1.012  0.022  547.  369.    -31.3  0.30   0.80   0.37    2.10  174.   10.0  284.2   10.0
+              88 03 02 16   34.3  0.262  0.815  0.022  561.  323.    -46.9  0.30   0.80   0.40    2.00  183.   10.0  284.5   10.0
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =      559.28449 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITGAS   OF PITGAS      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22        0.00000       0.00000
+ 23      541.28562     541.28562
+ 24     1136.56784    1136.56784
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     559.28449     559.28449
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03002    GROUP VALUE =      559.28221 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITPRT1  OF PITPRT1     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22        0.00000       0.00000
+ 23      541.28367     541.28367
+ 24     1136.56296    1136.56296
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     559.28221     559.28221
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03003    GROUP VALUE =      559.28221 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITPRT2  OF PITPRT2     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22        0.00000       0.00000
+ 23      541.28367     541.28367
+ 24     1136.56296    1136.56296
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     559.28221     559.28221
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =       86.41290 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITGAS   OF PITGAS      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       94.47226      94.47226
+  2      183.44371     183.44371
+  3      102.02747     102.02747
+  4      268.59122     268.59122
+  5      297.70086     297.70086
+  6      155.52132     155.52132
+  7       68.97370      68.97370
+  8      140.11531     140.11531
+  9        9.79748       9.79748
+ 10       10.84831      10.84831
+ 11        7.60608       7.60608
+ 12        7.88406       7.88406
+ 13        8.83565       8.83565
+ 14        9.12261       9.12261
+ 15        0.44896       0.44896
+ 16        3.62473       3.62473
+ 17        0.00000       0.00000
+ 18        0.00000       0.00000
+ 19        0.05229       0.05229
+ 20      413.71359     413.71359
+ 21      223.59745     223.59745
+ 22       67.53251      67.53251
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      86.41290      86.41290
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24002    GROUP VALUE =       86.41259 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITPRT1  OF PITPRT1     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       94.47198      94.47198
+  2      183.44311     183.44311
+  3      102.02706     102.02706
+  4      268.59013     268.59013
+  5      297.69952     297.69952
+  6      155.52091     155.52091
+  7       68.97360      68.97360
+  8      140.11494     140.11494
+  9        9.79746       9.79746
+ 10       10.84828      10.84828
+ 11        7.60606       7.60606
+ 12        7.88404       7.88404
+ 13        8.83563       8.83563
+ 14        9.12259       9.12259
+ 15        0.44896       0.44896
+ 16        3.62472       3.62472
+ 17        0.00000       0.00000
+ 18        0.00000       0.00000
+ 19        0.05229       0.05229
+ 20      413.71148     413.71148
+ 21      223.59692     223.59692
+ 22       67.53241      67.53241
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      86.41259      86.41259
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24003    GROUP VALUE =       86.41259 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     500.00       0.00       0.00       0.00 (M)
+ HR GROUP:PITPRT2  OF PITPRT2     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       94.47198      94.47198
+  2      183.44311     183.44311
+  3      102.02706     102.02706
+  4      268.59013     268.59013
+  5      297.69952     297.69952
+  6      155.52091     155.52091
+  7       68.97360      68.97360
+  8      140.11494     140.11494
+  9        9.79746       9.79746
+ 10       10.84828      10.84828
+ 11        7.60606       7.60606
+ 12        7.88404       7.88404
+ 13        8.83563       8.83563
+ 14        9.12259       9.12259
+ 15        0.44896       0.44896
+ 16        3.62472       3.62472
+ 17        0.00000       0.00000
+ 18        0.00000       0.00000
+ 19        0.05229       0.05229
+ 20      413.71148     413.71148
+ 21      223.59692     223.59692
+ 22       67.53241      67.53241
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      86.41259      86.41259
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =      260.35587 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030403;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITGAS   OF PITGAS      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1      777.61888     777.61888
+  2        0.41219       0.41219
+  3        3.03655       3.03655
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     260.35587     260.35587
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+              88 03 04 02   -3.7  0.085 -9.000 -9.000 -999.   59.     14.7  0.75   1.50   1.00    1.10   26.   10.0  275.0   10.0
+              88 03 04 03   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   32.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03002    GROUP VALUE =      260.35506 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030403;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITPRT1  OF PITPRT1     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1      777.61645     777.61645
+  2        0.41219       0.41219
+  3        3.03654       3.03654
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     260.35506     260.35506
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+              88 03 04 02   -3.7  0.085 -9.000 -9.000 -999.   59.     14.7  0.75   1.50   1.00    1.10   26.   10.0  275.0   10.0
+              88 03 04 03   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   32.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03003    GROUP VALUE =      260.35506 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030403;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+ HR GROUP:PITPRT2  OF PITPRT2     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1      777.61645     777.61645
+  2        0.41219       0.41219
+  3        3.03654       3.03654
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     260.35506     260.35506
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+              88 03 04 02   -3.7  0.085 -9.000 -9.000 -999.   59.     14.7  0.75   1.50   1.00    1.10   26.   10.0  275.0   10.0
+              88 03 04 03   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   32.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:22
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

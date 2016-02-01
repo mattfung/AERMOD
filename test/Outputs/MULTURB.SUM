@@ -1,0 +1,371 @@
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses URBAN Dispersion Algorithm for the SBL for     4 Source(s),
+   for Total of    4 Urban Area(s):
+   Urban ID = URBAREA1 ;  Urban Population =   2500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA2 ;  Urban Population =   1500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA3 ;  Urban Population =    500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA4 ;  Urban Population =    250000.0 ;  Urban Roughness Length =  1.000 m
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. Half-life of 4 hrs for URBAN SO2.
+         6. Urban Roughness Length of 1.0 Meter Used.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+
+ **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
+         User has specified non-standard averaging periods:    3-HR   8-HR  24-HR         
+         High ranked 1-hour values are NOT averaged across the number of years modeled, and
+         complete years of data are NOT required.
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      4 Source(s);       4 Source Group(s); and     144 Receptor(s)
+
+                with:      4 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  multurb_evt.inp                                                                                 
+ **File for Summary of Results:   MULTURB.SUM                                                                                     
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   aermet2.sfc                                                                        Met Version:  14134
+   Profile file:   aermet2.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14735                  Upper air station no.:    14735
+                  Name: ALBANY,NY                                  Name: ALBANY,NY                               
+                  Year:   1988                                     Year:   1988
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 88 03 01  61 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+ 88 03 01  61 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+ 88 03 01  61 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+ 88 03 01  61 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+ 88 03 01  61 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+ 88 03 01  61 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+ 88 03 01  61 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+ 88 03 01  61 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+ 88 03 01  61 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+ 88 03 01  61 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+ 88 03 01  61 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ 88 03 01  61 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ 88 03 01  61 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ 88 03 01  61 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ 88 03 01  61 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ 88 03 01  61 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ 88 03 01  61 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+ 88 03 01  61 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+ 88 03 01  61 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+ 88 03 01  61 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+ 88 03 01  61 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+ 88 03 01  61 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+ 88 03 01  61 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+ 88 03 01  61 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 88 03 01 01   10.0 0  318.    0.80   273.8   48.7    0.11    0.48
+ 88 03 01 01   50.0 0  323.    2.00   275.0   14.7  -99.00    0.50
+ 88 03 01 01  100.0 1  320.    3.70   274.8    9.1    0.41    0.58
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK1    1ST HIGHEST VALUE IS      37.89227 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      36.81712 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      35.03104 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      34.49715 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      31.94139 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      30.95611 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      29.55889 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      28.48210 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      27.21294 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      23.82556 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK2    1ST HIGHEST VALUE IS      39.11308 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      38.18575 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      37.36997 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      35.20223 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      33.55183 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      31.35314 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      31.31639 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      29.41556 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      26.96882 AT (     328.89,     -119.71,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      26.05492 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK3    1ST HIGHEST VALUE IS      43.14232 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      42.67703 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      38.08379 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      36.37768 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      35.99959 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      34.58970 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      31.67097 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      29.41262 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      28.32514 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      26.13447 AT (     984.81,     -173.65,     0.00,     0.00,    0.00)  GP  POL1    
+
+STACK4    1ST HIGHEST VALUE IS      43.78806 AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      43.50756 AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      37.43719 AT (     642.79,     -766.04,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      35.73094 AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      35.44131 AT (     939.69,     -342.02,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      32.35750 AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      29.70733 AT (     500.00,     -866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      29.33135 AT (     383.02,     -321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      26.34355 AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      25.08214 AT (     984.81,     -173.65,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     753.65578  ON 88030111: AT (     303.11,     -175.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     421.98804  ON 88030113: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     329.96009  ON 88030112: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     261.07802  ON 88030112: AT (     469.85,     -171.01,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS     276.99601  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      57.27086  ON 88030208: AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     275.65388  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      65.52180  ON 88030108: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     272.94026  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      95.14228  ON 88030108: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     264.11465  ON 88030116: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     112.36796  ON 88030116: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+STACK1   HIGH   1ST HIGH VALUE IS      99.61928  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      33.45042  ON 88030324: AT (     866.03,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK2   HIGH   1ST HIGH VALUE IS     100.47962  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      36.23090  ON 88030324: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK3   HIGH   1ST HIGH VALUE IS     103.43867  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      40.50701  ON 88030324: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+  
+STACK4   HIGH   1ST HIGH VALUE IS     101.68031  ON 88030124: AT (     433.01,     -250.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      42.59738  ON 88030324: AT (     766.04,     -642.79,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:05
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            4 Warning Message(s)
+ A Total of            0 Informational Message(s)
+
+ A Total of           96 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of            0 Missing Hours Identified (  0.00 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      19       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ CO W362      19       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
+ CO W362      19       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     8-hr Ave
+ CO W362      19       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave

@@ -1,0 +1,280 @@
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **PARTICLE DEPOSITION Data Provided.
+ **Model Uses DRY DEPLETION.     DDPLETE  =  T
+ **Model Uses WET DEPLETION.     WETDPLT  =  T
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         NOCHKD   - Suppresses checking of date sequence in meteorology files
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Accepts FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  OTHER   
+  
+ **Model Calculates  1 Short Term Average(s) of:  24-HR
+  
+ **This Run Includes:    159 Source(s);       6 Source Group(s); and      10 Receptor(s)
+
+                with:      0 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      1 VOLUME source(s)
+                 and:    156 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      2 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Concurrent Values for Postprocessing (POSTFILE Keyword)
+          Model Outputs External File(s) of High Values for Plotting (PLOTFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =  1000.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  surfcoal_evt.inp                                                                                
+ **File for Summary of Results:   SURFCOAL.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   cordero.sfc                                                                        Met Version:  14134
+   Profile file:   cordero.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    24090                  Upper air station no.:    24090
+                  Name: RAPID_CITY                                 Name: RAPID_CITY                              
+                  Year:   1993                                     Year:   1993
+
+ First 24 hours of scalar data
+ YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN  Z0 BOWEN  ALB  REF WS   WD   HT  REF TA  HT IPCOD PRATE  RH SFCP CCVR
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 93 05 19 01   -9.9  0.107 -9.000 -9.000 -999.   84.     10.0 0.10 3.00 1.00    2.46  297.  10.  280.9  10.  0   0.00   82.  906.  1
+ 93 05 19 02  -25.1  0.249 -9.000 -9.000 -999.  297.     49.4 0.10 3.00 1.00    3.49  304.  10.  280.9  10.  0   0.00   82.  907.  1
+ 93 05 19 03  -21.9  0.225 -9.000 -9.000 -999.  257.     42.1 0.10 3.00 1.00    3.26  311.  10.  280.1  10.  0   0.00   81.  908.  3
+ 93 05 19 04  -25.3  0.248 -9.000 -9.000 -999.  296.     48.7 0.10 3.00 1.00    3.49  331.  10.  278.4  10.  0   0.00   85.  908.  1
+ 93 05 19 05  -22.7  0.221 -9.000 -9.000 -999.  249.     38.5 0.10 3.00 1.00    3.26  323.  10.  277.2  10.  0   0.00   85.  908.  1
+ 93 05 19 06   -6.1  0.211 -9.000 -9.000 -999.  233.    125.7 0.10 3.00 0.44    2.64  295.  10.  278.8  10.  0   0.00   76.  909.  1
+ 93 05 19 07   75.0  0.237  0.939  0.005  357.  277.    -14.4 0.10 3.00 0.29    2.19  325.  10.  282.1  10.  0   0.00   55.  909.  1
+ 93 05 19 08  163.6  0.327  1.587  0.008  794.  448.    -17.3 0.10 3.00 0.23    3.08  347.  10.  284.0  10.  0   0.00   53.  909.  1
+ 93 05 19 09  240.8  0.410  1.911  0.007  941.  629.    -23.1 0.10 3.00 0.21    3.98  353.  10.  285.4  10.  0   0.00   51.  909.  1
+ 93 05 19 10  301.8  0.434  2.124  0.005 1031.  687.    -22.0 0.10 3.00 0.20    4.20   16.  10.  286.2  10.  0   0.00   45.  909.  1
+ 93 05 19 11  343.9  0.453  2.369  0.005 1255.  732.    -21.9 0.10 3.00 0.20    4.38  356.  10.  287.2  10.  0   0.00   43.  908.  1
+ 93 05 19 12  364.9  0.480  2.740  0.005 1829.  797.    -24.5 0.10 3.00 0.20    4.69  339.  10.  288.0  10.  0   0.00   41.  907.  1
+ 93 05 19 13  366.7  0.460  2.789  0.006 1920.  749.    -21.4 0.10 3.00 0.20    4.43    5.  10.  288.5  10.  0   0.00   38.  907.  3
+ 93 05 19 14  231.1  0.471  2.411  0.006 1966.  776.    -36.6 0.10 3.00 0.20    4.78  349.  10.  289.2  10.  0   0.00   40.  907.  8
+ 93 05 19 15  203.3  0.535  2.389  0.006 2173.  938.    -60.9 0.10 3.00 0.20    5.63   12.  10.  289.2  10.  0   0.00   41.  906.  8
+ 93 05 19 16  163.3  0.494  2.255  0.006 2277.  836.    -59.7 0.10 3.00 0.21    5.19   15.  10.  289.2  10.  0   0.00   41.  906.  8
+ 93 05 19 17  112.5  0.438  2.000  0.006 2303.  698.    -60.2 0.10 3.00 0.23    4.60   23.  10.  288.2  10.  0   0.00   45.  906.  8
+ 93 05 19 18   74.3  0.476  1.747  0.006 2320.  789.   -117.6 0.10 3.00 0.29    5.19   31.  10.  287.8  10.  0   0.00   44.  906.  6
+ 93 05 19 19   -0.6  0.446 -9.000 -9.000 -999.  716.   8888.0 0.10 3.00 0.46    5.14   41.  10.  286.2  10.  0   0.00   52.  906.  6
+ 93 05 19 20  -25.6  0.278 -9.000 -9.000 -999.  373.     67.4 0.10 3.00 1.00    3.71   56.  10.  284.0  10.  0   0.00   62.  906.  4
+ 93 05 19 21  -10.2  0.109 -9.000 -9.000 -999.  121.     10.1 0.10 3.00 1.00    2.50   76.  10.  282.2  10.  0   0.00   64.  907.  1
+ 93 05 19 22  -10.7  0.111 -9.000 -9.000 -999.   88.     10.3 0.10 3.00 1.00    2.55   98.  10.  280.4  10.  0   0.00   62.  907.  0
+ 93 05 19 23  -22.1  0.216 -9.000 -9.000 -999.  242.     37.1 0.10 3.00 1.00    3.22  137.  10.  279.8  10.  0   0.00   67.  907.  0
+ 93 05 19 24  -23.2  0.227 -9.000 -9.000 -999.  260.     40.9 0.10 3.00 1.00    3.31  144.  10.  279.5  10.  0   0.00   75.  907.  0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 93 05 19 01   10.0 1  297.    2.46   281.0    8.0  -99.00    0.34
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      63.29638  ON 93061424: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   2ND HIGH VALUE IS      61.57159  ON 93061824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   3RD HIGH VALUE IS      52.47968  ON 93070824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   4TH HIGH VALUE IS      49.79802  ON 93052924: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   5TH HIGH VALUE IS      42.19668  ON 93062424: AT (     384.05,     1319.78,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   6TH HIGH VALUE IS      40.55616  ON 93061824: AT (     384.05,     1319.78,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   7TH HIGH VALUE IS      35.73632  ON 93062224: AT (     384.05,     1319.78,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   8TH HIGH VALUE IS      30.21926  ON 93061224: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+  
+ROADS    HIGH   1ST HIGH VALUE IS      57.89858  ON 93061424: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   2ND HIGH VALUE IS      54.33950  ON 93061824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   3RD HIGH VALUE IS      47.26893  ON 93070824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   4TH HIGH VALUE IS      44.52652  ON 93052924: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   5TH HIGH VALUE IS      39.21891  ON 93070624: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   6TH HIGH VALUE IS      36.58257  ON 93062224: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   7TH HIGH VALUE IS      32.14849  ON 93062224: AT (     384.05,     1319.78,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   8TH HIGH VALUE IS      26.71493  ON 93052524: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+  
+NPIT     HIGH   1ST HIGH VALUE IS      18.42284  ON 93052524: AT (   -1554.48,     3496.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   2ND HIGH VALUE IS      14.47847  ON 93062624: AT (   -1554.48,     3496.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   3RD HIGH VALUE IS       9.92618  ON 93062624: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   4TH HIGH VALUE IS       9.07526  ON 93061824: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   5TH HIGH VALUE IS       7.90198  ON 93063024: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   6TH HIGH VALUE IS       7.47321  ON 93051924: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   7TH HIGH VALUE IS       5.90160  ON 93062224: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   8TH HIGH VALUE IS       5.85600m ON 93071824: AT (   -2310.38,     2590.80,  1000.00,  1000.00,    3.50)  DC          
+  
+SPIT     HIGH   1ST HIGH VALUE IS       4.10836  ON 93052524: AT (   -1249.68,    -3810.00,  1000.00,  1000.00,    3.40)  DC          
+         HIGH   2ND HIGH VALUE IS       2.98606  ON 93062624: AT (   -1249.68,    -3810.00,  1000.00,  1000.00,    3.40)  DC          
+         HIGH   3RD HIGH VALUE IS       2.83966  ON 93061024: AT (   -1249.68,    -3810.00,  1000.00,  1000.00,    3.40)  DC          
+         HIGH   4TH HIGH VALUE IS       1.80013  ON 93052924: AT (    -664.46,    -5539.74,  1000.00,  1000.00,    4.60)  DC          
+         HIGH   5TH HIGH VALUE IS       1.62584  ON 93052324: AT (    -664.46,    -5539.74,  1000.00,  1000.00,    4.60)  DC          
+         HIGH   6TH HIGH VALUE IS       1.48716  ON 93061224: AT (    -664.46,    -5539.74,  1000.00,  1000.00,    4.60)  DC          
+         HIGH   7TH HIGH VALUE IS       1.18704  ON 93062824: AT (   -1249.68,    -3810.00,  1000.00,  1000.00,    3.40)  DC          
+         HIGH   8TH HIGH VALUE IS       1.13713  ON 93061624: AT (    -664.46,    -5539.74,  1000.00,  1000.00,    4.60)  DC          
+  
+ACTVTY   HIGH   1ST HIGH VALUE IS       0.12264  ON 93061824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   2ND HIGH VALUE IS       0.11114  ON 93061424: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   3RD HIGH VALUE IS       0.09822  ON 93070624: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   4TH HIGH VALUE IS       0.08076  ON 93070824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   5TH HIGH VALUE IS       0.07598  ON 93063024: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   6TH HIGH VALUE IS       0.06138  ON 93052924: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   7TH HIGH VALUE IS       0.06117  ON 93062624: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   8TH HIGH VALUE IS       0.05503  ON 93061024: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+OTHERS   HIGH   1ST HIGH VALUE IS       5.80762  ON 93061824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   2ND HIGH VALUE IS       3.68736  ON 93061024: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   3RD HIGH VALUE IS       2.31950  ON 93052524: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   4TH HIGH VALUE IS       1.84911  ON 93052124: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   5TH HIGH VALUE IS       1.57731  ON 93060424: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   6TH HIGH VALUE IS       1.50248  ON 93062224: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   7TH HIGH VALUE IS       1.34017  ON 93061224: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+         HIGH   8TH HIGH VALUE IS       1.30810  ON 93062824: AT (     283.46,      448.06,  1000.00,  1000.00,    3.50)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10             ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Roads as Area Srcs                                                  ***        14:54:28
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of           24 Warning Message(s)
+ A Total of            7 Informational Message(s)
+
+ A Total of          720 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of            7 Missing Hours Identified (  0.97 Percent)
+
+ Met Data File Includes     784.30 Millimeters (    30.878 Inches) of Precipitation
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W205       8       FLAGDF: No Option Parameter Setting.  Forced by Default to     ZFLAG=0.
+ SO W320      18        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      32        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      34        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      36        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      48        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      50        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      78        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      80        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      82        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      84        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      86        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      88        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      90        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      92        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      94        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      96        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320      98        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     100        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     102        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     104        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     106        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     108        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE
+ SO W320     118        APARM: Input Parameter May Be Out-of-Range for Parameter         ANGLE

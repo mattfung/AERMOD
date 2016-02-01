@@ -1,0 +1,657 @@
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+ **Model Is Setup For Calculation of Dry DEPosition Values.
+ **Model Is Setup For Calculation of Wet DEPosition Values.
+  
+   --  DEPOSITION LOGIC  --
+ **GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses DRY DEPLETION.     DDPLETE  =  T
+ **Model Uses WET DEPLETION.     WETDPLT  =  T
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  BENZENE 
+  
+ **Model Calculates  5 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR  MONTH
+     and Calculates ANNUAL Averages
+  
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and     252 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of High Values for Plotting (PLOTFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+  Concentration:  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+     Deposition:  Emission Units = GRAM/SEC                                 ;  Emission Rate Unit Factor =   0.36000E+10
+                  Output Units   = MICROGRAMS/M**2                         
+  
+ **Approximate Storage Requirements of Model =      3.9 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  testgas2_evt.inp                                                                                
+ **File for Summary of Results:   TESTGAS2.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   houston.sfc                                                                        Met Version:  14134
+   Profile file:   houston.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:   722430                  Upper air station no.:     3937
+                  Name: HOUSTON                                    Name: LAKE_CHARLES                            
+                  Year:   1996                                     Year:   1996
+
+ First 24 hours of scalar data
+ YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN  Z0 BOWEN  ALB  REF WS   WD   HT  REF TA  HT IPCOD PRATE  RH SFCP CCVR
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 96 01 01 01 -999.0 -9.000 -9.000 -9.000 -999. -999. -99999.0 0.15 0.70 1.00    0.00    0.   6.  287.5   2.  0   0.00   96.  998. 10
+ 96 01 01 02  -11.0  0.202 -9.000 -9.000 -999.  217.     66.2 0.15 0.70 1.00    2.10   28.   6.  287.5   2.  0   0.00  100.  997. 10
+ 96 01 01 03  -11.0  0.202 -9.000 -9.000 -999.  217.     66.2 0.15 0.70 1.00    2.10   44.   6.  287.5   2.  0   0.00  100.  997. 10
+ 96 01 01 04  -17.4  0.319 -9.000 -9.000 -999.  432.    165.9 0.15 0.70 1.00    3.10   73.   6.  288.1   2.  0   0.00   96.  997. 10
+ 96 01 01 05  -14.2  0.261 -9.000 -9.000 -999.  322.    111.5 0.15 0.70 1.00    2.60   83.   6.  288.1   2.  0   0.00   96.  996. 10
+ 96 01 01 06  -17.3  0.319 -9.000 -9.000 -999.  432.    165.9 0.15 0.70 1.00    3.10   82.   6.  288.1   2.  0   0.00  100.  996. 10
+ 96 01 01 07  -14.2  0.261 -9.000 -9.000 -999.  322.    111.8 0.15 0.70 1.00    2.60   85.   6.  288.8   2.  0   0.00  100.  996. 10
+ 96 01 01 08  -20.0  0.375 -9.000 -9.000 -999.  552.    234.6 0.15 0.70 0.74    3.60   83.   6.  289.2   2.  0   0.00  100.  996. 10
+ 96 01 01 09    0.7  0.389  0.071  0.005   18.  582.  -7501.7 0.15 0.70 0.41    3.60   97.   6.  290.4   2.  0   0.00  100.  996. 10
+ 96 01 01 10   11.9 -9.000 -9.000 -9.000   64. -999. -99999.0 0.15 0.70 0.31    0.00    0.   6.  292.0   2.  0   0.00  100.  996. 10
+ 96 01 01 11   20.4  0.345  0.391  0.005  103.  487.   -178.7 0.15 0.70 0.28    3.10  194.   6.  293.1   2.  0   0.00   93.  996. 10
+ 96 01 01 12   25.8  0.348  0.465  0.005  138.  492.   -144.7 0.15 0.70 0.27    3.10  226.   6.  294.2   2.  0   0.00   87.  996. 10
+ 96 01 01 13   27.5  0.620  0.506  0.005  167. 1172.   -771.0 0.15 0.70 0.26    5.70  273.   6.  294.9   2.  0   0.00   80.  995. 10
+ 96 01 01 14   25.6  0.620  0.517  0.005  190. 1172.   -824.2 0.15 0.70 0.27    5.70  349.   6.  295.4   2.  0   0.00   72.  994. 10
+ 96 01 01 15   41.4  0.676  0.678  0.005  267. 1330.   -659.9 0.15 0.70 0.28    6.20   12.   6.  293.8   2.  0   0.00   75.  994.  9
+ 96 01 01 16   10.4  0.617  0.442  0.005  295. 1170.  -2008.8 0.15 0.70 0.32    5.70  354.   6.  292.5   2.  0   0.00   75.  995. 10
+ 96 01 01 17   -9.6  0.949 -9.000 -9.000 -999. 2216.   7932.6 0.15 0.70 0.45    8.80   11.   6.  290.4   2.  0   0.00   83.  996. 10
+ 96 01 01 18  -42.3  0.771 -9.000 -9.000 -999. 1672.    962.1 0.15 0.70 1.00    7.20  347.   6.  285.9   2.  0   0.00   92.  998. 10
+ 96 01 01 19  -45.6  0.825 -9.000 -9.000 -999. 1795.   1098.4 0.15 0.70 1.00    7.70  324.   6.  284.9   2.  0   0.00   85.  999. 10
+ 96 01 01 20  -42.7  0.771 -9.000 -9.000 -999. 1631.    954.6 0.15 0.70 1.00    7.20  327.   6.  283.8   2.  0   0.00   85. 1000. 10
+ 96 01 01 21  -42.9  0.771 -9.000 -9.000 -999. 1624.    950.5 0.15 0.70 1.00    7.20  320.   6.  282.5   2.  0   0.00   86. 1000. 10
+ 96 01 01 22  -55.8  0.999 -9.000 -9.000 -999. 2386.   1594.0 0.15 0.70 1.00    9.30  302.   6.  282.0   2.  0   0.00   82. 1001. 10
+ 96 01 01 23  -43.2  0.771 -9.000 -9.000 -999. 1698.    946.7 0.15 0.70 1.00    7.20  310.   6.  281.4   2.  0   0.00   79. 1002. 10
+ 96 01 01 24  -37.3  0.661 -9.000 -9.000 -999. 1316.    693.6 0.15 0.70 1.00    6.20  310.   6.  279.9   2.  0   0.00   82. 1002. 10
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 96 01 01 01    6.1 1 -999.  -99.00   287.6   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS      27.14024 AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      27.00728 AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      23.16402 AT (    -321.39,      383.02,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      21.58936 AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      20.41248 AT (    -383.02,      321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      18.05388 AT (    -433.01,      250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      17.21496 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      16.59203 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      15.40481 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      14.03875 AT (    -469.85,      171.01,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     408.70640  ON 96010117: AT (     -86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     387.06396  ON 96011720: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     384.45260  ON 96052319: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     372.07522  ON 96011718: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     369.87572  ON 96011724: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     369.82678  ON 96011723: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     377.85886  ON 96011724: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     301.65131  ON 96011718: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     285.73664  ON 96011615: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     273.18108  ON 96051512: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     269.99828  ON 96052612: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     269.79201  ON 96110624: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     309.08715  ON 96011724: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     253.50271  ON 96041216: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     235.53622  ON 96032416: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     233.31629  ON 96051516: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     219.04524  ON 96051416: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     217.24328  ON 96052616: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     141.87915  ON 96011724: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     131.48145  ON 96110624: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     120.02440  ON 96051524: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     114.81580m ON 96122224: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     111.90244  ON 96102124: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     110.03061  ON 96052824: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST MONTH RESULTS ***
+
+
+                                    ** CONC OF BENZENE  IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      64.63416b ON 96053124: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      38.50766b ON 96063024: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      36.48073c ON 96043024: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS      30.22819b ON 96073124: AT (    -321.39,      383.02,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS      23.89654b ON 96083124: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS      21.66645b ON 96113024: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2/YR                       **
+
+                                                                                                             NETWORK
+GROUP ID                           DRY DEPO                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS   21101.94927 AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS   20995.68626 AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS   17776.20555 AT (    -321.39,      383.02,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS   16992.51601 AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS   14980.68240 AT (    -383.02,      321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS   12524.52315 AT (    -433.01,      250.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS   12157.88998 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS   10609.03069 AT (    -342.02,      939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS   10445.92254 AT (    -500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    9491.25302 AT (      86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      66.16606  ON 96042411: AT (    -100.00,      173.21,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      63.16717  ON 96042312: AT (      86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      60.95725  ON 96042410: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS      60.52124  ON 96050410: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS      59.86491  ON 96050209: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS      59.52047  ON 96042810: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     174.31625  ON 96011615: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     170.10601  ON 96050212: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     167.08829  ON 96051512: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     160.15865  ON 96042412: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     157.86767  ON 96050312: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     156.92242  ON 96051418: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     388.59152  ON 96050416: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     384.66128  ON 96041216: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     375.04157  ON 96050516: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     349.88593  ON 96042416: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     314.93744  ON 96052316: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     312.02213  ON 96041216: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     549.13996  ON 96051524: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     485.44426  ON 96041224: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS     484.02747  ON 96050524: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS     437.44337c ON 96051424: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS     434.44802c ON 96042424: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS     411.30306  ON 96052624: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST MONTH RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS    8604.83558b ON 96053124: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS    4200.03907c ON 96043024: AT (    -250.00,      433.01,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS    2029.96598b ON 96022924: AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS    1707.79491b ON 96022924: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS    1343.33640b ON 96013124: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS    1209.13525b ON 96073124: AT (    -171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2/YR                       **
+
+                                                                                                             NETWORK
+GROUP ID                           WET DEPO                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     125.24629 AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     103.38617 AT (     -93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     102.14820 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      75.34889 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      74.52144 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      73.70543 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      68.95009 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      66.63832 AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      66.60165 AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      64.59408 AT (     -98.48,      -17.36,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      85.59244  ON 96091824: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      19.81864  ON 96091824: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS       8.25216  ON 96082819: AT (     -93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS       6.96076  ON 96082820: AT (     -98.48,      -17.36,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS       6.33279  ON 96091824: AT (     -98.48,      -17.36,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS       4.66951  ON 96022819: AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      85.59244  ON 96091824: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      19.81864  ON 96091824: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      13.55031  ON 96123103: AT (     -98.48,      -17.36,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS       7.47263  ON 96022821: AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS       6.36538  ON 96042906: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS       4.72030  ON 96092712: AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      85.59244m ON 96091824: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      19.81864m ON 96091824: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      14.04782  ON 96082824: AT (     -93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS       8.31320  ON 96121608: AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS       7.02264  ON 96121516: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS       4.76252  ON 96010524: AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      85.59244b ON 96091824: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      19.81864b ON 96091824: AT (     -76.60,      -64.28,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      14.62562b ON 96082824: AT (     -93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS       8.11527c ON 96042924: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS       7.79464c ON 96102224: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS       5.36122c ON 96121624: AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST MONTH RESULTS ***
+
+
+                                    ** DEPO OF BENZENE  IN MICROGRAMS/M**2                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS      85.75963b ON 96093024: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      29.54004b ON 96083124: AT (     -86.60,      -50.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   3RD HIGH VALUE IS      19.35905b ON 96083124: AT (     -93.97,      -34.20,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   4TH HIGH VALUE IS       9.94530b ON 96022924: AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   5TH HIGH VALUE IS       7.96908b ON 96103124: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   6TH HIGH VALUE IS       4.60475b ON 96113024: AT (      64.28,      -76.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for gaseous deposition based on Wesely, et. al. (2001)    ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Gas deposition inputs are from App. C and App. D for Benzene        ***        14:52:33
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of         1981 Informational Message(s)
+
+ A Total of         8784 Hours Were Processed
+
+ A Total of         1587 Calm Hours Identified
+
+ A Total of          394 Missing Hours Identified (  4.49 Percent)
+
+ Met Data File Includes     921.20 Millimeters (    36.268 Inches) of Precipitation
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  

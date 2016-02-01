@@ -1,0 +1,53 @@
+CO STARTING                                                                                                                         
+   TITLEONE AERMOD model test case for OPENPIT sources; includes OPENPIT sources 
+   TITLETWO for gaseous, particulate using Method 1, and particulate using Method 2
+   MODELOPT  CONC   FLAT   NODRYDPLT   NOWETDPLT
+   AVERTIME  3  24  PERIOD                                                                                                          
+   POLLUTID  SO2                                                                                                                    
+   RUNORNOT  RUN
+   EVENTFIL  openpits_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING
+   ELEVUNIT  METERS
+   location  PITGAS   OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT1  OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT2  OPENPIT  -100.0 -100.0   0.0
+                                                                                                                                    
+SO SRCPARAM  PITGAS    1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+SO SRCPARAM  PITPRT1   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   MASSFRAX  PITPRT1   1.0
+   PARTDENS  PITPRT1   1.0
+   PARTDIAM  PITPRT1   0.01
+SO SRCPARAM  PITPRT2   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   METHOD_2  PITPRT2   1.0  0.01
+
+   SRCGROUP  PITGAS   PITGAS
+   SRCGROUP  PITPRT1  PITPRT1
+   SRCGROUP  PITPRT2  PITPRT2
+
+SO FINISHED
+                                                                                                                                    
+RE STARTING
+RE GRIDPOLR POL1 STA
+                 ORIG 0.0  0.0
+                 DIST 500. 1000.
+                 GDIR 4 90 90
+RE GRIDPOLR POL1 END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+   SURFFILE  "aermet2 test met.sfc"
+   PROFFILE  "aermet2 test met.pfl"
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY                                                                                                 
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND                                                                                                   
+   MAXTABLE  ALLAVE  50       
+   SUMMFILE  OPENPITS.SUM                                                                                                      
+OU FINISHED

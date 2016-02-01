@@ -1,0 +1,22 @@
+  
+    ************ Error Message List *************
+  
+    PW     --- Pathway                           
+    Code   --- Error Type + Error Code           
+    L#     --- The Line Number Where Error Occurs
+    ModNam --- Module Name In Which Error Occurs 
+    Hints  --- Hints For The Possible Solution   
+    *********************************************
+  
+PW CODE    L#      MODNAM                       ERROR MESSAGES                      HINTS
+-- ---- ------- ------------  -------------------------------------------------- ------------
+  
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1986112611
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1986112613
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1986112611
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1986112613
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1989120421
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1989120423
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1990062104
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1990062105
+MX I440       0       CHKCLM: Calm Hour Identified in Meteorology Data File at     1990062122

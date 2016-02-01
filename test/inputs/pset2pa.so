@@ -1,0 +1,318 @@
+SO LOCATION R0010201 AREA       -979.412   1660.587      0.000
+SO SRCPARAM R0010201   1.0   2.0  30.480      262.73       73.2    3.0
+SO LOCATION R0010202 AREA       -727.912   1736.587      0.000
+SO SRCPARAM R0010202   1.0   2.0  30.480      262.73       73.2    3.0
+SO LOCATION R0010301 AREA       -464.431   1811.227      0.000
+SO SRCPARAM R0010301   1.0   2.0  30.480      245.46      119.8    3.0
+SO LOCATION R0020101 AREA      -1783.262   1786.878      0.000
+SO SRCPARAM R0020101   1.0   2.0  30.480      299.31      165.3    3.0
+SO LOCATION R0020102 AREA      -1707.262   1497.378      0.000
+SO SRCPARAM R0020102   1.0   2.0  30.480      299.31      165.3    3.0
+SO LOCATION R0020201 AREA      -1649.053   1218.931      0.000
+SO SRCPARAM R0020201   1.0   2.0  30.480      228.28       78.5    3.0
+SO LOCATION R0020202 AREA      -1425.386   1264.598      0.000
+SO SRCPARAM R0020202   1.0   2.0  30.480      228.28       78.5    3.0
+SO LOCATION R0020203 AREA      -1201.719   1310.265      0.000
+SO SRCPARAM R0020203   1.0   2.0  30.480      228.28       78.5    3.0
+SO LOCATION R0020301 AREA       -990.240   1340.982      0.000
+SO SRCPARAM R0020301   1.0   2.0  30.480      305.00      360.0    3.0
+SO LOCATION R0020401 AREA       -979.412   1660.587      0.000
+SO SRCPARAM R0020401   1.0   2.0  30.480      262.73       73.2    3.0
+SO LOCATION R0020402 AREA       -727.912   1736.587      0.000
+SO SRCPARAM R0020402   1.0   2.0  30.480      262.73       73.2    3.0
+SO LOCATION R0020501 AREA       -464.431   1811.227      0.000
+SO SRCPARAM R0020501   1.0   2.0  30.480      245.46      119.8    3.0
+SO LOCATION R0030101 AREA       -386.466   3120.889      0.000
+SO SRCPARAM R0030101   1.0   2.0  30.480      194.91      128.8    3.0
+SO LOCATION R0030201 AREA       -230.277   2993.629      0.000
+SO SRCPARAM R0030201   1.0   2.0  30.480      228.17      154.2    3.0
+SO LOCATION R0030202 AREA       -131.127   2788.129      0.000
+SO SRCPARAM R0030202   1.0   2.0  30.480      228.17      154.2    3.0
+SO LOCATION R0030301 AREA        -30.880   2572.446      0.000
+SO SRCPARAM R0030301   1.0   2.0  30.480      227.30      193.5    3.0
+SO LOCATION R0030302 AREA        -84.030   2351.446      0.000
+SO SRCPARAM R0030302   1.0   2.0  30.480      227.30      193.5    3.0
+SO LOCATION R0030401 AREA       -140.535   2123.959      0.000
+SO SRCPARAM R0030401   1.0   2.0  30.480      162.27      221.3    3.0
+SO LOCATION R0030501 AREA       -243.760   2012.009      0.000
+SO SRCPARAM R0030501   1.0   2.0  30.480      168.00      180.0    3.0
+SO LOCATION R0030502 AREA       -243.760   1844.009      0.000
+SO SRCPARAM R0030502   1.0   2.0  30.480      168.00      180.0    3.0
+SO LOCATION R0040101 AREA       -669.228   2840.460      0.000
+SO SRCPARAM R0040101   1.0   2.0  30.480      212.08       21.0    3.0
+SO LOCATION R0040201 AREA       -590.565   3042.926      0.000
+SO SRCPARAM R0040201   1.0   2.0  30.480      139.70       40.6    3.0
+SO LOCATION R0040301 AREA       -483.280   3153.491      0.000
+SO SRCPARAM R0040301   1.0   2.0  30.480      96.768      108.1    3.0
+SO LOCATION R0050101 AREA        -74.864   2904.672      0.000
+SO SRCPARAM R0050101   1.0   2.0  30.480      183.48      335.5    3.0
+SO LOCATION R0050201 AREA       -138.797   3062.866      0.000
+SO SRCPARAM R0050201   1.0   2.0  30.480      260.85      276.8    3.0
+SO LOCATION R0060201 AREA       -464.431   1811.227      0.000
+SO SRCPARAM R0060201   1.0   2.0  30.480      245.46      119.8    3.0
+SO LOCATION R0070201 AREA       -274.848   2302.634      0.000
+SO SRCPARAM R0070201   1.0   2.0  30.480      290.66      173.9    3.0
+SO LOCATION R0070301 AREA       -243.760   2012.009      0.000
+SO SRCPARAM R0070301   1.0   2.0  30.480      168.00      180.0    3.0
+SO LOCATION R0070302 AREA       -243.760   1844.009      0.000
+SO SRCPARAM R0070302   1.0   2.0  30.480      168.00      180.0    3.0
+SO LOCATION R0080101 AREA       -244.105   1679.225      0.000
+SO SRCPARAM R0080101   1.0   2.0  30.480      217.91      167.8    3.0
+SO LOCATION R0080201 AREA       -197.760   1463.009      0.000
+SO SRCPARAM R0080201   1.0   2.0  30.480      268.20      180.0    3.0
+SO LOCATION R0080202 AREA       -197.760   1194.809      0.000
+SO SRCPARAM R0080202   1.0   2.0  30.480      268.20      180.0    3.0
+SO LOCATION R0080203 AREA       -197.760    926.609      0.000
+SO SRCPARAM R0080203   1.0   2.0  30.480      268.20      180.0    3.0
+SO LOCATION R0080204 AREA       -197.760    658.409      0.000
+SO SRCPARAM R0080204   1.0   2.0  30.480      268.20      180.0    3.0
+SO LOCATION R0080205 AREA       -197.760    390.209      0.000
+SO SRCPARAM R0080205   1.0   2.0  30.480      268.20      180.0    3.0
+SO LOCATION R0080301 AREA       -207.559    136.236      0.000
+SO SRCPARAM R0080301   1.0   2.0  30.480      277.31      110.9    3.0
+SO LOCATION R0080302 AREA         51.441     37.136      0.000
+SO SRCPARAM R0080302   1.0   2.0  30.480      277.31      110.9    3.0
+SO LOCATION R0090201 AREA       -852.699  -4552.976      0.000
+SO SRCPARAM R0090201   1.0   2.0  30.480      174.18       15.3    3.0
+SO LOCATION R0100101 AREA        315.691    -87.061      0.000
+SO SRCPARAM R0100101   1.0   2.0  30.480      247.89      225.5    3.0
+SO LOCATION R0100102 AREA        138.891   -260.821      0.000
+SO SRCPARAM R0100102   1.0   2.0  30.480      247.89      225.5    3.0
+SO LOCATION R0100103 AREA        -37.909   -434.581      0.000
+SO SRCPARAM R0100103   1.0   2.0  30.480      247.89      225.5    3.0
+SO LOCATION R0100104 AREA       -214.709   -608.341      0.000
+SO SRCPARAM R0100104   1.0   2.0  30.480      247.89      225.5    3.0
+SO LOCATION R0100105 AREA       -391.509   -782.101      0.000
+SO SRCPARAM R0100105   1.0   2.0  30.480      247.89      225.5    3.0
+SO LOCATION R0100201 AREA       -563.762   -945.255      0.000
+SO SRCPARAM R0100201   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100202 AREA       -568.873  -1239.922      0.000
+SO SRCPARAM R0100202   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100203 AREA       -573.984  -1534.589      0.000
+SO SRCPARAM R0100203   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100204 AREA       -579.095  -1829.255      0.000
+SO SRCPARAM R0100204   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100205 AREA       -584.207  -2123.922      0.000
+SO SRCPARAM R0100205   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100206 AREA       -589.318  -2418.589      0.000
+SO SRCPARAM R0100206   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100207 AREA       -594.429  -2713.255      0.000
+SO SRCPARAM R0100207   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100208 AREA       -599.540  -3007.922      0.000
+SO SRCPARAM R0100208   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100209 AREA       -604.651  -3302.589      0.000
+SO SRCPARAM R0100209   1.0   2.0  30.480      294.71      181.0    3.0
+SO LOCATION R0100301 AREA       -610.682  -3602.221      0.000
+SO SRCPARAM R0100301   1.0   2.0  30.480      243.28      200.1    3.0
+SO LOCATION R0100302 AREA       -694.182  -3830.721      0.000
+SO SRCPARAM R0100302   1.0   2.0  30.480      243.28      200.1    3.0
+SO LOCATION R0100401 AREA       -776.760  -4053.991      0.000
+SO SRCPARAM R0100401   1.0   2.0  30.480      167.50      180.0    3.0
+SO LOCATION R0100402 AREA       -776.760  -4221.491      0.000
+SO SRCPARAM R0100402   1.0   2.0  30.480      167.50      180.0    3.0
+SO LOCATION R0110101 AREA      -1100.688  -4450.213      0.000
+SO SRCPARAM R0110101   1.0   2.0  30.480      157.16       76.0    3.0
+SO LOCATION R0110102 AREA       -948.189  -4412.213      0.000
+SO SRCPARAM R0110102   1.0   2.0  30.480      157.16       76.0    3.0
+SO LOCATION R0120101 AREA       -730.545  -4637.548      0.000
+SO SRCPARAM R0120101   1.0   2.0  30.480      255.56      342.7    3.0
+SO LOCATION R0130101 AREA      -2056.582   5186.430      0.000
+SO SRCPARAM R0130101   1.0   2.0  30.480      244.22       16.9    3.0
+SO LOCATION R0130102 AREA      -1985.582   5420.097      0.000
+SO SRCPARAM R0130102   1.0   2.0  30.480      244.22       16.9    3.0
+SO LOCATION R0130103 AREA      -1914.582   5653.763      0.000
+SO SRCPARAM R0130103   1.0   2.0  30.480      244.22       16.9    3.0
+SO LOCATION R0130201 AREA      -1815.029   5889.087      0.000
+SO SRCPARAM R0130201   1.0   2.0  30.480      254.83      156.5    3.0
+SO LOCATION R0130202 AREA      -1713.362   5655.421      0.000
+SO SRCPARAM R0130202   1.0   2.0  30.480      254.83      156.5    3.0
+SO LOCATION R0130203 AREA      -1611.695   5421.754      0.000
+SO SRCPARAM R0130203   1.0   2.0  30.480      254.83      156.5    3.0
+SO LOCATION R0130301 AREA      -1514.485   5193.904      0.000
+SO SRCPARAM R0130301   1.0   2.0  30.480      195.30      128.7    3.0
+SO LOCATION R0130302 AREA      -1361.985   5071.904      0.000
+SO SRCPARAM R0130302   1.0   2.0  30.480      195.30      128.7    3.0
+SO LOCATION NORTHPIT OPENPIT   -1524.000   1439.000      0.000
+SO SRCPARAM NORTHPIT   1.0   0.000       1829.       183.0      0.1674E+08  -45.0
+SO LOCATION SOUTHPIT OPENPIT   -1295.000  -5030.000      0.000
+SO SRCPARAM SOUTHPIT   1.0   0.000       518.0       610.0      0.1296E+08    0.0
+SO LOCATION A1       AREA      -2000.000   3000.000      0.000
+SO SRCPARAM A1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A2       AREA      -2000.000   2695.000      0.000
+SO SRCPARAM A2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A3       AREA      -2000.000   2390.000      0.000
+SO SRCPARAM A3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A4       AREA      -2000.000   2085.000      0.000
+SO SRCPARAM A4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A5       AREA      -2000.000   1780.000      0.000
+SO SRCPARAM A5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A6       AREA      -2000.000   1475.000      0.000
+SO SRCPARAM A6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A7       AREA      -2000.000   1170.000      0.000
+SO SRCPARAM A7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A8       AREA      -2000.000    865.000      0.000
+SO SRCPARAM A8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION A9       AREA      -2000.000    560.000      0.000
+SO SRCPARAM A9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B1       AREA      -1695.000   3000.000      0.000
+SO SRCPARAM B1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B2       AREA      -1695.000   2695.000      0.000
+SO SRCPARAM B2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B3       AREA      -1695.000   2390.000      0.000
+SO SRCPARAM B3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B4       AREA      -1695.000   2085.000      0.000
+SO SRCPARAM B4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B5       AREA      -1695.000   1780.000      0.000
+SO SRCPARAM B5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B6       AREA      -1695.000   1475.000      0.000
+SO SRCPARAM B6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B7       AREA      -1695.000   1170.000      0.000
+SO SRCPARAM B7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B8       AREA      -1695.000    865.000      0.000
+SO SRCPARAM B8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION B9       AREA      -1695.000    560.000      0.000
+SO SRCPARAM B9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C1       AREA      -1390.000   3000.000      0.000
+SO SRCPARAM C1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C2       AREA      -1390.000   2695.000      0.000
+SO SRCPARAM C2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C3       AREA      -1390.000   2390.000      0.000
+SO SRCPARAM C3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C4       AREA      -1390.000   2085.000      0.000
+SO SRCPARAM C4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C5       AREA      -1390.000   1780.000      0.000
+SO SRCPARAM C5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C6       AREA      -1390.000   1475.000      0.000
+SO SRCPARAM C6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C7       AREA      -1390.000   1170.000      0.000
+SO SRCPARAM C7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C8       AREA      -1390.000    865.000      0.000
+SO SRCPARAM C8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION C9       AREA      -1390.000    560.000      0.000
+SO SRCPARAM C9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D1       AREA      -1085.000   3000.000      0.000
+SO SRCPARAM D1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D2       AREA      -1085.000   2695.000      0.000
+SO SRCPARAM D2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D3       AREA      -1085.000   2390.000      0.000
+SO SRCPARAM D3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D4       AREA      -1085.000   2085.000      0.000
+SO SRCPARAM D4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D5       AREA      -1085.000   1780.000      0.000
+SO SRCPARAM D5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D6       AREA      -1085.000   1475.000      0.000
+SO SRCPARAM D6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D7       AREA      -1085.000   1170.000      0.000
+SO SRCPARAM D7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D8       AREA      -1085.000    865.000      0.000
+SO SRCPARAM D8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION D9       AREA      -1085.000    560.000      0.000
+SO SRCPARAM D9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E1       AREA       -780.000   3000.000      0.000
+SO SRCPARAM E1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E2       AREA       -780.000   2695.000      0.000
+SO SRCPARAM E2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E3       AREA       -780.000   2390.000      0.000
+SO SRCPARAM E3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E4       AREA       -780.000   2085.000      0.000
+SO SRCPARAM E4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E5       AREA       -780.000   1780.000      0.000
+SO SRCPARAM E5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E6       AREA       -780.000   1475.000      0.000
+SO SRCPARAM E6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E7       AREA       -780.000   1170.000      0.000
+SO SRCPARAM E7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E8       AREA       -780.000    865.000      0.000
+SO SRCPARAM E8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION E9       AREA       -780.000    560.000      0.000
+SO SRCPARAM E9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F1       AREA       -475.000   3000.000      0.000
+SO SRCPARAM F1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F2       AREA       -475.000   2695.000      0.000
+SO SRCPARAM F2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F3       AREA       -475.000   2390.000      0.000
+SO SRCPARAM F3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F4       AREA       -475.000   2085.000      0.000
+SO SRCPARAM F4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F5       AREA       -475.000   1780.000      0.000
+SO SRCPARAM F5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F6       AREA       -475.000   1475.000      0.000
+SO SRCPARAM F6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F7       AREA       -475.000   1170.000      0.000
+SO SRCPARAM F7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F8       AREA       -475.000    865.000      0.000
+SO SRCPARAM F8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION F9       AREA       -475.000    560.000      0.000
+SO SRCPARAM F9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G1       AREA       -170.000   3000.000      0.000
+SO SRCPARAM G1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G2       AREA       -170.000   2695.000      0.000
+SO SRCPARAM G2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G3       AREA       -170.000   2390.000      0.000
+SO SRCPARAM G3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G4       AREA       -170.000   2085.000      0.000
+SO SRCPARAM G4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G5       AREA       -170.000   1780.000      0.000
+SO SRCPARAM G5         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G6       AREA       -170.000   1475.000      0.000
+SO SRCPARAM G6         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G7       AREA       -170.000   1170.000      0.000
+SO SRCPARAM G7         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G8       AREA       -170.000    865.000      0.000
+SO SRCPARAM G8         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION G9       AREA       -170.000    560.000      0.000
+SO SRCPARAM G9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION V1       AREA      -1500.000  -3695.000      0.000
+SO SRCPARAM V1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION V2       AREA      -1500.000  -4000.000      0.000
+SO SRCPARAM V2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION V3       AREA      -1500.000  -4305.000      0.000
+SO SRCPARAM V3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION V4       AREA      -1500.000  -4610.000      0.000
+SO SRCPARAM V4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION W1       AREA      -1195.000  -3695.000      0.000
+SO SRCPARAM W1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION W2       AREA      -1195.000  -4000.000      0.000
+SO SRCPARAM W2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION W3       AREA      -1195.000  -4305.000      0.000
+SO SRCPARAM W3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION W4       AREA      -1195.000  -4610.000      0.000
+SO SRCPARAM W4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION X1       AREA       -890.000  -3695.000      0.000
+SO SRCPARAM X1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION X2       AREA       -890.000  -4000.000      0.000
+SO SRCPARAM X2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION X3       AREA       -890.000  -4305.000      0.000
+SO SRCPARAM X3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION X4       AREA       -890.000  -4610.000      0.000
+SO SRCPARAM X4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Y1       AREA       -585.000  -3695.000      0.000
+SO SRCPARAM Y1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Y2       AREA       -585.000  -4000.000      0.000
+SO SRCPARAM Y2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Y3       AREA       -585.000  -4305.000      0.000
+SO SRCPARAM Y3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Y4       AREA       -585.000  -4610.000      0.000
+SO SRCPARAM Y4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Z1       AREA       -280.000  -3695.000      0.000
+SO SRCPARAM Z1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Z2       AREA       -280.000  -4000.000      0.000
+SO SRCPARAM Z2         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Z3       AREA       -280.000  -4305.000      0.000
+SO SRCPARAM Z3         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION Z4       AREA       -280.000  -4610.000      0.000
+SO SRCPARAM Z4         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION H1       AREA        135.000   3000.000      0.000
+SO SRCPARAM H1         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION H9       AREA        135.000    560.000      0.000
+SO SRCPARAM H9         1.0   2.00       305.       305.       90.0       0.00    
+SO LOCATION LOVERN   AREA       -732.000   2743.000      0.000
+SO SRCPARAM LOVERN     1.0   2.00       200.       200.       0.00       0.00    
+SO LOCATION LOVERS   AREA      -1238.000  -4476.000      0.000
+SO SRCPARAM LOVERS     1.0   2.00       200.       200.       0.00       0.00    
+SO LOCATION UOVERN   AREA        -91.000   2713.000      0.000
+SO SRCPARAM UOVERN     1.0   2.00       200.       200.       0.00       0.00    
+SO LOCATION UOVERS   AREA       -786.000  -4714.000      0.000
+SO SRCPARAM UOVERS     1.0   2.00       200.       200.       0.00       0.00    
+SO LOCATION UCOAL    VOLUME      405.000    -68.000      0.000
+SO SRCPARAM UCOAL      1.0   3.00       5.00       10.0    

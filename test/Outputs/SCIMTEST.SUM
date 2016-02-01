@@ -1,0 +1,265 @@
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         SCIM     - Use Sampled Chronological Input Model (SCIM) option
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  OTHER   
+  
+ **Model Calculates ANNUAL Averages Only
+  
+ **This Run Includes:      6 Source(s);       6 Source Group(s); and     180 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      1 VOLUME source(s)
+                 and:      3 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      1 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File for Summary of Results:   SCIMTEST.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   salem_86-90.sfc                                                                    Met Version:  14134
+   Profile file:   salem_86-90.pfl                                                                 
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    24232                  Upper air station no.:    24232
+                  Name: SALEM                                      Name: SALEM                                   
+                  Year:   1986                                     Year:   1986
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 86 01 01   1 01  -24.4  0.432 -9.000 -9.000 -999.  681.    296.3  0.04   0.86   1.00    6.20  171.   10.0  280.4    2.0
+ 86 01 01   1 02  -30.5  0.542 -9.000 -9.000 -999.  958.    468.1  0.04   0.86   1.00    7.70  168.   10.0  280.9    2.0
+ 86 01 01   1 03  -34.9  0.623 -9.000 -9.000 -999. 1177.    618.1  0.04   0.86   1.00    8.80  174.   10.0  281.4    2.0
+ 86 01 01   1 04  -30.3  0.542 -9.000 -9.000 -999.  966.    470.0  0.04   0.86   1.00    7.70  183.   10.0  282.0    2.0
+ 86 01 01   1 05  -43.1  0.768 -9.000 -9.000 -999. 1613.    940.1  0.04   0.86   1.00   10.80  193.   10.0  281.4    2.0
+ 86 01 01   1 06  -30.5  0.542 -9.000 -9.000 -999. 1017.    468.9  0.04   0.86   1.00    7.70  192.   10.0  281.4    2.0
+ 86 01 01   1 07  -24.3  0.432 -9.000 -9.000 -999.  697.    297.6  0.04   0.86   1.00    6.20  195.   10.0  281.4    2.0
+ 86 01 01   1 08  -21.7  0.209 -9.000 -9.000 -999.  283.     37.7  0.04   0.86   1.00    3.60  113.   10.0  280.9    2.0
+ 86 01 01   1 09  -22.9  0.355 -9.000 -9.000 -999.  508.    176.6  0.04   0.86   0.55    5.20  127.   10.0  280.4    2.0
+ 86 01 01   1 10   16.0  0.381  0.415  0.005  160.  564.   -310.7  0.04   0.86   0.36    5.20  161.   10.0  280.4    2.0
+ 86 01 01   1 11   30.6  0.345  0.618  0.005  278.  488.   -121.3  0.04   0.86   0.28    4.60  254.   10.0  282.5    2.0
+ 86 01 01   1 12   42.2  0.349  0.766  0.005  385.  495.    -91.2  0.04   0.86   0.25    4.60  276.   10.0  282.5    2.0
+ 86 01 01   1 13   64.3  0.566  0.966  0.005  506. 1022.   -254.8  0.04   0.86   0.25    7.70  223.   10.0  283.8    2.0
+ 86 01 01   1 14   54.8  0.427  0.963  0.005  589.  687.   -128.4  0.04   0.86   0.26    5.70  239.   10.0  283.8    2.0
+ 86 01 01   1 15   30.6  0.345  0.811  0.005  630.  492.   -121.7  0.04   0.86   0.31    4.60  212.   10.0  283.1    2.0
+ 86 01 01   1 16    0.4  0.259  0.195  0.005  628.  320.  -3691.8  0.04   0.86   0.43    3.60  224.   10.0  280.9    2.0
+ 86 01 01   1 17   -9.3  0.093 -9.000 -9.000 -999.   99.      7.9  0.04   0.86   0.73    2.60  141.   10.0  278.8    2.0
+ 86 01 01   1 18  -16.4  0.143 -9.000 -9.000 -999.  129.     16.0  0.04   0.86   1.00    3.10  217.   10.0  276.4    2.0
+ 86 01 01   1 19   -3.1  0.054 -9.000 -9.000 -999.   35.      4.5  0.04   0.86   1.00    1.50  144.   10.0  275.4    2.0
+ 86 01 01   1 20   -2.9  0.054 -9.000 -9.000 -999.   30.      4.8  0.04   0.86   1.00    1.50  137.   10.0  274.9    2.0
+ 86 01 01   1 21   -2.8  0.054 -9.000 -9.000 -999.   30.      5.0  0.04   0.86   1.00    1.50  140.   10.0  273.8    2.0
+ 86 01 01   1 22   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  142.   10.0  273.8    2.0
+ 86 01 01   1 23   -3.1  0.054 -9.000 -9.000 -999.   30.      4.6  0.04   0.86   1.00    1.50  140.   10.0  272.0    2.0
+ 86 01 01   1 24   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  280.   10.0  272.0    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 86 01 01 01   10.0 1  171.    6.20   280.4   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK     1ST HIGHEST VALUE IS      17.17100 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      15.33253 AT (     -86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      15.30342 AT (      86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      14.79338 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      13.10211 AT (      86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      12.06409 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      11.71837 AT (    -171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      11.43136 AT (     171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      11.09698 AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       9.63010 AT (     173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+
+AREA      1ST HIGHEST VALUE IS     139.08127 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     128.11001 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     109.90663 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     100.21305 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      99.81057 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      90.46103 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      79.81796 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      79.14710 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      77.32714 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      74.40542 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+CIRC      1ST HIGHEST VALUE IS    4020.16774 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS    3826.22106 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS    3368.22988 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS    3358.11218 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS    3289.84303 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS    3149.13942 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS    2984.18623 AT (     -17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS    2889.14768 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS    2464.07818 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    2405.14250 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+AREAP     1ST HIGHEST VALUE IS     101.65607 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      97.12849 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      76.20071 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      75.35118 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      75.15097 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      61.76143 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      55.70632 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      45.94403 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      45.24560 AT (      50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      44.77508 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+VOL       1ST HIGHEST VALUE IS       6.34523 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS       6.32803 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       5.76587 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       5.60242 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       5.06506 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       4.53582 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       4.25801 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       4.25323 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.24572 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       3.96225 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+OPENPIT   1ST HIGHEST VALUE IS      44.19640 AT (     171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      39.94004 AT (     500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      35.76205 AT (     383.02,      321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      34.45470 AT (    -100.00,      173.21,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      34.41886 AT (     153.21,      128.56,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      31.94409 AT (      86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      31.48094 AT (     766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      29.63703 AT (     173.21,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      29.21732 AT (    -128.56,      153.21,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      28.08074 AT (      76.60,       64.28,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of         6065 Informational Message(s)
+
+ A Total of        43824 Hours Were Processed
+
+ A Total of         6024 Calm Hours Identified
+
+ A Total of           41 Missing Hours Identified (  0.09 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  

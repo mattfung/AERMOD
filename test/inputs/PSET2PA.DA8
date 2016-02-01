@@ -1,0 +1,18 @@
+* AERMOD ( 15181):  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10                 07/23/15
+* AERMET ( 14134):  Roads as Area Srcs                                                      14:54:28
+* MODELING OPTIONS USED:  NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+*         PLOT FILE OF  HIGH   8TH HIGH 24-HR VALUES FOR SOURCE GROUP: ALL     
+*         FOR A TOTAL OF    10 RECEPTORS.
+*         FORMAT: (3(1X,F13.5),3(1X,F8.2),3X,A5,2X,A8,2X,A5,5X,A8,2X,I8)                                                                                                                                                  
+*        X             Y      AVERAGE CONC    ZELEV    ZHILL    ZFLAG    AVE     GRP       RANK     NET ID   DATE(CONC)
+* ____________  ____________  ____________   ______   ______   ______  ______  ________  ________  ________  ________
+   -1249.68000   -3810.00000       5.82809  1000.00  1000.00     3.40   24-HR  ALL         8TH               93061024
+    -265.18000    -914.40000      13.27220  1000.00  1000.00     3.50   24-HR  ALL         8TH               93061224
+     283.46000     448.06000      30.21926  1000.00  1000.00     3.50   24-HR  ALL         8TH               93061224
+     384.05000    1319.78000      24.09336  1000.00  1000.00     3.50   24-HR  ALL         8TH               93063024
+   -2310.38000    2590.80000      12.63528  1000.00  1000.00     3.50   24-HR  ALL         8TH               93052524
+   -1554.48000    3496.06000       8.12123  1000.00  1000.00     3.50   24-HR  ALL         8TH               93053124
+   -3582.62000     656.84000       1.84935  1000.00  1000.00     4.50   24-HR  ALL         8TH               93052724
+    1272.54000     228.60000       8.03196  1000.00  1000.00     4.40   24-HR  ALL         8TH               93063024
+    1272.54000     228.60000       8.03196  1000.00  1000.00     4.40   24-HR  ALL         8TH               93063024
+    -664.46000   -5539.74000       3.04836  1000.00  1000.00     4.60   24-HR  ALL         8TH               93071024

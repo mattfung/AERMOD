@@ -1,0 +1,1235 @@
+** To run the example, copy the CAPPED_NOSTD.INP file to AERMOD.INP and type:
+**
+**    AERMOD
+**
+** The results for this example problem are provided in file AERMOD.OUT.
+ 
+CO STARTING
+   TITLEONE  AERMOD Model Test Case with Capped and Horizontal Stacks
+   TITLETWO  No downwash cases based on MCH procedure, with NOSTD option
+   MODELOPT  CONC   FLAT   NOSTD   BETA
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+ 
+** Horizontal point source without downwash
+   LOCATION  STACK2H  POINTHOR  0.0   0.0   0.0
+** Point Source        QS      HS     TS    VS    DS
+** Parameters:        ----    ----   ----  ----   ---
+   SRCPARAM  STACK2H  500.0   20.00  425.  10.0   2.
+ 
+** Horizontal point source without downwash with equivalent diameter per MCH procedure
+   LOCATION  STACK2HE  POINT  0.0   0.0   0.0
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2HE  500.0   20.00   425.  0.001  200.
+ 
+** Capped point source without downwash
+   LOCATION  STACK2C  POINTCAP  0.0   0.0   0.0
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2C  500.0   20.00  425.  10.0   2.
+ 
+** Capped point source without downwash with equivalent diameter per MCH procedure,
+** with stack height adjustment for STD
+   LOCATION  STACK2CE  POINT  0.0   0.0   0.0
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2CE  500.0   14.00   425.  0.001  200.
+ 
+   SRCGROUP  STACK2H  STACK2H
+   SRCGROUP  STACK2HE STACK2HE
+   SRCGROUP  STACK2C  STACK2C
+   SRCGROUP  STACK2CE STACK2CE
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  aermet2.sfc
+   PROFFILE  aermet2.pfl
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H01001   1  STACK2H    88030111        4398.63907
+   EVENTLOC H001H01001 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H01001   1  STACK2H    88030114        1739.73021
+   EVENTLOC H002H01001 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H001H01002   1  STACK2HE   88030111        4398.63907
+   EVENTLOC H001H01002 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H01002   1  STACK2HE   88030114        1739.73021
+   EVENTLOC H002H01002 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H001H01003   1  STACK2C    88030111        8853.68498
+   EVENTLOC H001H01003 XR=       86.602540 YR=      -50.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01003   1  STACK2C    88030114        2654.62477
+   EVENTLOC H002H01003 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H001H01004   1  STACK2CE   88030111        7133.76335
+   EVENTLOC H001H01004 XR=       86.602540 YR=      -50.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01004   1  STACK2CE   88030114        1969.12731
+   EVENTLOC H002H01004 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H001H03001   3  STACK2H    88030112        2260.37267
+   EVENTLOC H001H03001 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H03001   3  STACK2H    88030115        1478.66540
+   EVENTLOC H002H03001 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H03002   3  STACK2HE   88030112        2260.37267
+   EVENTLOC H001H03002 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H03002   3  STACK2HE   88030115        1478.66540
+   EVENTLOC H002H03002 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H03003   3  STACK2C    88030112        3828.37129
+   EVENTLOC H001H03003 XR=       86.602540 YR=      -50.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03003   3  STACK2C    88030115        2233.09073
+   EVENTLOC H002H03003 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H03004   3  STACK2CE   88030112        3022.83003
+   EVENTLOC H001H03004 XR=       86.602540 YR=      -50.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03004   3  STACK2CE   88030115        1695.91697
+   EVENTLOC H002H03004 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H08001   8  STACK2H    88030116        1667.59114
+   EVENTLOC H001H08001 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H08001   8  STACK2H    88030316         299.44815
+   EVENTLOC H002H08001 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08002   8  STACK2HE   88030116        1667.59114
+   EVENTLOC H001H08002 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H08002   8  STACK2HE   88030316         299.44815
+   EVENTLOC H002H08002 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08003   8  STACK2C    88030116        2432.51831
+   EVENTLOC H001H08003 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H08003   8  STACK2C    88030316         364.66292
+   EVENTLOC H002H08003 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H001H08004   8  STACK2CE   88030116        1949.35450
+   EVENTLOC H001H08004 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H08004   8  STACK2CE   88030316         272.62822
+   EVENTLOC H002H08004 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H001H24001  24  STACK2H    88030124         575.37813
+   EVENTLOC H001H24001 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H24001  24  STACK2H    88030324         116.81295
+   EVENTLOC H002H24001 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24002  24  STACK2HE   88030124         575.37813
+   EVENTLOC H001H24002 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H24002  24  STACK2HE   88030324         116.81295
+   EVENTLOC H002H24002 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24003  24  STACK2C    88030124         850.96142
+   EVENTLOC H001H24003 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H24003  24  STACK2C    88030324         144.16178
+   EVENTLOC H002H24003 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24004  24  STACK2CE   88030124         687.10486
+   EVENTLOC H001H24004 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H002H24004  24  STACK2CE   88030324         113.68486
+   EVENTLOC H002H24004 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+
+  *** Message Summary For AERMOD Model Setup ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            2 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ SO W320      30        PPARM: Input Parameter May Be Out-of-Range for Parameter            DS
+ SO W320      43        PPARM: Input Parameter May Be Out-of-Range for Parameter            DS
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Not Use Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+         6. Option for Capped & Horiz Stacks Selected With:
+  
+                 1 Capped Stack(s); and      1 Horizontal Stack(s)
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      4 Source(s);       4 Source Group(s); and      32 Event(s)
+
+                with:      4 POINT(s), including
+                           1 POINTCAP(s) and      1 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK2H          0   0.50000E+03       0.0       0.0     0.0    20.00   425.00    10.00     2.00    NO      NO   HOR         
+ STACK2HE         0   0.50000E+03       0.0       0.0     0.0    20.00   425.00     0.00   200.00    NO      NO    NO         
+ STACK2C          0   0.50000E+03       0.0       0.0     0.0    20.00   425.00    10.00     2.00    NO      NO   CAP         
+ STACK2CE         0   0.50000E+03       0.0       0.0     0.0    14.00   425.00     0.00   200.00    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  STACK2H    STACK2H     ,
+
+  STACK2HE   STACK2HE    ,
+
+  STACK2C    STACK2C     ,
+
+  STACK2CE   STACK2CE    ,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   3  1  0
+                                                           AND END DATE: 1988   3  3 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01001    GROUP VALUE =     4398.63908 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11     4398.63908    4398.63908
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    4398.63908    4398.63908
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01001    GROUP VALUE =     1739.73021 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030114;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 14     1739.73021    1739.73021
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1739.73021    1739.73021
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01002    GROUP VALUE =     4398.63908 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11     4398.63908    4398.63908
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    4398.63908    4398.63908
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01002    GROUP VALUE =     1739.73021 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030114;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 14     1739.73021    1739.73021
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1739.73021    1739.73021
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01003    GROUP VALUE =     8853.68496 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.60     -50.00       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11     8853.68496    8853.68496
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    8853.68496    8853.68496
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01003    GROUP VALUE =     2654.62477 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030114;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 14     2654.62477    2654.62477
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    2654.62477    2654.62477
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01004    GROUP VALUE =     7133.76332 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.60     -50.00       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11     7133.76332    7133.76332
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    7133.76332    7133.76332
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01004    GROUP VALUE =     1969.12731 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030114;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 14     1969.12731    1969.12731
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1969.12731    1969.12731
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =     2260.37268 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    2260.37268    2260.37268
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =     1478.66540 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030115;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13     1251.48472    1251.48472
+ 14     1705.79815    1705.79815
+ 15     1478.71332    1478.71332
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1478.66540    1478.66540
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03002    GROUP VALUE =     2260.37268 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    2260.37268    2260.37268
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03002    GROUP VALUE =     1478.66540 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030115;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13     1251.48472    1251.48472
+ 14     1705.79815    1705.79815
+ 15     1478.71332    1478.71332
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1478.66540    1478.66540
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03003    GROUP VALUE =     3828.37128 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.60     -50.00       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10     1868.47366    1868.47366
+ 11     8853.68496    8853.68496
+ 12      762.95523     762.95523
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    3828.37128    3828.37128
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03003    GROUP VALUE =     2233.09073 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030115;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13     1972.88946    1972.88946
+ 14     2613.82076    2613.82076
+ 15     2112.56198    2112.56198
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    2233.09073    2233.09073
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03004    GROUP VALUE =     3022.83001 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.60     -50.00       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10     1453.84688    1453.84688
+ 11     7133.76332    7133.76332
+ 12      480.87984     480.87984
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    3022.83001    3022.83001
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03004    GROUP VALUE =     1695.91697 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030115;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13     1500.28890    1500.28890
+ 14     1934.85625    1934.85625
+ 15     1652.60575    1652.60575
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1695.91697    1695.91697
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08001    GROUP VALUE =     1667.59114 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      846.27768     846.27768
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+ 13     1568.58453    1568.58453
+ 14     1326.12515    1326.12515
+ 15     1318.62753    1318.62753
+ 16     1499.99623    1499.99623
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1667.59114    1667.59114
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08002    GROUP VALUE =     1667.59114 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      846.27768     846.27768
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+ 13     1568.58453    1568.58453
+ 14     1326.12515    1326.12515
+ 15     1318.62753    1318.62753
+ 16     1499.99623    1499.99623
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1667.59114    1667.59114
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08003    GROUP VALUE =     2432.51830 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9     1278.56507    1278.56507
+ 10     2147.88719    2147.88719
+ 11     6108.35480    6108.35480
+ 12     1258.27772    1258.27772
+ 13     2380.36709    2380.36709
+ 14     2142.69420    2142.69420
+ 15     1921.61532    1921.61532
+ 16     2222.38504    2222.38504
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    2432.51830    2432.51830
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  24
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08004    GROUP VALUE =     1949.35450 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      824.97892     824.97892
+ 10     1654.68318    1654.68318
+ 11     5742.28988    5742.28988
+ 12      869.79585     869.79585
+ 13     1854.93935    1854.93935
+ 14     1531.68541    1531.68541
+ 15     1484.38851    1484.38851
+ 16     1632.07486    1632.07486
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1949.35450    1949.35450
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  25
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =      575.37813 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        7.30945       7.30945
+  2       43.10667      43.10667
+  3       14.34843      14.34843
+  4       19.98265      19.98265
+  5       18.13088      18.13088
+  6      117.64632     117.64632
+  7       72.32839      72.32839
+  8       39.75437      39.75437
+  9      846.27768     846.27768
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+ 13     1568.58453    1568.58453
+ 14     1326.12515    1326.12515
+ 15     1318.62753    1318.62753
+ 16     1499.99623    1499.99623
+ 17       32.17751      32.17751
+ 18        2.82171       2.82171
+ 19       34.00345      34.00345
+ 20       35.94283      35.94283
+ 21        0.34182       0.34182
+ 22        3.62543       3.62543
+ 23       22.80462      22.80462
+ 24        4.02138       4.02138
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     575.37813     575.37813
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  26
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24002    GROUP VALUE =      575.37813 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        7.30945       7.30945
+  2       43.10667      43.10667
+  3       14.34843      14.34843
+  4       19.98265      19.98265
+  5       18.13088      18.13088
+  6      117.64632     117.64632
+  7       72.32839      72.32839
+  8       39.75437      39.75437
+  9      846.27768     846.27768
+ 10     1597.08510    1597.08510
+ 11     4398.63908    4398.63908
+ 12      785.39385     785.39385
+ 13     1568.58453    1568.58453
+ 14     1326.12515    1326.12515
+ 15     1318.62753    1318.62753
+ 16     1499.99623    1499.99623
+ 17       32.17751      32.17751
+ 18        2.82171       2.82171
+ 19       34.00345      34.00345
+ 20       35.94283      35.94283
+ 21        0.34182       0.34182
+ 22        3.62543       3.62543
+ 23       22.80462      22.80462
+ 24        4.02138       4.02138
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     575.37813     575.37813
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  27
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24003    GROUP VALUE =      850.96142 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       21.18775      21.18775
+  2       95.28639      95.28639
+  3       30.51473      30.51473
+  4       31.58760      31.58760
+  5       29.01441      29.01441
+  6      196.80105     196.80105
+  7      143.36710     143.36710
+  8       70.35560      70.35560
+  9     1278.56507    1278.56507
+ 10     2147.88719    2147.88719
+ 11     6108.35480    6108.35480
+ 12     1258.27772    1258.27772
+ 13     2380.36709    2380.36709
+ 14     2142.69420    2142.69420
+ 15     1921.61532    1921.61532
+ 16     2222.38504    2222.38504
+ 17      132.06990     132.06990
+ 18       10.66654      10.66654
+ 19       66.69207      66.69207
+ 20       63.92330      63.92330
+ 21        1.48278       1.48278
+ 22       10.20815      10.20815
+ 23       45.45810      45.45810
+ 24       14.31227      14.31227
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     850.96142     850.96142
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  28
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24004    GROUP VALUE =      687.10486 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       19.12711      19.12711
+  2       93.08969      93.08969
+  3       26.54315      26.54315
+  4       31.34259      31.34259
+  5       27.39184      27.39184
+  6      188.74614     188.74614
+  7      135.70544     135.70544
+  8       66.45221      66.45221
+  9      824.97892     824.97892
+ 10     1654.68318    1654.68318
+ 11     5742.28988    5742.28988
+ 12      869.79585     869.79585
+ 13     1854.93935    1854.93935
+ 14     1531.68541    1531.68541
+ 15     1484.38851    1484.38851
+ 16     1632.07486    1632.07486
+ 17      102.69477     102.69477
+ 18       11.19636      11.19636
+ 19       67.25261      67.25261
+ 20       55.40176      55.40176
+ 21        1.53794       1.53794
+ 22       10.43880      10.43880
+ 23       43.26609      43.26609
+ 24       15.49415      15.49415
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     687.10486     687.10486
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  29
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08001    GROUP VALUE =      299.44815 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      267.46705     267.46705
+ 10      193.93023     193.93023
+ 11     1027.81877    1027.81877
+ 12      463.27498     463.27498
+ 13      281.95659     281.95659
+ 14      112.98066     112.98066
+ 15       32.37549      32.37549
+ 16       15.78147      15.78147
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     299.44815     299.44815
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  30
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08002    GROUP VALUE =      299.44815 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      267.46705     267.46705
+ 10      193.93023     193.93023
+ 11     1027.81877    1027.81877
+ 12      463.27498     463.27498
+ 13      281.95659     281.95659
+ 14      112.98066     112.98066
+ 15       32.37549      32.37549
+ 16       15.78147      15.78147
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     299.44815     299.44815
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  31
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08003    GROUP VALUE =      364.66292 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      442.29913     442.29913
+ 10      290.71708     290.71708
+ 11     1014.14522    1014.14522
+ 12      505.72733     505.72733
+ 13      328.14869     328.14869
+ 14      246.55506     246.55506
+ 15       58.39006      58.39006
+ 16       31.32076      31.32076
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     364.66292     364.66292
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  32
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08004    GROUP VALUE =      272.62822 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      267.19024     267.19024
+ 10      204.05131     204.05131
+ 11      827.75383     827.75383
+ 12      417.47329     417.47329
+ 13      208.67309     208.67309
+ 14      198.64363     198.64363
+ 15       33.94084      33.94084
+ 16       23.29952      23.29952
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     272.62822     272.62822
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  33
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =      116.81295 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2H  OF STACK2H     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.00715       0.00715
+  2        0.01176       0.01176
+  3        8.61048       8.61048
+  4        1.61036       1.61036
+  5        1.88504       1.88504
+  6      186.38911     186.38911
+  7       40.53529      40.53529
+  8      116.71189     116.71189
+  9      267.46705     267.46705
+ 10      193.93023     193.93023
+ 11     1027.81877    1027.81877
+ 12      463.27498     463.27498
+ 13      281.95659     281.95659
+ 14      112.98066     112.98066
+ 15       32.37549      32.37549
+ 16       15.78147      15.78147
+ 17        2.82767       2.82767
+ 18       14.03446      14.03446
+ 19       33.03983      33.03983
+ 20        2.01350       2.01350
+ 21        0.06783       0.06783
+ 22        0.01687       0.01687
+ 23        0.07776       0.07776
+ 24        0.08666       0.08666
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     116.81295     116.81295
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  34
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24002    GROUP VALUE =      116.81295 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2HE OF STACK2HE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.00715       0.00715
+  2        0.01176       0.01176
+  3        8.61048       8.61048
+  4        1.61036       1.61036
+  5        1.88504       1.88504
+  6      186.38911     186.38911
+  7       40.53529      40.53529
+  8      116.71189     116.71189
+  9      267.46705     267.46705
+ 10      193.93023     193.93023
+ 11     1027.81877    1027.81877
+ 12      463.27498     463.27498
+ 13      281.95659     281.95659
+ 14      112.98066     112.98066
+ 15       32.37549      32.37549
+ 16       15.78147      15.78147
+ 17        2.82767       2.82767
+ 18       14.03446      14.03446
+ 19       33.03983      33.03983
+ 20        2.01350       2.01350
+ 21        0.06783       0.06783
+ 22        0.01687       0.01687
+ 23        0.07776       0.07776
+ 24        0.08666       0.08666
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     116.81295     116.81295
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  35
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24003    GROUP VALUE =      144.16178 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2C  OF STACK2C     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.02389       0.02389
+  2        0.04376       0.04376
+  3       19.57971      19.57971
+  4        3.80587       3.80587
+  5        3.25987       3.25987
+  6      265.27497     265.27497
+  7       56.91736      56.91736
+  8      162.34166     162.34166
+  9      352.16118     352.16118
+ 10      228.79638     228.79638
+ 11     1157.26781    1157.26781
+ 12      560.18500     560.18500
+ 13      379.36499     379.36499
+ 14      131.67309     131.67309
+ 15       47.08214      47.08214
+ 16       22.40349      22.40349
+ 17        5.63259       5.63259
+ 18       20.21628      20.21628
+ 19       40.26422      40.26422
+ 20        3.08285       3.08285
+ 21        0.13172       0.13172
+ 22        0.04421       0.04421
+ 23        0.15916       0.15916
+ 24        0.17063       0.17063
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     144.16178     144.16178
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  36
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24004    GROUP VALUE =      113.68486 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2CE OF STACK2CE    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.02353       0.02353
+  2        0.04189       0.04189
+  3       31.27441      31.27441
+  4        3.77982       3.77982
+  5        3.32714       3.32714
+  6      256.16924     256.16924
+  7       56.54769      56.54769
+  8      170.66348     170.66348
+  9      213.97708     213.97708
+ 10      151.34207     151.34207
+ 11      946.39428     946.39428
+ 12      462.52830     462.52830
+ 13      220.85662     220.85662
+ 14      107.98326     107.98326
+ 15       22.24043      22.24043
+ 16       14.17908      14.17908
+ 17        3.99537       3.99537
+ 18       19.96952      19.96952
+ 19       39.58551      39.58551
+ 20        3.07543       3.07543
+ 21        0.12878       0.12878
+ 22        0.04069       0.04069
+ 23        0.14855       0.14855
+ 24        0.16460       0.16460
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     113.68486     113.68486
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Model Test Case with Capped and Horizontal Stacks            ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  No downwash cases based on MCH procedure, with NOSTD option         ***        14:52:32
+                                                                                                                       PAGE  37
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NOSTD     BETA      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            2 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ SO W320      30        PPARM: Input Parameter May Be Out-of-Range for Parameter            DS
+ SO W320      43        PPARM: Input Parameter May Be Out-of-Range for Parameter            DS
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

@@ -1,0 +1,76 @@
+CO STARTING
+   TITLEONE  PM-10 Test Case for the AERMOD Model using single met file
+   TITLETWO  Five years of met data from Salem, OR
+   MODELOPT  CONC  FLAT
+   AVERTIME  24  PERIOD
+   POLLUTID  PM10
+   RUNORNOT  RUN
+   EVENTFIL  testpm10_evt.inp  DETAIL
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+
+SO STARTING
+   LOCATION  STACK1  POINT  0.0   0.0   0.0
+                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK1  25.0   65.00   425.  15.0   5.
+                                                                                                                                    
+SO BUILDHGT  STACK1    36*50.
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1    22.50   26.81   30.31   32.89   34.47   35.00
+                                                                                                                                    
+   LOCATION  STACK2  POINT  0.0   0.0   0.0
+                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2  100.0   65.00  425.  15.0   5.
+
+   SRCGROUP  ALL
+SO FINISHED
+
+RE STARTING
+   GRIDPOLR  POL1  STA
+             POL1  ORIG  0.0  0.0
+             POL1  DIST  200.  500.  1000.
+             POL1  GDIR  36    10.   10.
+             POL1  END
+RE FINISHED
+
+ME STARTING
+   SURFFILE  salem_86-90.sfc
+   PROFFILE  salem_86-90.pfl
+   SURFDATA  24232  1986  SALEM
+   UAIRDATA  24232  1986  SALEM
+   PROFBASE  0.0
+ME FINISHED
+
+OU STARTING
+   RECTABLE  ALLAVE  sixth
+   MAXTABLE  ALLAVE  100
+   MAXIFILE  24  ALL  30.0  TESTPM10_MAXIFILE.OUT
+   SEASONHR  ALL  TESTPM10_SEASHR.FIL
+   SUMMFILE  TESTPM10.SUM
+OU FINISHED

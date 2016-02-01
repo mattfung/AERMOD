@@ -1,0 +1,351 @@
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Allow FLAT/ELEV Terrain Option by Source,
+            with      1 FLAT and      1 ELEV Source(s).
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+
+ **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
+         User has specified non-standard averaging periods:    3-HR   8-HR  24-HR         
+         High ranked 1-hour values are NOT averaged across the number of years modeled, and
+         complete years of data are NOT required.
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      2 Source(s);       2 Source Group(s); and      11 Receptor(s)
+
+                with:      2 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Concurrent Values for Postprocessing (POSTFILE Keyword)
+          Model Outputs External File(s) of High Values for Plotting (PLOTFILE Keyword)
+          Model Outputs External File(s) of Ranked Values (RANKFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     1.80 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  flatelev_evt.inp                                                                                
+ **File for Summary of Results:   FlatElev.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   1  1  1
+                                                           AND END DATE: 1988  12 31 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   lovett.sfc                                                                         Met Version:  14134
+   Profile file:   lovett.pfl                                                                      
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14735                  Upper air station no.:    14735
+                  Name: ALBANY                                     Name: ALBANY                                  
+                  Year:   1988                                     Year:   1988
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 88 01 01   1 01   -0.1  0.011 -9.000 -9.000 -999.    3.      2.1  0.00   0.10   1.00    0.60   35.   50.0  273.8   10.0
+ 88 01 01   1 02   -0.1  0.015 -9.000 -9.000 -999.    4.      2.8  0.00   0.10   1.00    0.80  168.   50.0  274.2   10.0
+ 88 01 01   1 03    0.0  0.009 -9.000 -9.000 -999.    2.      1.8  0.00   0.10   1.00    0.50  136.   50.0  274.5   10.0
+ 88 01 01   1 04    0.0  0.009 -9.000 -9.000 -999.    2.      1.8  0.00   0.10   1.00    0.50  157.   50.0  274.0   10.0
+ 88 01 01   1 05    0.0  0.009 -9.000 -9.000 -999.    2.      1.7  0.00   0.10   1.00    0.50   56.   50.0  273.8   10.0
+ 88 01 01   1 06   -0.2  0.024 -9.000 -9.000 -999.    9.      7.2  0.75   1.50   1.00    0.50  197.   50.0  274.3   10.0
+ 88 01 01   1 07    0.0  0.007 -9.000 -9.000 -999.    2.      1.1  0.00   0.10   1.00    0.40  170.   50.0  274.5   10.0
+ 88 01 01   1 08   -0.3  0.033 -9.000 -9.000 -999.   15.     10.1  0.75   1.50   0.93    0.70  222.   50.0  274.3   10.0
+ 88 01 01   1 09   -0.6  0.048 -9.000 -9.000 -999.   25.     16.3  0.75   1.50   0.68    1.00  213.   50.0  274.7   10.0
+ 88 01 01   1 10   -0.3  0.043 -9.000 -9.000 -999.   21.     23.0  0.75   1.50   0.58    0.90  222.   50.0  275.2   10.0
+ 88 01 01   1 11   38.0  0.167  0.605  0.011  210.  163.    -11.0  0.75   1.50   0.55    1.00  212.   50.0  275.7   10.0
+ 88 01 01   1 12   14.2  0.030  0.440  0.011  216.   53.     -1.0  0.00   0.10   0.25    0.40  158.   10.0  276.3   10.0
+ 88 01 01   1 13   46.4  0.119  0.673  0.009  236.   99.     -3.3  0.30   0.80   0.39    0.60   66.   10.0  276.8   10.0
+ 88 01 01   1 14   52.9  0.121  0.723  0.008  257.  101.     -3.0  0.75   1.15   0.41    0.40    2.   10.0  277.5   10.0
+ 88 01 01   1 15   15.9  0.085  0.488  0.007  263.   60.     -3.5  0.75   1.50   0.58    0.40  180.   50.0  277.7   10.0
+ 88 01 01   1 16    0.2  0.024  0.108  0.007  263.   12.     -6.8  0.00   0.10   0.43    0.50  138.   50.0  277.7   10.0
+ 88 01 01   1 17   -1.8  0.067 -9.000 -9.000 -999.   41.     14.6  0.75   1.50   0.94    1.40  222.   50.0  277.7   10.0
+ 88 01 01   1 18   -1.1  0.039 -9.000 -9.000 -999.   18.      4.8  0.75   1.50   1.00    0.50  194.   10.0  278.0   10.0
+ 88 01 01   1 19  -14.8  0.200 -9.000 -9.000 -999.  214.     48.4  1.50   1.50   1.00    3.50  268.   50.0  278.2   10.0
+ 88 01 01   1 20   -8.1  0.148 -9.000 -9.000 -999.  138.     36.6  1.50   1.50   1.00    2.60  265.   50.0  276.8   10.0
+ 88 01 01   1 21   -8.7  0.154 -9.000 -9.000 -999.  145.     37.9  1.50   1.50   1.00    2.70  258.   50.0  275.3   10.0
+ 88 01 01   1 22   -5.3  0.085 -9.000 -9.000 -999.   61.     10.5  0.75   1.50   1.00    1.10  218.   10.0  274.3   10.0
+ 88 01 01   1 23   -5.5  0.093 -9.000 -9.000 -999.   68.     13.1  0.75   1.50   1.00    1.20  219.   10.0  274.0   10.0
+ 88 01 01   1 24   -8.7  0.171 -9.000 -9.000 -999.  170.     52.2  1.50   1.50   1.00    3.00  270.   50.0  273.8   10.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 88 01 01 01   10.0 0  286.    0.50   273.8   57.2    0.02    0.31
+ 88 01 01 01   50.0 0   35.    0.60   274.5   31.3  -99.00    0.28
+ 88 01 01 01  100.0 1  146.    1.30   274.5   46.4    0.14    0.77
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (  8784 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ELEV_STK  1ST HIGHEST VALUE IS       3.14117 AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+          2ND HIGHEST VALUE IS       3.08237 AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+          3RD HIGHEST VALUE IS       2.93448 AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+          4TH HIGHEST VALUE IS       2.16476 AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+          5TH HIGHEST VALUE IS       1.78525 AT (    5810.00,    70900.00,   253.17,   323.10,    0.00)  DC          
+          6TH HIGHEST VALUE IS       1.76790 AT (    3600.00,    69700.00,   319.31,   330.67,    0.00)  DC          
+          7TH HIGHEST VALUE IS       1.50697 AT (    5500.00,    70450.00,   234.88,   329.78,    0.00)  DC          
+          8TH HIGHEST VALUE IS       0.86217 AT (    5860.00,    71340.00,   160.97,   340.96,    0.00)  DC          
+          9TH HIGHEST VALUE IS       0.76492 AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+         10TH HIGHEST VALUE IS       0.51804 AT (    3500.00,    67750.00,   237.48,   239.26,    0.00)  DC          
+
+FLAT_STK  1ST HIGHEST VALUE IS       0.75552 AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+          2ND HIGHEST VALUE IS       0.74970 AT (    5860.00,    71340.00,   160.97,   340.96,    0.00)  DC          
+          3RD HIGHEST VALUE IS       0.74433 AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+          4TH HIGHEST VALUE IS       0.73970 AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+          5TH HIGHEST VALUE IS       0.72593 AT (    5810.00,    70900.00,   253.17,   323.10,    0.00)  DC          
+          6TH HIGHEST VALUE IS       0.72511 AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+          7TH HIGHEST VALUE IS       0.69819 AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+          8TH HIGHEST VALUE IS       0.66718 AT (    5500.00,    70450.00,   234.88,   329.78,    0.00)  DC          
+          9TH HIGHEST VALUE IS       0.64082 AT (    3600.00,    69700.00,   319.31,   330.67,    0.00)  DC          
+         10TH HIGHEST VALUE IS       0.41911 AT (    7870.00,    69130.00,    26.09,    26.09,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ELEV_STK HIGH   1ST HIGH VALUE IS     309.99382  ON 88011214: AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS     295.28647  ON 88011214: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS     250.24318  ON 88011710: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+  
+FLAT_STK HIGH   1ST HIGH VALUE IS      89.25217  ON 88092010: AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      70.28433  ON 88091812: AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS      69.38498  ON 88011612: AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ELEV_STK HIGH   1ST HIGH VALUE IS     130.56369  ON 88011215: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS     125.51996  ON 88020124: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS     107.61485  ON 88041509: AT (    4780.00,    70700.00,   324.80,   329.02,    0.00)  DC          
+  
+FLAT_STK HIGH   1ST HIGH VALUE IS      50.60060  ON 88070712: AT (    5500.00,    70450.00,   234.88,   329.78,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      38.44600  ON 88100212: AT (    5860.00,    71340.00,   160.97,   340.96,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS      33.75471  ON 88091812: AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  8-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ELEV_STK HIGH   1ST HIGH VALUE IS      77.54343  ON 88040116: AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      69.16366  ON 88110416: AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS      55.40553  ON 88040616: AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+  
+FLAT_STK HIGH   1ST HIGH VALUE IS      22.47192  ON 88011616: AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      18.99996  ON 88011616: AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS      17.98011  ON 88091816: AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ELEV_STK HIGH   1ST HIGH VALUE IS      28.88395  ON 88112724: AT (    5110.00,    70850.00,   319.80,   322.66,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS      28.67180  ON 88110424: AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS      25.38289  ON 88040324: AT (    4520.00,    69780.00,   296.71,   296.71,    0.00)  DC          
+  
+FLAT_STK HIGH   1ST HIGH VALUE IS       7.49670  ON 88011624: AT (    6930.00,    71300.00,   156.75,   276.71,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS       6.33765  ON 88011624: AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+         HIGH   3RD HIGH VALUE IS       6.02880  ON 88091824: AT (    6250.00,    71070.00,   276.63,   276.63,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Includes both ELEV and FLAT source                                  ***        14:53:28
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT and  ELEV      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of           21 Warning Message(s)
+ A Total of          187 Informational Message(s)
+
+ A Total of         8784 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of          187 Missing Hours Identified (  2.13 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      10       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ CO W362      10       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     3-hr Ave
+ CO W362      10       COCARD: Multiyear 1h NO2/SO2 processing not applicable for     8-hr Ave
+ CO W362      10       COCARD: Multiyear 1h NO2/SO2 processing not applicable for    24-hr Ave
+ MX W479     184       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.539
+ MX W479     185       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.556
+ MX W479     186       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.593
+ MX W479     187       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.552
+ MX W479     188       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.509
+ MX W479     594       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.506
+ MX W479     597       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.537
+ MX W479    1016       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.602
+ MX W479    1017       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.652
+ MX W479    1031       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.576
+ MX W479    1032       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.962
+ MX W479    1033       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.697
+ MX W479    2837       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.552
+ MX W479    4963       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.577
+ MX W479    5275       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.636
+ MX W479    5803       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.555
+ MX W479    7797       TGINIT: Potential temperature gradient is out-of-range:    TG4PFL=0.537

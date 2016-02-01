@@ -1,0 +1,985 @@
+CO STARTING
+   TITLEONE AERMOD model test case for OPENPIT sources; includes OPENPIT sources
+   TITLETWO for gaseous, particulate using Method 1, and particulate using Method 2
+   MODELOPT  CONC   FLAT   NODRYDPLT   NOWETDPLT
+   AVERTIME  3  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   EVENTFIL  openpits_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+   location  PITGAS   OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT1  OPENPIT  -100.0 -100.0   0.0
+   location  PITPRT2  OPENPIT  -100.0 -100.0   0.0
+ 
+SO SRCPARAM  PITGAS    1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+SO SRCPARAM  PITPRT1   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   MASSFRAX  PITPRT1   1.0
+   PARTDENS  PITPRT1   1.0
+   PARTDIAM  PITPRT1   0.01
+SO SRCPARAM  PITPRT2   1.0E-5   0.000     1800.     180.0      0.16E+08  -45.0
+   METHOD_2  PITPRT2   1.0  0.01
+ 
+   SRCGROUP  PITGAS   PITGAS
+   SRCGROUP  PITPRT1  PITPRT1
+   SRCGROUP  PITPRT2  PITPRT2
+ 
+SO FINISHED
+ 
+RE STARTING
+RE GRIDPOLR POL1 STA
+                 ORIG 0.0  0.0
+                 DIST 500. 1000.
+                 GDIR 4 90 90
+RE GRIDPOLR POL1 END
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  "aermet2 test met.sfc"
+   PROFFILE  "aermet2 test met.pfl"
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE  ALLAVE  FIRST-SECOND
+   MAXTABLE  ALLAVE  50
+   SUMMFILE  OPENPITS.SUM
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+
+ **NOTE: Special processing requirements applicable for the 1-hour SO2 NAAQS have been disabled!!!
+         User has specified non-standard averaging periods:    3-HR  24-HR                
+         High ranked 1-hour values are NOT averaged across the number of years modeled, and
+         complete years of data are NOT required.
+  
+ **Model Calculates  2 Short Term Average(s) of:   3-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      3 Source(s);       3 Source Group(s); and       8 Receptor(s)
+
+                with:      0 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      3 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  openpits_evt.inp                                                                                
+ **File for Summary of Results:   OPENPITS.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+
+                                                  *** OPENPIT SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    VOLUME   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF PIT    OF PIT    OF PIT     OF PIT   SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)    (M**3)               BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ PITGAS           0   0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ PITPRT1          1   0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ PITPRT2       METH2  0.10000E-04    -100.0    -100.0     0.0     0.00   1800.00    180.00    -45.00   .16000E+08  NO           
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  PITGAS     PITGAS      ,
+
+  PITPRT1    PITPRT1     ,
+
+  PITPRT2    PITPRT2     ,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                                *** SOURCE PARTICULATE/GAS DATA ***
+
+
+
+
+        *** SOURCE ID = PITPRT1     ; SOURCE TYPE = OPENPIT  ***
+
+        MASS FRACTION =
+            1.00000, 
+
+        PARTICLE DIAMETER (MICRONS) =
+            0.01000, 
+
+        PARTICLE DENSITY (G/CM**3)  =
+            1.00000, 
+
+
+        *** SOURCE ID = PITPRT2     ; SOURCE TYPE = OPENPIT  ***
+
+        FINE PARTICLE MASS FRACTION =
+            1.00000, 
+
+        PARTICLE DIAMETER (MICRONS) =
+            0.01000, 
+
+        PARTICLE DENSITY (G/CM**3)  =
+            1.00000, 
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                          *** ORIGIN FOR POLAR NETWORK ***
+                                X-ORIG =      0.00 ;   Y-ORIG =       0.00  (METERS)
+
+                                          *** DISTANCE RANGES OF NETWORK ***
+                                                    (METERS)
+
+          500.0,    1000.0,
+
+                                          *** DIRECTION RADIALS OF NETWORK *** 
+                                                    (DEGREES)
+
+           90.0,     180.0,     270.0,     360.0,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   aermet2 test met.sfc                                                               Met Version:  14134
+   Profile file:   aermet2 test met.pfl                                                            
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14735                  Upper air station no.:    14735
+                  Name: ALBANY,NY                                  Name: ALBANY,NY                               
+                  Year:   1988                                     Year:   1988
+
+ First 24 hours of scalar data
+ YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN  Z0 BOWEN  ALB  REF WS   WD   HT  REF TA  HT IPCOD PRATE  RH SFCP CCVR
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9 0.75 1.50 1.00    0.80  318.  10.  273.8  10.  0  -9.00  999. 1003.  4
+ 88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5 0.75 1.50 1.00    0.90  273.  10.  273.5  10.  0  -9.00  999. 1003.  1
+ 88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7 0.75 1.50 1.00    0.60  276.  10.  272.4  10.  0  -9.00  999. 1003.  1
+ 88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6 0.30 0.80 1.00    0.60  200.  10.  271.5  10.  0  -9.00  999. 1003.  1
+ 88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3 0.75 1.50 1.00    1.20  289.  10.  271.8  10.  0  -9.00  999. 1003.  0
+ 88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5 0.75 1.50 1.00    0.80  254.  10.  271.0  10.  0  -9.00  999. 1004.  0
+ 88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5 0.75 1.50 1.00    0.90  264.  10.  270.9  10.  0  -9.00  999. 1004.  0
+ 88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2 0.75 1.50 0.67    1.30  315.  10.  271.8  10.  0  -9.00  999. 1005.  6
+ 88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3 0.75 1.50 0.56    1.90  310.  10.  272.3  10.  0  -9.00  999. 1005.  7
+ 88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0 0.75 1.50 0.52    2.30  315.  10.  273.0  10.  0  -9.00  999. 1005.  6
+ 88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5 0.75 1.50 0.51    7.70  297.   6.  268.8   2.  0  -9.00  999. 1005.  2
+ 88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9 0.75 1.50 0.51    2.50  309.  10.  274.7  10.  0  -9.00  999. 1004.  0
+ 88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9 0.75 1.50 0.51    3.20  316.  10.  274.9  10.  0  -9.00  999. 1003.  0
+ 88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8 0.75 1.50 0.51    3.20  290.  10.  275.3  10.  0  -9.00  999. 1002.  0
+ 88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3 0.75 1.50 0.52    2.90  300.  10.  275.5  10.  0  -9.00  999. 1002.  0
+ 88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9 0.75 1.50 0.55    2.80  315.  10.  275.0  10.  0  -9.00  999. 1001.  0
+ 88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5 0.75 1.50 0.62    2.90  308.  10.  274.3  10.  0  -9.00  999. 1001.  0
+ 88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1 0.75 1.50 0.86    1.90  311.  10.  273.3  10.  0  -9.00  999. 1001.  0
+ 88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1 0.75 1.50 1.00    1.60  313.  10.  272.2  10.  0  -9.00  999. 1001.  0
+ 88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2 0.75 1.50 1.00    1.30  326.  10.  271.3  10.  0  -9.00  999. 1002.  0
+ 88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8 0.75 1.50 1.00    2.00  327.  10.  270.5  10.  0  -9.00  999. 1001.  0
+ 88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8 0.75 1.50 1.00    1.90  320.  10.  269.8  10.  0  -9.00  999. 1001.  0
+ 88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5 0.75 1.50 1.00    0.80  284.  10.  268.7  10.  0  -9.00  999. 1001.  0
+ 88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0 0.75 1.50 1.00    1.60  298.  10.  268.3  10.  0  -9.00  999. 1001.  0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 88 03 01 01   10.0 0  318.    0.80   273.8   48.7    0.11    0.48
+ 88 03 01 01   50.0 0  323.    2.00   275.0   14.7  -99.00    0.50
+ 88 03 01 01  100.0 1  320.    3.70   274.8    9.1    0.41    0.58
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE PERIOD (    96 HRS) AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP: PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        500.00      1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       90.00 |      79.68443     50.01544
+      180.00 |      14.57239      6.68917
+      270.00 |      11.24925     11.37006
+      360.00 |      37.44174     10.78197
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE PERIOD (    96 HRS) AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP: PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        500.00      1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       90.00 |      79.68419     50.01528
+      180.00 |      14.57236      6.68916
+      270.00 |      11.24921     11.37002
+      360.00 |      37.44160     10.78193
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE PERIOD (    96 HRS) AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP: PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        500.00      1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       90.00 |      79.68419     50.01528
+      180.00 |      14.57236      6.68916
+      270.00 |      11.24921     11.37002
+      360.00 |      37.44160     10.78193
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    240.60447 (88030306)    181.05097 (88030306)
+     180.0 |     98.86718 (88030209)     65.31369 (88030406)
+     270.0 |    227.39644 (88030403)    247.59096 (88030324)
+     360.0 |    559.28449 (88030324)    136.41102 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    240.60352 (88030306)    181.05026 (88030306)
+     180.0 |     98.86679 (88030209)     65.31358 (88030406)
+     270.0 |    227.39573 (88030403)    247.58990 (88030324)
+     360.0 |    559.28221 (88030324)    136.41052 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    240.60352 (88030306)    181.05026 (88030306)
+     180.0 |     98.86679 (88030209)     65.31358 (88030406)
+     270.0 |    227.39573 (88030403)    247.58990 (88030324)
+     360.0 |    559.28221 (88030324)    136.41052 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    237.88292 (88030206)    171.84486 (88030206)
+     180.0 |     93.59378 (88030403)     40.07984 (88030403)
+     270.0 |    130.48848 (88030324)    116.24361 (88030403)
+     360.0 |    260.35587 (88030403)    127.98574 (88030318)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    237.88222 (88030206)    171.84435 (88030206)
+     180.0 |     93.59359 (88030403)     40.07976 (88030403)
+     270.0 |    130.48792 (88030324)    116.24325 (88030403)
+     360.0 |    260.35506 (88030403)    127.98522 (88030318)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST  3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    237.88222 (88030206)    171.84435 (88030206)
+     180.0 |     93.59359 (88030403)     40.07976 (88030403)
+     270.0 |    130.48792 (88030324)    116.24325 (88030403)
+     360.0 |    260.35506 (88030403)    127.98522 (88030318)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    101.75303 (88030224)     74.14899 (88030224)
+     180.0 |     38.28782 (88030424)     20.13833 (88030424)
+     270.0 |     28.68434 (88030424)     30.94887 (88030324)
+     360.0 |     87.83530 (88030324)     33.04959 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    101.75266 (88030224)     74.14871 (88030224)
+     180.0 |     38.28775 (88030424)     20.13829 (88030424)
+     270.0 |     28.68425 (88030424)     30.94874 (88030324)
+     360.0 |     87.83494 (88030324)     33.04947 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   1ST HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |    101.75266 (88030224)     74.14871 (88030224)
+     180.0 |     38.28775 (88030424)     20.13829 (88030424)
+     270.0 |     28.68425 (88030424)     30.94874 (88030324)
+     360.0 |     87.83494 (88030324)     33.04947 (88030324)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |     86.41290 (88030324)     56.59799 (88030324)
+     180.0 |     12.74919 (88030224)      5.70372 (88030324)
+     270.0 |     16.31106 (88030324)     14.53127 (88030424)
+     360.0 |     32.68711 (88030424)      9.23845 (88030224)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |     86.41259 (88030324)     56.59777 (88030324)
+     180.0 |     12.74914 (88030224)      5.70371 (88030324)
+     270.0 |     16.31099 (88030324)     14.53123 (88030424)
+     360.0 |     32.68700 (88030424)      9.23841 (88030224)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE   2ND HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      90.0 |     86.41259 (88030324)     56.59777 (88030324)
+     180.0 |     12.74914 (88030224)      5.70371 (88030324)
+     270.0 |     16.31099 (88030324)     14.53123 (88030424)
+     360.0 |     32.68700 (88030424)      9.23841 (88030224)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     559.28449 (88030324) AT (     -0.00,     500.00)  GP       26.     112.80649 (88030406) AT (    500.00,       0.00)  GP
+    2.     260.35587 (88030403) AT (     -0.00,     500.00)  GP       27.     109.92029 (88030106) AT (     -0.00,     500.00)  GP
+    3.     247.59096 (88030324) AT (  -1000.00,      -0.00)  GP       28.      98.86718 (88030209) AT (      0.00,    -500.00)  GP
+    4.     240.60447 (88030306) AT (    500.00,       0.00)  GP       29.      94.86507 (88030124) AT (   1000.00,       0.00)  GP
+    5.     237.88292 (88030206) AT (    500.00,       0.00)  GP       30.      94.58560 (88030218) AT (   1000.00,       0.00)  GP
+    6.     227.71157 (88030103) AT (    500.00,       0.00)  GP       31.      93.59378 (88030403) AT (      0.00,    -500.00)  GP
+    7.     227.39644 (88030403) AT (   -500.00,      -0.00)  GP       32.      85.69291 (88030424) AT (   1000.00,       0.00)  GP
+    8.     217.64995 (88030221) AT (    500.00,       0.00)  GP       33.      84.99083 (88030406) AT (      0.00,    -500.00)  GP
+    9.     212.45444 (88030321) AT (    500.00,       0.00)  GP       34.      83.60408 (88030409) AT (      0.00,    -500.00)  GP
+   10.     181.05097 (88030306) AT (   1000.00,       0.00)  GP       35.      83.25381 (88030121) AT (    500.00,       0.00)  GP
+   11.     171.84486 (88030206) AT (   1000.00,       0.00)  GP       36.      80.60122 (88030203) AT (   1000.00,       0.00)  GP
+   12.     168.94497 (88030103) AT (   1000.00,       0.00)  GP       37.      78.26114 (88030209) AT (   1000.00,       0.00)  GP
+   13.     167.89907 (88030221) AT (   1000.00,       0.00)  GP       38.      72.96216 (88030309) AT (    500.00,       0.00)  GP
+   14.     143.38084 (88030318) AT (     -0.00,     500.00)  GP       39.      70.16823 (88030303) AT (   1000.00,       0.00)  GP
+   15.     139.71588 (88030321) AT (   1000.00,       0.00)  GP       40.      65.73041 (88030421) AT (    500.00,       0.00)  GP
+   16.     136.41102 (88030324) AT (     -0.00,    1000.00)  GP       41.      65.31369 (88030406) AT (      0.00,   -1000.00)  GP
+   17.     131.67824 (88030124) AT (    500.00,       0.00)  GP       42.      63.41331 (88030403) AT (    500.00,       0.00)  GP
+   18.     130.48848 (88030324) AT (   -500.00,      -0.00)  GP       43.      59.84417 (88030121) AT (   1000.00,       0.00)  GP
+   19.     127.98574 (88030318) AT (     -0.00,    1000.00)  GP       44.      58.09220 (88030212) AT (     -0.00,     500.00)  GP
+   20.     126.64781 (88030303) AT (    500.00,       0.00)  GP       45.      56.77199 (88030106) AT (    500.00,       0.00)  GP
+   21.     124.38965 (88030218) AT (    500.00,       0.00)  GP       46.      56.63986 (88030409) AT (    500.00,       0.00)  GP
+   22.     121.25453 (88030209) AT (    500.00,       0.00)  GP       47.      51.84191 (88030109) AT (    500.00,       0.00)  GP
+   23.     120.02194 (88030424) AT (    500.00,       0.00)  GP       48.      51.11819 (88030309) AT (   1000.00,       0.00)  GP
+   24.     116.24361 (88030403) AT (  -1000.00,      -0.00)  GP       49.      40.07984 (88030403) AT (      0.00,   -1000.00)  GP
+   25.     112.84721 (88030203) AT (    500.00,       0.00)  GP       50.      39.89480 (88030212) AT (     -0.00,    1000.00)  GP
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  24
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     559.28221 (88030324) AT (     -0.00,     500.00)  GP       26.     112.80630 (88030406) AT (    500.00,       0.00)  GP
+    2.     260.35506 (88030403) AT (     -0.00,     500.00)  GP       27.     109.91987 (88030106) AT (     -0.00,     500.00)  GP
+    3.     247.58990 (88030324) AT (  -1000.00,      -0.00)  GP       28.      98.86679 (88030209) AT (      0.00,    -500.00)  GP
+    4.     240.60352 (88030306) AT (    500.00,       0.00)  GP       29.      94.86485 (88030124) AT (   1000.00,       0.00)  GP
+    5.     237.88222 (88030206) AT (    500.00,       0.00)  GP       30.      94.58518 (88030218) AT (   1000.00,       0.00)  GP
+    6.     227.71083 (88030103) AT (    500.00,       0.00)  GP       31.      93.59359 (88030403) AT (      0.00,    -500.00)  GP
+    7.     227.39573 (88030403) AT (   -500.00,      -0.00)  GP       32.      85.69273 (88030424) AT (   1000.00,       0.00)  GP
+    8.     217.64896 (88030221) AT (    500.00,       0.00)  GP       33.      84.99069 (88030406) AT (      0.00,    -500.00)  GP
+    9.     212.45357 (88030321) AT (    500.00,       0.00)  GP       34.      83.60392 (88030409) AT (      0.00,    -500.00)  GP
+   10.     181.05026 (88030306) AT (   1000.00,       0.00)  GP       35.      83.25368 (88030121) AT (    500.00,       0.00)  GP
+   11.     171.84435 (88030206) AT (   1000.00,       0.00)  GP       36.      80.60102 (88030203) AT (   1000.00,       0.00)  GP
+   12.     168.94442 (88030103) AT (   1000.00,       0.00)  GP       37.      78.26084 (88030209) AT (   1000.00,       0.00)  GP
+   13.     167.89830 (88030221) AT (   1000.00,       0.00)  GP       38.      72.96200 (88030309) AT (    500.00,       0.00)  GP
+   14.     143.38025 (88030318) AT (     -0.00,     500.00)  GP       39.      70.16800 (88030303) AT (   1000.00,       0.00)  GP
+   15.     139.71521 (88030321) AT (   1000.00,       0.00)  GP       40.      65.73032 (88030421) AT (    500.00,       0.00)  GP
+   16.     136.41052 (88030324) AT (     -0.00,    1000.00)  GP       41.      65.31358 (88030406) AT (      0.00,   -1000.00)  GP
+   17.     131.67793 (88030124) AT (    500.00,       0.00)  GP       42.      63.41318 (88030403) AT (    500.00,       0.00)  GP
+   18.     130.48792 (88030324) AT (   -500.00,      -0.00)  GP       43.      59.84408 (88030121) AT (   1000.00,       0.00)  GP
+   19.     127.98522 (88030318) AT (     -0.00,    1000.00)  GP       44.      58.09199 (88030212) AT (     -0.00,     500.00)  GP
+   20.     126.64738 (88030303) AT (    500.00,       0.00)  GP       45.      56.77186 (88030106) AT (    500.00,       0.00)  GP
+   21.     124.38910 (88030218) AT (    500.00,       0.00)  GP       46.      56.63976 (88030409) AT (    500.00,       0.00)  GP
+   22.     121.25406 (88030209) AT (    500.00,       0.00)  GP       47.      51.84179 (88030109) AT (    500.00,       0.00)  GP
+   23.     120.02169 (88030424) AT (    500.00,       0.00)  GP       48.      51.11808 (88030309) AT (   1000.00,       0.00)  GP
+   24.     116.24325 (88030403) AT (  -1000.00,      -0.00)  GP       49.      40.07976 (88030403) AT (      0.00,   -1000.00)  GP
+   25.     112.84694 (88030203) AT (    500.00,       0.00)  GP       50.      39.89460 (88030212) AT (     -0.00,    1000.00)  GP
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  25
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50   3-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     559.28221 (88030324) AT (     -0.00,     500.00)  GP       26.     112.80630 (88030406) AT (    500.00,       0.00)  GP
+    2.     260.35506 (88030403) AT (     -0.00,     500.00)  GP       27.     109.91987 (88030106) AT (     -0.00,     500.00)  GP
+    3.     247.58990 (88030324) AT (  -1000.00,      -0.00)  GP       28.      98.86679 (88030209) AT (      0.00,    -500.00)  GP
+    4.     240.60352 (88030306) AT (    500.00,       0.00)  GP       29.      94.86485 (88030124) AT (   1000.00,       0.00)  GP
+    5.     237.88222 (88030206) AT (    500.00,       0.00)  GP       30.      94.58518 (88030218) AT (   1000.00,       0.00)  GP
+    6.     227.71083 (88030103) AT (    500.00,       0.00)  GP       31.      93.59359 (88030403) AT (      0.00,    -500.00)  GP
+    7.     227.39573 (88030403) AT (   -500.00,      -0.00)  GP       32.      85.69273 (88030424) AT (   1000.00,       0.00)  GP
+    8.     217.64896 (88030221) AT (    500.00,       0.00)  GP       33.      84.99069 (88030406) AT (      0.00,    -500.00)  GP
+    9.     212.45357 (88030321) AT (    500.00,       0.00)  GP       34.      83.60392 (88030409) AT (      0.00,    -500.00)  GP
+   10.     181.05026 (88030306) AT (   1000.00,       0.00)  GP       35.      83.25368 (88030121) AT (    500.00,       0.00)  GP
+   11.     171.84435 (88030206) AT (   1000.00,       0.00)  GP       36.      80.60102 (88030203) AT (   1000.00,       0.00)  GP
+   12.     168.94442 (88030103) AT (   1000.00,       0.00)  GP       37.      78.26084 (88030209) AT (   1000.00,       0.00)  GP
+   13.     167.89830 (88030221) AT (   1000.00,       0.00)  GP       38.      72.96200 (88030309) AT (    500.00,       0.00)  GP
+   14.     143.38025 (88030318) AT (     -0.00,     500.00)  GP       39.      70.16800 (88030303) AT (   1000.00,       0.00)  GP
+   15.     139.71521 (88030321) AT (   1000.00,       0.00)  GP       40.      65.73032 (88030421) AT (    500.00,       0.00)  GP
+   16.     136.41052 (88030324) AT (     -0.00,    1000.00)  GP       41.      65.31358 (88030406) AT (      0.00,   -1000.00)  GP
+   17.     131.67793 (88030124) AT (    500.00,       0.00)  GP       42.      63.41318 (88030403) AT (    500.00,       0.00)  GP
+   18.     130.48792 (88030324) AT (   -500.00,      -0.00)  GP       43.      59.84408 (88030121) AT (   1000.00,       0.00)  GP
+   19.     127.98522 (88030318) AT (     -0.00,    1000.00)  GP       44.      58.09199 (88030212) AT (     -0.00,     500.00)  GP
+   20.     126.64738 (88030303) AT (    500.00,       0.00)  GP       45.      56.77186 (88030106) AT (    500.00,       0.00)  GP
+   21.     124.38910 (88030218) AT (    500.00,       0.00)  GP       46.      56.63976 (88030409) AT (    500.00,       0.00)  GP
+   22.     121.25406 (88030209) AT (    500.00,       0.00)  GP       47.      51.84179 (88030109) AT (    500.00,       0.00)  GP
+   23.     120.02169 (88030424) AT (    500.00,       0.00)  GP       48.      51.11808 (88030309) AT (   1000.00,       0.00)  GP
+   24.     116.24325 (88030403) AT (  -1000.00,      -0.00)  GP       49.      40.07976 (88030403) AT (      0.00,   -1000.00)  GP
+   25.     112.84694 (88030203) AT (    500.00,       0.00)  GP       50.      39.89460 (88030212) AT (     -0.00,    1000.00)  GP
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  26
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITGAS   ***
+                                  INCLUDING SOURCE(S):     PITGAS      , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     101.75303 (88030224) AT (    500.00,       0.00)  GP       26.       0.77179 (88030124) AT (     -0.00,    1000.00)  GP
+    2.      87.83530 (88030324) AT (     -0.00,     500.00)  GP       27.       0.06806 (88030424) AT (     -0.00,    1000.00)  GP
+    3.      86.41290 (88030324) AT (    500.00,       0.00)  GP       28.       0.01870 (88030124) AT (      0.00,   -1000.00)  GP
+    4.      74.14899 (88030224) AT (   1000.00,       0.00)  GP       29.       0.00161 (88030224) AT (   -500.00,      -0.00)  GP
+    5.      73.19153 (88030124) AT (    500.00,       0.00)  GP       30.       0.00011 (88030224) AT (  -1000.00,      -0.00)  GP
+    6.      57.38027 (88030424) AT (    500.00,       0.00)  GP       31.       0.00000 (00000000) AT (      0.00,       0.00)    
+    7.      56.59799 (88030324) AT (   1000.00,       0.00)  GP       32.       0.00000 (00000000) AT (      0.00,       0.00)    
+    8.      51.71707 (88030124) AT (   1000.00,       0.00)  GP       33.       0.00000 (00000000) AT (      0.00,       0.00)    
+    9.      38.28782 (88030424) AT (      0.00,    -500.00)  GP       34.       0.00000 (00000000) AT (      0.00,       0.00)    
+   10.      33.04959 (88030324) AT (     -0.00,    1000.00)  GP       35.       0.00000 (00000000) AT (      0.00,       0.00)    
+   11.      32.68711 (88030424) AT (     -0.00,     500.00)  GP       36.       0.00000 (00000000) AT (      0.00,       0.00)    
+   12.      30.94887 (88030324) AT (  -1000.00,      -0.00)  GP       37.       0.00000 (00000000) AT (      0.00,       0.00)    
+   13.      28.68434 (88030424) AT (   -500.00,      -0.00)  GP       38.       0.00000 (00000000) AT (      0.00,       0.00)    
+   14.      20.13833 (88030424) AT (      0.00,   -1000.00)  GP       39.       0.00000 (00000000) AT (      0.00,       0.00)    
+   15.      17.59773 (88030424) AT (   1000.00,       0.00)  GP       40.       0.00000 (00000000) AT (      0.00,       0.00)    
+   16.      16.31106 (88030324) AT (   -500.00,      -0.00)  GP       41.       0.00000 (00000000) AT (      0.00,       0.00)    
+   17.      15.50452 (88030224) AT (     -0.00,     500.00)  GP       42.       0.00000 (00000000) AT (      0.00,       0.00)    
+   18.      14.53127 (88030424) AT (  -1000.00,      -0.00)  GP       43.       0.00000 (00000000) AT (      0.00,       0.00)    
+   19.      13.74004 (88030124) AT (     -0.00,     500.00)  GP       44.       0.00000 (00000000) AT (      0.00,       0.00)    
+   20.      12.74919 (88030224) AT (      0.00,    -500.00)  GP       45.       0.00000 (00000000) AT (      0.00,       0.00)    
+   21.       9.23845 (88030224) AT (     -0.00,    1000.00)  GP       46.       0.00000 (00000000) AT (      0.00,       0.00)    
+   22.       6.30753 (88030324) AT (      0.00,    -500.00)  GP       47.       0.00000 (00000000) AT (      0.00,       0.00)    
+   23.       5.70372 (88030324) AT (      0.00,   -1000.00)  GP       48.       0.00000 (00000000) AT (      0.00,       0.00)    
+   24.       0.94502 (88030124) AT (      0.00,    -500.00)  GP       49.       0.00000 (00000000) AT (      0.00,       0.00)    
+   25.       0.89594 (88030224) AT (      0.00,   -1000.00)  GP       50.       0.00000 (00000000) AT (      0.00,       0.00)    
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  27
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT1  ***
+                                  INCLUDING SOURCE(S):     PITPRT1     , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     101.75266 (88030224) AT (    500.00,       0.00)  GP       26.       0.77178 (88030124) AT (     -0.00,    1000.00)  GP
+    2.      87.83494 (88030324) AT (     -0.00,     500.00)  GP       27.       0.06806 (88030424) AT (     -0.00,    1000.00)  GP
+    3.      86.41259 (88030324) AT (    500.00,       0.00)  GP       28.       0.01870 (88030124) AT (      0.00,   -1000.00)  GP
+    4.      74.14871 (88030224) AT (   1000.00,       0.00)  GP       29.       0.00161 (88030224) AT (   -500.00,      -0.00)  GP
+    5.      73.19134 (88030124) AT (    500.00,       0.00)  GP       30.       0.00011 (88030224) AT (  -1000.00,      -0.00)  GP
+    6.      57.38016 (88030424) AT (    500.00,       0.00)  GP       31.       0.00000 (00000000) AT (      0.00,       0.00)    
+    7.      56.59777 (88030324) AT (   1000.00,       0.00)  GP       32.       0.00000 (00000000) AT (      0.00,       0.00)    
+    8.      51.71694 (88030124) AT (   1000.00,       0.00)  GP       33.       0.00000 (00000000) AT (      0.00,       0.00)    
+    9.      38.28775 (88030424) AT (      0.00,    -500.00)  GP       34.       0.00000 (00000000) AT (      0.00,       0.00)    
+   10.      33.04947 (88030324) AT (     -0.00,    1000.00)  GP       35.       0.00000 (00000000) AT (      0.00,       0.00)    
+   11.      32.68700 (88030424) AT (     -0.00,     500.00)  GP       36.       0.00000 (00000000) AT (      0.00,       0.00)    
+   12.      30.94874 (88030324) AT (  -1000.00,      -0.00)  GP       37.       0.00000 (00000000) AT (      0.00,       0.00)    
+   13.      28.68425 (88030424) AT (   -500.00,      -0.00)  GP       38.       0.00000 (00000000) AT (      0.00,       0.00)    
+   14.      20.13829 (88030424) AT (      0.00,   -1000.00)  GP       39.       0.00000 (00000000) AT (      0.00,       0.00)    
+   15.      17.59770 (88030424) AT (   1000.00,       0.00)  GP       40.       0.00000 (00000000) AT (      0.00,       0.00)    
+   16.      16.31099 (88030324) AT (   -500.00,      -0.00)  GP       41.       0.00000 (00000000) AT (      0.00,       0.00)    
+   17.      15.50448 (88030224) AT (     -0.00,     500.00)  GP       42.       0.00000 (00000000) AT (      0.00,       0.00)    
+   18.      14.53123 (88030424) AT (  -1000.00,      -0.00)  GP       43.       0.00000 (00000000) AT (      0.00,       0.00)    
+   19.      13.73998 (88030124) AT (     -0.00,     500.00)  GP       44.       0.00000 (00000000) AT (      0.00,       0.00)    
+   20.      12.74914 (88030224) AT (      0.00,    -500.00)  GP       45.       0.00000 (00000000) AT (      0.00,       0.00)    
+   21.       9.23841 (88030224) AT (     -0.00,    1000.00)  GP       46.       0.00000 (00000000) AT (      0.00,       0.00)    
+   22.       6.30752 (88030324) AT (      0.00,    -500.00)  GP       47.       0.00000 (00000000) AT (      0.00,       0.00)    
+   23.       5.70371 (88030324) AT (      0.00,   -1000.00)  GP       48.       0.00000 (00000000) AT (      0.00,       0.00)    
+   24.       0.94502 (88030124) AT (      0.00,    -500.00)  GP       49.       0.00000 (00000000) AT (      0.00,       0.00)    
+   25.       0.89594 (88030224) AT (      0.00,   -1000.00)  GP       50.       0.00000 (00000000) AT (      0.00,       0.00)    
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  28
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                              *** THE MAXIMUM   50  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  PITPRT2  ***
+                                  INCLUDING SOURCE(S):     PITPRT2     , 
+
+                                        ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     101.75266 (88030224) AT (    500.00,       0.00)  GP       26.       0.77178 (88030124) AT (     -0.00,    1000.00)  GP
+    2.      87.83494 (88030324) AT (     -0.00,     500.00)  GP       27.       0.06806 (88030424) AT (     -0.00,    1000.00)  GP
+    3.      86.41259 (88030324) AT (    500.00,       0.00)  GP       28.       0.01870 (88030124) AT (      0.00,   -1000.00)  GP
+    4.      74.14871 (88030224) AT (   1000.00,       0.00)  GP       29.       0.00161 (88030224) AT (   -500.00,      -0.00)  GP
+    5.      73.19134 (88030124) AT (    500.00,       0.00)  GP       30.       0.00011 (88030224) AT (  -1000.00,      -0.00)  GP
+    6.      57.38016 (88030424) AT (    500.00,       0.00)  GP       31.       0.00000 (00000000) AT (      0.00,       0.00)    
+    7.      56.59777 (88030324) AT (   1000.00,       0.00)  GP       32.       0.00000 (00000000) AT (      0.00,       0.00)    
+    8.      51.71694 (88030124) AT (   1000.00,       0.00)  GP       33.       0.00000 (00000000) AT (      0.00,       0.00)    
+    9.      38.28775 (88030424) AT (      0.00,    -500.00)  GP       34.       0.00000 (00000000) AT (      0.00,       0.00)    
+   10.      33.04947 (88030324) AT (     -0.00,    1000.00)  GP       35.       0.00000 (00000000) AT (      0.00,       0.00)    
+   11.      32.68700 (88030424) AT (     -0.00,     500.00)  GP       36.       0.00000 (00000000) AT (      0.00,       0.00)    
+   12.      30.94874 (88030324) AT (  -1000.00,      -0.00)  GP       37.       0.00000 (00000000) AT (      0.00,       0.00)    
+   13.      28.68425 (88030424) AT (   -500.00,      -0.00)  GP       38.       0.00000 (00000000) AT (      0.00,       0.00)    
+   14.      20.13829 (88030424) AT (      0.00,   -1000.00)  GP       39.       0.00000 (00000000) AT (      0.00,       0.00)    
+   15.      17.59770 (88030424) AT (   1000.00,       0.00)  GP       40.       0.00000 (00000000) AT (      0.00,       0.00)    
+   16.      16.31099 (88030324) AT (   -500.00,      -0.00)  GP       41.       0.00000 (00000000) AT (      0.00,       0.00)    
+   17.      15.50448 (88030224) AT (     -0.00,     500.00)  GP       42.       0.00000 (00000000) AT (      0.00,       0.00)    
+   18.      14.53123 (88030424) AT (  -1000.00,      -0.00)  GP       43.       0.00000 (00000000) AT (      0.00,       0.00)    
+   19.      13.73998 (88030124) AT (     -0.00,     500.00)  GP       44.       0.00000 (00000000) AT (      0.00,       0.00)    
+   20.      12.74914 (88030224) AT (      0.00,    -500.00)  GP       45.       0.00000 (00000000) AT (      0.00,       0.00)    
+   21.       9.23841 (88030224) AT (     -0.00,    1000.00)  GP       46.       0.00000 (00000000) AT (      0.00,       0.00)    
+   22.       6.30752 (88030324) AT (      0.00,    -500.00)  GP       47.       0.00000 (00000000) AT (      0.00,       0.00)    
+   23.       5.70371 (88030324) AT (      0.00,   -1000.00)  GP       48.       0.00000 (00000000) AT (      0.00,       0.00)    
+   24.       0.94502 (88030124) AT (      0.00,    -500.00)  GP       49.       0.00000 (00000000) AT (      0.00,       0.00)    
+   25.       0.89594 (88030224) AT (      0.00,   -1000.00)  GP       50.       0.00000 (00000000) AT (      0.00,       0.00)    
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  29
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (    96 HRS) RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+PITGAS    1ST HIGHEST VALUE IS      79.68443 AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      50.01544 AT (    1000.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      37.44174 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      14.57239 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      11.37006 AT (   -1000.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      11.24925 AT (    -500.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      10.78197 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       6.68917 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+         10TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+
+PITPRT1   1ST HIGHEST VALUE IS      79.68419 AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      50.01528 AT (    1000.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      37.44160 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      14.57236 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      11.37002 AT (   -1000.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      11.24921 AT (    -500.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      10.78193 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       6.68916 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+         10TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+
+PITPRT2   1ST HIGHEST VALUE IS      79.68419 AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      50.01528 AT (    1000.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      37.44160 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      14.57236 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      11.37002 AT (   -1000.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      11.24921 AT (    -500.00,       -0.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      10.78193 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       6.68916 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+         10TH HIGHEST VALUE IS       0.00000 AT (       0.00,        0.00,     0.00,     0.00,    0.00)
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  30
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  3-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+PITGAS   HIGH   1ST HIGH VALUE IS     559.28449  ON 88030324: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     260.35587  ON 88030403: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+PITPRT1  HIGH   1ST HIGH VALUE IS     559.28221  ON 88030324: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     260.35506  ON 88030403: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+PITPRT2  HIGH   1ST HIGH VALUE IS     559.28221  ON 88030324: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS     260.35506  ON 88030403: AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  31
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+
+
+                                    ** CONC OF SO2      IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+PITGAS   HIGH   1ST HIGH VALUE IS     101.75303  ON 88030224: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      86.41290  ON 88030324: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+PITPRT1  HIGH   1ST HIGH VALUE IS     101.75266  ON 88030224: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      86.41259  ON 88030324: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+  
+PITPRT2  HIGH   1ST HIGH VALUE IS     101.75266  ON 88030224: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+         HIGH   2ND HIGH VALUE IS      86.41259  ON 88030324: AT (     500.00,        0.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD model test case for OPENPIT sources; includes OPENPIT sources ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** for gaseous, particulate using Method 1, and particulate using Metho ***        14:53:21
+                                                                                                                       PAGE  32
+ **MODELOPTs:   NonDFAULT CONC      FLAT      NODRYDPLT NOWETDPLT RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+
+ A Total of           96 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of            0 Missing Hours Identified (  0.00 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

@@ -1,0 +1,64 @@
+CO STARTING
+   TITLEONE  Test of SCIM option in AERMOD
+   TITLETWO  Five years of met data from Salem
+   MODELOPT  CONC  FLAT  SCIM
+   AVERTIME  ANNUAL
+   POLLUTID  OTHER
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+
+SO STARTING
+   ELEVUNIT  METERS
+   LOCATION  STACK    POINT       0.0    0.0   0.0
+SO LOCATION  AREA     AREA      -10.0  -10.0   0.0
+SO LOCATION  CIRC     AREACIRC    0.0    0.0   0.0
+   LOCATION  AREAP    AREAPOLY    0.0    0.0   0.0
+SO LOCATION  VOL      VOLUME      0.0    0.0   0.0
+   location  OPENPIT  OPENPIT  -100.0 -100.0   0.0
+                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK   100.0   35.00  432.  11.7   2.4
+                                                                                                                                    
+   SRCPARAM  AREA   0.001  1.0   20.  20.
+
+   SRCPARAM  CIRC   0.1    10.0  20.
+
+   SRCPARAM  AREAP  0.001  1.0  8  2.0
+   AREAVERT  AREAP  0.0 0.0  10.0 0.0  10.0 10.0  0.0 10.0  0.0 20.0
+   AREAVERT  AREAP  -10.0 20.0  -10.0 10.0  -10.0 0.0
+
+   SRCPARAM  VOL    0.1    1.0   20.  20.
+
+SO SRCPARAM  OPENPIT   1.0E-5   0.000       1829.       183.0      0.1674E+08  -45.0
+
+   SRCGROUP  STACK    STACK  
+   SRCGROUP  AREA     AREA   
+   SRCGROUP  CIRC     CIRC   
+   SRCGROUP  AREAP    AREAP  
+   SRCGROUP  VOL      VOL    
+   SRCGROUP  OPENPIT  OPENPIT
+
+SO FINISHED
+
+RE STARTING
+   GRIDPOLR  POL1  STA
+             POL1  ORIG  0.0  0.0
+             POL1  DIST  100. 200.  500.  1000.  5000.
+             POL1  GDIR  36    10.   10.
+             POL1  END
+RE FINISHED
+
+ME STARTING
+   SURFFILE  salem_86-90.sfc
+   PROFFILE  salem_86-90.pfl
+   SURFDATA  24232  1986  SALEM
+   UAIRDATA  24232  1986  SALEM
+   PROFBASE  0.0
+   SCIMBYHR  1  25  scimmed_met.sfc  scimmed_met.pfl
+ME FINISHED
+
+OU STARTING
+   SUMMFILE  SCIMTEST.SUM
+OU FINISHED

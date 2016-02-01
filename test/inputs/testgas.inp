@@ -1,0 +1,95 @@
+CO STARTING                                                                                                                         
+   TITLEONE  Test case for gaseous deposition based on Wesely, et. al. (2001)
+   TITLETWO  Gas deposition inputs are from App. C and App. D for Benzene
+**           With modifications for wet deposition per Chris Walcek
+   MODELOPT  CONC  DDEP   WDEP  FLAT
+   AVERTIME  1                                                                                                                      
+   POLLUTID  BENZENE
+   RUNORNOT  RUN                                                                                                                    
+   ERRORFIL  ERRORS.OUT
+** Define Wesely Seasonal Categories for Each Calendar Month
+   GDSEASON  4  4  4  5  1  1  1  1  1  2  3  3
+** Define uniform use category 4
+   GDLANUSE  36*4
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING                                                                                                                         
+   LOCATION  STACK1  POINT  0.0   0.0   0.0                                                                                         
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK1  100.0   35.   432.  11.7  2.4                                                                                  
+
+** Define source inputs for gas deposition (from App. C and D for Benzene):
+**           SrcID   Da (cm^2/s)  Dw (cm^2/s)  RcLipid (s/cm)  Henry (Pa-m^3/mol)
+   GASDEPOS  STACK1  0.08962      1.04E-5      2.51E4          557.0
+
+** Specify output units for deposition flux (MICROGRAMS/M**2)
+   DEPOUNIT  3.6E9   GRAM/SEC  MICROGRAMS/M**2                                                                                      
+   SRCGROUP  ALL
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+** Note that receptors are positioned along plume centerline
+   DISCCART    0.0     100.                                                                                                         
+   DISCCART    0.0     200.                                                                                                         
+   DISCCART    0.0     300.                                                                                                         
+   DISCCART    0.0     400.                                                                                                         
+   DISCCART    0.0     500.                                                                                                         
+   DISCCART    0.0     600.                                                                                                         
+   DISCCART    0.0     700.                                                                                                         
+   DISCCART    0.0     800.                                                                                                         
+   DISCCART    0.0     900.                                                                                                         
+   DISCCART    0.0    1000.                                                                                                         
+   DISCCART    0.0    1100.                                                                                                         
+   DISCCART    0.0    1200.                                                                                                         
+   DISCCART    0.0    1300.                                                                                                         
+   DISCCART    0.0    1400.                                                                                                         
+   DISCCART    0.0    1500.                                                                                                         
+   DISCCART    0.0    1600.                                                                                                         
+   DISCCART    0.0    1700.                                                                                                         
+   DISCCART    0.0    1800.                                                                                                         
+   DISCCART    0.0    1900.                                                                                                         
+   DISCCART    0.0    2000.                                                                                                         
+   DISCCART    0.0    2100.                                                                                                         
+   DISCCART    0.0    2200.                                                                                                         
+   DISCCART    0.0    2300.                                                                                                         
+   DISCCART    0.0    2400.                                                                                                         
+   DISCCART    0.0    2500.                                                                                                         
+   DISCCART    0.0    2600.                                                                                                         
+   DISCCART    0.0    2700.                                                                                                         
+   DISCCART    0.0    2800.                                                                                                         
+   DISCCART    0.0    2900.                                                                                                         
+   DISCCART    0.0    3000.                                                                                                         
+   DISCCART    0.0    3500.                                                                                                         
+   DISCCART    0.0    4000.                                                                                                         
+   DISCCART    0.0    4500.                                                                                                         
+   DISCCART    0.0    5000.                                                                                                         
+   DISCCART    0.0    5500.                                                                                                         
+   DISCCART    0.0    6000.                                                                                                         
+   DISCCART    0.0    6500.                                                                                                         
+   DISCCART    0.0    7000.                                                                                                         
+   DISCCART    0.0    7500.                                                                                                         
+   DISCCART    0.0    8000.                                                                                                         
+   DISCCART    0.0    8500.                                                                                                         
+   DISCCART    0.0    9000.                                                                                                         
+   DISCCART    0.0    9500.                                                                                                         
+   DISCCART    0.0   10000.                                                                                                         
+   DISCCART    0.0   15000.                                                                                                         
+   DISCCART    0.0   20000.                                                                                                         
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING
+** Note that TEST.MET file includes six hours of test data for January.
+   SURFFILE  test.sfc  free
+   PROFFILE  test.pfl
+   SURFDATA  99999  1990  UNK                                                                                                       
+   UAIRDATA  99999  1990  UNK
+   PROFBASE  0.0
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING
+   RECTABLE  ALLAVE  FIRST-SECOND
+   MAXTABLE  ALLAVE  10
+   DAYTABLE  ALLAVE
+   SUMMFILE  TESTGAS.SUM
+OU FINISHED

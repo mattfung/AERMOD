@@ -1,0 +1,128 @@
+** To run the example, copy the ALLSRCS.INP file to AERMOD.INP and type:                                                                                                        
+**                                                                                                                                  
+**    AERMOD
+**                                                                                                                                  
+** The results for this example problem are provided in file AERMOD.OUT.
+                                                                                                                                    
+CO STARTING                                                                                                                         
+   TITLEONE A Simple Example Problem for the AERMOD Model with all Source Types
+   TITLETWO All receptor types are also included
+   MODELOPT  CONC   FLAT
+   AVERTIME  1  3  8  24  PERIOD                                                                                                          
+   POLLUTID  SO2                                                                                                                    
+   RUNORNOT  RUN
+   EVENTFIL  allsrcs_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING
+** Use all source types
+   ELEVUNIT  METERS
+   LOCATION  STACKDW  POINT       0.0    0.0   0.0
+SO LOCATION  AREA     AREA      -10.0  -10.0   0.0
+SO LOCATION  CIRC     AREACIRC    0.0    0.0   0.0
+   LOCATION  AREAP    AREAPOLY    0.0    0.0   0.0
+SO LOCATION  VOL      VOLUME      0.0    0.0   0.0
+   LOCATION  STACK    POINT       0.0    0.0   0.0
+   location  OPENPIT  OPENPIT  -100.0 -100.0   0.0
+                                                                                                                                    
+** Point Source         QS      HS     TS    VS    DS
+** Parameters:         ----    ----   ----  ----   ---
+   SRCPARAM  STACKDW   500.0   65.00  425.  15.0   5.
+
+SO BUILDHGT  STACKDW   36*50.
+SO BUILDWID  STACKDW   62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACKDW   87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACKDW   89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACKDW   62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACKDW   87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACKDW   89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACKDW   82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACKDW   72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACKDW   86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACKDW   82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACKDW   72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACKDW   86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACKDW  -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACKDW  -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACKDW  -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACKDW  -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACKDW   -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACKDW  -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACKDW   34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACKDW   11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACKDW  -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACKDW  -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACKDW  -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACKDW   22.50   26.81   30.31   32.89   34.47   35.00
+
+   SRCPARAM  AREA   0.001  1.0   20.  20.
+
+   SRCPARAM  CIRC   0.1    10.0  20.
+
+   SRCPARAM  AREAP  0.001  1.0  8  2.0
+   AREAVERT  AREAP  0.0 0.0  10.0 0.0  10.0 10.0  0.0 10.0  0.0 20.0
+   AREAVERT  AREAP  -10.0 20.0  -10.0 10.0  -10.0 0.0
+
+   SRCPARAM  VOL    0.1    1.0   20.  20.
+
+   SRCPARAM  STACK  100.0  35.00  432.  11.7  2.4
+
+SO SRCPARAM  OPENPIT   1.0E-5   0.000       1829.       183.0      0.1674E+08  -45.0
+
+   SRCGROUP  STACKDW  STACKDW
+   SRCGROUP  AREA     AREA   
+   SRCGROUP  CIRC     CIRC   
+   SRCGROUP  AREAP    AREAP  
+   SRCGROUP  VOL      VOL    
+   SRCGROUP  STACK    STACK
+   SRCGROUP  OPENPIT  OPENPIT
+
+SO FINISHED
+                                                                                                                                    
+RE STARTING
+** Use all receptor types
+RE GRIDPOLR POL1 STA
+                 ORIG STACK
+                 DIST 175. 350. 500. 1000.
+                 GDIR 36 10 10
+RE GRIDPOLR POL1 END
+
+RE GRIDCART CAR1 STA
+                 XYINC  -1000.  5  500.  -1000.  5  500.
+RE GRIDCART CAR1 END
+
+RE GRIDCART CAR2 STA
+                 XPNTS  -1000. -500. 0. 500. 1000.
+                 YPNTS  -1000. -500. 0. 500. 1000.
+RE GRIDCART CAR2 END
+
+RE DISCPOLR STACK 1000.  90.
+
+RE DISCCART 1000. 0.
+
+RE EVALCART 1000. 0. 0. 0. 0. ARC1
+                 
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+   SURFFILE  "aermet2 test met.sfc"
+   PROFFILE  "aermet2 test met.pfl"
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY                                                                                                 
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND                                                                                                   
+   MAXTABLE  ALLAVE  50
+   PLOTFILE  24  STACKDW   FIRST   ALLSRCS_STACKDW_24HR.PLT
+   PLOTFILE  24  AREA      FIRST   ALLSRCS_AREA_24HR.PLT
+   PLOTFILE  24  CIRC      FIRST   ALLSRCS_CIRC_24HR.PLT
+   PLOTFILE  24  AREAP     FIRST   ALLSRCS_AREAP_24HR.PLT
+   PLOTFILE  24  VOL       FIRST   ALLSRCS_VOL_24HR.PLT
+   PLOTFILE  24  STACK     FIRST   ALLSRCS_STACK_24HR.PLT
+   PLOTFILE  24  OPENPIT   FIRST   ALLSRCS_OPENPIT_24HR.PLT
+   SUMMFILE  ALLSRCS.SUM                                                                                                      
+OU FINISHED

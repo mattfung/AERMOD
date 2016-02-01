@@ -1,0 +1,217 @@
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+ **Model Is Setup For Calculation of Dry DEPosition Values.
+ **Model Is Setup For Calculation of Wet DEPosition Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **PARTICLE DEPOSITION Data Provided.
+ **Model Uses DRY DEPLETION.     DDPLETE  =  T
+ **Model Uses WET DEPLETION.     WETDPLT  =  T
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  CHROMIUM
+  
+ **Model Calculates  1 Short Term Average(s) of:   1-HR
+  
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and      46 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  12345
+  
+ **Output Options Selected:
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Tables of Concurrent Short Term Values by Receptor for Each Day Processed (DAYTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+  Concentration:  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+     Deposition:  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.36000E+07
+                  Output Units   = MILLIGRAMS/SQ-M                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File for Summary of Results:   TESTPART.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   test.sfc                                                                           Met Version:  12345
+   Profile file:   test.pfl                                                                        
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    99999                  Upper air station no.:    99999
+                  Name: UNK                                        Name: UNK                                     
+                  Year:   1990                                     Year:   1990
+
+ First 24 hours of scalar data
+ YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN  Z0 BOWEN  ALB  REF WS   WD   HT  REF TA  HT IPCOD PRATE  RH SFCP CCVR
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 90 01 01 01   49.4  0.177  1.600  0.010 3000.  171.    -10.1 0.30 1.00 0.25    1.00  180.  10.  287.4  10.  0   2.00   96.  998. 10
+ 90 01 01 02    0.0  0.114  0.074  0.010 1000.   89.  -9000.0 0.30 1.00 0.25    1.00  180.  10.  287.4  10.  0   2.00  100.  997. 10
+ 90 01 01 03   -0.8  0.057 -9.000  0.010 -999.   31.     21.1 0.30 1.00 0.25    1.00  180.  10.  287.4  10.  0   2.00  100.  997. 10
+ 90 01 01 04   -0.4  0.342 -9.000  0.010 -999.  460.   9000.0 0.30 1.00 0.25    3.00  180.  10.  288.1  10.  0   2.00   95.  997. 10
+ 90 01 01 05   -1.9  0.570 -9.000  0.010 -999.  991.   9000.0 0.30 1.00 0.25    5.50  180.  10.  288.1  10.  0   2.00   95.  996. 10
+ 90 01 01 06  -14.9  1.141 -9.000  0.010 -999. 2802.   9000.0 0.30 1.00 0.25   10.00  180.  10.  288.1  10.  0   2.00  100.  996. 10
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 90 01 01 01   10.0 1  180.    1.00   287.4 -999.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** CONC OF CHROMIUM IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS     459.31939  ON 90010106: AT (       0.00,      400.00,     0.00,     0.00,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS     231.58231  ON 90010105: AT (       0.00,      700.00,     0.00,     0.00,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** DEPO OF CHROMIUM IN MILLIGRAMS/SQ-M                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              DRY DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS       5.22655  ON 90010106: AT (       0.00,      400.00,     0.00,     0.00,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS       1.76776  ON 90010105: AT (       0.00,      800.00,     0.00,     0.00,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** THE SUMMARY OF HIGHEST  1-HR RESULTS ***
+
+
+                                    ** DEPO OF CHROMIUM IN MILLIGRAMS/SQ-M                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                              WET DEPO     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   1ST HIGH VALUE IS       0.48471  ON 90010103: AT (       0.00,      100.00,     0.00,     0.00,    0.00)  DC          
+         HIGH   2ND HIGH VALUE IS       0.40548  ON 90010102: AT (       0.00,      100.00,     0.00,     0.00,    0.00)  DC          
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  12345 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:52:56
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            1 Warning Message(s)
+ A Total of            0 Informational Message(s)
+
+ A Total of            6 Hours Were Processed
+
+ A Total of            0 Calm Hours Identified
+
+ A Total of            0 Missing Hours Identified (  0.00 Percent)
+
+ Met Data File Includes      12.00 Millimeters (     0.472 Inches) of Precipitation
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ ME W396      84       MEOPEN: AERMET Version Out-dated or Non-standard; Version:        12345

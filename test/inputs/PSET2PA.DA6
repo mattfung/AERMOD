@@ -1,0 +1,18 @@
+* AERMOD ( 15181):  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10                 07/23/15
+* AERMET ( 14134):  Roads as Area Srcs                                                      14:54:28
+* MODELING OPTIONS USED:  NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+*         PLOT FILE OF  HIGH   6TH HIGH 24-HR VALUES FOR SOURCE GROUP: ALL     
+*         FOR A TOTAL OF    10 RECEPTORS.
+*         FORMAT: (3(1X,F13.5),3(1X,F8.2),3X,A5,2X,A8,2X,A5,5X,A8,2X,I8)                                                                                                                                                  
+*        X             Y      AVERAGE CONC    ZELEV    ZHILL    ZFLAG    AVE     GRP       RANK     NET ID   DATE(CONC)
+* ____________  ____________  ____________   ______   ______   ______  ______  ________  ________  ________  ________
+   -1249.68000   -3810.00000       5.93218  1000.00  1000.00     3.40   24-HR  ALL         6TH               93051924
+    -265.18000    -914.40000      17.76483  1000.00  1000.00     3.50   24-HR  ALL         6TH               93052924
+     283.46000     448.06000      38.27426  1000.00  1000.00     3.50   24-HR  ALL         6TH               93062224
+     384.05000    1319.78000      40.55616  1000.00  1000.00     3.50   24-HR  ALL         6TH               93061824
+   -2310.38000    2590.80000      15.00424  1000.00  1000.00     3.50   24-HR  ALL         6TH               93063024
+   -1554.48000    3496.06000      11.37103  1000.00  1000.00     3.50   24-HR  ALL         6TH               93061224
+   -3582.62000     656.84000       7.06070  1000.00  1000.00     4.50   24-HR  ALL         6TH               93062624
+    1272.54000     228.60000      11.13364  1000.00  1000.00     4.40   24-HR  ALL         6TH               93052924
+    1272.54000     228.60000      11.13364  1000.00  1000.00     4.40   24-HR  ALL         6TH               93052924
+    -664.46000   -5539.74000       3.94367  1000.00  1000.00     4.60   24-HR  ALL         6TH               93071624

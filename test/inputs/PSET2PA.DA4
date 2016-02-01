@@ -1,0 +1,18 @@
+* AERMOD ( 15181):  SURFACE COAL MINE MODEL EVALUATION: CORDERO MINE, PM-10                 07/23/15
+* AERMET ( 14134):  Roads as Area Srcs                                                      14:54:28
+* MODELING OPTIONS USED:  NonDFAULT CONC      FLAT      FLGPOL    NOCHKD    DRYDPLT   WETDPLT   RURAL
+*         PLOT FILE OF  HIGH   4TH HIGH 24-HR VALUES FOR SOURCE GROUP: ALL     
+*         FOR A TOTAL OF    10 RECEPTORS.
+*         FORMAT: (3(1X,F13.5),3(1X,F8.2),3X,A5,2X,A8,2X,A5,5X,A8,2X,I8)                                                                                                                                                  
+*        X             Y      AVERAGE CONC    ZELEV    ZHILL    ZFLAG    AVE     GRP       RANK     NET ID   DATE(CONC)
+* ____________  ____________  ____________   ______   ______   ______  ______  ________  ________  ________  ________
+   -1249.68000   -3810.00000       8.00886  1000.00  1000.00     3.40   24-HR  ALL         4TH               93052524
+    -265.18000    -914.40000      21.09885  1000.00  1000.00     3.50   24-HR  ALL         4TH               93070824
+     283.46000     448.06000      49.79802  1000.00  1000.00     3.50   24-HR  ALL         4TH               93052924
+     384.05000    1319.78000      42.75305  1000.00  1000.00     3.50   24-HR  ALL         4TH               93061424
+   -2310.38000    2590.80000      19.37110  1000.00  1000.00     3.50   24-HR  ALL         4TH               93061824
+   -1554.48000    3496.06000      19.80200  1000.00  1000.00     3.50   24-HR  ALL         4TH               93070224
+   -3582.62000     656.84000       8.33103  1000.00  1000.00     4.50   24-HR  ALL         4TH               93061224
+    1272.54000     228.60000      14.88390  1000.00  1000.00     4.40   24-HR  ALL         4TH               93061824
+    1272.54000     228.60000      14.88390  1000.00  1000.00     4.40   24-HR  ALL         4TH               93061824
+    -664.46000   -5539.74000       4.41147  1000.00  1000.00     4.60   24-HR  ALL         4TH               93052924

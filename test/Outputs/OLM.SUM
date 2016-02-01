@@ -1,0 +1,361 @@
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+         6. Ozone Limiting Method (OLM) Used for NO2 Conversion
+            with an Equilibrium NO2/NOx Ratio of  0.900 and
+            with NO OLMGROUPs
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  NO2     
+
+ **Note that special processing requirements apply for the 1-hour NO2 NAAQS - check available guidance.
+   Model will process user-specified ranks of daily maximum 1-hour values averaged across the number of years modeled.
+   For annual NO2 NAAQS modeling, the multi-year maximum of PERIOD values can be simulated using the MULTYEAR keyword.
+   Multi-year PERIOD and 1-hour values should only be done in a single model run using the MULTYEAR option with a
+   single multi-year meteorological data file using STARTEND keyword.
+  
+ **Model Calculates  1 Short Term Average(s) of:   1-HR
+     and Calculates ANNUAL Averages
+  
+ **This Run Includes:      1 Source(s);       1 Source Group(s); and     144 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+
+ **This Run Includes OZONE    Values for a Single Sector
+              HOURLY OZONE    Values are Available
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Threshold Violations (MAXIFILE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =    35.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **File Created for Event Model:  olm_evt.inp                                                                                     
+ **File for Summary of Results:   OLM.SUM                                                                                         
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   anch-99.sfc                                                                        Met Version:  14134
+   Profile file:   anch-99.pfl                                                                     
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    26451                  Upper air station no.:    26409
+                  Name: ANCHORAGE,AK                               Name: ANCHORAGE,AK                            
+                  Year:   1999                                     Year:   1999
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 99 01 01   1 01  -14.8  0.247 -9.000 -9.000 -999.  294.     90.4  0.10   1.50   1.00    2.86    1.    7.0  262.5    2.0
+ 99 01 01   1 02  -20.9  0.347 -9.000 -9.000 -999.  491.    179.3  0.10   1.50   1.00    3.86  358.    7.0  262.5    2.0
+ 99 01 01   1 03  -14.8  0.247 -9.000 -9.000 -999.  299.     90.6  0.10   1.50   1.00    2.86    4.    7.0  263.1    2.0
+ 99 01 01   1 04  -20.7  0.347 -9.000 -9.000 -999.  491.    180.6  0.10   1.50   1.00    3.86  353.    7.0  264.2    2.0
+ 99 01 01   1 05  -17.8  0.298 -9.000 -9.000 -999.  391.    132.6  0.10   1.50   1.00    3.36  999.    7.0  264.2    2.0
+ 99 01 01   1 06  -27.9  0.394 -9.000 -9.000 -999.  593.    195.3  0.10   1.50   1.00    4.36  342.    7.0  264.9    2.0
+ 99 01 01   1 07  -23.6  0.396 -9.000 -9.000 -999.  599.    236.2  0.10   1.50   1.00    4.36  355.    7.0  265.4    2.0
+ 99 01 01   1 08  -14.6  0.247 -9.000 -9.000 -999.  310.     91.8  0.10   1.50   1.00    2.86  333.    7.0  265.9    2.0
+ 99 01 01   1 09  -20.6  0.347 -9.000 -9.000 -999.  491.    182.2  0.10   1.50   1.00    3.86  327.    7.0  266.4    2.0
+ 99 01 01   1 10  -14.6  0.247 -9.000 -9.000 -999.  300.     92.0  0.10   1.50   1.00    2.86  999.    7.0  266.4    2.0
+ 99 01 01   1 11  -23.4  0.396 -9.000 -9.000 -999.  599.    237.8  0.10   1.50   0.81    4.36  334.    7.0  267.0    2.0
+ 99 01 01   1 12  -22.2  0.397 -9.000 -9.000 -999.  601.    252.3  0.10   1.50   0.65    4.36  326.    7.0  267.5    2.0
+ 99 01 01   1 13  -26.2  0.504 -9.000 -9.000 -999.  859.    437.4  0.10   1.50   0.59    5.46  333.    7.0  267.5    2.0
+ 99 01 01   1 14  -15.5  0.300 -9.000 -9.000 -999.  432.    156.0  0.10   1.50   0.58    3.36  999.    7.0  268.1    2.0
+ 99 01 01   1 15  -16.5  0.299 -9.000 -9.000 -999.  393.    144.3  0.10   1.50   0.64    3.36  332.    7.0  268.1    2.0
+ 99 01 01   1 16  -17.5  0.298 -9.000 -9.000 -999.  390.    135.3  0.10   1.50   0.79    3.36  334.    7.0  268.8    2.0
+ 99 01 01   1 17  -20.3  0.348 -9.000 -9.000 -999.  492.    184.3  0.10   1.50   1.00    3.86  351.    7.0  269.2    2.0
+ 99 01 01   1 18  -23.2  0.397 -9.000 -9.000 -999.  599.    240.5  0.10   1.50   1.00    4.36  317.    7.0  269.9    2.0
+ 99 01 01   1 19  -20.3  0.348 -9.000 -9.000 -999.  494.    184.8  0.10   1.50   1.00    3.86  344.    7.0  269.9    2.0
+ 99 01 01   1 20  -20.3  0.348 -9.000 -9.000 -999.  492.    184.8  0.10   1.50   1.00    3.86  337.    7.0  269.9    2.0
+ 99 01 01   1 21  -17.4  0.298 -9.000 -9.000 -999.  392.    135.7  0.10   1.50   1.00    3.36  340.    7.0  269.9    2.0
+ 99 01 01   1 22  -17.4  0.298 -9.000 -9.000 -999.  390.    135.7  0.10   1.50   1.00    3.36  332.    7.0  269.9    2.0
+ 99 01 01   1 23  -20.3  0.348 -9.000 -9.000 -999.  492.    185.1  0.10   1.50   1.00    3.86  340.    7.0  270.4    2.0
+ 99 01 01   1 24   -7.0  0.121 -9.000 -9.000 -999.  167.     22.4  0.10   1.50   1.00    1.76  999.    7.0  270.4    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 99 01 01 01    7.0 1    1.    2.86   262.6   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS       5.58099 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS       4.62948 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       4.15552 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       3.21547 AT (       0.00,    -1000.00,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       3.12487 AT (    -173.65,     -984.81,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       3.11107 AT (    -102.61,      281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       2.99242 AT (      -0.00,     1000.00,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       2.84526 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       2.84052 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       2.75911 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   1ST-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     115.88635 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     114.30816 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     113.84701 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     113.42625 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     113.18458 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     112.71719 AT (    -102.61,      281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     110.80952 AT (     295.44,      -52.09,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     109.54465 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     109.15012 AT (     -52.09,      295.44,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     108.12884 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   2ND-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     113.15079 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     112.67773 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     112.66575 AT (    -102.61,      281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     112.40966 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     111.05837 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     109.14191 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     106.86796 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     106.50378 AT (     -52.09,      295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     103.63675 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS     101.84481 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   3RD-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     111.21258 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     109.43118 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     108.96395 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     108.74377 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     104.27842 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     101.65995 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS     100.81679 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS     100.44139 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS     100.04328 AT (    -102.61,      281.91,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      98.80038 AT (     281.91,     -102.61,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   4TH-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     104.90909 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     103.20971 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     103.08407 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     102.86758 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     102.77053 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS     100.24938 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      99.92005 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      98.98685 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      98.50729 AT (     281.91,     -102.61,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      95.08463 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   5TH-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     104.52767 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     101.82376 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     101.47303 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     101.28415 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS     100.66356 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      99.61997 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      98.55711 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      97.97151 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      96.22262 AT (     281.91,     -102.61,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      93.08005 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+                      *** THE SUMMARY OF MAXIMUM   6TH-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   1 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     103.85906 AT (     102.61,     -281.91,    35.00,    35.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     100.89028 AT (     150.00,     -259.81,    35.00,    35.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     100.56610 AT (     259.81,     -150.00,    35.00,    35.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     100.12980 AT (     229.81,     -192.84,    35.00,    35.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      99.96281 AT (      52.09,     -295.44,    35.00,    35.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      98.32912 AT (    -342.02,      939.69,    35.00,    35.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      97.98816 AT (    -500.00,      866.03,    35.00,    35.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      97.70653 AT (     192.84,     -229.81,    35.00,    35.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      96.09796 AT (     281.91,     -102.61,    35.00,    35.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      92.14402 AT (    -173.65,      984.81,    35.00,    35.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   *** AERMOD OLM Test Case - 35m Stack, 50g/s - OLM                        ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:56:30
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      OLM       RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            1 Warning Message(s)
+ A Total of         1831 Informational Message(s)
+
+ A Total of         8760 Hours Were Processed
+
+ A Total of         1337 Calm Hours Identified
+
+ A Total of          494 Missing Hours Identified (  5.64 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361      11       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt

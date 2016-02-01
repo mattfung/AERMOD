@@ -1,0 +1,1307 @@
+** To run the example, copy the MULTURB.INP file to AERMOD.INP and type:
+**
+**    AERMOD
+**
+** The results for this example problem are provided in file AERMOD.OUT.
+ 
+CO STARTING
+   TITLEONE  Example Problem for the AERMOD Model with multiple urban areas
+   MODELOPT  CONC   FLAT
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2
+   URBANOPT  URBAREA1  2.5E6   Somewhere_in_USA  1.0
+   URBANOPT  URBAREA2  1.5E6   Somewhere_else_in_USA  1.0
+   URBANOPT  URBAREA3  0.5E6   Somewhere_else_still_in_USA  1.0
+   URBANOPT  URBAREA4  0.25E6  Somewhere_else_still_in_the_USA  1.0
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+SO INCLUDED multurb_sources.dat
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  aermet2.sfc
+   PROFFILE  aermet2.pfl
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H01001   1  STACK1     88030111         753.65578
+   EVENTLOC H001H01001 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01001   1  STACK1     88030113         421.98804
+   EVENTLOC H002H01001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01002   1  STACK2     88030111         753.65578
+   EVENTLOC H001H01002 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01002   1  STACK2     88030113         421.98804
+   EVENTLOC H002H01002 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01003   1  STACK3     88030111         753.65578
+   EVENTLOC H001H01003 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01003   1  STACK3     88030113         421.98804
+   EVENTLOC H002H01003 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01004   1  STACK4     88030111         753.65578
+   EVENTLOC H001H01004 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01004   1  STACK4     88030113         421.98804
+   EVENTLOC H002H01004 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H03001   3  STACK1     88030112         329.96009
+   EVENTLOC H001H03001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03001   3  STACK1     88030112         261.07802
+   EVENTLOC H002H03001 XR=      469.846310 YR=     -171.010072     0.0000     0.0000     0.0000
+   EVENTPER H001H03002   3  STACK2     88030112         329.96009
+   EVENTLOC H001H03002 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03002   3  STACK2     88030112         261.07802
+   EVENTLOC H002H03002 XR=      469.846310 YR=     -171.010072     0.0000     0.0000     0.0000
+   EVENTPER H001H03003   3  STACK3     88030112         329.96009
+   EVENTLOC H001H03003 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03003   3  STACK3     88030112         261.07802
+   EVENTLOC H002H03003 XR=      469.846310 YR=     -171.010072     0.0000     0.0000     0.0000
+   EVENTPER H001H03004   3  STACK4     88030112         329.96009
+   EVENTLOC H001H03004 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03004   3  STACK4     88030112         261.07802
+   EVENTLOC H002H03004 XR=      469.846310 YR=     -171.010072     0.0000     0.0000     0.0000
+   EVENTPER H001H08001   8  STACK1     88030116         276.99601
+   EVENTLOC H001H08001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08001   8  STACK1     88030208          57.27086
+   EVENTLOC H002H08001 XR=      173.648178 YR=     -984.807753     0.0000     0.0000     0.0000
+   EVENTPER H001H08002   8  STACK2     88030116         275.65388
+   EVENTLOC H001H08002 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08002   8  STACK2     88030108          65.52180
+   EVENTLOC H002H08002 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+   EVENTPER H001H08003   8  STACK3     88030116         272.94026
+   EVENTLOC H001H08003 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08003   8  STACK3     88030108          95.14228
+   EVENTLOC H002H08003 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+   EVENTPER H001H08004   8  STACK4     88030116         264.11465
+   EVENTLOC H001H08004 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08004   8  STACK4     88030116         112.36796
+   EVENTLOC H002H08004 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+   EVENTPER H001H24001  24  STACK1     88030124          99.61928
+   EVENTLOC H001H24001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24001  24  STACK1     88030324          33.45042
+   EVENTLOC H002H24001 XR=      866.025404 YR=     -500.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24002  24  STACK2     88030124         100.47962
+   EVENTLOC H001H24002 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24002  24  STACK2     88030324          36.23090
+   EVENTLOC H002H24002 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+   EVENTPER H001H24003  24  STACK3     88030124         103.43867
+   EVENTLOC H001H24003 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24003  24  STACK3     88030324          40.50701
+   EVENTLOC H002H24003 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+   EVENTPER H001H24004  24  STACK4     88030124         101.68031
+   EVENTLOC H001H24004 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24004  24  STACK4     88030324          42.59738
+   EVENTLOC H002H24004 XR=      766.044443 YR=     -642.787610     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses URBAN Dispersion Algorithm for the SBL for     4 Source(s),
+   for Total of    4 Urban Area(s):
+   Urban ID = URBAREA1 ;  Urban Population =   2500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA2 ;  Urban Population =   1500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA3 ;  Urban Population =    500000.0 ;  Urban Roughness Length =  1.000 m
+   Urban ID = URBAREA4 ;  Urban Population =    250000.0 ;  Urban Roughness Length =  1.000 m
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. Half-life of 4 hrs for URBAN SO2.
+         6. Urban Roughness Length of 1.0 Meter Used.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      4 Source(s);       4 Source Group(s); and      32 Event(s)
+
+                with:      4 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK1           0   0.50000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     YES   NO         
+ STACK2           0   0.50000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     YES   NO         
+ STACK3           0   0.50000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     YES   NO         
+ STACK4           0   0.50000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     YES   NO         
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  STACK1     STACK1      ,
+
+  STACK2     STACK2      ,
+
+  STACK3     STACK3      ,
+
+  STACK4     STACK4      ,
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+
+                                          *** SOURCE IDs DEFINED AS URBAN SOURCES ***
+
+  URBAN ID   URBAN POP                                    SOURCE IDs
+  --------   ---------                                    ----------
+
+
+  URBAREA1    2500000.   STACK1      ,
+
+  URBAREA2    1500000.   STACK2      ,
+
+  URBAREA3     500000.   STACK3      ,
+
+  URBAREA4     250000.   STACK4      ,
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                          *** DIRECTION SPECIFIC BUILDING DIMENSIONS ***
+
+
+ SOURCE ID: STACK1      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+
+ SOURCE ID: STACK2      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+
+ SOURCE ID: STACK3      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+
+ SOURCE ID: STACK4      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   3  1  0
+                                                           AND END DATE: 1988   3  3 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01001    GROUP VALUE =      753.65578 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      753.65578     753.65578
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     753.65578     753.65578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01001    GROUP VALUE =      421.98804 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030113;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      421.98804     421.98804
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     421.98804     421.98804
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01002    GROUP VALUE =      753.65578 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      753.65578     753.65578
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     753.65578     753.65578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01002    GROUP VALUE =      421.98804 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030113;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      421.98804     421.98804
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     421.98804     421.98804
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01003    GROUP VALUE =      753.65578 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      753.65578     753.65578
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     753.65578     753.65578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01003    GROUP VALUE =      421.98804 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030113;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      421.98804     421.98804
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     421.98804     421.98804
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01004    GROUP VALUE =      753.65578 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      753.65578     753.65578
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     753.65578     753.65578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01004    GROUP VALUE =      421.98804 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030113;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      421.98804     421.98804
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     421.98804     421.98804
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =      329.96009 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     329.96009     329.96009
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =      261.07802 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     469.85    -171.01       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10       72.30110      72.30110
+ 11      611.84334     611.84334
+ 12       99.08963      99.08963
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     261.07802     261.07802
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03002    GROUP VALUE =      329.96009 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     329.96009     329.96009
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03002    GROUP VALUE =      261.07802 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     469.85    -171.01       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10       72.30110      72.30110
+ 11      611.84334     611.84334
+ 12       99.08963      99.08963
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     261.07802     261.07802
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03003    GROUP VALUE =      329.96009 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     329.96009     329.96009
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03003    GROUP VALUE =      261.07802 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     469.85    -171.01       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10       72.30110      72.30110
+ 11      611.84334     611.84334
+ 12       99.08963      99.08963
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     261.07802     261.07802
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03004    GROUP VALUE =      329.96009 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     329.96009     329.96009
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03004    GROUP VALUE =      261.07802 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     469.85    -171.01       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10       72.30110      72.30110
+ 11      611.84334     611.84334
+ 12       99.08963      99.08963
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     261.07802     261.07802
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08001    GROUP VALUE =      276.99601 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      137.89027     137.89027
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     276.99601     276.99601
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  24
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08002    GROUP VALUE =      275.65388 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      127.15319     127.15319
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     275.65388     275.65388
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  25
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08002    GROUP VALUE =       65.52180 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030108;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       24.65221      24.65221
+  2       84.36658      84.36658
+  3       57.34426      57.34426
+  4       68.77974      68.77974
+  5       55.79529      55.79529
+  6      113.18233     113.18233
+  7       79.76360      79.76360
+  8       40.29040      40.29040
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      65.52180      65.52180
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  26
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08003    GROUP VALUE =      272.94026 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      105.44425     105.44425
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     272.94026     272.94026
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  27
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08003    GROUP VALUE =       95.14228 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030108;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       37.68375      37.68375
+  2      122.05626     122.05626
+  3       85.26294      85.26294
+  4       93.22933      93.22933
+  5       74.71042      74.71042
+  6      159.30392     159.30392
+  7      125.10478     125.10478
+  8       63.78686      63.78686
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      95.14228      95.14228
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  28
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08004    GROUP VALUE =      264.11465 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9       34.83938      34.83938
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     264.11465     264.11465
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  29
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08004    GROUP VALUE =      112.36796 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9       42.17216      42.17216
+ 10      109.59423     109.59423
+ 11      146.07476     146.07476
+ 12      116.05801     116.05801
+ 13      230.03006     230.03006
+ 14       30.99206      30.99206
+ 15       46.14460      46.14460
+ 16      177.87779     177.87779
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     112.36796     112.36796
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  30
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =       99.61928 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        1.30791       1.30791
+  2       19.69876      19.69876
+  3       11.43961      11.43961
+  4       30.91385      30.91385
+  5       15.69655      15.69655
+  6       28.56940      28.56940
+  7       17.61551      17.61551
+  8        5.41619       5.41619
+  9      137.89027     137.89027
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+ 17        0.00837       0.00837
+ 18        2.67492       2.67492
+ 19        8.67860       8.67860
+ 20        8.61719       8.61719
+ 21        0.07473       0.07473
+ 22        0.38781       0.38781
+ 23       19.98046      19.98046
+ 24        3.81467       3.81467
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      99.61928      99.61928
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  31
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24002    GROUP VALUE =      100.47962 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        1.87141       1.87141
+  2       20.39806      20.39806
+  3        9.95403       9.95403
+  4       38.19139      38.19139
+  5       15.83132      15.83132
+  6       32.42342      32.42342
+  7       26.14751      26.14751
+  8        8.27483       8.27483
+  9      127.15319     127.15319
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+ 17        0.01748       0.01748
+ 18        4.37162       4.37162
+ 19       13.81922      13.81922
+ 20       12.91401      12.91401
+ 21        0.11464       0.11464
+ 22        0.57974       0.57974
+ 23       16.26162      16.26162
+ 24        5.10952       5.10952
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     100.47962     100.47962
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  32
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24003    GROUP VALUE =      103.43867 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        3.80459       3.80459
+  2       18.40507      18.40507
+  3       12.03263      12.03263
+  4       54.78264      54.78264
+  5       16.42729      16.42729
+  6       48.61412      48.61412
+  7       23.65234      23.65234
+  8       20.47894      20.47894
+  9      105.44425     105.44425
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+ 17        0.02791       0.02791
+ 18       13.64723      13.64723
+ 19       37.95916      37.95916
+ 20       22.52487      22.52487
+ 21        0.32852       0.32852
+ 22        1.55032       1.55032
+ 23       15.14167      15.14167
+ 24        9.62858       9.62858
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     103.43867     103.43867
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  33
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24004    GROUP VALUE =      101.68031 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        2.94052       2.94052
+  2       19.82881      19.82881
+  3       13.65797      13.65797
+  4       65.55024      65.55024
+  5       18.48516      18.48516
+  6       58.83146      58.83146
+  7       25.75673      25.75673
+  8       14.20453      14.20453
+  9       34.83938      34.83938
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+ 17        0.07058       0.07058
+ 18       21.82862      21.82862
+ 19       43.69349      43.69349
+ 20       18.37546      18.37546
+ 21        0.67168       0.67168
+ 22        2.83069       2.83069
+ 23       14.31306      14.31306
+ 24        6.37119       6.37119
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     101.68031     101.68031
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  34
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08001    GROUP VALUE =       57.27086 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030208;  LOCATION (XR,YR,ZELEV,ZFLAG):     173.65    -984.81       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.02850       0.02850
+  2       38.51954      38.51954
+  3      119.43438     119.43438
+  4        8.70323       8.70323
+  5       77.18208      77.18208
+  6        2.65255       2.65255
+  7       82.59135      82.59135
+  8      129.05523     129.05523
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      57.27086      57.27086
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  35
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =       33.45042 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     866.03    -500.00       0.00       0.00 (M)
+ HR GROUP:STACK1   OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.12003       0.12003
+  2        0.16950       0.16950
+  3       22.58274      22.58274
+  4       84.48255      84.48255
+  5       45.32739      45.32739
+  6       65.97636      65.97636
+  7       14.02947      14.02947
+  8       68.00380      68.00380
+  9       10.06412      10.06412
+ 10       22.45406      22.45406
+ 11      112.07641     112.07641
+ 12       43.15748      43.15748
+ 13       19.52609      19.52609
+ 14       11.90979      11.90979
+ 15        2.00084       2.00084
+ 16        1.08005       1.08005
+ 17       28.51597      28.51597
+ 18       79.13334      79.13334
+ 19      137.76177     137.76177
+ 20       33.43025      33.43025
+ 21        0.52493       0.52493
+ 22        0.02709       0.02709
+ 23        0.18697       0.18697
+ 24        0.26918       0.26918
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      33.45042      33.45042
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  36
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24002    GROUP VALUE =       36.23090 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK2   OF STACK2      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.12312       0.12312
+  2        0.17147       0.17147
+  3       23.06731      23.06731
+  4       82.43747      82.43747
+  5       51.22173      51.22173
+  6       94.45364      94.45364
+  7       48.44393      48.44393
+  8      116.43393     116.43393
+  9       16.38030      16.38030
+ 10       10.71554      10.71554
+ 11       94.52558      94.52558
+ 12       48.12027      48.12027
+ 13        5.25265       5.25265
+ 14        5.33197       5.33197
+ 15        0.35374       0.35374
+ 16        0.13035       0.13035
+ 17        7.53337       7.53337
+ 18       84.41813      84.41813
+ 19      146.19290     146.19290
+ 20       33.10015      33.10015
+ 21        0.57066       0.57066
+ 22        0.03661       0.03661
+ 23        0.21737       0.21737
+ 24        0.30935       0.30935
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      36.23090      36.23090
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  37
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24003    GROUP VALUE =       40.50701 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK3   OF STACK3      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.10210       0.10210
+  2        0.13687       0.13687
+  3       22.61939      22.61939
+  4       65.06333      65.06333
+  5       54.24905      54.24905
+  6      136.19457     136.19457
+  7       53.36163      53.36163
+  8      169.39827     169.39827
+  9       16.38030      16.38030
+ 10       10.71554      10.71554
+ 11       94.52558      94.52558
+ 12       48.12027      48.12027
+ 13        5.25265       5.25265
+ 14        5.33197       5.33197
+ 15        0.35374       0.35374
+ 16        0.13035       0.13035
+ 17        5.75226       5.75226
+ 18       91.90123      91.90123
+ 19      160.66231     160.66231
+ 20       30.65415      30.65415
+ 21        0.58100       0.58100
+ 22        0.04748       0.04748
+ 23        0.26536       0.26536
+ 24        0.36888       0.36888
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      40.50701      40.50701
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  38
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24004    GROUP VALUE =       42.59738 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     766.04    -642.79       0.00       0.00 (M)
+ HR GROUP:STACK4   OF STACK4      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.07469       0.07469
+  2        0.09727       0.09727
+  3       21.98398      21.98398
+  4       47.40643      47.40643
+  5       54.21812      54.21812
+  6      161.65727     161.65727
+  7       67.44437      67.44437
+  8      202.12319     202.12319
+  9       16.38030      16.38030
+ 10       10.71554      10.71554
+ 11       94.52558      94.52558
+ 12       48.12027      48.12027
+ 13        5.25265       5.25265
+ 14        5.33197       5.33197
+ 15        0.35374       0.35374
+ 16        0.13035       0.13035
+ 17        4.27714       4.27714
+ 18       91.62012      91.62012
+ 19      161.45075     161.45075
+ 20       27.95652      27.95652
+ 21        0.52910       0.52910
+ 22        0.02068       0.02068
+ 23        0.28018       0.28018
+ 24        0.38702       0.38702
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      42.59738      42.59738
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  Example Problem for the AERMOD Model with multiple urban areas      ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:54:06
+                                                                                                                       PAGE  39
+ **MODELOPTs:   NonDFAULT CONC      FLAT      URBAN
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

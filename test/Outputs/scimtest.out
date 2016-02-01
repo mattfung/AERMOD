@@ -1,0 +1,825 @@
+CO STARTING
+   TITLEONE  Test of SCIM option in AERMOD
+   TITLETWO  Five years of met data from Salem
+   MODELOPT  CONC  FLAT  SCIM
+   AVERTIME  ANNUAL
+   POLLUTID  OTHER
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+   LOCATION  STACK    POINT       0.0    0.0   0.0
+SO LOCATION  AREA     AREA      -10.0  -10.0   0.0
+SO LOCATION  CIRC     AREACIRC    0.0    0.0   0.0
+   LOCATION  AREAP    AREAPOLY    0.0    0.0   0.0
+SO LOCATION  VOL      VOLUME      0.0    0.0   0.0
+   location  OPENPIT  OPENPIT  -100.0 -100.0   0.0
+ 
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK   100.0   35.00  432.  11.7   2.4
+ 
+   SRCPARAM  AREA   0.001  1.0   20.  20.
+ 
+   SRCPARAM  CIRC   0.1    10.0  20.
+ 
+   SRCPARAM  AREAP  0.001  1.0  8  2.0
+   AREAVERT  AREAP  0.0 0.0  10.0 0.0  10.0 10.0  0.0 10.0  0.0 20.0
+   AREAVERT  AREAP  -10.0 20.0  -10.0 10.0  -10.0 0.0
+ 
+   SRCPARAM  VOL    0.1    1.0   20.  20.
+ 
+SO SRCPARAM  OPENPIT   1.0E-5   0.000       1829.       183.0      0.1674E+08  -45.0
+ 
+   SRCGROUP  STACK    STACK
+   SRCGROUP  AREA     AREA
+   SRCGROUP  CIRC     CIRC
+   SRCGROUP  AREAP    AREAP
+   SRCGROUP  VOL      VOL
+   SRCGROUP  OPENPIT  OPENPIT
+ 
+SO FINISHED
+ 
+RE STARTING
+   GRIDPOLR  POL1  STA
+             POL1  ORIG  0.0  0.0
+             POL1  DIST  100. 200.  500.  1000.  5000.
+             POL1  GDIR  36    10.   10.
+             POL1  END
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  salem_86-90.sfc
+   PROFFILE  salem_86-90.pfl
+   SURFDATA  24232  1986  SALEM
+   UAIRDATA  24232  1986  SALEM
+   PROFBASE  0.0
+   SCIMBYHR  1  25  scimmed_met.sfc  scimmed_met.pfl
+ME FINISHED
+ 
+OU STARTING
+   SUMMFILE  SCIMTEST.SUM
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         SCIM     - Use Sampled Chronological Input Model (SCIM) option
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  OTHER   
+  
+ **Model Calculates ANNUAL Averages Only
+  
+ **This Run Includes:      6 Source(s);       6 Source Group(s); and     180 Receptor(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      1 VOLUME source(s)
+                 and:      3 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      1 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File for Summary of Results:   SCIMTEST.SUM                                                                                    
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK            0   0.10000E+03       0.0       0.0     0.0    35.00   432.00    11.70     2.40    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                  *** VOLUME SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE    RELEASE    INIT.    INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.   HEIGHT      SY       SZ     SOURCE  SCALAR VARY
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (METERS) (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ VOL              0   0.10000E+00       0.0       0.0     0.0     1.00    20.00    20.00     NO           
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                  *** AREA SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF AREA   OF AREA   OF AREA     SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)  (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ AREA             0   0.10000E-02     -10.0     -10.0     0.0     1.00     20.00     20.00      0.00     0.00     NO           
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                *** AREACIRC SOURCE DATA ***
+
+               NUMBER EMISSION RATE    CENTER OF AREA   BASE     RELEASE  RADIUS     NUMBER     INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT   OF AREA   OF VERTS.    SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS)                      (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ CIRC             0   0.10000E+00       0.0       0.0     0.0    10.00      20.00      20        0.00     NO           
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                *** AREAPOLY SOURCE DATA ***
+
+               NUMBER EMISSION RATE   LOCATION OF AREA  BASE     RELEASE  NUMBER      INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF VERTS.     SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS)            (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ AREAP            0   0.10000E-02       0.0       0.0     0.0     1.00       8         2.00     NO           
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                                  *** OPENPIT SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    VOLUME   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF PIT    OF PIT    OF PIT     OF PIT   SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)    (M**3)               BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ OPENPIT          0   0.10000E-04    -100.0    -100.0     0.0     0.00   1829.00    183.00    -45.00   .16740E+08  NO           
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  STACK      STACK       ,
+
+  AREA       AREA        ,
+
+  CIRC       CIRC        ,
+
+  AREAP      AREAP       ,
+
+  VOL        VOL         ,
+
+  OPENPIT    OPENPIT     ,
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                          *** ORIGIN FOR POLAR NETWORK ***
+                                X-ORIG =      0.00 ;   Y-ORIG =       0.00  (METERS)
+
+                                          *** DISTANCE RANGES OF NETWORK ***
+                                                    (METERS)
+
+          100.0,     200.0,     500.0,    1000.0,    5000.0,
+
+                                          *** DIRECTION RADIALS OF NETWORK *** 
+                                                    (DEGREES)
+
+           10.0,      20.0,      30.0,      40.0,      50.0,      60.0,      70.0,      80.0,      90.0,     100.0,
+          110.0,     120.0,     130.0,     140.0,     150.0,     160.0,     170.0,     180.0,     190.0,     200.0,
+          210.0,     220.0,     230.0,     240.0,     250.0,     260.0,     270.0,     280.0,     290.0,     300.0,
+          310.0,     320.0,     330.0,     340.0,     350.0,     360.0,
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                      * SOURCE-RECEPTOR COMBINATIONS FOR WHICH CALCULATIONS MAY NOT BE PERFORMED *
+                        LESS THAN 1.0 METER; WITHIN OPENPIT; OR BEYOND 80KM FOR FASTAREA/FASTALL
+
+
+                              SOURCE          - - RECEPTOR LOCATION - -         DISTANCE
+                                ID            XR (METERS)   YR (METERS)         (METERS)
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+                             OPENPIT                 17.4          98.5          OPENPIT
+                             OPENPIT                 34.7         197.0          OPENPIT
+                             OPENPIT                 34.2          94.0          OPENPIT
+                             OPENPIT                 68.4         187.9          OPENPIT
+                             OPENPIT                 50.0          86.6          OPENPIT
+                             OPENPIT                100.0         173.2          OPENPIT
+                             OPENPIT                250.0         433.0          OPENPIT
+                             OPENPIT                 64.3          76.6          OPENPIT
+                             OPENPIT                128.6         153.2          OPENPIT
+                             OPENPIT                321.4         383.0          OPENPIT
+                             OPENPIT                642.8         766.0          OPENPIT
+                             OPENPIT                -76.6         -64.3          OPENPIT
+                             OPENPIT                -86.6         -50.0          OPENPIT
+                             OPENPIT                -94.0         -34.2          OPENPIT
+                             OPENPIT                -98.5         -17.4          OPENPIT
+                             OPENPIT               -100.0          -0.0          OPENPIT
+                             OPENPIT                -98.5          17.4          OPENPIT
+                             OPENPIT               -197.0          34.7          OPENPIT
+                             OPENPIT                -94.0          34.2          OPENPIT
+                             OPENPIT               -187.9          68.4          OPENPIT
+                             OPENPIT                -86.6          50.0          OPENPIT
+                             OPENPIT                -76.6          64.3          OPENPIT
+                             OPENPIT                -64.3          76.6          OPENPIT
+                             OPENPIT                -50.0          86.6          OPENPIT
+                             OPENPIT                -34.2          94.0          OPENPIT
+                             OPENPIT                -68.4         187.9          OPENPIT
+                             OPENPIT                -17.4          98.5          OPENPIT
+                             OPENPIT                -34.7         197.0          OPENPIT
+                             OPENPIT                 -0.0         100.0          OPENPIT
+                             OPENPIT                 -0.0         200.0          OPENPIT
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   salem_86-90.sfc                                                                    Met Version:  14134
+   Profile file:   salem_86-90.pfl                                                                 
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    24232                  Upper air station no.:    24232
+                  Name: SALEM                                      Name: SALEM                                   
+                  Year:   1986                                     Year:   1986
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 86 01 01   1 01  -24.4  0.432 -9.000 -9.000 -999.  681.    296.3  0.04   0.86   1.00    6.20  171.   10.0  280.4    2.0
+ 86 01 01   1 02  -30.5  0.542 -9.000 -9.000 -999.  958.    468.1  0.04   0.86   1.00    7.70  168.   10.0  280.9    2.0
+ 86 01 01   1 03  -34.9  0.623 -9.000 -9.000 -999. 1177.    618.1  0.04   0.86   1.00    8.80  174.   10.0  281.4    2.0
+ 86 01 01   1 04  -30.3  0.542 -9.000 -9.000 -999.  966.    470.0  0.04   0.86   1.00    7.70  183.   10.0  282.0    2.0
+ 86 01 01   1 05  -43.1  0.768 -9.000 -9.000 -999. 1613.    940.1  0.04   0.86   1.00   10.80  193.   10.0  281.4    2.0
+ 86 01 01   1 06  -30.5  0.542 -9.000 -9.000 -999. 1017.    468.9  0.04   0.86   1.00    7.70  192.   10.0  281.4    2.0
+ 86 01 01   1 07  -24.3  0.432 -9.000 -9.000 -999.  697.    297.6  0.04   0.86   1.00    6.20  195.   10.0  281.4    2.0
+ 86 01 01   1 08  -21.7  0.209 -9.000 -9.000 -999.  283.     37.7  0.04   0.86   1.00    3.60  113.   10.0  280.9    2.0
+ 86 01 01   1 09  -22.9  0.355 -9.000 -9.000 -999.  508.    176.6  0.04   0.86   0.55    5.20  127.   10.0  280.4    2.0
+ 86 01 01   1 10   16.0  0.381  0.415  0.005  160.  564.   -310.7  0.04   0.86   0.36    5.20  161.   10.0  280.4    2.0
+ 86 01 01   1 11   30.6  0.345  0.618  0.005  278.  488.   -121.3  0.04   0.86   0.28    4.60  254.   10.0  282.5    2.0
+ 86 01 01   1 12   42.2  0.349  0.766  0.005  385.  495.    -91.2  0.04   0.86   0.25    4.60  276.   10.0  282.5    2.0
+ 86 01 01   1 13   64.3  0.566  0.966  0.005  506. 1022.   -254.8  0.04   0.86   0.25    7.70  223.   10.0  283.8    2.0
+ 86 01 01   1 14   54.8  0.427  0.963  0.005  589.  687.   -128.4  0.04   0.86   0.26    5.70  239.   10.0  283.8    2.0
+ 86 01 01   1 15   30.6  0.345  0.811  0.005  630.  492.   -121.7  0.04   0.86   0.31    4.60  212.   10.0  283.1    2.0
+ 86 01 01   1 16    0.4  0.259  0.195  0.005  628.  320.  -3691.8  0.04   0.86   0.43    3.60  224.   10.0  280.9    2.0
+ 86 01 01   1 17   -9.3  0.093 -9.000 -9.000 -999.   99.      7.9  0.04   0.86   0.73    2.60  141.   10.0  278.8    2.0
+ 86 01 01   1 18  -16.4  0.143 -9.000 -9.000 -999.  129.     16.0  0.04   0.86   1.00    3.10  217.   10.0  276.4    2.0
+ 86 01 01   1 19   -3.1  0.054 -9.000 -9.000 -999.   35.      4.5  0.04   0.86   1.00    1.50  144.   10.0  275.4    2.0
+ 86 01 01   1 20   -2.9  0.054 -9.000 -9.000 -999.   30.      4.8  0.04   0.86   1.00    1.50  137.   10.0  274.9    2.0
+ 86 01 01   1 21   -2.8  0.054 -9.000 -9.000 -999.   30.      5.0  0.04   0.86   1.00    1.50  140.   10.0  273.8    2.0
+ 86 01 01   1 22   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  142.   10.0  273.8    2.0
+ 86 01 01   1 23   -3.1  0.054 -9.000 -9.000 -999.   30.      4.6  0.04   0.86   1.00    1.50  140.   10.0  272.0    2.0
+ 86 01 01   1 24   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  280.   10.0  272.0    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 86 01 01 01   10.0 1  171.    6.20   280.4   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: STACK    ***
+                                  INCLUDING SOURCE(S):     STACK       , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       0.66148      3.59796     13.10211      9.63010      2.06489
+       20.00 |       0.67366      3.24195      8.36013      5.43041      1.05625
+       30.00 |       0.71549      2.97813      5.81140      3.41539      0.62844
+       40.00 |       0.77401      3.00316      5.76050      3.32510      0.60630
+       50.00 |       0.82528      3.00111      5.49437      3.21316      0.60006
+       60.00 |       0.84460      2.90001      4.90061      2.77380      0.52231
+       70.00 |       0.82564      2.84685      5.10486      2.86100      0.59898
+       80.00 |       0.78946      2.79035      5.70638      3.25512      0.55189
+       90.00 |       0.77010      2.76202      5.68985      3.23070      0.43032
+      100.00 |       0.79825      2.85227      5.47352      3.00104      0.43943
+      110.00 |       0.90609      3.23708      6.35851      3.67931      0.67578
+      120.00 |       1.08685      3.87613      7.55935      4.52331      0.84428
+      130.00 |       1.29429      4.58542      8.27354      4.89112      1.04880
+      140.00 |       1.47897      5.17884      8.31556      4.67798      0.87547
+      150.00 |       1.62893      5.94938      8.65927      4.52724      0.96902
+      160.00 |       1.75423      7.39450     11.43136      6.01588      1.20666
+      170.00 |       1.80769      9.00496     15.30342      8.26454      1.45044
+      180.00 |       1.69881      9.41711     17.17100      9.32205      1.64573
+      190.00 |       1.43953      8.22818     15.33253      8.22608      1.29055
+      200.00 |       1.16837      6.35672     11.71837      6.28089      1.02757
+      210.00 |       0.97824      4.75174      8.39596      4.56702      0.66989
+      220.00 |       0.86431      3.67790      6.03455      3.30055      0.55622
+      230.00 |       0.80712      3.06645      4.70313      2.63594      0.49724
+      240.00 |       0.76359      2.63167      3.59614      2.05522      0.38583
+      250.00 |       0.70166      2.20654      2.57378      1.48850      0.33630
+      260.00 |       0.65513      1.88564      1.96682      1.15068      0.32202
+      270.00 |       0.65587      1.78761      1.79263      1.01336      0.23931
+      280.00 |       0.67911      1.87868      1.98191      1.10467      0.22343
+      290.00 |       0.68345      1.99349      2.33727      1.35938      0.31957
+      300.00 |       0.65409      1.98097      2.52525      1.54066      0.41964
+      310.00 |       0.60914      1.95409      2.86463      1.84387      0.62460
+      320.00 |       0.58603      2.11640      3.71207      2.50573      0.97393
+      330.00 |       0.60396      2.42546      4.90023      3.43416      1.36852
+      340.00 |       0.64362      2.77901      7.25856      5.45666      1.85460
+      350.00 |       0.67109      3.20920     11.09698      9.09275      2.60138
+      360.00 |       0.67114      3.62768     14.79338     12.06409      3.31321
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: AREA     ***
+                                  INCLUDING SOURCE(S):     AREA        , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |     109.90663     33.81024      7.17481      2.25533      0.16472
+       20.00 |      79.81796     22.53711      4.24925      1.22402      0.06747
+       30.00 |      70.96539     23.75844      5.43212      1.73486      0.11829
+       40.00 |      50.80553     13.94212      2.38021      0.59586      0.02323
+       50.00 |      50.95172     15.88678      3.47324      1.10450      0.07527
+       60.00 |      54.46998     18.11279      4.14940      1.34391      0.08989
+       70.00 |      39.05182     11.02007      2.07395      0.58724      0.03302
+       80.00 |      33.67179     10.78286      2.48176      0.83022      0.06930
+       90.00 |      33.51640      9.40937      1.78468      0.51421      0.02872
+      100.00 |      46.90839     14.01744      2.88449      0.91203      0.07090
+      110.00 |      58.47711     19.27798      4.48385      1.50208      0.11734
+      120.00 |      53.56038     16.21712      3.53405      1.17084      0.09943
+      130.00 |      55.58938     16.64837      3.40538      1.05254      0.07656
+      140.00 |      61.67496     18.33157      3.72812      1.11755      0.06735
+      150.00 |      73.30542     22.60070      4.76897      1.46809      0.09431
+      160.00 |      79.14710     24.19479      5.07672      1.57972      0.11152
+      170.00 |      77.32714     23.10606      4.64531      1.37702      0.08810
+      180.00 |      74.40542     23.51056      4.89954      1.45784      0.08527
+      190.00 |      48.90473     13.41150      2.36198      0.64716      0.04099
+      200.00 |      28.88518      7.68620      1.44288      0.44948      0.04121
+      210.00 |      27.03224      8.25379      1.84619      0.62746      0.05823
+      220.00 |      25.40228      7.54350      1.61105      0.53802      0.04880
+      230.00 |      20.97029      6.50850      1.42246      0.46131      0.03131
+      240.00 |      13.33068      4.09139      0.95585      0.33478      0.02995
+      250.00 |       9.77196      2.59119      0.52922      0.17334      0.01199
+      260.00 |      14.58877      4.99240      1.15282      0.38026      0.02907
+      270.00 |      10.74521      3.25962      0.69615      0.22726      0.01952
+      280.00 |       8.83957      2.00830      0.23933      0.03808      0.00054
+      290.00 |      20.88517      6.05537      1.10565      0.28165      0.01090
+      300.00 |      40.95567     12.65677      2.57486      0.74381      0.03680
+      310.00 |      65.78896     20.27045      4.24410      1.31950      0.09589
+      320.00 |      90.46103     28.68017      6.27204      2.01255      0.14646
+      330.00 |     100.21305     31.24635      6.69161      2.12150      0.15516
+      340.00 |      99.81057     29.05741      5.91333      1.80320      0.11247
+      350.00 |     128.11001     39.55084      8.34362      2.62730      0.19794
+      360.00 |     139.08127     44.63664      9.87627      3.17763      0.22984
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: CIRC     ***
+                                  INCLUDING SOURCE(S):     CIRC        , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |    3368.22988   1896.44597    823.18206    447.65664     49.02998
+       20.00 |    2388.39047   1192.76908    552.36478    292.54760     26.29744
+       30.00 |    1772.49355    859.61343    473.48117    307.39332     38.26658
+       40.00 |    1531.84871    742.25239    329.64936    175.90816     12.70720
+       50.00 |    1405.58831    712.91059    338.87931    203.92308     24.25558
+       60.00 |    1266.48095    674.64500    379.70178    241.18340     29.04466
+       70.00 |    1162.13203    598.94242    261.62470    140.80238     12.37972
+       80.00 |    1132.90764    588.37233    229.68316    137.68505     17.72320
+       90.00 |    1158.39461    685.68875    281.09882    131.28257     10.95916
+      100.00 |    1281.23430    712.97873    329.01686    181.11853     19.58949
+      110.00 |    1558.93388    804.31490    391.23492    248.46370     32.67508
+      120.00 |    1900.42640    965.39524    413.60262    219.80519     25.28711
+      130.00 |    2119.10395   1031.78163    406.59203    215.93722     23.25148
+      140.00 |    2229.25433   1134.40732    485.81999    248.74259     24.31088
+      150.00 |    2464.07818   1321.55462    572.05899    304.27773     32.39026
+      160.00 |    2889.14768   1510.46807    647.00584    331.93966     34.12994
+      170.00 |    3289.84303   1617.42126    639.81334    315.48774     29.68427
+      180.00 |    3358.11218   1537.29815    527.80319    287.91807     31.39143
+      190.00 |    2984.18623   1238.45405    336.31235    156.44292     13.66877
+      200.00 |    2384.45546    918.86715    195.50582     79.73859      9.75107
+      210.00 |    1819.09367    690.96549    178.19967     93.59157     13.50248
+      220.00 |    1394.35655    525.84222    164.08034     90.43010     11.43555
+      230.00 |    1055.90447    369.13393    122.07837     76.69760     10.12694
+      240.00 |     776.31978    225.46804     53.01196     41.53267      7.51081
+      250.00 |     583.48100    155.24372     30.99061     23.94865      4.04465
+      260.00 |     453.98319    131.22506     55.77775     52.28868      8.65359
+      270.00 |     384.35489    113.45499     55.54841     40.69778      5.29857
+      280.00 |     428.97866    152.36826     47.33755     22.60826      0.94668
+      290.00 |     584.78776    257.68889    114.23704     71.76274      6.26030
+      300.00 |     836.18803    438.57791    264.83922    163.06641     16.66881
+      310.00 |    1216.85965    771.17946    507.02219    285.45604     29.06348
+      320.00 |    1737.61353   1145.56682    662.08990    388.99022     44.71406
+      330.00 |    2405.14250   1702.51576    856.89887    448.64908     46.48022
+      340.00 |    3149.13942   2087.06446    833.89450    401.59017     39.51201
+      350.00 |    3826.22106   2324.93449    992.16850    528.76923     57.21076
+      360.00 |    4020.16774   2400.33301   1092.82341    610.48769     69.32266
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: AREAP    ***
+                                  INCLUDING SOURCE(S):     AREAP       , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |      76.20071     24.72256      5.37867      1.69424      0.12341
+       20.00 |      55.70632     16.31847      3.11896      0.90596      0.05066
+       30.00 |      45.24560     16.53667      3.98561      1.28480      0.08806
+       40.00 |      34.23394      9.97420      1.72265      0.42811      0.01696
+       50.00 |      36.50486     11.60229      2.50685      0.80404      0.05612
+       60.00 |      32.38729     12.24156      3.02631      0.99125      0.06659
+       70.00 |      22.65312      7.09303      1.45643      0.43078      0.02476
+       80.00 |      21.34459      7.39334      1.82743      0.61986      0.05147
+       90.00 |      23.76091      6.95527      1.35989      0.39735      0.02200
+      100.00 |      33.52683     10.54160      2.13508      0.67262      0.05278
+      110.00 |      33.77943     12.12041      3.04306      1.05761      0.08597
+      120.00 |      32.34097     11.03409      2.55421      0.86057      0.07441
+      130.00 |      33.41410     11.08381      2.40173      0.75538      0.05630
+      140.00 |      37.08236     12.24684      2.67308      0.82263      0.05066
+      150.00 |      43.50587     15.06320      3.42573      1.08012      0.07043
+      160.00 |      45.94403     15.92743      3.62980      1.16013      0.08334
+      170.00 |      44.77508     15.21041      3.31685      1.00952      0.06592
+      180.00 |      43.09632     15.29184      3.46167      1.06092      0.06366
+      190.00 |      30.99519      9.40388      1.73710      0.47913      0.03049
+      200.00 |      18.16167      5.29083      1.05710      0.33371      0.03082
+      210.00 |      15.58448      5.23831      1.29313      0.45804      0.04365
+      220.00 |      15.75832      5.18459      1.16695      0.39546      0.03627
+      230.00 |      13.83464      4.57030      1.05743      0.34909      0.02364
+      240.00 |      10.15603      3.02946      0.69677      0.24609      0.02228
+      250.00 |       6.34437      1.67907      0.32708      0.11060      0.00837
+      260.00 |       7.27673      2.72127      0.69286      0.24498      0.02082
+      270.00 |       9.04897      2.98856      0.58281      0.17949      0.01471
+      280.00 |       5.03329      1.06801      0.12662      0.02151      0.00040
+      290.00 |       9.98684      3.81880      0.81311      0.21437      0.00807
+      300.00 |      22.11475      8.04324      1.80753      0.53677      0.02700
+      310.00 |      41.34047     14.15305      3.12775      0.98433      0.07175
+      320.00 |      61.76143     20.59344      4.65058      1.50465      0.10992
+      330.00 |      75.35118     23.79839      5.09954      1.61033      0.11711
+      340.00 |      75.15097     21.92399      4.47041      1.36147      0.08461
+      350.00 |      97.12849     29.86836      6.29962      1.97938      0.14875
+      360.00 |     101.65607     33.11791      7.40300      2.38683      0.17276
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: VOL      ***
+                                  INCLUDING SOURCE(S):     VOL         , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       5.60242      2.55461      0.80874      0.32565      0.03320
+       20.00 |       4.53582      1.86674      0.52296      0.19357      0.01551
+       30.00 |       3.64148      1.54513      0.54656      0.23623      0.02412
+       40.00 |       3.06266      1.22590      0.32702      0.10914      0.00712
+       50.00 |       2.76654      1.18847      0.38567      0.16278      0.01672
+       60.00 |       2.56688      1.20555      0.44003      0.19629      0.02027
+       70.00 |       2.32415      0.97055      0.27814      0.10520      0.00937
+       80.00 |       2.17192      0.86135      0.27846      0.12219      0.01565
+       90.00 |       2.25794      0.91084      0.26764      0.10098      0.00847
+      100.00 |       2.53723      1.10900      0.34301      0.13954      0.01599
+      110.00 |       2.83433      1.29850      0.45848      0.20712      0.02461
+      120.00 |       3.05346      1.32464      0.41863      0.17869      0.02151
+      130.00 |       3.27309      1.37739      0.41448      0.16527      0.01743
+      140.00 |       3.58593      1.51128      0.46023      0.17978      0.01584
+      150.00 |       3.96225      1.73725      0.55198      0.22335      0.02101
+      160.00 |       4.24572      1.90798      0.60945      0.24936      0.02488
+      170.00 |       4.25801      1.93746      0.59006      0.22728      0.02074
+      180.00 |       3.88205      1.78936      0.56913      0.22270      0.01938
+      190.00 |       3.17960      1.29702      0.33470      0.11496      0.01088
+      200.00 |       2.46512      0.87750      0.21195      0.07796      0.00988
+      210.00 |       1.98184      0.75846      0.22219      0.09472      0.01298
+      220.00 |       1.66640      0.69289      0.20435      0.08625      0.01170
+      230.00 |       1.37808      0.57018      0.17597      0.07611      0.00855
+      240.00 |       1.11241      0.41061      0.12003      0.05423      0.00776
+      250.00 |       0.94937      0.33284      0.08531      0.03626      0.00462
+      260.00 |       0.89324      0.37782      0.13082      0.05880      0.00757
+      270.00 |       0.90148      0.33822      0.10580      0.04564      0.00594
+      280.00 |       1.06609      0.33777      0.07774      0.02496      0.00261
+      290.00 |       1.53358      0.55445      0.16198      0.05976      0.00478
+      300.00 |       2.31984      0.95652      0.29594      0.11550      0.00930
+      310.00 |       3.29312      1.48658      0.49845      0.20669      0.02131
+      320.00 |       4.25323      1.97568      0.66412      0.28154      0.02952
+      330.00 |       5.06506      2.31768      0.78392      0.32500      0.03288
+      340.00 |       5.76587      2.48587      0.73385      0.28146      0.02417
+      350.00 |       6.32803      2.96877      0.94928      0.38263      0.04019
+      360.00 |       6.34523      3.15816      1.09303      0.45933      0.04620
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: OPENPIT  ***
+                                  INCLUDING SOURCE(S):     OPENPIT     , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        100.00       200.00       500.00      1000.00      5000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       0.00000      0.00000     31.94409     19.78674      1.63852
+       20.00 |       0.00000      0.00000     44.19640     26.21119      0.98390
+       30.00 |       0.00000      0.00000      0.00000     39.94004      1.16596
+       40.00 |       0.00000      0.00000      0.00000      0.00000      0.17915
+       50.00 |      28.08074     34.41886     35.76205     31.48094      0.58414
+       60.00 |      25.81479     29.63703     25.12546     19.44483      0.78779
+       70.00 |      24.09902     25.91186     19.90352     14.36185      0.36532
+       80.00 |      22.63154     23.15736     16.84863     11.67002      0.39414
+       90.00 |      21.32908     21.13555     14.75992      9.88082      0.48733
+      100.00 |      20.08677     19.56793     13.32579      8.76816      0.68921
+      110.00 |      18.81913     18.31564     12.13062      7.89057      0.65063
+      120.00 |      17.48445     17.20429     10.90532      7.04115      0.60520
+      130.00 |      16.04655     15.94447     10.14310      6.49927      0.60805
+      140.00 |      14.47528     14.33336      9.50849      6.13024      0.72692
+      150.00 |      12.84754     12.04435      9.02574      5.66115      0.80626
+      160.00 |      11.34242      9.03515      6.46644      4.35044      0.72501
+      170.00 |      10.10011      6.16872      3.28239      2.83725      0.67766
+      180.00 |       9.11631      4.11073      2.18327      1.40912      0.56045
+      190.00 |       8.35690      3.12204      1.87821      1.10428      0.23378
+      200.00 |       7.82409      2.93664      1.86467      1.16077      0.08769
+      210.00 |       7.52420      2.89470      1.94041      1.12529      0.24077
+      220.00 |       7.66589      2.73485      1.92514      1.32431      0.32229
+      230.00 |       0.00000      2.52829      1.59711      0.83278      0.25388
+      240.00 |       0.00000      2.47237      1.55497      1.08532      0.08921
+      250.00 |       0.00000      2.47255      1.63670      0.66080      0.02700
+      260.00 |       0.00000      2.48840      1.33359      0.62584      0.08834
+      270.00 |       0.00000      4.10320      1.11135      0.52535      0.21855
+      280.00 |       0.00000      0.00000      1.03215      0.66351      0.07442
+      290.00 |       0.00000      0.00000      1.20643      0.83594      0.09245
+      300.00 |       0.00000     19.88732      3.75265      1.61556      0.24749
+      310.00 |       0.00000     24.40004      5.96107      2.80735      0.51920
+      320.00 |       0.00000     29.21732      8.03620      4.16902      0.83764
+      330.00 |       0.00000     34.45470     10.50432      5.70075      1.12737
+      340.00 |       0.00000      0.00000     14.62724      7.56758      1.24466
+      350.00 |       0.00000      0.00000     19.69795     10.89315      1.38598
+      360.00 |       0.00000      0.00000     25.04503     14.99936      2.01163
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+STACK     1ST HIGHEST VALUE IS      17.17100 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      15.33253 AT (     -86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      15.30342 AT (      86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      14.79338 AT (      -0.00,      500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      13.10211 AT (      86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      12.06409 AT (      -0.00,     1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      11.71837 AT (    -171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      11.43136 AT (     171.01,     -469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      11.09698 AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       9.63010 AT (     173.65,      984.81,     0.00,     0.00,    0.00)  GP  POL1    
+
+AREA      1ST HIGHEST VALUE IS     139.08127 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS     128.11001 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS     109.90663 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS     100.21305 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      99.81057 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      90.46103 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      79.81796 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      79.14710 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      77.32714 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      74.40542 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+
+CIRC      1ST HIGHEST VALUE IS    4020.16774 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS    3826.22106 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS    3368.22988 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS    3358.11218 AT (       0.00,     -100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS    3289.84303 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS    3149.13942 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS    2984.18623 AT (     -17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS    2889.14768 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS    2464.07818 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS    2405.14250 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+AREAP     1ST HIGHEST VALUE IS     101.65607 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      97.12849 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      76.20071 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      75.35118 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      75.15097 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      61.76143 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      55.70632 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      45.94403 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      45.24560 AT (      50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      44.77508 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF OTHER    IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+VOL       1ST HIGHEST VALUE IS       6.34523 AT (      -0.00,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS       6.32803 AT (     -17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       5.76587 AT (     -34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       5.60242 AT (      17.36,       98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       5.06506 AT (     -50.00,       86.60,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       4.53582 AT (      34.20,       93.97,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       4.25801 AT (      17.36,      -98.48,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       4.25323 AT (     -64.28,       76.60,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       4.24572 AT (      34.20,      -93.97,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       3.96225 AT (      50.00,      -86.60,     0.00,     0.00,    0.00)  GP  POL1    
+
+OPENPIT   1ST HIGHEST VALUE IS      44.19640 AT (     171.01,      469.85,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS      39.94004 AT (     500.00,      866.03,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS      35.76205 AT (     383.02,      321.39,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS      34.45470 AT (    -100.00,      173.21,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS      34.41886 AT (     153.21,      128.56,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS      31.94409 AT (      86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS      31.48094 AT (     766.04,      642.79,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS      29.63703 AT (     173.21,      100.00,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS      29.21732 AT (    -128.56,      153.21,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS      28.08074 AT (      76.60,       64.28,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  Test of SCIM option in AERMOD                                       ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem                                   ***        14:59:41
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      SCIM      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of         6065 Informational Message(s)
+
+ A Total of        43824 Hours Were Processed
+
+ A Total of         6024 Calm Hours Identified
+
+ A Total of           41 Missing Hours Identified (  0.09 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

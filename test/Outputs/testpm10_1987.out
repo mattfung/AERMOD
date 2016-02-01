@@ -1,0 +1,588 @@
+CO STARTING
+   TITLEONE  PM-10 Test Case for the AERMOD Model using MULTYEAR option
+   TITLETWO  Five years of met data from Salem, OR
+   MODELOPT  CONC  FLAT
+   AVERTIME  24  PERIOD
+   POLLUTID  PM10
+   RUNORNOT  RUN
+   MULTYEAR  pm10_1987.sav  pm10_1986.sav
+   EVENTFIL  testpm10_multyr_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   LOCATION  STACK1  POINT  0.0   0.0   0.0
+ 
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK1  25.0   65.00   425.  15.0   5.
+ 
+SO BUILDHGT  STACK1    36*50.
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1    22.50   26.81   30.31   32.89   34.47   35.00
+ 
+   LOCATION  STACK2  POINT  0.0   0.0   0.0
+ 
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2  100.0   65.00  425.  15.0   5.
+ 
+   SRCGROUP  ALL
+SO FINISHED
+ 
+RE STARTING
+   GRIDPOLR  POL1  STA
+             POL1  ORIG  0.0  0.0
+             POL1  DIST  200.  500.  1000.
+             POL1  GDIR  36    10.   10.
+             POL1  END
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  salem_86-90.sfc
+   PROFFILE  salem_86-90.pfl
+   SURFDATA  24232  1986  SALEM
+   UAIRDATA  24232  1986  SALEM
+   PROFBASE  0.0
+   startend  87 1 1 1  87 12 31 24
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE  ALLAVE  sixth
+   MAXTABLE  ALLAVE  100
+   MAXIFILE  24  all  30.0  TESTPM10_MULTYR_MAXIFILE.OUT
+   SEASONHR  ALL  TESTPM10_MULTYR_SEASHR.FIL
+   SUMMFILE  TESTPM10_1987.SUM
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  PM10    
+  
+ **Model Calculates  1 Short Term Average(s) of:  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run Includes:      2 Source(s);       1 Source Group(s); and     108 Receptor(s)
+
+                with:      2 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Tables of PERIOD Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs External File(s) of Threshold Violations (MAXIFILE Keyword)
+          Model Outputs External File(s) of Values by Season and Hour-of-Day (SEASONHR Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **NOTE: This Run was Restarted (MULTYEAR Keyword):
+ **File for Initializing Arrays:  pm10_1986.sav                                                                                   
+ **File for Saving Result Arrays: pm10_1987.sav                                                                                   
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ **File Created for Event Model:  testpm10_multyr_evt.inp                                                                         
+ **File for Summary of Results:   TESTPM10_1987.SUM                                                                               
+  
+ **This Run is Part of a Multi-year (MULTYEAR) Application.
+   NOTE:  The PERIOD Results Table Reflects Current Period Only;
+          The Overall Maximum PERIOD Results Table and
+          Short Term Results are Cumulative Across All Years Processed.
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK1           0   0.25000E+02       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     NO    NO         
+ STACK2           0   0.10000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STACK1      , STACK2      ,
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                          *** DIRECTION SPECIFIC BUILDING DIMENSIONS ***
+
+
+ SOURCE ID: STACK1      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                          *** ORIGIN FOR POLAR NETWORK ***
+                                X-ORIG =      0.00 ;   Y-ORIG =       0.00  (METERS)
+
+                                          *** DISTANCE RANGES OF NETWORK ***
+                                                    (METERS)
+
+          200.0,     500.0,    1000.0,
+
+                                          *** DIRECTION RADIALS OF NETWORK *** 
+                                                    (DEGREES)
+
+           10.0,      20.0,      30.0,      40.0,      50.0,      60.0,      70.0,      80.0,      90.0,     100.0,
+          110.0,     120.0,     130.0,     140.0,     150.0,     160.0,     170.0,     180.0,     190.0,     200.0,
+          210.0,     220.0,     230.0,     240.0,     250.0,     260.0,     270.0,     280.0,     290.0,     300.0,
+          310.0,     320.0,     330.0,     340.0,     350.0,     360.0,
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1987   1  1  1
+                                                           AND END DATE: 1987  12 31 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   salem_86-90.sfc                                                                    Met Version:  14134
+   Profile file:   salem_86-90.pfl                                                                 
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    24232                  Upper air station no.:    24232
+                  Name: SALEM                                      Name: SALEM                                   
+                  Year:   1986                                     Year:   1986
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 86 01 01   1 01  -24.4  0.432 -9.000 -9.000 -999.  681.    296.3  0.04   0.86   1.00    6.20  171.   10.0  280.4    2.0
+ 86 01 01   1 02  -30.5  0.542 -9.000 -9.000 -999.  958.    468.1  0.04   0.86   1.00    7.70  168.   10.0  280.9    2.0
+ 86 01 01   1 03  -34.9  0.623 -9.000 -9.000 -999. 1177.    618.1  0.04   0.86   1.00    8.80  174.   10.0  281.4    2.0
+ 86 01 01   1 04  -30.3  0.542 -9.000 -9.000 -999.  966.    470.0  0.04   0.86   1.00    7.70  183.   10.0  282.0    2.0
+ 86 01 01   1 05  -43.1  0.768 -9.000 -9.000 -999. 1613.    940.1  0.04   0.86   1.00   10.80  193.   10.0  281.4    2.0
+ 86 01 01   1 06  -30.5  0.542 -9.000 -9.000 -999. 1017.    468.9  0.04   0.86   1.00    7.70  192.   10.0  281.4    2.0
+ 86 01 01   1 07  -24.3  0.432 -9.000 -9.000 -999.  697.    297.6  0.04   0.86   1.00    6.20  195.   10.0  281.4    2.0
+ 86 01 01   1 08  -21.7  0.209 -9.000 -9.000 -999.  283.     37.7  0.04   0.86   1.00    3.60  113.   10.0  280.9    2.0
+ 86 01 01   1 09  -22.9  0.355 -9.000 -9.000 -999.  508.    176.6  0.04   0.86   0.55    5.20  127.   10.0  280.4    2.0
+ 86 01 01   1 10   16.0  0.381  0.415  0.005  160.  564.   -310.7  0.04   0.86   0.36    5.20  161.   10.0  280.4    2.0
+ 86 01 01   1 11   30.6  0.345  0.618  0.005  278.  488.   -121.3  0.04   0.86   0.28    4.60  254.   10.0  282.5    2.0
+ 86 01 01   1 12   42.2  0.349  0.766  0.005  385.  495.    -91.2  0.04   0.86   0.25    4.60  276.   10.0  282.5    2.0
+ 86 01 01   1 13   64.3  0.566  0.966  0.005  506. 1022.   -254.8  0.04   0.86   0.25    7.70  223.   10.0  283.8    2.0
+ 86 01 01   1 14   54.8  0.427  0.963  0.005  589.  687.   -128.4  0.04   0.86   0.26    5.70  239.   10.0  283.8    2.0
+ 86 01 01   1 15   30.6  0.345  0.811  0.005  630.  492.   -121.7  0.04   0.86   0.31    4.60  212.   10.0  283.1    2.0
+ 86 01 01   1 16    0.4  0.259  0.195  0.005  628.  320.  -3691.8  0.04   0.86   0.43    3.60  224.   10.0  280.9    2.0
+ 86 01 01   1 17   -9.3  0.093 -9.000 -9.000 -999.   99.      7.9  0.04   0.86   0.73    2.60  141.   10.0  278.8    2.0
+ 86 01 01   1 18  -16.4  0.143 -9.000 -9.000 -999.  129.     16.0  0.04   0.86   1.00    3.10  217.   10.0  276.4    2.0
+ 86 01 01   1 19   -3.1  0.054 -9.000 -9.000 -999.   35.      4.5  0.04   0.86   1.00    1.50  144.   10.0  275.4    2.0
+ 86 01 01   1 20   -2.9  0.054 -9.000 -9.000 -999.   30.      4.8  0.04   0.86   1.00    1.50  137.   10.0  274.9    2.0
+ 86 01 01   1 21   -2.8  0.054 -9.000 -9.000 -999.   30.      5.0  0.04   0.86   1.00    1.50  140.   10.0  273.8    2.0
+ 86 01 01   1 22   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  142.   10.0  273.8    2.0
+ 86 01 01   1 23   -3.1  0.054 -9.000 -9.000 -999.   30.      4.6  0.04   0.86   1.00    1.50  140.   10.0  272.0    2.0
+ 86 01 01   1 24   -6.0  0.075 -9.000 -9.000 -999.   50.      6.4  0.04   0.86   1.00    2.10  280.   10.0  272.0    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 86 01 01 01   10.0 1  171.    6.20   280.4   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                              *** THE PERIOD (  8760 HRS) AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , STACK2      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+   DIRECTION |                                                DISTANCE (METERS)
+   (DEGREES) |        200.00       500.00      1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+       10.00 |       1.01955      1.69468      1.75533
+       20.00 |       0.63636      1.25176      1.30789
+       30.00 |       0.44146      1.05440      1.16485
+       40.00 |       0.34175      1.02399      1.24344
+       50.00 |       0.29617      1.01691      1.24402
+       60.00 |       0.27485      1.01325      1.27602
+       70.00 |       0.26681      0.99917      1.19924
+       80.00 |       0.26861      1.04681      1.26336
+       90.00 |       0.28858      1.12971      1.31401
+      100.00 |       0.33810      1.28897      1.48128
+      110.00 |       0.41680      1.59822      1.85176
+      120.00 |       0.50242      1.91890      2.21401
+      130.00 |       0.58027      2.18553      2.38644
+      140.00 |       0.67057      2.52472      2.76250
+      150.00 |       0.79998      2.85419      2.96481
+      160.00 |       0.94984      3.40292      3.54893
+      170.00 |       1.02269      3.91900      4.07071
+      180.00 |       0.95240      3.90797      4.14911
+      190.00 |       0.87475      3.53199      3.80819
+      200.00 |       0.79389      2.87685      3.01355
+      210.00 |       0.67051      2.06567      2.11088
+      220.00 |       0.51465      1.39048      1.40122
+      230.00 |       0.36306      0.93401      0.94095
+      240.00 |       0.25695      0.65482      0.66430
+      250.00 |       0.20104      0.51032      0.52058
+      260.00 |       0.17552      0.42671      0.41646
+      270.00 |       0.16688      0.38786      0.36145
+      280.00 |       0.16577      0.39425      0.37959
+      290.00 |       0.20258      0.42854      0.44507
+      300.00 |       0.36267      0.53426      0.61933
+      310.00 |       0.70317      0.91122      1.11024
+      320.00 |       1.25424      1.48735      1.59728
+      330.00 |       1.89978      2.06877      1.93948
+      340.00 |       2.31517      2.76288      2.35422
+      350.00 |       2.27287      3.20118      2.87799
+      360.00 |       1.66994      2.57008      2.46804
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                              *** THE   6TH HIGHEST 24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , STACK2      , 
+
+                                   *** NETWORK ID: POL1     ;  NETWORK TYPE: GRIDPOLR ***
+
+                                        ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+ DIRECTION |                                                  DISTANCE (METERS)
+ (DEGREES) |          200.00                  500.00                 1000.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+      10.0 |     13.20379 (87120124)     13.17741 (87120124)     12.31444 (86051224)
+      20.0 |      8.26899 (87120124)     12.31411 (86092524)     10.29170c(87041424)
+      30.0 |      5.28545 (86011624)      7.91278c(86070924)      8.78204 (86052124)
+      40.0 |      4.00869 (87120924)      8.57445c(86091824)      9.84889c(87070324)
+      50.0 |      3.45715 (86042724)      8.52805c(87072124)      9.20446 (86042824)
+      60.0 |      3.19081c(87091524)      7.95070c(87072924)     10.30516 (87072424)
+      70.0 |      3.05648c(86090724)      9.43449c(87051024)      9.81126c(87062924)
+      80.0 |      3.40911 (86070324)      9.14753c(87060424)      9.97005 (86071124)
+      90.0 |      3.53771c(86080724)      9.96949c(87081524)      9.98981c(86062724)
+     100.0 |      4.05749c(86071824)     11.80447c(86071824)     12.34655c(87061124)
+     110.0 |      4.50735c(87052124)     12.76743c(87081224)     11.96951 (86040124)
+     120.0 |      4.90726c(87061424)     15.22012c(86082024)     15.67799 (86072324)
+     130.0 |      5.17068c(87052124)     15.88057c(87052124)     16.06448c(86072824)
+     140.0 |      4.62436c(87071524)     15.62912c(86062524)     16.49812c(86062524)
+     150.0 |      5.05939 (86060224)     16.22304c(87071924)     16.86825c(86071824)
+     160.0 |      6.44891c(86071824)     18.78603c(87071924)     18.29755c(86081024)
+     170.0 |      7.53905c(86072024)     22.41353c(86090124)     21.05288c(86072024)
+     180.0 |      7.17072c(86063024)     21.39605c(87060324)     22.38433c(87080124)
+     190.0 |      6.45520c(86073124)     20.27612 (87062524)     21.80624c(87062424)
+     200.0 |      6.36584c(87082124)     18.65871 (87042524)     18.72840 (87060224)
+     210.0 |      6.22551c(87080724)     15.63940 (87042224)     16.11117 (87042524)
+     220.0 |      5.24141 (86050824)     11.59444c(87050724)     11.85130c(87050724)
+     230.0 |      4.49132c(86061224)      7.64571c(87072024)      7.73635c(87071024)
+     240.0 |      3.75168 (86050824)      7.78668c(87080624)      6.74141 (86050824)
+     250.0 |      3.45424c(87042724)      6.28805c(86063024)      5.29346c(86061924)
+     260.0 |      3.21020c(87051924)      5.60245c(86032724)      4.50690c(86063024)
+     270.0 |      3.29982c(87051924)      4.81242c(86061324)      3.69705 (87061524)
+     280.0 |      2.82762c(87061924)      5.15966c(87062924)      3.63664c(86082424)
+     290.0 |      2.72946c(87051924)      4.64850c(87062924)      3.99479c(86112924)
+     300.0 |      4.11891c(86091524)      4.59771c(86063024)      4.90264c(86031824)
+     310.0 |      6.31569 (87112224)      6.51442c(87091024)      6.27004c(87091024)
+     320.0 |     11.03908c(87112424)     10.43382 (86050524)     10.60570c(86121724)
+     330.0 |     21.38510 (86103024)     14.04516 (86041524)     11.99612 (87010424)
+     340.0 |     28.17377 (86103024)     24.75473 (86041524)     15.45627c(86112624)
+     350.0 |     29.63175 (86022324)     31.40314 (87120724)     20.54387c(87120624)
+     360.0 |     20.34120c(86112624)     24.60758c(87021524)     19.95835c(87120624)
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                              *** THE MAXIMUM  100  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , STACK2      , 
+
+                                        ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.      59.22515 (86112324) AT (    -86.82,     492.40)  GP       41.      26.92981c(86073124) AT (      0.00,   -1000.00)  GP
+    2.      55.81732 (86112324) AT (    -34.73,     196.96)  GP       42.      26.89738 (86103024) AT (   -171.01,     469.85)  GP
+    3.      55.72307 (87013124) AT (    -86.82,     492.40)  GP       43.      26.88577 (86111824) AT (    -34.73,     196.96)  GP
+    4.      53.00601 (87013124) AT (    -34.73,     196.96)  GP       44.      26.68805 (86111824) AT (    -68.40,     187.94)  GP
+    5.      44.63281 (86112324) AT (   -173.65,     984.81)  GP       45.      26.64106 (87113024) AT (   -100.00,     173.21)  GP
+    6.      44.19080 (87013124) AT (    -68.40,     187.94)  GP       46.      26.62480 (87120924) AT (     -0.00,    1000.00)  GP
+    7.      41.92232 (86112324) AT (    -68.40,     187.94)  GP       47.      26.58503 (87012824) AT (    -34.73,     196.96)  GP
+    8.      41.77524 (86112324) AT (     -0.00,     200.00)  GP       48.      26.56105c(87080724) AT (   -173.65,    -984.81)  GP
+    9.      40.14843 (87013124) AT (   -173.65,     984.81)  GP       49.      26.55277 (86042624) AT (    -34.73,     196.96)  GP
+   10.      38.81660 (86112324) AT (     -0.00,     500.00)  GP       50.      26.32859c(87081824) AT (      0.00,   -1000.00)  GP
+   11.      36.17500c(86112624) AT (    -34.73,     196.96)  GP       51.      26.32274 (86112324) AT (     -0.00,    1000.00)  GP
+   12.      35.76188 (87013124) AT (     -0.00,     200.00)  GP       52.      26.30805 (86022324) AT (    -68.40,     187.94)  GP
+   13.      35.42232c(86112624) AT (    -68.40,     187.94)  GP       53.      26.22433 (86112224) AT (    -68.40,     187.94)  GP
+   14.      34.29908c(86112624) AT (    -86.82,     492.40)  GP       54.      26.01641 (86112224) AT (   -100.00,     173.21)  GP
+   15.      33.48706 (86022324) AT (    -86.82,     492.40)  GP       55.      25.96525c(87080124) AT (    -86.82,    -492.40)  GP
+   16.      32.25757c(87120624) AT (    -86.82,     492.40)  GP       56.      25.89388c(87052024) AT (    173.65,    -984.81)  GP
+   17.      31.52704 (87120924) AT (     -0.00,     500.00)  GP       57.      25.86673 (86103024) AT (    -34.73,     196.96)  GP
+   18.      31.40314 (87120724) AT (    -86.82,     492.40)  GP       58.      25.83782 (87012824) AT (     -0.00,     500.00)  GP
+   19.      31.12466 (87120724) AT (    -68.40,     187.94)  GP       59.      25.81968 (86092524) AT (   -100.00,     173.21)  GP
+   20.      31.01020 (87013124) AT (     -0.00,     500.00)  GP       60.      25.81372 (87120724) AT (   -171.01,     469.85)  GP
+   21.      30.81560c(87120624) AT (    -34.73,     196.96)  GP       61.      25.69326c(87081824) AT (      0.00,    -500.00)  GP
+   22.      30.72925 (87012824) AT (    -86.82,     492.40)  GP       62.      25.44893 (86021524) AT (    -86.82,     492.40)  GP
+   23.      30.67030c(86122224) AT (    -86.82,     492.40)  GP       63.      25.32011 (86092524) AT (   -128.56,     153.21)  GP
+   24.      30.58647 (87120724) AT (    -34.73,     196.96)  GP       64.      25.29378 (86111924) AT (    -86.82,     492.40)  GP
+   25.      29.63175 (86022324) AT (    -34.73,     196.96)  GP       65.      25.28452c(87071424) AT (      0.00,   -1000.00)  GP
+   26.      28.95939c(86122224) AT (    -34.73,     196.96)  GP       66.      25.24374c(87080724) AT (    -86.82,    -492.40)  GP
+   27.      28.74644c(86073124) AT (    173.65,    -984.81)  GP       67.      24.91834 (86022324) AT (   -173.65,     984.81)  GP
+   28.      28.72869 (86042624) AT (    -86.82,     492.40)  GP       68.      24.83988c(87081824) AT (     86.82,    -492.40)  GP
+   29.      28.67262 (86042624) AT (   -171.01,     469.85)  GP       69.      24.75473 (86041524) AT (   -171.01,     469.85)  GP
+   30.      28.64040c(86073124) AT (      0.00,    -500.00)  GP       70.      24.65978 (87120924) AT (    -34.73,     196.96)  GP
+   31.      28.55085 (87013124) AT (   -171.01,     469.85)  GP       71.      24.65504c(87080724) AT (      0.00,   -1000.00)  GP
+   32.      28.54657 (86103024) AT (    -86.82,     492.40)  GP       72.      24.60758c(87021524) AT (     -0.00,     500.00)  GP
+   33.      28.48836c(86073124) AT (     86.82,    -492.40)  GP       73.      24.43884 (87021624) AT (    -68.40,     187.94)  GP
+   34.      28.46372 (86042624) AT (    -68.40,     187.94)  GP       74.      24.42938c(87120624) AT (    -68.40,     187.94)  GP
+   35.      28.27728c(87120624) AT (     -0.00,     500.00)  GP       75.      24.42519 (86111824) AT (    -86.82,     492.40)  GP
+   36.      28.17377 (86103024) AT (    -68.40,     187.94)  GP       76.      24.37491 (86041524) AT (    -68.40,     187.94)  GP
+   37.      27.61237c(86112624) AT (   -171.01,     469.85)  GP       77.      24.30032c(86122224) AT (     -0.00,     500.00)  GP
+   38.      27.50393 (87011324) AT (    -86.82,     492.40)  GP       78.      24.27547c(87071524) AT (    766.04,    -642.79)  GP
+   39.      27.17389c(87080124) AT (   -173.65,    -984.81)  GP       79.      24.27285c(87120624) AT (     -0.00,     200.00)  GP
+   40.      27.01931 (86041524) AT (    -86.82,     492.40)  GP       80.      24.21963 (86073024) AT (     86.82,    -492.40)  GP
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                              *** THE MAXIMUM  100  24-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     STACK1      , STACK2      , 
+
+                                        ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   81.      24.14534c(87071424) AT (      0.00,    -500.00)  GP       91.      23.71160 (86073024) AT (    173.65,    -984.81)  GP
+   82.      24.13015c(87052024) AT (     86.82,    -492.40)  GP       92.      23.67263c(87021524) AT (    -86.82,     492.40)  GP
+   83.      24.12077 (87010324) AT (    -86.82,     492.40)  GP       93.      23.64999c(86031224) AT (    -86.82,     492.40)  GP
+   84.      24.04604c(87092724) AT (   -173.65,    -984.81)  GP       94.      23.57670 (87012824) AT (    -68.40,     187.94)  GP
+   85.      23.99243c(87071524) AT (    383.02,    -321.39)  GP       95.      23.55941c(86031224) AT (   -171.01,     469.85)  GP
+   86.      23.90885 (87060224) AT (   -173.65,    -984.81)  GP       96.      23.51007 (87113024) AT (    -68.40,     187.94)  GP
+   87.      23.87543c(87071524) AT (    866.03,    -500.00)  GP       97.      23.46393c(87081724) AT (      0.00,   -1000.00)  GP
+   88.      23.84727c(87080724) AT (   -342.02,    -939.69)  GP       98.      23.45648 (87011324) AT (    -34.73,     196.96)  GP
+   89.      23.79811 (87013124) AT (   -100.00,     173.21)  GP       99.      23.44560 (86041524) AT (   -173.65,     984.81)  GP
+   90.      23.72435c(87080724) AT (   -171.01,    -469.85)  GP      100.      23.16323 (87060224) AT (    -86.82,    -492.40)  GP
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                        *** THE SUMMARY OF MAXIMUM PERIOD (  8760 HRS) RESULTS ***
+                                        ***    ACROSS      2 YEARS WITH THE MULTYEAR OPTION    ***
+
+
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS       4.14911 AT (       0.00,    -1000.00,     0.00,     0.00,    0.00)  GP  POL1    
+          2ND HIGHEST VALUE IS       4.07071 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          3RD HIGHEST VALUE IS       3.91900 AT (      86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          4TH HIGHEST VALUE IS       3.90797 AT (       0.00,     -500.00,     0.00,     0.00,    0.00)  GP  POL1    
+          5TH HIGHEST VALUE IS       3.80819 AT (    -173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+          6TH HIGHEST VALUE IS       3.56857 AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          7TH HIGHEST VALUE IS       3.54893 AT (     342.02,     -939.69,     0.00,     0.00,    0.00)  GP  POL1    
+          8TH HIGHEST VALUE IS       3.53199 AT (     -86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+          9TH HIGHEST VALUE IS       3.49709 AT (      86.82,     -492.40,     0.00,     0.00,    0.00)  GP  POL1    
+         10TH HIGHEST VALUE IS       3.48966 AT (     173.65,     -984.81,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+                                                *** THE SUMMARY OF HIGHEST 24-HR RESULTS ***
+                                            *** ACROSS      2 YEARS WITH THE MULTYEAR OPTION ***
+
+
+                                    ** CONC OF PM10     IN MICROGRAMS/M**3                          **
+
+                                                      DATE                                                                    NETWORK
+GROUP ID                          AVERAGE CONC     (YYMMDDHH)             RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)    OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+ALL      HIGH   6TH HIGH VALUE IS      31.40314  ON 87120724: AT (     -86.82,      492.40,     0.00,     0.00,    0.00)  GP  POL1    
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION  15181 ***   ***  PM-10 Test Case for the AERMOD Model using MULTYEAR option          ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:01:04
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      MULTYR    RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of         2275 Informational Message(s)
+
+ A Total of        17520 Hours Were Processed
+
+ A Total of         2247 Calm Hours Identified
+
+ A Total of           28 Missing Hours Identified (  0.16 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

@@ -1,0 +1,2092 @@
+** To run the example, copy the ALLSRCS.INP file to AERMOD.INP and type:
+**
+**    AERMOD
+**
+** The results for this example problem are provided in file AERMOD.OUT.
+ 
+CO STARTING
+   TITLEONE A Simple Example Problem for the AERMOD Model with all Source Types
+   TITLETWO All receptor types are also included
+   MODELOPT  CONC   FLAT
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+** Use all source types
+   ELEVUNIT  METERS
+   LOCATION  STACKDW  POINT       0.0    0.0   0.0
+SO LOCATION  AREA     AREA      -10.0  -10.0   0.0
+SO LOCATION  CIRC     AREACIRC    0.0    0.0   0.0
+   LOCATION  AREAP    AREAPOLY    0.0    0.0   0.0
+SO LOCATION  VOL      VOLUME      0.0    0.0   0.0
+   LOCATION  STACK    POINT       0.0    0.0   0.0
+   location  OPENPIT  OPENPIT  -100.0 -100.0   0.0
+ 
+** Point Source         QS      HS     TS    VS    DS
+** Parameters:         ----    ----   ----  ----   ---
+   SRCPARAM  STACKDW   500.0   65.00  425.  15.0   5.
+ 
+SO BUILDHGT  STACKDW   36*50.
+SO BUILDWID  STACKDW   62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACKDW   87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACKDW   89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACKDW   62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACKDW   87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACKDW   89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACKDW   82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACKDW   72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACKDW   86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACKDW   82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACKDW   72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACKDW   86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACKDW  -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACKDW  -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACKDW  -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACKDW  -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACKDW   -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACKDW  -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACKDW   34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACKDW   11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACKDW  -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACKDW  -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACKDW  -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACKDW   22.50   26.81   30.31   32.89   34.47   35.00
+ 
+   SRCPARAM  AREA   0.001  1.0   20.  20.
+ 
+   SRCPARAM  CIRC   0.1    10.0  20.
+ 
+   SRCPARAM  AREAP  0.001  1.0  8  2.0
+   AREAVERT  AREAP  0.0 0.0  10.0 0.0  10.0 10.0  0.0 10.0  0.0 20.0
+   AREAVERT  AREAP  -10.0 20.0  -10.0 10.0  -10.0 0.0
+ 
+   SRCPARAM  VOL    0.1    1.0   20.  20.
+ 
+   SRCPARAM  STACK  100.0  35.00  432.  11.7  2.4
+ 
+SO SRCPARAM  OPENPIT   1.0E-5   0.000       1829.       183.0      0.1674E+08  -45.0
+ 
+   SRCGROUP  STACKDW  STACKDW
+   SRCGROUP  AREA     AREA
+   SRCGROUP  CIRC     CIRC
+   SRCGROUP  AREAP    AREAP
+   SRCGROUP  VOL      VOL
+   SRCGROUP  STACK    STACK
+   SRCGROUP  OPENPIT  OPENPIT
+ 
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  "aermet2 test met.sfc"
+   PROFFILE  "aermet2 test met.pfl"
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H01001   1  STACKDW    88030111         753.65578
+   EVENTLOC H001H01001 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01001   1  STACKDW    88030113         421.98804
+   EVENTLOC H002H01001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01002   1  AREA       88030206       11631.01502
+   EVENTLOC H001H01002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01002   1  AREA       88030205       11321.73793
+   EVENTLOC H002H01002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01003   1  CIRC       88030317       96768.74772
+   EVENTLOC H001H01003 XR=      134.057778 YR=      112.487832     0.0000     0.0000     0.0000
+   EVENTPER H002H01003   1  CIRC       88030207       74055.25015
+   EVENTLOC H002H01003 XR=      328.892417 YR=     -119.707050     0.0000     0.0000     0.0000
+   EVENTPER H001H01004   1  AREAP      88030219       18639.52203
+   EVENTLOC H001H01004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01004   1  AREAP      88030218       16837.21666
+   EVENTLOC H002H01004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H01005   1  VOL        88030320          72.74275
+   EVENTLOC H001H01005 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H002H01005   1  VOL        88030124          32.70109
+   EVENTLOC H002H01005 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H01006   1  STACK      88030111         300.73465
+   EVENTLOC H001H01006 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H01006   1  STACK      88030114         184.35046
+   EVENTLOC H002H01006 XR=      328.892417 YR=     -119.707050     0.0000     0.0000     0.0000
+   EVENTPER H001H01007   1  OPENPIT    88030401        1473.15395
+   EVENTLOC H001H01007 XR=      171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H002H01007   1  OPENPIT    88030324        1417.34332
+   EVENTLOC H002H01007 XR=      171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H001H03001   3  STACKDW    88030112         329.96009
+   EVENTLOC H001H03001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03001   3  STACKDW    88030112         261.07802
+   EVENTLOC H002H03001 XR=      469.846310 YR=     -171.010072     0.0000     0.0000     0.0000
+   EVENTPER H001H03002   3  AREA       88030206       11353.25971
+   EVENTLOC H001H03002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03002   3  AREA       88030303       10061.10578
+   EVENTLOC H002H03002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H03003   3  CIRC       88030224       69415.50631
+   EVENTLOC H001H03003 XR=      383.022222 YR=      321.393805     0.0000     0.0000     0.0000
+   EVENTPER H002H03003   3  CIRC       88030306       45676.82655
+   EVENTLOC H002H03003 XR=      328.892417 YR=     -119.707050     0.0000     0.0000     0.0000
+   EVENTPER H001H03004   3  AREAP      88030306       10480.41088
+   EVENTLOC H001H03004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03004   3  AREAP      88030221        9824.65204
+   EVENTLOC H002H03004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H03005   3  VOL        88030321          31.26518
+   EVENTLOC H001H03005 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H002H03005   3  VOL        88030124          16.08959
+   EVENTLOC H002H03005 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H001H03006   3  STACK      88030112         184.23655
+   EVENTLOC H001H03006 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H03006   3  STACK      88030115         154.85342
+   EVENTLOC H002H03006 XR=      328.892417 YR=     -119.707050     0.0000     0.0000     0.0000
+   EVENTPER H001H03007   3  OPENPIT    88030324         682.46638
+   EVENTLOC H001H03007 XR=      171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H002H03007   3  OPENPIT    88030321         634.53372
+   EVENTLOC H002H03007 XR=      268.115555 YR=      224.975663     0.0000     0.0000     0.0000
+   EVENTPER H001H08001   8  STACKDW    88030116         264.11465
+   EVENTLOC H001H08001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08001   8  STACKDW    88030316          28.85267
+   EVENTLOC H002H08001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08002   8  AREA       88030208        9725.73038
+   EVENTLOC H001H08002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08002   8  AREA       88030308        9056.16048
+   EVENTLOC H002H08002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08003   8  CIRC       88030208       38393.64287
+   EVENTLOC H001H08003 XR=      328.892417 YR=     -119.707050     0.0000     0.0000     0.0000
+   EVENTPER H002H08003   8  CIRC       88030108       33560.87333
+   EVENTLOC H002H08003 XR=      175.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08004   8  AREAP      88030208        8009.72900
+   EVENTLOC H001H08004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08004   8  AREAP      88030408        7363.61415
+   EVENTLOC H002H08004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08005   8  VOL        88030324          18.06142
+   EVENTLOC H001H08005 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H002H08005   8  VOL        88030224          10.97765
+   EVENTLOC H002H08005 XR=      175.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08006   8  STACK      88030116         151.89934
+   EVENTLOC H001H08006 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H08006   8  STACK      88030316          35.28877
+   EVENTLOC H002H08006 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H08007   8  OPENPIT    88030208         493.07542
+   EVENTLOC H001H08007 XR=      268.115555 YR=      224.975663     0.0000     0.0000     0.0000
+   EVENTPER H002H08007   8  OPENPIT    88030224         457.78345
+   EVENTLOC H002H08007 XR=      383.022222 YR=      321.393805     0.0000     0.0000     0.0000
+   EVENTPER H001H24001  24  STACKDW    88030124          88.89511
+   EVENTLOC H001H24001 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24001  24  STACKDW    88030324          10.09519
+   EVENTLOC H002H24001 XR=      866.025404 YR=     -500.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24002  24  AREA       88030224        7419.43493
+   EVENTLOC H001H24002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24002  24  AREA       88030324        6352.80169
+   EVENTLOC H002H24002 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24003  24  CIRC       88030124       19686.74644
+   EVENTLOC H001H24003 XR=      164.446209 YR=      -59.853525     0.0000     0.0000     0.0000
+   EVENTPER H002H24003  24  CIRC       88030324       14670.86891
+   EVENTLOC H002H24003 XR=      175.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24004  24  AREAP      88030424        5875.21330
+   EVENTLOC H001H24004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24004  24  AREAP      88030324        4880.32568
+   EVENTLOC H002H24004 XR=        0.000000 YR=        0.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24005  24  VOL        88030324          10.02345
+   EVENTLOC H001H24005 XR=      172.341357 YR=      -30.388431     0.0000     0.0000     0.0000
+   EVENTPER H002H24005  24  VOL        88030324           7.59643
+   EVENTLOC H002H24005 XR=      151.554446 YR=      -87.500000     0.0000     0.0000     0.0000
+   EVENTPER H001H24006  24  STACK      88030124          52.92565
+   EVENTLOC H001H24006 XR=      303.108891 YR=     -175.000000     0.0000     0.0000     0.0000
+   EVENTPER H002H24006  24  STACK      88030324          12.80163
+   EVENTLOC H002H24006 XR=      433.012702 YR=     -250.000000     0.0000     0.0000     0.0000
+   EVENTPER H001H24007  24  OPENPIT    88030224         310.11433
+   EVENTLOC H001H24007 XR=      268.115555 YR=      224.975663     0.0000     0.0000     0.0000
+   EVENTPER H002H24007  24  OPENPIT    88030324         255.13533
+   EVENTLOC H002H24007 XR=      268.115555 YR=      224.975663     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+  
+ **Model Calculates  4 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      7 Source(s);       7 Source Group(s); and      56 Event(s)
+
+                with:      2 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      1 VOLUME source(s)
+                 and:      3 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      1 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACKDW          0   0.50000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     NO    NO         
+ STACK            0   0.10000E+03       0.0       0.0     0.0    35.00   432.00    11.70     2.40    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                  *** VOLUME SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE    RELEASE    INIT.    INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.   HEIGHT      SY       SZ     SOURCE  SCALAR VARY
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (METERS) (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ VOL              0   0.10000E+00       0.0       0.0     0.0     1.00    20.00    20.00     NO           
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                  *** AREA SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF AREA   OF AREA   OF AREA     SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)  (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ AREA             0   0.10000E-02     -10.0     -10.0     0.0     1.00     20.00     20.00      0.00     0.00     NO           
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                *** AREACIRC SOURCE DATA ***
+
+               NUMBER EMISSION RATE    CENTER OF AREA   BASE     RELEASE  RADIUS     NUMBER     INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT   OF AREA   OF VERTS.    SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS)                      (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ CIRC             0   0.10000E+00       0.0       0.0     0.0    10.00      20.00      20        0.00     NO           
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                *** AREAPOLY SOURCE DATA ***
+
+               NUMBER EMISSION RATE   LOCATION OF AREA  BASE     RELEASE  NUMBER      INIT.   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF VERTS.     SZ     SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS)            (METERS)              BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ AREAP            0   0.10000E-02       0.0       0.0     0.0     1.00       8         2.00     NO           
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                  *** OPENPIT SOURCE DATA ***
+
+               NUMBER EMISSION RATE  COORD (SW CORNER)  BASE     RELEASE  X-DIM     Y-DIM    ORIENT.    VOLUME   URBAN  EMISSION RATE
+   SOURCE       PART.  (GRAMS/SEC       X        Y      ELEV.    HEIGHT  OF PIT    OF PIT    OF PIT     OF PIT   SOURCE  SCALAR VARY
+     ID         CATS.   /METER**2)   (METERS) (METERS) (METERS) (METERS) (METERS)  (METERS)   (DEG.)    (M**3)               BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ OPENPIT          0   0.10000E-04    -100.0    -100.0     0.0     0.00   1829.00    183.00    -45.00   .16740E+08  NO           
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  STACKDW    STACKDW     ,
+
+  AREA       AREA        ,
+
+  CIRC       CIRC        ,
+
+  AREAP      AREAP       ,
+
+  VOL        VOL         ,
+
+  STACK      STACK       ,
+
+  OPENPIT    OPENPIT     ,
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                          *** DIRECTION SPECIFIC BUILDING DIMENSIONS ***
+
+
+ SOURCE ID: STACKDW     
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   3  1  0
+                                                           AND END DATE: 1988   3  4 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01001    GROUP VALUE =      753.65578 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      753.65578     753.65578
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     753.65578     753.65578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01001    GROUP VALUE =      421.98804 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030113;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      421.98804     421.98804
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     421.98804     421.98804
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01005    GROUP VALUE =       32.70109 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 24       32.70109      32.70109
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      32.70109      32.70109
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01006    GROUP VALUE =      300.73465 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030111;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 11      300.73465     300.73465
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     300.73465     300.73465
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01006    GROUP VALUE =      184.35046 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030114;  LOCATION (XR,YR,ZELEV,ZFLAG):     328.89    -119.71       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 14      184.35046     184.35046
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     184.35046     184.35046
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =      329.96009 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     329.96009     329.96009
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =      261.07802 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     469.85    -171.01       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10       72.30110      72.30110
+ 11      611.84334     611.84334
+ 12       99.08963      99.08963
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     261.07802     261.07802
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03005    GROUP VALUE =       16.08959 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22        4.47862       4.47862
+ 23       11.08904      11.08904
+ 24       32.70109      32.70109
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      16.08959      16.08959
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03006    GROUP VALUE =      184.23655 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030112;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      140.32537     140.32537
+ 11      300.73465     300.73465
+ 12      111.64964     111.64964
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     184.23655     184.23655
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03006    GROUP VALUE =      154.85342 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030115;  LOCATION (XR,YR,ZELEV,ZFLAG):     328.89    -119.71       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      142.11537     142.11537
+ 14      184.35046     184.35046
+ 15      138.09444     138.09444
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     154.85342     154.85342
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08001    GROUP VALUE =      264.11465 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9       34.83938      34.83938
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     264.11465     264.11465
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08003    GROUP VALUE =    33560.87333 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030108;  LOCATION (XR,YR,ZELEV,ZFLAG):     175.00       0.00       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     1793.86493    1793.86493
+  2    66931.45499   66931.45499
+  3    53382.69804   53382.69804
+  4        0.00000       0.00000
+  5    32131.77024   32131.77024
+  6    47310.75730   47310.75730
+  7    55553.83469   55553.83469
+  8    11382.60647   11382.60647
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   33560.87333   33560.87333
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08006    GROUP VALUE =      151.89934 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030116;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9       84.78432      84.78432
+ 10      140.32537     140.32537
+ 11      300.73465     300.73465
+ 12      111.64964     111.64964
+ 13      170.46139     170.46139
+ 14      137.15833     137.15833
+ 15      117.85818     117.85818
+ 16      152.22289     152.22289
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     151.89934     151.89934
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  24
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =       88.89511 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.16377       0.16377
+  2        1.34126       1.34126
+  3        1.04057       1.04057
+  4        4.35237       4.35237
+  5        0.96893       0.96893
+  6        3.83321       3.83321
+  7        2.23528       2.23528
+  8        0.60294       0.60294
+  9       34.83938      34.83938
+ 10      113.41550     113.41550
+ 11      746.09698     746.09698
+ 12      130.36780     130.36780
+ 13      421.98804     421.98804
+ 14      209.65834     209.65834
+ 15       84.73899      84.73899
+ 16      371.81219     371.81219
+ 17        0.20487       0.20487
+ 18        0.89584       0.89584
+ 19        2.53665       2.53665
+ 20        1.11593       1.11593
+ 21        0.02089       0.02089
+ 22        0.06224       0.06224
+ 23        1.00731       1.00731
+ 24        0.18335       0.18335
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      88.89511      88.89511
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  25
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24003    GROUP VALUE =    19686.74644 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     164.45     -59.85       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1    26784.21922   26784.21922
+  2    45737.65689   45737.65689
+  3    49237.25452   49237.25452
+  4        0.00000       0.00000
+  5    49667.94547   49667.94547
+  6    15625.72552   15625.72552
+  7    35746.41380   35746.41380
+  8    19494.19140   19494.19140
+  9     5242.74487    5242.74487
+ 10     4445.53382    4445.53382
+ 11     2145.07612    2145.07612
+ 12     4182.03660    4182.03660
+ 13     3424.27513    3424.27513
+ 14     3767.82483    3767.82483
+ 15     4171.22224    4171.22224
+ 16     3604.14108    3604.14108
+ 17     5455.24905    5455.24905
+ 18    17835.83979   17835.83979
+ 19    22669.88399   22669.88399
+ 20    13466.61080   13466.61080
+ 21     7493.82689    7493.82689
+ 22    14800.14817   14800.14817
+ 23    59716.47842   59716.47842
+ 24    57767.61601   57767.61601
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   19686.74644   19686.74644
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  26
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24006    GROUP VALUE =       52.92565 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030124;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.20691       0.20691
+  2        3.31320       3.31320
+  3        1.62967       1.62967
+  4        2.52388       2.52388
+  5        2.68901       2.68901
+  6       15.79903      15.79903
+  7        7.73215       7.73215
+  8        4.53277       4.53277
+  9       84.78432      84.78432
+ 10      140.32537     140.32537
+ 11      300.73465     300.73465
+ 12      111.64964     111.64964
+ 13      170.46139     170.46139
+ 14      137.15833     137.15833
+ 15      117.85818     117.85818
+ 16      152.22289     152.22289
+ 17        1.85569       1.85569
+ 18        0.55851       0.55851
+ 19        8.90131       8.90131
+ 20        3.08609       3.08609
+ 21        0.09482       0.09482
+ 22        0.60880       0.60880
+ 23        1.32334       1.32334
+ 24        0.16557       0.16557
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      52.92565      52.92565
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 01 01   -2.7  0.062 -9.000 -9.000 -999.   37.      7.9  0.75   1.50   1.00    0.80  318.   10.0  273.8   10.0
+              88 03 01 02   -3.5  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  273.   10.0  273.5   10.0
+              88 03 01 03   -1.6  0.046 -9.000 -9.000 -999.   24.      5.7  0.75   1.50   1.00    0.60  276.   10.0  272.4   10.0
+              88 03 01 04   -1.0  0.034 -9.000 -9.000 -999.   15.      3.6  0.30   0.80   1.00    0.60  200.   10.0  271.5   10.0
+              88 03 01 05   -6.3  0.093 -9.000 -9.000 -999.   68.     11.3  0.75   1.50   1.00    1.20  289.   10.0  271.8   10.0
+              88 03 01 06   -2.8  0.062 -9.000 -9.000 -999.   37.      7.5  0.75   1.50   1.00    0.80  254.   10.0  271.0   10.0
+              88 03 01 07   -3.6  0.069 -9.000 -9.000 -999.   44.      8.5  0.75   1.50   1.00    0.90  264.   10.0  270.9   10.0
+              88 03 01 08   -5.4  0.148 -9.000 -9.000 -999.  137.     54.2  0.75   1.50   0.67    1.30  315.   10.0  271.8   10.0
+              88 03 01 09   25.1  0.321  0.558  0.007  248.  437.   -118.3  0.75   1.50   0.56    1.90  310.   10.0  272.3   10.0
+              88 03 01 10   60.6  0.396  0.949  0.008  506.  599.    -92.0  0.75   1.50   0.52    2.30  315.   10.0  273.0   10.0
+              88 03 01 11   88.3  1.474  1.182  0.005  671. 4000.  -3249.5  0.75   1.50   0.51    7.70  297.    6.1  268.8    2.0
+              88 03 01 12   97.8  0.438  1.247  0.005  711. 2198.    -76.9  0.75   1.50   0.51    2.50  309.   10.0  274.7   10.0
+              88 03 01 13   99.6  0.535  1.277  0.005  749. 1158.   -137.9  0.75   1.50   0.51    3.20  316.   10.0  274.9   10.0
+              88 03 01 14   88.9  0.533  1.248  0.006  781.  941.   -151.8  0.75   1.50   0.51    3.20  290.   10.0  275.3   10.0
+              88 03 01 15   65.9  0.483  1.147  0.007  818.  808.   -152.3  0.75   1.50   0.52    2.90  300.   10.0  275.5   10.0
+              88 03 01 16   31.5  0.453  0.905  0.007  841.  733.   -263.9  0.75   1.50   0.55    2.80  315.   10.0  275.0   10.0
+              88 03 01 17  -15.1  0.430 -9.000 -9.000 -999.  678.    469.5  0.75   1.50   0.62    2.90  308.   10.0  274.3   10.0
+              88 03 01 18  -15.6  0.147 -9.000 -9.000 -999.  249.     18.1  0.75   1.50   0.86    1.90  311.   10.0  273.3   10.0
+              88 03 01 19  -11.2  0.124 -9.000 -9.000 -999.  108.     15.1  0.75   1.50   1.00    1.60  313.   10.0  272.2   10.0
+              88 03 01 20   -7.4  0.100 -9.000 -9.000 -999.   76.     12.2  0.75   1.50   1.00    1.30  326.   10.0  271.3   10.0
+              88 03 01 21  -17.5  0.154 -9.000 -9.000 -999.  146.     18.8  0.75   1.50   1.00    2.00  327.   10.0  270.5   10.0
+              88 03 01 22  -15.8  0.147 -9.000 -9.000 -999.  135.     17.8  0.75   1.50   1.00    1.90  320.   10.0  269.8   10.0
+              88 03 01 23   -2.8  0.062 -9.000 -9.000 -999.   40.      7.5  0.75   1.50   1.00    0.80  284.   10.0  268.7   10.0
+              88 03 01 24  -11.2  0.124 -9.000 -9.000 -999.  104.     15.0  0.75   1.50   1.00    1.60  298.   10.0  268.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  27
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01002    GROUP VALUE =    11631.01502 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030206;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  6    11631.01502   11631.01502
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   11631.01502   11631.01502
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  28
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01002    GROUP VALUE =    11321.73793 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030205;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  5    11321.73793   11321.73793
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   11321.73793   11321.73793
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  29
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01003    GROUP VALUE =    74055.25015 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030207;  LOCATION (XR,YR,ZELEV,ZFLAG):     328.89    -119.71       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  7    74055.25015   74055.25015
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   74055.25015   74055.25015
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  30
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01004    GROUP VALUE =    18639.52203 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030219;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19    18639.52203   18639.52203
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   18639.52203   18639.52203
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  31
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01004    GROUP VALUE =    16837.21666 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030218;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 18    16837.21666   16837.21666
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   16837.21666   16837.21666
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  32
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03002    GROUP VALUE =    11353.25971 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030206;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  4    11107.02618   11107.02618
+  5    11321.73793   11321.73793
+  6    11631.01502   11631.01502
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   11353.25971   11353.25971
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  33
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03003    GROUP VALUE =    69415.50629 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     383.02     321.39       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22    75982.44982   75982.44982
+ 23    64354.79193   64354.79193
+ 24    67909.27712   67909.27712
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   69415.50629   69415.50629
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  34
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03004    GROUP VALUE =     9824.65204 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030221;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19    18639.52203   18639.52203
+ 20     8939.44680    8939.44680
+ 21     1894.98730    1894.98730
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    9824.65204    9824.65204
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  35
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08002    GROUP VALUE =     9725.73038 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030208;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     4401.23280    4401.23280
+  2     8934.84277    8934.84277
+  3    11132.40278   11132.40278
+  4    11107.02618   11107.02618
+  5    11321.73793   11321.73793
+  6    11631.01502   11631.01502
+  7     9184.82142    9184.82142
+  8    10092.76417   10092.76417
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    9725.73038    9725.73038
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  36
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08003    GROUP VALUE =    38393.64290 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030208;  LOCATION (XR,YR,ZELEV,ZFLAG):     328.89    -119.71       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     5470.08087    5470.08087
+  2    23339.94599   23339.94599
+  3    23780.89553   23780.89553
+  4    45851.91015   45851.91015
+  5    74653.82339   74653.82339
+  6    59997.23712   59997.23712
+  7    74055.25015   74055.25015
+  8        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   38393.64290   38393.64290
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  37
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08004    GROUP VALUE =     8009.72900 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030208;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     3957.21588    3957.21588
+  2     4860.47664    4860.47664
+  3    11394.79105   11394.79105
+  4     6695.30437    6695.30437
+  5     7647.05817    7647.05817
+  6     8128.58407    8128.58407
+  7     9378.42144    9378.42144
+  8    12015.98037   12015.98037
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    8009.72900    8009.72900
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  38
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08005    GROUP VALUE =       10.97765 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     175.00       0.00       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17        3.71488       3.71488
+ 18       12.12143      12.12143
+ 19       12.15176      12.15176
+ 20       12.15026      12.15026
+ 21       11.33127      11.33127
+ 22       12.11525      12.11525
+ 23       12.11525      12.11525
+ 24       12.12109      12.12109
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      10.97765      10.97765
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  39
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08007    GROUP VALUE =      493.07542 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030208;  LOCATION (XR,YR,ZELEV,ZFLAG):     268.12     224.98       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       58.47927      58.47927
+  2      409.12801     409.12801
+  3      287.45004     287.45004
+  4      472.88516     472.88516
+  5      436.66751     436.66751
+  6      373.83171     373.83171
+  7      458.29660     458.29660
+  8     1447.86508    1447.86508
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     493.07542     493.07542
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  40
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08007    GROUP VALUE =      457.78345 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     383.02     321.39       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17        0.00000       0.00000
+ 18      528.10857     528.10857
+ 19      413.72121     413.72121
+ 20      484.84484     484.84484
+ 21      729.27599     729.27599
+ 22      884.97033     884.97033
+ 23      245.49930     245.49930
+ 24      375.84736     375.84736
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     457.78345     457.78345
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  41
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24002    GROUP VALUE =     7419.43493 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     4401.23280    4401.23280
+  2     8934.84277    8934.84277
+  3    11132.40278   11132.40278
+  4    11107.02618   11107.02618
+  5    11321.73793   11321.73793
+  6    11631.01502   11631.01502
+  7     9184.82142    9184.82142
+  8    10092.76417   10092.76417
+  9     5989.14298    5989.14298
+ 10     5597.16181    5597.16181
+ 11     6185.01291    6185.01291
+ 12     5720.05646    5720.05646
+ 13     4401.23668    4401.23668
+ 14     2900.68413    2900.68413
+ 15     2701.30804    2701.30804
+ 16     2787.36072    2787.36072
+ 17     4329.20236    4329.20236
+ 18     7072.65561    7072.65561
+ 19     8333.11771    8333.11771
+ 20     7366.33412    7366.33412
+ 21    10074.84219   10074.84219
+ 22     9181.24124    9181.24124
+ 23     8797.56293    8797.56293
+ 24     8823.67530    8823.67530
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    7419.43493    7419.43493
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+              88 03 02 09   30.8  0.157  0.443  0.016  100.  149.    -11.2  0.30   0.80   0.42    1.00  104.   10.0  268.4   10.0
+              88 03 02 10   70.1  0.172  0.806  0.020  267.  172.     -6.5  0.30   0.80   0.38    1.00  117.   10.0  270.2   10.0
+              88 03 02 11   93.6  0.179  0.967  0.022  345.  182.     -5.5  0.30   0.80   0.36    1.00  124.   10.0  272.2   10.0
+              88 03 02 12  107.8  0.182  1.081  0.022  418.  186.     -5.0  0.30   0.80   0.36    1.00  128.   10.0  274.9   10.0
+              88 03 02 13  102.1  0.214  1.110  0.022  478.  238.     -8.6  0.30   0.80   0.36    1.30  118.   10.0  278.6   10.0
+              88 03 02 14   84.2  0.272  1.070  0.022  519.  340.    -21.3  0.30   0.80   0.36    1.90  174.   10.0  283.0   10.0
+              88 03 02 15   67.4  0.287  1.012  0.022  547.  369.    -31.3  0.30   0.80   0.37    2.10  174.   10.0  284.2   10.0
+              88 03 02 16   34.3  0.262  0.815  0.022  561.  323.    -46.9  0.30   0.80   0.40    2.00  183.   10.0  284.5   10.0
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  42
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24007    GROUP VALUE =      310.11433 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030224;  LOCATION (XR,YR,ZELEV,ZFLAG):     268.12     224.98       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       58.47927      58.47927
+  2      409.12801     409.12801
+  3      287.45004     287.45004
+  4      472.88516     472.88516
+  5      436.66751     436.66751
+  6      373.83171     373.83171
+  7      458.29660     458.29660
+  8     1447.86508    1447.86508
+  9        0.00000       0.00000
+ 10        0.00000       0.00000
+ 11        0.00000       0.00000
+ 12        0.00000       0.00000
+ 13        0.00000       0.00000
+ 14        0.00000       0.00000
+ 15        0.00000       0.00000
+ 16        0.00000       0.00000
+ 17        0.00000       0.00000
+ 18      536.83287     536.83287
+ 19      419.58828     419.58828
+ 20      492.34944     492.34944
+ 21      669.56115     669.56115
+ 22      768.51278     768.51278
+ 23      250.32177     250.32177
+ 24      360.97417     360.97417
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     310.11433     310.11433
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 02 01  -30.1  0.256 -9.000 -9.000 -999.  310.     49.6  0.75   1.50   1.00    2.30  305.   10.0  267.8   10.0
+              88 03 02 02   -4.4  0.077 -9.000 -9.000 -999.   95.      9.3  0.75   1.50   1.00    1.00  273.   10.0  267.2   10.0
+              88 03 02 03   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  308.   10.0  266.8   10.0
+              88 03 02 04   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  277.   10.0  266.0   10.0
+              88 03 02 05   -2.8  0.062 -9.000 -9.000 -999.   37.      7.4  0.75   1.50   1.00    0.80  282.   10.0  265.5   10.0
+              88 03 02 06   -3.6  0.069 -9.000 -9.000 -999.   44.      8.4  0.75   1.50   1.00    0.90  287.   10.0  265.5   10.0
+              88 03 02 07   -1.6  0.046 -9.000 -9.000 -999.   24.      5.6  0.75   1.50   1.00    0.60  289.   10.0  265.7   10.0
+              88 03 02 08   -1.2  0.046 -9.000 -9.000 -999.   24.      7.4  0.75   1.50   0.66    0.60   34.   10.0  266.5   10.0
+              88 03 02 09   30.8  0.157  0.443  0.016  100.  149.    -11.2  0.30   0.80   0.42    1.00  104.   10.0  268.4   10.0
+              88 03 02 10   70.1  0.172  0.806  0.020  267.  172.     -6.5  0.30   0.80   0.38    1.00  117.   10.0  270.2   10.0
+              88 03 02 11   93.6  0.179  0.967  0.022  345.  182.     -5.5  0.30   0.80   0.36    1.00  124.   10.0  272.2   10.0
+              88 03 02 12  107.8  0.182  1.081  0.022  418.  186.     -5.0  0.30   0.80   0.36    1.00  128.   10.0  274.9   10.0
+              88 03 02 13  102.1  0.214  1.110  0.022  478.  238.     -8.6  0.30   0.80   0.36    1.30  118.   10.0  278.6   10.0
+              88 03 02 14   84.2  0.272  1.070  0.022  519.  340.    -21.3  0.30   0.80   0.36    1.90  174.   10.0  283.0   10.0
+              88 03 02 15   67.4  0.287  1.012  0.022  547.  369.    -31.3  0.30   0.80   0.37    2.10  174.   10.0  284.2   10.0
+              88 03 02 16   34.3  0.262  0.815  0.022  561.  323.    -46.9  0.30   0.80   0.40    2.00  183.   10.0  284.5   10.0
+              88 03 02 17   -1.9  0.130 -9.000 -9.000 -999.  124.    103.4  0.30   0.80   0.49    1.30  162.   10.0  283.1   10.0
+              88 03 02 18   -0.8  0.039 -9.000 -9.000 -999.   30.      6.3  0.75   1.50   0.85    0.50  348.   10.0  280.5   10.0
+              88 03 02 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  331.   10.0  280.0   10.0
+              88 03 02 20   -0.8  0.039 -9.000 -9.000 -999.   18.      6.2  0.75   1.50   1.00    0.50  287.   10.0  280.2   10.0
+              88 03 02 21   -1.6  0.054 -9.000 -9.000 -999.   30.      8.7  0.75   1.50   1.00    0.70  240.   10.0  280.1   10.0
+              88 03 02 22   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  236.   10.0  280.8   10.0
+              88 03 02 23   -0.8  0.039 -9.000 -9.000 -999.   18.      6.8  0.75   1.50   1.00    0.50  227.   10.0  280.3   10.0
+              88 03 02 24   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  229.   10.0  279.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  43
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01003    GROUP VALUE =    96768.74754 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030317;  LOCATION (XR,YR,ZELEV,ZFLAG):     134.06     112.49       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17    96768.74754   96768.74754
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   96768.74754   96768.74754
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  44
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01005    GROUP VALUE =       72.74275 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030320;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 20       72.74275      72.74275
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      72.74275      72.74275
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  45
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01007    GROUP VALUE =     1417.34332 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     171.01     469.85       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 24     1417.34332    1417.34332
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1417.34332    1417.34332
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  46
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03002    GROUP VALUE =    10061.10578 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030303;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1    11132.23610   11132.23610
+  2    10234.76027   10234.76027
+  3     8816.32096    8816.32096
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   10061.10578   10061.10578
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  47
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03003    GROUP VALUE =    45676.82655 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030306;  LOCATION (XR,YR,ZELEV,ZFLAG):     328.89    -119.71       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  4    55253.46334   55253.46334
+  5    55834.21250   55834.21250
+  6    25942.80382   25942.80382
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   45676.82655   45676.82655
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  48
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03004    GROUP VALUE =    10480.41088 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030306;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  4     9985.84705    9985.84705
+  5    11688.26702   11688.26702
+  6     9767.11856    9767.11856
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   10480.41088   10480.41088
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  49
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03005    GROUP VALUE =       31.26518 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030321;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19       12.11773      12.11773
+ 20       72.74275      72.74275
+ 21        8.93506       8.93506
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      31.26518      31.26518
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  50
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03007    GROUP VALUE =      682.46638 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     171.01     469.85       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22        0.00000       0.00000
+ 23      630.05583     630.05583
+ 24     1417.34332    1417.34332
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     682.46638     682.46638
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  51
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03007    GROUP VALUE =      634.53371 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88030321;  LOCATION (XR,YR,ZELEV,ZFLAG):     268.12     224.98       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19      964.88699     964.88699
+ 20      454.77192     454.77192
+ 21      483.94222     483.94222
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     634.53371     634.53371
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  52
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08001    GROUP VALUE =       28.85267 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9        6.98291       6.98291
+ 10       22.44093      22.44093
+ 11      130.51970     130.51970
+ 12       38.73250      38.73250
+ 13       13.51523      13.51523
+ 14       16.13441      16.13441
+ 15        1.47942       1.47942
+ 16        1.01622       1.01622
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      28.85267      28.85267
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  53
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08002    GROUP VALUE =     9056.16048 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030308;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1    11132.23610   11132.23610
+  2    10234.76027   10234.76027
+  3     8816.32096    8816.32096
+  4     9196.15877    9196.15877
+  5     8056.59885    8056.59885
+  6     9731.83209    9731.83209
+  7     5246.28678    5246.28678
+  8    10035.09002   10035.09002
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    9056.16048    9056.16048
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  54
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08005    GROUP VALUE =       18.06142 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17       11.00057      11.00057
+ 18       11.19849      11.19849
+ 19       12.11773      12.11773
+ 20       72.74275      72.74275
+ 21        8.93506       8.93506
+ 22        3.66762       3.66762
+ 23       12.31909      12.31909
+ 24       12.51008      12.51008
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      18.06142      18.06142
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  55
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08006    GROUP VALUE =       35.28877 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030316;  LOCATION (XR,YR,ZELEV,ZFLAG):     303.11    -175.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9       22.21525      22.21525
+ 10       27.42345      27.42345
+ 11      133.33077     133.33077
+ 12       50.52185      50.52185
+ 13       27.26059      27.26059
+ 14       16.69405      16.69405
+ 15        3.36634       3.36634
+ 16        1.49786       1.49786
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      35.28877      35.28877
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  56
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =       10.09519 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     866.03    -500.00       0.00       0.00 (M)
+ HR GROUP:STACKDW  OF STACKDW     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.00023       0.00023
+  2        0.00027       0.00027
+  3        0.15755       0.15755
+  4        0.09713       0.09713
+  5        0.44865       0.44865
+  6       11.30423      11.30423
+  7        0.92708       0.92708
+  8        2.96145       2.96145
+  9       10.06412      10.06412
+ 10       22.45406      22.45406
+ 11      112.07641     112.07641
+ 12       43.15748      43.15748
+ 13       19.52609      19.52609
+ 14       11.90979      11.90979
+ 15        2.00084       2.00084
+ 16        1.08005       1.08005
+ 17        0.22981       0.22981
+ 18        0.99829       0.99829
+ 19        2.73736       2.73736
+ 20        0.14091       0.14091
+ 21        0.00319       0.00319
+ 22        0.00014       0.00014
+ 23        0.00404       0.00404
+ 24        0.00537       0.00537
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      10.09519      10.09519
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  57
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24002    GROUP VALUE =     6352.80169 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREA     OF AREA        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1    11132.23610   11132.23610
+  2    10234.76027   10234.76027
+  3     8816.32096    8816.32096
+  4     9196.15877    9196.15877
+  5     8056.59885    8056.59885
+  6     9731.83209    9731.83209
+  7     5246.28678    5246.28678
+  8    10035.09002   10035.09002
+  9     4326.04502    4326.04502
+ 10     5871.70842    5871.70842
+ 11     3574.38691    3574.38691
+ 12     3191.69132    3191.69132
+ 13     3801.95939    3801.95939
+ 14     4514.10731    4514.10731
+ 15     4702.59402    4702.59402
+ 16     6713.47866    6713.47866
+ 17    11119.62491   11119.62491
+ 18      716.33281     716.33281
+ 19     7950.83695    7950.83695
+ 20      159.97067     159.97067
+ 21     8952.42002    8952.42002
+ 22     5546.82435    5546.82435
+ 23     5008.63878    5008.63878
+ 24     3867.33728    3867.33728
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    6352.80169    6352.80169
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  58
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24003    GROUP VALUE =    14670.86891 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     175.00       0.00       0.00       0.00 (M)
+ HR GROUP:CIRC     OF CIRC        
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1    62931.87325   62931.87325
+  2    65703.41394   65703.41394
+  3    53583.83877   53583.83877
+  4     9628.71149    9628.71149
+  5     3838.65364    3838.65364
+  6    19729.90611   19729.90611
+  7     2262.66739    2262.66739
+  8    57799.45207   57799.45207
+  9     6671.73576    6671.73576
+ 10     9847.84653    9847.84653
+ 11     5972.16388    5972.16388
+ 12     4676.74663    4676.74663
+ 13     7673.02213    7673.02213
+ 14     9679.85567    9679.85567
+ 15     7137.67102    7137.67102
+ 16    15071.38831   15071.38831
+ 17     7110.56537    7110.56537
+ 18        0.00000       0.00000
+ 19     2779.40952    2779.40952
+ 20        1.93243       1.93243
+ 21        0.00000       0.00000
+ 22        0.00000       0.00000
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE   14670.86891   14670.86891
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  59
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24004    GROUP VALUE =     4880.32568 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     4334.81050    4334.81050
+  2     5206.75198    5206.75198
+  3     4268.26917    4268.26917
+  4     9985.84705    9985.84705
+  5    11688.26702   11688.26702
+  6     9767.11856    9767.11856
+  7     5974.24733    5974.24733
+  8     5380.89507    5380.89507
+  9     3115.36215    3115.36215
+ 10     3415.44682    3415.44682
+ 11     2546.38424    2546.38424
+ 12     2466.35416    2466.35416
+ 13     2252.19885    2252.19885
+ 14     2762.61281    2762.61281
+ 15     1165.82478    1165.82478
+ 16     2075.46157    2075.46157
+ 17      547.51690     547.51690
+ 18      956.95425     956.95425
+ 19     1572.85128    1572.85128
+ 20     7208.50137    7208.50137
+ 21    10484.99559   10484.99559
+ 22     5621.29196    5621.29196
+ 23     4571.62324    4571.62324
+ 24     9758.22972    9758.22972
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    4880.32568    4880.32568
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  60
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24005    GROUP VALUE =       10.02345 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     172.34     -30.39       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       10.76617      10.76617
+  2       11.28219      11.28219
+  3       11.74871      11.74871
+  4       11.74907      11.74907
+  5       12.11991      12.11991
+  6       10.08754      10.08754
+  7        4.97572       4.97572
+  8        9.57051       9.57051
+  9        1.54825       1.54825
+ 10        1.38196       1.38196
+ 11        2.01939       2.01939
+ 12        1.21917       1.21917
+ 13        1.49703       1.49703
+ 14        2.16799       2.16799
+ 15        1.46696       1.46696
+ 16        2.47082       2.47082
+ 17       11.00057      11.00057
+ 18       11.19849      11.19849
+ 19       12.11773      12.11773
+ 20       72.74275      72.74275
+ 21        8.93506       8.93506
+ 22        3.66762       3.66762
+ 23       12.31909      12.31909
+ 24       12.51008      12.51008
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      10.02345      10.02345
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  61
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24005    GROUP VALUE =        7.59643 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     151.55     -87.50       0.00       0.00 (M)
+ HR GROUP:VOL      OF VOL         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       10.76617      10.76617
+  2       11.28219      11.28219
+  3       11.74871      11.74871
+  4       11.74907      11.74907
+  5       12.11991      12.11991
+  6       10.08754      10.08754
+  7        4.97572       4.97572
+  8        9.57051       9.57051
+  9        1.63298       1.63298
+ 10        1.38196       1.38196
+ 11        2.58241       2.58241
+ 12        1.27674       1.27674
+ 13        1.47236       1.47236
+ 14        2.16003       2.16003
+ 15        1.46696       1.46696
+ 16        2.47082       2.47082
+ 17       11.00057      11.00057
+ 18       11.19849      11.19849
+ 19       12.11773      12.11773
+ 20       13.82165      13.82165
+ 21        8.93506       8.93506
+ 22        3.66762       3.66762
+ 23       12.31909      12.31909
+ 24       12.51008      12.51008
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE       7.59643       7.59643
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  62
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24006    GROUP VALUE =       12.80163 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     433.01    -250.00       0.00       0.00 (M)
+ HR GROUP:STACK    OF STACK       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.00011       0.00011
+  2        0.00013       0.00013
+  3        0.14549       0.14549
+  4        0.05893       0.05893
+  5        0.16944       0.16944
+  6       13.21186      13.21186
+  7        3.06459       3.06459
+  8        6.85245       6.85245
+  9       24.44416      24.44416
+ 10       26.40693      26.40693
+ 11      123.54168     123.54168
+ 12       55.82258      55.82258
+ 13       31.06420      31.06420
+ 14       12.44252      12.44252
+ 15        3.82631       3.82631
+ 16        1.65106       1.65106
+ 17        0.23403       0.23403
+ 18        1.07258       1.07258
+ 19        3.08333       3.08333
+ 20        0.13609       0.13609
+ 21        0.00299       0.00299
+ 22        0.00041       0.00041
+ 23        0.00328       0.00328
+ 24        0.00409       0.00409
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      12.80163      12.80163
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  63
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24007    GROUP VALUE =      255.13533 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030324;  LOCATION (XR,YR,ZELEV,ZFLAG):     268.12     224.98       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1      559.94154     559.94154
+  2      566.78909     566.78909
+  3      718.72070     718.72070
+  4      409.03506     409.03506
+  5      414.04986     414.04986
+  6      270.51662     270.51662
+  7      119.63741     119.63741
+  8      395.78547     395.78547
+  9       32.20313      32.20313
+ 10       37.75499      37.75499
+ 11       26.13215      26.13215
+ 12       21.75259      21.75259
+ 13       33.28477      33.28477
+ 14       34.93569      34.93569
+ 15       59.80827      59.80827
+ 16      102.63375     102.63375
+ 17      228.82862     228.82862
+ 18        0.00000       0.00000
+ 19      964.88699     964.88699
+ 20      454.77192     454.77192
+ 21      483.94222     483.94222
+ 22      187.83698     187.83698
+ 23        0.00000       0.00000
+ 24        0.00000       0.00000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     255.13533     255.13533
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 03 01   -2.0  0.062 -9.000 -9.000 -999.   37.     10.8  0.75   1.50   1.00    0.80  265.   10.0  279.6   10.0
+              88 03 03 02   -1.5  0.054 -9.000 -9.000 -999.   30.      9.4  0.75   1.50   1.00    0.70  269.   10.0  279.0   10.0
+              88 03 03 03   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  262.   10.0  277.8   10.0
+              88 03 03 04   -1.1  0.046 -9.000 -9.000 -999.   24.      8.1  0.75   1.50   1.00    0.60  295.   10.0  277.7   10.0
+              88 03 03 05   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  300.   10.0  278.5   10.0
+              88 03 03 06   -2.5  0.069 -9.000 -9.000 -999.   44.     12.2  0.75   1.50   1.00    0.90  306.   10.0  280.2   10.0
+              88 03 03 07  -10.8  0.131 -9.000 -9.000 -999.  114.     18.7  0.75   1.50   1.00    1.70  319.   10.0  280.6   10.0
+              88 03 03 08   -1.7  0.069 -9.000 -9.000 -999.   45.     17.2  0.75   1.50   0.66    0.90  274.   10.0  280.3   10.0
+              88 03 03 09   32.0  0.271  0.821  0.005  619.  339.    -56.0  0.75   1.50   0.56    1.50  302.   10.0  280.6   10.0
+              88 03 03 10   64.4  0.233  1.207  0.008  978.  271.    -17.7  0.75   1.50   0.52    1.10  290.   10.0  280.8   10.0
+              88 03 03 11   78.3  0.335  1.309  0.008 1027.  466.    -43.1  0.75   1.50   0.51    1.80  303.   10.0  281.4   10.0
+              88 03 03 12   73.5  0.361  1.299  0.008 1070.  520.    -57.3  0.75   1.50   0.51    2.00  312.   10.0  281.3   10.0
+              88 03 03 13   51.9  0.310  1.168  0.009 1100.  417.    -51.6  0.75   1.50   0.51    1.70  287.   10.0  281.0   10.0
+              88 03 03 14   67.5  0.290  1.289  0.009 1137.  375.    -32.4  0.75   1.50   0.51    1.50  290.   10.0  280.7   10.0
+              88 03 03 15   12.6  0.213  0.738  0.009 1143.  238.    -68.3  0.75   1.50   0.52    1.20  243.   10.0  279.4   10.0
+              88 03 03 16    3.6  0.169  0.488  0.009 1144.  167.   -119.2  0.75   1.50   0.54    1.00  254.   10.0  277.8   10.0
+              88 03 03 17   -1.1  0.054 -9.000 -9.000 -999.   44.     12.6  0.75   1.50   0.62    0.70  227.   10.0  277.3   10.0
+              88 03 03 18   -0.3  0.023 -9.000 -9.000 -999.    9.      3.5  0.30   0.80   0.76    0.40  113.   10.0  277.1   10.0
+              88 03 03 19   -0.8  0.039 -9.000 -9.000 -999.   18.      6.7  0.75   1.50   1.00    0.50  243.   10.0  276.7   10.0
+              88 03 03 20   -0.3  0.023 -9.000 -9.000 -999.    8.      4.0  0.75   1.50   1.00    0.30  283.   10.0  276.2   10.0
+              88 03 03 21   -3.1  0.077 -9.000 -9.000 -999.   51.     13.4  0.75   1.50   1.00    1.00   10.   10.0  275.8   10.0
+              88 03 03 22  -10.2  0.177 -9.000 -9.000 -999.  179.     49.0  0.75   1.50   1.00    1.60   16.   10.0  275.3   10.0
+              88 03 03 23   -0.7  0.034 -9.000 -9.000 -999.   57.      5.1  0.30   0.80   1.00    0.60   96.   10.0  274.9   10.0
+              88 03 03 24   -0.5  0.029 -9.000 -9.000 -999.   13.      4.2  0.30   0.80   1.00    0.50   68.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  64
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01007    GROUP VALUE =     1473.15396 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88030401;  LOCATION (XR,YR,ZELEV,ZFLAG):     171.01     469.85       0.00       0.00 (M)
+ HR GROUP:OPENPIT  OF OPENPIT     
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     1473.15396    1473.15396
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    1473.15396    1473.15396
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  65
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08004    GROUP VALUE =     7363.61415 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  88030408;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     9316.13232    9316.13232
+  2     8732.56755    8732.56755
+  3     6383.21862    6383.21862
+  4     4997.60978    4997.60978
+  5     7448.18942    7448.18942
+  6     7748.00961    7748.00961
+  7     7203.05103    7203.05103
+  8     7080.13490    7080.13490
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    7363.61415    7363.61415
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+              88 03 04 02   -3.7  0.085 -9.000 -9.000 -999.   59.     14.7  0.75   1.50   1.00    1.10   26.   10.0  275.0   10.0
+              88 03 04 03   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   32.   10.0  275.0   10.0
+              88 03 04 04  -11.5  0.201 -9.000 -9.000 -999.  216.     62.7  0.75   1.50   1.00    1.70   23.   10.0  274.8   10.0
+              88 03 04 05   -5.2  0.100 -9.000 -9.000 -999.   81.     17.4  0.75   1.50   1.00    1.30   20.   10.0  274.7   10.0
+              88 03 04 06   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   12.   10.0  274.8   10.0
+              88 03 04 07   -2.4  0.063 -9.000 -9.000 -999.   38.      9.3  0.30   0.80   1.00    1.10   35.   10.0  274.7   10.0
+              88 03 04 08   -5.6  0.134 -9.000 -9.000 -999.  118.     38.7  0.75   1.50   0.65    1.30   18.   10.0  274.7   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  66
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24004    GROUP VALUE =     5875.21330 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88030424;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00       0.00       0.00       0.00 (M)
+ HR GROUP:AREAP    OF AREAP       
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1     9316.13232    9316.13232
+  2     8732.56755    8732.56755
+  3     6383.21862    6383.21862
+  4     4997.60978    4997.60978
+  5     7448.18942    7448.18942
+  6     7748.00961    7748.00961
+  7     7203.05103    7203.05103
+  8     7080.13490    7080.13490
+  9     6064.42330    6064.42330
+ 10     4615.05065    4615.05065
+ 11     3626.38413    3626.38413
+ 12     4303.81941    4303.81941
+ 13     4757.97934    4757.97934
+ 14     5283.75532    5283.75532
+ 15     3536.03466    3536.03466
+ 16     4959.16427    4959.16427
+ 17     3249.35162    3249.35162
+ 18     2773.12820    2773.12820
+ 19     2599.87796    2599.87796
+ 20     5670.63039    5670.63039
+ 21     6018.12777    6018.12777
+ 22     5850.35613    5850.35613
+ 23    11560.49213   11560.49213
+ 24     7227.63065    7227.63065
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE    5875.21330    5875.21330
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 03 04 01   -1.0  0.040 -9.000 -9.000 -999.   19.      5.9  0.30   0.80   1.00    0.70   60.   10.0  274.8   10.0
+              88 03 04 02   -3.7  0.085 -9.000 -9.000 -999.   59.     14.7  0.75   1.50   1.00    1.10   26.   10.0  275.0   10.0
+              88 03 04 03   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   32.   10.0  275.0   10.0
+              88 03 04 04  -11.5  0.201 -9.000 -9.000 -999.  216.     62.7  0.75   1.50   1.00    1.70   23.   10.0  274.8   10.0
+              88 03 04 05   -5.2  0.100 -9.000 -9.000 -999.   81.     17.4  0.75   1.50   1.00    1.30   20.   10.0  274.7   10.0
+              88 03 04 06   -6.0  0.108 -9.000 -9.000 -999.   85.     18.7  0.75   1.50   1.00    1.40   12.   10.0  274.8   10.0
+              88 03 04 07   -2.4  0.063 -9.000 -9.000 -999.   38.      9.3  0.30   0.80   1.00    1.10   35.   10.0  274.7   10.0
+              88 03 04 08   -5.6  0.134 -9.000 -9.000 -999.  118.     38.7  0.75   1.50   0.65    1.30   18.   10.0  274.7   10.0
+              88 03 04 09    0.7  0.218  0.105  0.015   58.  245.  -1325.0  0.75   1.50   0.55    1.40   12.   10.0  275.0   10.0
+              88 03 04 10   10.0  0.279  0.397  0.012  224.  354.   -194.8  0.75   1.50   0.52    1.70  336.   10.0  274.7   10.0
+              88 03 04 11   16.5  0.272  0.493  0.012  259.  341.   -109.3  0.75   1.50   0.51    1.60  332.   10.0  274.3   10.0
+              88 03 04 12   20.0  0.262  0.535  0.013  272.  321.    -79.9  0.75   1.50   0.51    1.50  335.   10.0  274.2   10.0
+              88 03 04 13   20.5  0.249  0.547  0.014  285.  297.    -67.1  0.75   1.50   0.51    1.40  347.   10.0  274.3   10.0
+              88 03 04 14   17.7  0.219  0.528  0.014  296.  246.    -52.6  0.75   1.50   0.51    1.20   28.   10.0  274.2   10.0
+              88 03 04 15   11.9  0.353  0.466  0.009  303.  503.   -329.3  0.75   1.50   0.52    2.20  357.   10.0  274.0   10.0
+              88 03 04 16    3.3  0.254  0.304  0.013  305.  313.   -447.2  0.75   1.50   0.54    1.60    3.   10.0  273.9   10.0
+              88 03 04 17  -10.2  0.318 -9.000 -9.000 -999.  430.    281.0  0.75   1.50   0.61    2.20   22.   10.0  273.9   10.0
+              88 03 04 18  -19.9  0.351 -9.000 -9.000 -999.  499.    194.9  0.75   1.50   0.83    2.50   23.   10.0  273.6   10.0
+              88 03 04 19  -24.1  0.418 -9.000 -9.000 -999.  648.    270.3  0.75   1.50   1.00    2.90   11.   10.0  273.1   10.0
+              88 03 04 20   -8.5  0.147 -9.000 -9.000 -999.  235.     33.3  0.75   1.50   1.00    1.50    6.   10.0  273.3   10.0
+              88 03 04 21  -12.1  0.131 -9.000 -9.000 -999.  116.     16.7  0.75   1.50   1.00    1.70  350.   10.0  273.4   10.0
+              88 03 04 22  -14.1  0.139 -9.000 -9.000 -999.  124.     17.0  0.75   1.50   1.00    1.80  345.   10.0  273.5   10.0
+              88 03 04 23   -3.5  0.069 -9.000 -9.000 -999.   45.      8.5  0.75   1.50   1.00    0.90  328.   10.0  273.2   10.0
+              88 03 04 24   -8.5  0.108 -9.000 -9.000 -999.   85.     13.2  0.75   1.50   1.00    1.40  322.   10.0  272.5   10.0
+ *** AERMOD - VERSION  15181 ***   *** A Simple Example Problem for the AERMOD Model with all Source Types  ***        07/23/15
+ *** AERMET - VERSION  14134 ***   *** All receptor types are also included                                 ***        14:52:27
+                                                                                                                       PAGE  67
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

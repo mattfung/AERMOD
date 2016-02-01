@@ -1,0 +1,59 @@
+CO STARTING
+   TITLEONE  Test case for particle deposition based on Wesely, et. al. (2001)
+   TITLETWO  using Method 2.  Inputs are from App. B for Chromium compounds.
+**           With modifications for wet deposition per Chris Walcek
+   MODELOPT  CONC  DDEP   WDEP  FLAT
+   AVERTIME  1  3  8  24  MONTH  ANNUAL
+   POLLUTID  CHROMIUM
+   RUNORNOT  RUN                                                                                                                    
+   ERRORFIL  ERRORS.OUT
+   EVENTFIL  testprt2_evt.inp
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING         
+   DEPOUNIT  3.6D6   grams/sec   milligrams/sq-m                                                                                                                
+   LOCATION  STACK1  POINT  0.0   0.0   0.0                                                                                         
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK1  100.0   35.   432.  11.7  2.4                                                                                  
+                                                                                                                                    
+** Define inputs for Method 2 particle deposition (from App. B for Chromium):
+**           SrcID   FineMassFraction   Dmm (microns)
+   METHOD_2  STACK1  0.55               1.2
+
+** Note that default output units for deposition flux of GRAMS/M**2 are used.
+   SRCGROUP  ALL                                                                                                                    
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING                                                                                                                         
+** Polar receptor grid with 7 rings from 100m to 20,000m
+   GRIDPOLR  POL1  STA
+   GRIDPOLR  POL1  ORIG  0.0  0.0
+   GRIDPOLR  POL1  DIST  100.  200. 500. 1000. 5000. 10000. 20000.
+   GRIDPOLR  POL1  GDIR   36   10.  10.
+   GRIDPOLR  POL1  END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+** Note that HOUSTON.SFC file includes a full year of data for Houston, TX
+   SURFFILE  houston.sfc
+   PROFFILE  houston.pfl
+   SURFDATA  722430  1996  HOUSTON
+   UAIRDATA  3937    1996  LAKE_CHARLES
+   PROFBASE  0.0
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SIXTH
+   MAXTABLE  ALLAVE  100
+   PLOTFILE   1      ALL  FIRST  PRT2_01H.PLT
+   PLOTFILE   3      ALL  FIRST  PRT2_03H.PLT
+   PLOTFILE   8      ALL  FIRST  PRT2_08H.PLT
+   PLOTFILE  24      ALL  FIRST  PRT2_24H.PLT
+   PLOTFILE  MONTH   ALL  FIRST  PRT2_MON.PLT
+   PLOTFILE  ANNUAL  ALL         PRT2ANN.PLT
+   POSTFILE  MONTH   ALL  PLOT   PRT2_MON.PST
+   SEASONHR  ALL                 PRT2_SEASHR.DAT
+   SUMMFILE  TESTPRT2.SUM
+   FILEFORM  EXP
+OU FINISHED

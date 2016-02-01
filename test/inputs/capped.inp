@@ -1,0 +1,213 @@
+** To run the example, copy the CAPPED.INP file to AERMOD.INP and type:                                                                                                        
+**                                                                                                                                  
+**    AERMOD
+**                                                                                                                                  
+** The results for this example problem are provided in file AERMOD.OUT.
+                                                                                                                                    
+CO STARTING                                                                                                                         
+   TITLEONE  AERMOD Model Test Case with Capped and Horizontal Stacks
+   TITLETWO  Cases with and without downwash using BETA options
+   MODELOPT  CONC   FLAT  BETA
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2                                                                                                                    
+   RUNORNOT  RUN
+   EVENTFIL  capped_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING
+   ELEVUNIT  METERS
+   
+** Non-capped point source with downwash   
+   LOCATION  STACK1  POINT  0.0   0.0   0.0
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK1  500.0   65.00  425.  15.0   5.
+
+SO BUILDHGT  STACK1    36*50.
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1    22.50   26.81   30.31   32.89   34.47   35.00
+
+** Capped point source with downwash   
+   LOCATION  STACK1C  POINTCAP  0.0   0.0   0.0
+** Point Source       QS      HS     TS    VS    DS  
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK1C  500.0   65.00  425.  15.0   5.
+
+SO BUILDHGT  STACK1C    36*50.
+SO BUILDWID  STACK1C    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1C    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1C    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1C    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1C    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1C    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1C    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1C    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1C    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1C    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1C    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1C    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1C   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1C   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1C   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1C   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1C    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1C   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1C    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1C    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1C   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1C   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1C   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1C    22.50   26.81   30.31   32.89   34.47   35.00
+                                                                                                                                    
+** Horizontal point source with downwash   
+   LOCATION  STACK1H  POINTHOR  0.0   0.0   0.0
+** Point Source       QS      HS     TS    VS    DS   
+** Parameters:       ----    ----   ----  ----   --- 
+   SRCPARAM  STACK1H  500.0   65.00  425.  15.0   5.
+
+SO BUILDHGT  STACK1H    36*50.
+SO BUILDWID  STACK1H    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1H    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1H    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1H    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1H    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1H    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1H    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1H    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1H    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1H    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1H    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1H    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1H   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1H   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1H   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1H   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1H    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1H   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1H    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1H    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1H   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1H   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1H   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1H    22.50   26.81   30.31   32.89   34.47   35.00
+                                                                                                                                    
+** Capped point source with downwash per AERMOD Implementation Guide
+   LOCATION  STACK1C0  POINT  0.0   0.0   0.0                                                                                                                                    
+** Point Source         QS      HS     TS    VS    DS
+** Parameters:         ----    ----   ----  ----   ---
+   SRCPARAM  STACK1C0  500.0   65.00  425.  0.001  5.
+                                                                                                                                    
+SO BUILDHGT  STACK1C0    36*50.
+SO BUILDWID  STACK1C0    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1C0    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1C0    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1C0    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1C0    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1C0    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1C0    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1C0    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1C0    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1C0    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1C0    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1C0    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1C0   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1C0   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1C0   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1C0   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1C0    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1C0   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1C0    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1C0    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1C0   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1C0   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1C0   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1C0    22.50   26.81   30.31   32.89   34.47   35.00
+                                                                                                                                    
+                                                                                                                                    
+** Non-capped point source without downwash   
+   LOCATION  STACK2  POINT  0.0   0.0   0.0                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2  500.0   20.00  425.  10.0   2.
+
+** Capped point source without downwash                                                                                                                                     
+   LOCATION  STACK2C  POINTCAP  0.0   0.0   0.0                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2C  500.0   20.00  425.  10.0   2.
+                                                                                                                                    
+** Horizontal point source without downwash                                                                                                                                     
+   LOCATION  STACK2H  POINTHOR  0.0   0.0   0.0                                                                                                                                    
+** Point Source        QS      HS     TS    VS    DS
+** Parameters:        ----    ----   ----  ----   ---
+   SRCPARAM  STACK2H  500.0   20.00  425.  10.0   2.
+                                                                                                                                    
+** Capped point source without downwash per AERMOD Implementation Guide    
+   LOCATION  STACK2C0 POINT  0.0   0.0   0.0                                                                                                                                    
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2C0  500.0   20.00   425.  0.001  2.0
+                                                                                                                                    
+** Capped point source without downwash with equivalent diameter per MCH procedure
+   LOCATION  STACK2CE  POINT  0.0   0.0   0.0                                                                                                                                   
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2CE  500.0   20.00   425.  0.001  200.
+                                                                                                                                    
+   SRCGROUP  STACK1   STACK1
+   SRCGROUP  STACK1C  STACK1C
+   SRCGROUP  STACK1H  STACK1H
+   SRCGROUP  STACK1C0 STACK1C0
+   
+   SRCGROUP  STACK2   STACK2
+   SRCGROUP  STACK2C  STACK2C
+   SRCGROUP  STACK2H  STACK2H
+   SRCGROUP  STACK2C0 STACK2C0
+   SRCGROUP  STACK2CE STACK2CE
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+RE GRIDPOLR POL1 STA
+                 ORIG 0.0 0.0
+                 DIST 50. 100. 175. 350. 500. 700.  1000.  1500.
+                 GDIR 36 10 10
+RE GRIDPOLR POL1 END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+   SURFFILE  aermet2.sfc
+   PROFFILE  aermet2.pfl
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY                                                                                                 
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND                                                                                                   
+   MAXTABLE  ALLAVE  50       
+   SUMMFILE  CAPPED.SUM                                                                                                      
+OU FINISHED

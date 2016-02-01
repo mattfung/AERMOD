@@ -1,0 +1,5 @@
+RE GRIDPOLR POL1 STA
+                 ORIG STACK1
+                 DIST 175. 350. 500. 1000.
+                 GDIR 36 10 10
+RE GRIDPOLR POL1 END

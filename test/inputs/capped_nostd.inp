@@ -1,0 +1,73 @@
+** To run the example, copy the CAPPED_NOSTD.INP file to AERMOD.INP and type:                                                                                                        
+**                                                                                                                                  
+**    AERMOD
+**                                                                                                                                  
+** The results for this example problem are provided in file AERMOD.OUT.
+                                                                                                                                    
+CO STARTING                                                                                                                         
+   TITLEONE  AERMOD Model Test Case with Capped and Horizontal Stacks
+   TITLETWO  No downwash cases based on MCH procedure, with NOSTD option
+   MODELOPT  CONC   FLAT   NOSTD   BETA
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2                                                                                                                    
+   RUNORNOT  RUN
+   EVENTFIL  capped_nostd_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING
+   ELEVUNIT  METERS
+
+** Horizontal point source without downwash                                                                                                                                     
+   LOCATION  STACK2H  POINTHOR  0.0   0.0   0.0                                                                                                                                    
+** Point Source        QS      HS     TS    VS    DS
+** Parameters:        ----    ----   ----  ----   ---
+   SRCPARAM  STACK2H  500.0   20.00  425.  10.0   2.
+
+** Horizontal point source without downwash with equivalent diameter per MCH procedure
+   LOCATION  STACK2HE  POINT  0.0   0.0   0.0                                                                                                                                   
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2HE  500.0   20.00   425.  0.001  200.
+
+** Capped point source without downwash                                                                                                                                     
+   LOCATION  STACK2C  POINTCAP  0.0   0.0   0.0                                                                                                                                    
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2C  500.0   20.00  425.  10.0   2.
+
+** Capped point source without downwash with equivalent diameter per MCH procedure,
+** with stack height adjustment for STD
+   LOCATION  STACK2CE  POINT  0.0   0.0   0.0                                                                                                                                   
+** Point Source          QS      HS     TS    VS    DS
+** Parameters:          ----    ----   ----  ----   ---
+   SRCPARAM  STACK2CE  500.0   14.00   425.  0.001  200.
+
+   SRCGROUP  STACK2H  STACK2H
+   SRCGROUP  STACK2HE STACK2HE
+   SRCGROUP  STACK2C  STACK2C
+   SRCGROUP  STACK2CE STACK2CE
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+RE GRIDPOLR POL1 STA
+                 ORIG 0.0 0.0
+                 DIST 50. 100. 175. 350. 500. 700.  1000.  1500.
+                 GDIR 36 10 10
+RE GRIDPOLR POL1 END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+   SURFFILE  aermet2.sfc
+   PROFFILE  aermet2.pfl
+   SURFDATA  14735  1988  ALBANY,NY
+   UAIRDATA  14735  1988  ALBANY,NY                                                                                                 
+   SITEDATA  99999  1988  HUDSON
+   PROFBASE  0.0  METERS
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND                                                                                                   
+   MAXTABLE  ALLAVE  50
+   SUMMFILE  CAPPED_NOSTD.SUM
+OU FINISHED

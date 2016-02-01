@@ -1,0 +1,50 @@
+CO STARTING
+   TITLEONE  AERMOD Test Case - Lovett Complex Terrain Study
+   TITLETWO  Includes both ELEV and FLAT source
+   MODELOPT  CONC    FLAT  ELEV
+   AVERTIME  1  3  8  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   EVENTFIL  flatelev_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+
+SO STARTING  
+SO ELEVUNIT METERS
+SO LOCATION  ELEV_STK  POINT          5510.00      67960.00        3.25
+   SRCPARAM  ELEV_STK  150.0  145.   400.  25.0  5.0
+   
+SO LOCATION  FLAT_STK  POINT          5510.00      67960.00        FLAT
+   SRCPARAM  FLAT_STK  150.0  145.   400.  25.0  5.0
+
+   SRCGROUP  ELEV_STK  ELEV_STK
+   SRCGROUP  FLAT_STK  FLAT_STK
+SO FINISHED
+
+RE STARTING
+** Receptor locations and elevations from AERMAP output
+   INCLUDED  lovett_rec.dat
+RE FINISHED
+
+ME STARTING
+   SURFFILE  lovett.sfc  free
+   PROFFILE  lovett.pfl  free
+   SURFDATA  14735  1988  albany
+   UAIRDATA  14735  1988  albany
+   SITEDATA  00000  1988  LOVETT
+   STARTEND  88 01 01  88 12 31
+   PROFBASE  1.8
+ME FINISHED
+
+OU STARTING
+   RECTABLE ALLAVE FIRST-THIRD
+   MAXTABLE ALLAVE 400
+   POSTFILE  24       ELEV_STK   plot   lvt24_ELEV.pst
+   PLOTFILE  period   ELEV_STK          lvtan_ELEV.plt
+   POSTFILE  24       FLAT_STK   plot   lvt24_FLAT.pst
+   PLOTFILE  period   FLAT_STK          lvtan_FLAT.plt
+   RANKFILE  1 100 FlatElev1.RNK
+   RANKFILE  3 100 FlatElev3.RNK
+   RANKFILE 24 100 FlatElev24.RNK
+   SUMMFILE FlatElev.SUM
+OU FINISHED

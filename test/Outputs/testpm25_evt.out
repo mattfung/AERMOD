@@ -1,0 +1,534 @@
+CO STARTING
+   TITLEONE  PM-2.5 Test Case for the AERMOD Model using single met file
+   TITLETWO  Five years of met data from Salem, OR
+   MODELOPT  CONC  FLAT
+   AVERTIME  24  ANNUAL
+   POLLUTID  PM25
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   LOCATION  STACK1  POINT  0.0   0.0   0.0
+ 
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK1  25.0   65.00   425.  15.0   5.
+ 
+SO BUILDHGT  STACK1    36*50.
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDWID  STACK1    62.26   72.64   80.80   86.51   89.59   89.95
+SO BUILDWID  STACK1    87.58   82.54   75.00   82.54   87.58   89.95
+SO BUILDWID  STACK1    89.59   86.51   80.80   72.64   62.26   50.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO BUILDLEN  STACK1    82.54   87.58   89.95   89.59   86.51   80.80
+SO BUILDLEN  STACK1    72.64   62.26   50.00   62.26   72.64   80.80
+SO BUILDLEN  STACK1    86.51   89.59   89.95   87.58   82.54   75.00
+SO XBADJ     STACK1   -47.35  -55.76  -62.48  -67.29  -70.07  -70.71
+SO XBADJ     STACK1   -69.21  -65.60  -60.00  -65.60  -69.21  -70.71
+SO XBADJ     STACK1   -70.07  -67.29  -62.48  -55.76  -47.35  -37.50
+SO XBADJ     STACK1   -35.19  -31.82  -27.48  -22.30  -16.44  -10.09
+SO XBADJ     STACK1    -3.43    3.34   10.00    3.34   -3.43  -10.09
+SO XBADJ     STACK1   -16.44  -22.30  -27.48  -31.82  -35.19  -37.50
+SO YBADJ     STACK1    34.47   32.89   30.31   26.81   22.50   17.50
+SO YBADJ     STACK1    11.97    6.08    0.00   -6.08  -11.97  -17.50
+SO YBADJ     STACK1   -22.50  -26.81  -30.31  -32.89  -34.47  -35.00
+SO YBADJ     STACK1   -34.47  -32.89  -30.31  -26.81  -22.50  -17.50
+SO YBADJ     STACK1   -11.97   -6.08    0.00    6.08   11.97   17.50
+SO YBADJ     STACK1    22.50   26.81   30.31   32.89   34.47   35.00
+ 
+   LOCATION  STACK2  POINT  0.0   0.0   0.0
+ 
+** Point Source       QS      HS     TS    VS    DS
+** Parameters:       ----    ----   ----  ----   ---
+   SRCPARAM  STACK2  100.0   65.00  425.  15.0   5.
+ 
+   SRCGROUP  ALL
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  salem_86-90.sfc
+   PROFFILE  salem_86-90.pfl
+   SURFDATA  24232  1986  SALEM
+   UAIRDATA  24232  1986  SALEM
+   PROFBASE  0.0
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER TH24000001  24  ALL        86112324          41.92232
+   EVENTLOC TH24000001 XR=      -68.404030 YR=      187.938520     0.0000     0.0000     0.0000
+   EVENTPER TH24000002  24  ALL        86112324          55.81732
+   EVENTLOC TH24000002 XR=      -34.729640 YR=      196.961550     0.0000     0.0000     0.0000
+   EVENTPER TH24000003  24  ALL        86112324          59.22515
+   EVENTLOC TH24000003 XR=      -86.824090 YR=      492.403880     0.0000     0.0000     0.0000
+   EVENTPER TH24000004  24  ALL        86112324          44.63281
+   EVENTLOC TH24000004 XR=     -173.648180 YR=      984.807750     0.0000     0.0000     0.0000
+   EVENTPER TH24000005  24  ALL        86112324          41.77524
+   EVENTLOC TH24000005 XR=        0.000000 YR=      200.000000     0.0000     0.0000     0.0000
+   EVENTPER TH24000006  24  ALL        86112324          38.81660
+   EVENTLOC TH24000006 XR=        0.000000 YR=      500.000000     0.0000     0.0000     0.0000
+   EVENTPER TH24000007  24  ALL        86112624          35.42232
+   EVENTLOC TH24000007 XR=      -68.404030 YR=      187.938520     0.0000     0.0000     0.0000
+   EVENTPER TH24000008  24  ALL        86112624          36.17500
+   EVENTLOC TH24000008 XR=      -34.729640 YR=      196.961550     0.0000     0.0000     0.0000
+   EVENTPER TH24000009  24  ALL        87013124          44.19080
+   EVENTLOC TH24000009 XR=      -68.404030 YR=      187.938520     0.0000     0.0000     0.0000
+   EVENTPER TH24000010  24  ALL        87013124          53.00601
+   EVENTLOC TH24000010 XR=      -34.729640 YR=      196.961550     0.0000     0.0000     0.0000
+   EVENTPER TH24000011  24  ALL        87013124          55.72307
+   EVENTLOC TH24000011 XR=      -86.824090 YR=      492.403880     0.0000     0.0000     0.0000
+   EVENTPER TH24000012  24  ALL        87013124          40.14843
+   EVENTLOC TH24000012 XR=     -173.648180 YR=      984.807750     0.0000     0.0000     0.0000
+   EVENTPER TH24000013  24  ALL        87013124          35.76188
+   EVENTLOC TH24000013 XR=        0.000000 YR=      200.000000     0.0000     0.0000     0.0000
+   EVENTPER TH24000014  24  ALL        88011424          35.06189
+   EVENTLOC TH24000014 XR=      -86.824090 YR=      492.403880     0.0000     0.0000     0.0000
+   EVENTPER TH24000015  24  ALL        89120424          38.77913
+   EVENTLOC TH24000015 XR=       86.824090 YR=      492.403880     0.0000     0.0000     0.0000
+   EVENTPER TH24000016  24  ALL        90062124          35.04533
+   EVENTLOC TH24000016 XR=       86.824090 YR=     -492.403880     0.0000     0.0000     0.0000
+   EVENTPER TH24000017  24  ALL        90112324          35.99337
+   EVENTLOC TH24000017 XR=      -86.824090 YR=      492.403880     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  SOCONT
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  PM25    
+  
+ **Model Calculates  1 Short Term Average(s) of:  24-HR
+     and Calculates ANNUAL Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      2 Source(s);       1 Source Group(s); and      17 Event(s)
+
+                with:      2 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Source Contribution Information Only for EVENT Processing (SOCONT Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK1           0   0.25000E+02       0.0       0.0     0.0    65.00   425.00    15.00     5.00    YES     NO    NO         
+ STACK2           0   0.10000E+03       0.0       0.0     0.0    65.00   425.00    15.00     5.00    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STACK1      , STACK2      ,
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                          *** DIRECTION SPECIFIC BUILDING DIMENSIONS ***
+
+
+ SOURCE ID: STACK1      
+  IFV    BH      BW      BL     XADJ    YADJ     IFV    BH      BW      BL     XADJ    YADJ
+    1   50.0,   62.3,   82.5,  -47.3,   34.5,      2   50.0,   72.6,   87.6,  -55.8,   32.9,
+    3   50.0,   80.8,   90.0,  -62.5,   30.3,      4   50.0,   86.5,   89.6,  -67.3,   26.8,
+    5   50.0,   89.6,   86.5,  -70.1,   22.5,      6   50.0,   90.0,   80.8,  -70.7,   17.5,
+    7   50.0,   87.6,   72.6,  -69.2,   12.0,      8   50.0,   82.5,   62.3,  -65.6,    6.1,
+    9   50.0,   75.0,   50.0,  -60.0,    0.0,     10   50.0,   82.5,   62.3,  -65.6,   -6.1,
+   11   50.0,   87.6,   72.6,  -69.2,  -12.0,     12   50.0,   90.0,   80.8,  -70.7,  -17.5,
+   13   50.0,   89.6,   86.5,  -70.1,  -22.5,     14   50.0,   86.5,   89.6,  -67.3,  -26.8,
+   15   50.0,   80.8,   90.0,  -62.5,  -30.3,     16   50.0,   72.6,   87.6,  -55.8,  -32.9,
+   17   50.0,   62.3,   82.5,  -47.3,  -34.5,     18   50.0,   50.0,   75.0,  -37.5,  -35.0,
+   19   50.0,   62.3,   82.5,  -35.2,  -34.5,     20   50.0,   72.6,   87.6,  -31.8,  -32.9,
+   21   50.0,   80.8,   90.0,  -27.5,  -30.3,     22   50.0,   86.5,   89.6,  -22.3,  -26.8,
+   23   50.0,   89.6,   86.5,  -16.4,  -22.5,     24   50.0,   90.0,   80.8,  -10.1,  -17.5,
+   25   50.0,   87.6,   72.6,   -3.4,  -12.0,     26   50.0,   82.5,   62.3,    3.3,   -6.1,
+   27   50.0,   75.0,   50.0,   10.0,    0.0,     28   50.0,   82.5,   62.3,    3.3,    6.1,
+   29   50.0,   87.6,   72.6,   -3.4,   12.0,     30   50.0,   90.0,   80.8,  -10.1,   17.5,
+   31   50.0,   89.6,   86.5,  -16.4,   22.5,     32   50.0,   86.5,   89.6,  -22.3,   26.8,
+   33   50.0,   80.8,   90.0,  -27.5,   30.3,     34   50.0,   72.6,   87.6,  -31.8,   32.9,
+   35   50.0,   62.3,   82.5,  -35.2,   34.5,     36   50.0,   50.0,   75.0,  -37.5,   35.0,
+
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            0 0 0 0 0 0 0 0 0 0   0 0 0 1 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   1 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 1 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 0 0 0 0   0 0 0 0 0 0 1 0 0 1   0 0 0 0 0 0 0 1 0 0   0 0 0 0 0 0 0 0 0 0
+            0 0 0 0 0 0 0 0 0 0   0 0 0 0 0
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1986  11 23  0
+                                                           AND END DATE: 1990  11 23 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000001 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):     -68.40     187.94       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       41.92232 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              41.92232             STACK2               0.00000
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000002 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):     -34.73     196.96       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       55.81732 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              55.81729             STACK2               0.00002
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000003 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):     -86.82     492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       59.22515 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              56.92928             STACK2               2.29587
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000004 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):    -173.65     984.81       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       44.63281 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              28.53384             STACK2              16.09897
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000005 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     200.00       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       41.77524 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              41.77523             STACK2               0.00001
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000006 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112324;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     500.00       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       38.81660 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              37.27502             STACK2               1.54158
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000007 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112624;  LOCATION (XR,YR,ZELEV,ZFLAG):     -68.40     187.94       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       35.42232 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              35.42230             STACK2               0.00002
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000008 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  86112624;  LOCATION (XR,YR,ZELEV,ZFLAG):     -34.73     196.96       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       36.17500 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              36.17493             STACK2               0.00007
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000009 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  87013124;  LOCATION (XR,YR,ZELEV,ZFLAG):     -68.40     187.94       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       44.19080 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              44.19080             STACK2               0.00000
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000010 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  87013124;  LOCATION (XR,YR,ZELEV,ZFLAG):     -34.73     196.96       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       53.00601 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              53.00600             STACK2               0.00000
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000011 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  87013124;  LOCATION (XR,YR,ZELEV,ZFLAG):     -86.82     492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       55.72307 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              54.48755             STACK2               1.23553
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000012 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  87013124;  LOCATION (XR,YR,ZELEV,ZFLAG):    -173.65     984.81       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       40.14843 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              27.37203             STACK2              12.77639
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000013 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  87013124;  LOCATION (XR,YR,ZELEV,ZFLAG):       0.00     200.00       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       35.76188 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              35.76187             STACK2               0.00000
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000014 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  88011424;  LOCATION (XR,YR,ZELEV,ZFLAG):     -86.82     492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       35.06189 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              34.90123             STACK2               0.16066
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000015 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  89120424;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.82     492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       38.77913 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              37.58598             STACK2               1.19315
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000016 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  90062124;  LOCATION (XR,YR,ZELEV,ZFLAG):      86.82    -492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       35.04533 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              15.81496             STACK2              19.23037
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+                                          *** SOURCE CONTRIBUTIONS FOR EVENT: TH24000017 ***
+
+ ---> AVE. PER.:  24 HRS;  END DATE:  90112324;  LOCATION (XR,YR,ZELEV,ZFLAG):     -86.82     492.40       0.00       0.00 (M)
+
+ GROUP ID: ALL      OF SOURCES: STACK1      , STACK2      , 
+
+   *** GROUP VALUE =       35.99337 ***
+
+   SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION              SOURCE ID      CONTRIBUTION 
+ -------------    ------------            -------------    ------------            -------------    ------------ 
+  STACK1              34.84947             STACK2               1.14390
+ *** AERMOD - VERSION  15181 ***   ***  PM-2.5 Test Case for the AERMOD Model using single met file         ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  Five years of met data from Salem, OR                               ***        15:04:13
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      FLAT      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            9 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

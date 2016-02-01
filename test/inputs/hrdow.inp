@@ -1,0 +1,166 @@
+CO STARTING                                                                                                                         
+   TITLEONE  Test case for EMISFACT options including day-of-week
+   TITLETWO  HRDOW/SHRDOW/MHRDOW and HRDOW7/SHRDOW7/MHRDOW7
+   MODELOPT  CONC  FLAT
+   AVERTIME  1  3  8  24  ANNUAL
+   POLLUTID  OTHER
+   RUNORNOT  RUN
+   EVENTFIL  hrdow_evt.inp
+   ERRORFIL  ERRORS.OUT
+CO FINISHED                                                                                                                         
+                                                                                                                                    
+SO STARTING                                                                                                                         
+   LOCATION  STACK1  POINT  0.0   0.0   0.0                                                                                         
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK1  100.0   35.   432.  11.7  2.4
+
+   LOCATION  STACK2  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK2  100.0   35.   432.  11.7  2.4
+
+   LOCATION  STACK3  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK3  100.0   35.   432.  11.7  2.4
+
+   LOCATION  STACK4  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK4  100.0   35.   432.  11.7  2.4
+
+   LOCATION  STACK5  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK5  100.0   35.   432.  11.7  2.4
+
+   LOCATION  STACK6  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS                                                                                   
+** Parameters:       -----  ----   ----  ----  ---                                                                                  
+   SRCPARAM  STACK6  100.0   35.   432.  11.7  2.4
+
+
+** HRDOW Example: Hour-of-Day by Day-of-Week
+** Weekdays:                 
+   EMISFACT  STACK1  HRDOW 24*0.25 
+** Saturdays:               
+   EMISFACT  STACK1  HRDOW 24*1.25 
+** Sundays:                  
+   EMISFACT  STACK1  HRDOW 24*2.25
+
+
+** SHRDOW Example: Season by Hour-of-Day and Day-of-Week
+** Weekdays:                 Win    Spr    Sum    Fall
+   EMISFACT  STACK2  SHRDOW 24*0.1 24*0.2 24*0.3 24*0.4
+** Saturdays:                Win    Spr    Sum    Fall
+   EMISFACT  STACK2  SHRDOW 24*1.1 24*1.2 24*1.3 24*1.4
+** Sundays:                  Win    Spr    Sum    Fall
+   EMISFACT  STACK2  SHRDOW 24*2.1 24*2.2 24*2.3 24*2.4
+
+
+** MHRDOW Example: Month by Hour-of-Day and Day-of-Week
+** Weekdays:                 Jan    Feb    Mar    Apr    May    Jun
+   EMISFACT  STACK3  MHRDOW 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3
+**                           Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK3  MHRDOW 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+
+** Saturdays:                Jan    Feb    Mar    Apr    May    Jun
+   EMISFACT  STACK3  MHRDOW 24*1.1 24*1.1 24*1.2 24*1.2 24*1.2 24*1.3
+**                           Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK3  MHRDOW 24*1.3 24*1.3 24*1.4 24*1.4 24*1.4 24*1.1
+
+** Sundays:                  Jan    Feb    Mar    Apr    May    Jun
+   EMISFACT  STACK3  MHRDOW 24*2.1 24*2.1 24*2.2 24*2.2 24*2.2 24*2.3
+**                           Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK3  MHRDOW 24*2.3 24*2.3 24*2.4 24*2.4 24*2.4 24*2.1
+
+
+** HRDOW Example: Hour-of-Day by Day-of-Week (7 days)
+** Mondays:                 
+   EMISFACT  STACK4  HRDOW7 24*0.25 
+** Tuesdays:               
+   EMISFACT  STACK4  HRDOW7 24*0.25 
+** Wednesdays:                  
+   EMISFACT  STACK4  HRDOW7 24*0.25
+** Thursdays:                 
+   EMISFACT  STACK4  HRDOW7 24*0.25 
+** Fridays:                 
+   EMISFACT  STACK4  HRDOW7 24*0.25 
+** Saturdays:                 
+   EMISFACT  STACK4  HRDOW7 24*1.25 
+** Sundays:                 
+   EMISFACT  STACK4  HRDOW7 24*2.25 
+
+
+** SHRDOW7 Example: Season by Hour-of-Day and Day-of-Week (7 days)
+** Mondays:                   Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*0.1 24*0.2 24*0.3 24*0.4
+** Tuesdays:                  Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*0.1 24*0.2 24*0.3 24*0.4
+** Wednesdays:                Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*0.1 24*0.2 24*0.3 24*0.4
+** Thursdays:                 Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*0.1 24*0.2 24*0.3 24*0.4
+** Fridays:                   Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*0.1 24*0.2 24*0.3 24*0.4
+** Saturdays:                 Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*1.1 24*1.2 24*1.3 24*1.4
+** Sundays:                   Win    Spr    Sum    Fall
+   EMISFACT  STACK5  SHRDOW7 24*2.1 24*2.2 24*2.3 24*2.4
+
+
+** MHRDOW7 Example: Month by Hour-of-Day and Day-of-Week (7 days)
+** Mondays:                   Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+** Tuesdays:                  Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+** Wednesdays:                Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+** Thursdays:                 Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+** Fridays:                   Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*0.1 24*0.1 24*0.2 24*0.2 24*0.2 24*0.3 24*0.3 24*0.3 24*0.4 24*0.4 24*0.4 24*0.1
+** Saturdays:                 Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*1.1 24*1.1 24*1.2 24*1.2 24*1.2 24*1.3 24*1.3 24*1.3 24*1.4 24*1.4 24*1.4 24*1.1
+** Sundays:                   Jan    Feb    Mar    Apr    May    Jun    Jul    Aug    Sep    Oct    Nov    Dec
+   EMISFACT  STACK6  MHRDOW7 24*2.1 24*2.1 24*2.2 24*2.2 24*2.2 24*2.3 24*2.3 24*2.3 24*2.4 24*2.4 24*2.4 24*2.1
+
+   SRCGROUP  STACK1  STACK1
+   SRCGROUP  STACK2  STACK2
+   SRCGROUP  STACK3  STACK3
+   SRCGROUP  STACK4  STACK4
+   SRCGROUP  STACK5  STACK5
+   SRCGROUP  STACK6  STACK6
+SO FINISHED                                                                                                                         
+                                                                                                                                    
+RE STARTING
+** Polar receptor grid with 3 rings from 100m to 5,000m
+   GRIDPOLR  POL1  STA
+   GRIDPOLR  POL1  ORIG  0.0  0.0
+   GRIDPOLR  POL1  DIST  100.  1000. 5000.
+   GRIDPOLR  POL1  GDIR   36   10.  10.
+   GRIDPOLR  POL1  END
+RE FINISHED                                                                                                                         
+                                                                                                                                    
+ME STARTING                                                                                                                         
+** Note that HOUSTON.SFC file includes a full year of data for Houston, TX
+   SURFFILE  houston.sfc
+   PROFFILE  houston.pfl
+   SURFDATA  722430  1996  HOUSTON
+   UAIRDATA  3937    1996  LAKE_CHARLES
+   PROFBASE  0.0
+ME FINISHED                                                                                                                         
+                                                                                                                                    
+OU STARTING                                                                                                                         
+   RECTABLE  ALLAVE  FIRST-SECOND
+   MAXTABLE  ALLAVE  10
+   SEASONHR  STACK1  SEAHRST1.DAT
+   SEASONHR  STACK2  SEAHRST2.DAT
+   SEASONHR  STACK3  SEAHRST3.DAT
+   SEASONHR  STACK4  SEAHRST4.DAT
+   SEASONHR  STACK5  SEAHRST5.DAT
+   SEASONHR  STACK6  SEAHRST6.DAT
+   SUMMFILE  HRDOW.SUM
+   FILEFORM  EXP
+OU FINISHED

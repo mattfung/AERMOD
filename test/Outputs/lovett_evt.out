@@ -1,0 +1,372 @@
+CO STARTING
+   TITLEONE  AERMOD Test Case - Lovett Complex Terrain Study
+   MODELOPT  CONC    DFAULT
+   AVERTIME  1  3  24  PERIOD
+   POLLUTID  SO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+** Source location and elevation from AERMAP output
+   INCLUDED  lovett_src.dat
+** Point Source       QS     HS     TS    VS   DS
+** Parameters:       -----  ----   ----  ----  ---
+   SRCPARAM  STK4N5  312.6  145.   382.  23.1  4.5
+   HOUREMIS  lvthemis.dat STK4N5
+   SRCGROUP  ALL
+SO FINISHED
+ 
+ME STARTING
+   SURFFILE  lovett.sfc  free
+   PROFFILE  lovett.pfl  free
+   SURFDATA  14735  1988  albany
+   UAIRDATA  14735  1988  albany
+   SITEDATA  00000  1988  LOVETT
+   PROFBASE  1.8
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H01001   1  ALL        88020124         293.02376
+   EVENTLOC H001H01001 XR=     4780.000000 YR=    70700.000000   324.8000   329.0200     0.0000
+   EVENTPER H002H01001   1  ALL        88011708         264.40593
+   EVENTLOC H002H01001 XR=     4780.000000 YR=    70700.000000   324.8000   329.0200     0.0000
+   EVENTPER H001H03001   3  ALL        88081412         179.48461
+   EVENTLOC H001H03001 XR=     5110.000000 YR=    70850.000000   319.8000   322.6600     0.0000
+   EVENTPER H002H03001   3  ALL        88041421         166.11889
+   EVENTLOC H002H03001 XR=     4780.000000 YR=    70700.000000   324.8000   329.0200     0.0000
+   EVENTPER H001H24001  24  ALL        88011724          51.35891
+   EVENTLOC H001H24001 XR=     5110.000000 YR=    70850.000000   319.8000   322.6600     0.0000
+   EVENTPER H002H24001  24  ALL        88011724          44.84223
+   EVENTLOC H002H24001 XR=     4780.000000 YR=    70700.000000   324.8000   329.0200     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   1
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **NO PARTICLE DEPOSITION Data Provided.
+ **Model Uses NO DRY DEPLETION.  DRYDPLT  =  F
+ **Model Uses NO WET DEPLETION.  WETDPLT  =  F
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Uses Regulatory DEFAULT Options:
+         1. Stack-tip Downwash.
+         2. Model Accounts for ELEVated Terrain Effects.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  SO2     
+  
+ **Model Calculates  3 Short Term Average(s) of:   1-HR   3-HR  24-HR
+     and Calculates PERIOD Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      1 Source(s);       1 Source Group(s); and       6 Event(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     1.80 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   2
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STK4N5           0   0.31260E+03    5510.0   67960.0     3.2   145.00   382.00    23.10     4.50    NO      NO    NO  HOURLY 
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   3
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STK4N5      ,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   4
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1988   1 17  0
+                                                           AND END DATE: 1988   8 14 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   5
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01001    GROUP VALUE =      264.40593 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88011708;  LOCATION (XR,YR,ZELEV,ZFLAG):    4780.00   70700.00     324.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  8      264.40593     264.40593
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     264.40593     264.40593
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 01 17 08   -0.4  0.033 -9.000 -9.000 -999.   15.      8.6  0.75   1.50   0.91    0.70  224.   50.0  267.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   6
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =       51.35891 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    5110.00   70850.00     319.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.29799       0.29799
+  2        0.13129       0.13129
+  3       79.22514      79.22514
+  4       18.62780      18.62780
+  5        2.64078       2.64078
+  6       69.19045      69.19045
+  7      111.93311     111.93311
+  8      260.82840     260.82840
+  9      102.06364     102.06364
+ 10      143.42135     143.42135
+ 11       17.49950      17.49950
+ 12        0.84554       0.84554
+ 13       18.29746      18.29746
+ 14        5.48945       5.48945
+ 15        2.09369       2.09369
+ 16       16.95814      16.95814
+ 17       29.99650      29.99650
+ 18       40.67961      40.67961
+ 19      116.31462     116.31462
+ 20        2.84517       2.84517
+ 21       86.02729      86.02729
+ 22       76.93004      76.93004
+ 23        2.21059       2.21059
+ 24       28.06624      28.06624
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      51.35891      51.35891
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 01 17 01   -4.2  0.100 -9.000 -9.000 -999.   76.     21.4  0.75   1.50   1.00    2.10  206.   50.0  270.7   10.0
+              88 01 17 02   -9.2  0.148 -9.000 -9.000 -999.  136.     31.5  0.75   1.50   1.00    3.10  197.   50.0  270.2   10.0
+              88 01 17 03   -5.5  0.114 -9.000 -9.000 -999.   93.     24.4  0.75   1.50   1.00    2.40  201.   50.0  270.0   10.0
+              88 01 17 04   -0.8  0.046 -9.000 -9.000 -999.   25.     10.6  1.50   1.50   1.00    0.80  302.   50.0  269.5   10.0
+              88 01 17 05   -0.7  0.039 -9.000 -9.000 -999.   19.      7.5  0.30   0.80   1.00    1.00   76.   50.0  269.0   10.0
+              88 01 17 06   -2.8  0.081 -9.000 -9.000 -999.   55.     17.3  0.75   1.50   1.00    1.70  210.   50.0  268.5   10.0
+              88 01 17 07   -1.1  0.057 -9.000 -9.000 -999.   33.     14.7  0.75   1.50   1.00    1.20  211.   50.0  268.0   10.0
+              88 01 17 08   -0.4  0.033 -9.000 -9.000 -999.   15.      8.6  0.75   1.50   0.91    0.70  224.   50.0  267.7   10.0
+              88 01 17 09   -1.0  0.067 -9.000 -9.000 -999.   41.     27.3  0.75   1.50   0.66    1.40  218.   50.0  269.2   10.0
+              88 01 17 10    3.6  0.044  0.206  0.022   87.   23.     -2.2  0.00   0.10   0.30    0.80  152.   10.0  271.2   10.0
+              88 01 17 11   22.7  0.120  0.558  0.026  276.   99.     -6.8  0.30   0.80   0.40    0.70  125.   10.0  272.7   10.0
+              88 01 17 12   42.6  0.152  0.714  0.026  308.  142.     -7.4  0.30   0.80   0.39    0.90  117.   10.0  274.2   10.0
+              88 01 17 13   59.5  0.135  0.807  0.025  319.  119.     -3.7  0.30   0.80   0.38    0.70  118.   10.0  275.2   10.0
+              88 01 17 14   24.6  0.121  0.604  0.025  323.  101.     -6.5  0.30   0.80   0.40    0.70  106.   10.0  275.8   10.0
+              88 01 17 15    6.6  0.033  0.390  0.025  324.   23.     -1.0  0.00   0.10   0.29    0.50  143.   10.0  276.2   10.0
+              88 01 17 16    1.6  0.033  0.244  0.025  325.   15.     -2.1  0.00   0.10   0.38    0.60  165.   10.0  276.5   10.0
+              88 01 17 17   -0.8  0.039 -9.000 -9.000 -999.   18.      6.3  0.75   1.50   0.84    0.50  206.   10.0  276.3   10.0
+              88 01 17 18   -1.1  0.062 -9.000 -9.000 -999.   37.     18.9  0.75   1.50   1.00    1.30  205.   50.0  275.5   10.0
+              88 01 17 19   -1.1  0.062 -9.000 -9.000 -999.   37.     18.9  0.75   1.50   1.00    1.30  199.   50.0  275.2   10.0
+              88 01 17 20   -0.2  0.029 -9.000 -9.000 -999.   12.      8.7  0.75   1.50   1.00    0.60  205.   50.0  275.0   10.0
+              88 01 17 21   -0.1  0.020 -9.000 -9.000 -999.    7.      4.9  0.30   0.80   1.00    0.50  112.   50.0  274.8   10.0
+              88 01 17 22   -0.6  0.049 -9.000 -9.000 -999.   26.     16.8  0.75   1.50   1.00    1.20  180.  100.0  274.5   10.0
+              88 01 17 23   -0.2  0.029 -9.000 -9.000 -999.   12.      8.7  0.75   1.15   1.00    0.60   29.   50.0  274.3   10.0
+              88 01 17 24   -0.3  0.034 -9.000 -9.000 -999.   15.     11.4  1.50   1.50   1.00    0.60  272.   50.0  274.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   7
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =       44.84223 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  88011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    4780.00   70700.00     324.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.27802       0.27802
+  2        0.12569       0.12569
+  3        8.04060       8.04060
+  4       25.72186      25.72186
+  5        2.90760       2.90760
+  6       12.89877      12.89877
+  7      243.32910     243.32910
+  8      264.40593     264.40593
+  9       13.38999      13.38999
+ 10      171.69369     171.69369
+ 11       40.09066      40.09066
+ 12        0.98471       0.98471
+ 13       21.57522      21.57522
+ 14       15.89013      15.89013
+ 15       16.72899      16.72899
+ 16       76.88251      76.88251
+ 17       30.02920      30.02920
+ 18        3.07921       3.07921
+ 19       37.83738      37.83738
+ 20        0.64617       0.64617
+ 21       42.42396      42.42396
+ 22       20.43187      20.43187
+ 23        2.47265       2.47265
+ 24       24.34961      24.34961
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE      44.84223      44.84223
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 01 17 01   -4.2  0.100 -9.000 -9.000 -999.   76.     21.4  0.75   1.50   1.00    2.10  206.   50.0  270.7   10.0
+              88 01 17 02   -9.2  0.148 -9.000 -9.000 -999.  136.     31.5  0.75   1.50   1.00    3.10  197.   50.0  270.2   10.0
+              88 01 17 03   -5.5  0.114 -9.000 -9.000 -999.   93.     24.4  0.75   1.50   1.00    2.40  201.   50.0  270.0   10.0
+              88 01 17 04   -0.8  0.046 -9.000 -9.000 -999.   25.     10.6  1.50   1.50   1.00    0.80  302.   50.0  269.5   10.0
+              88 01 17 05   -0.7  0.039 -9.000 -9.000 -999.   19.      7.5  0.30   0.80   1.00    1.00   76.   50.0  269.0   10.0
+              88 01 17 06   -2.8  0.081 -9.000 -9.000 -999.   55.     17.3  0.75   1.50   1.00    1.70  210.   50.0  268.5   10.0
+              88 01 17 07   -1.1  0.057 -9.000 -9.000 -999.   33.     14.7  0.75   1.50   1.00    1.20  211.   50.0  268.0   10.0
+              88 01 17 08   -0.4  0.033 -9.000 -9.000 -999.   15.      8.6  0.75   1.50   0.91    0.70  224.   50.0  267.7   10.0
+              88 01 17 09   -1.0  0.067 -9.000 -9.000 -999.   41.     27.3  0.75   1.50   0.66    1.40  218.   50.0  269.2   10.0
+              88 01 17 10    3.6  0.044  0.206  0.022   87.   23.     -2.2  0.00   0.10   0.30    0.80  152.   10.0  271.2   10.0
+              88 01 17 11   22.7  0.120  0.558  0.026  276.   99.     -6.8  0.30   0.80   0.40    0.70  125.   10.0  272.7   10.0
+              88 01 17 12   42.6  0.152  0.714  0.026  308.  142.     -7.4  0.30   0.80   0.39    0.90  117.   10.0  274.2   10.0
+              88 01 17 13   59.5  0.135  0.807  0.025  319.  119.     -3.7  0.30   0.80   0.38    0.70  118.   10.0  275.2   10.0
+              88 01 17 14   24.6  0.121  0.604  0.025  323.  101.     -6.5  0.30   0.80   0.40    0.70  106.   10.0  275.8   10.0
+              88 01 17 15    6.6  0.033  0.390  0.025  324.   23.     -1.0  0.00   0.10   0.29    0.50  143.   10.0  276.2   10.0
+              88 01 17 16    1.6  0.033  0.244  0.025  325.   15.     -2.1  0.00   0.10   0.38    0.60  165.   10.0  276.5   10.0
+              88 01 17 17   -0.8  0.039 -9.000 -9.000 -999.   18.      6.3  0.75   1.50   0.84    0.50  206.   10.0  276.3   10.0
+              88 01 17 18   -1.1  0.062 -9.000 -9.000 -999.   37.     18.9  0.75   1.50   1.00    1.30  205.   50.0  275.5   10.0
+              88 01 17 19   -1.1  0.062 -9.000 -9.000 -999.   37.     18.9  0.75   1.50   1.00    1.30  199.   50.0  275.2   10.0
+              88 01 17 20   -0.2  0.029 -9.000 -9.000 -999.   12.      8.7  0.75   1.50   1.00    0.60  205.   50.0  275.0   10.0
+              88 01 17 21   -0.1  0.020 -9.000 -9.000 -999.    7.      4.9  0.30   0.80   1.00    0.50  112.   50.0  274.8   10.0
+              88 01 17 22   -0.6  0.049 -9.000 -9.000 -999.   26.     16.8  0.75   1.50   1.00    1.20  180.  100.0  274.5   10.0
+              88 01 17 23   -0.2  0.029 -9.000 -9.000 -999.   12.      8.7  0.75   1.15   1.00    0.60   29.   50.0  274.3   10.0
+              88 01 17 24   -0.3  0.034 -9.000 -9.000 -999.   15.     11.4  1.50   1.50   1.00    0.60  272.   50.0  274.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   8
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01001    GROUP VALUE =      293.02376 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  88020124;  LOCATION (XR,YR,ZELEV,ZFLAG):    4780.00   70700.00     324.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 24      293.02376     293.02376
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     293.02376     293.02376
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 02 01 24   -0.5  0.031 -9.000 -9.000 -999.   13.      5.4  0.75   1.50   1.00    0.40  220.   10.0  280.8   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE   9
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =      166.11889 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88041421;  LOCATION (XR,YR,ZELEV,ZFLAG):    4780.00   70700.00     324.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19       46.66674      46.66674
+ 20      210.70718     210.70718
+ 21      240.98275     240.98275
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     166.11889     166.11889
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 04 14 19   -0.9  0.030 -9.000 -9.000 -999.   13.      2.8  0.00   0.10   1.00    1.40  147.   10.0  280.2   10.0
+              88 04 14 20   -0.7  0.026 -9.000 -9.000 -999.   10.      2.4  0.00   0.10   1.00    1.20  153.   10.0  279.3   10.0
+              88 04 14 21   -0.5  0.022 -9.000 -9.000 -999.    8.      2.0  0.00   0.10   1.00    1.00  152.   10.0  278.7   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE  10
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =      179.48461 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  88081412;  LOCATION (XR,YR,ZELEV,ZFLAG):    5110.00   70850.00     319.80       0.00 (M)
+ HR GROUP:ALL      OF STK4N5      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      233.08277     233.08277
+ 11      183.50349     183.50349
+ 12      121.86756     121.86756
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     179.48461     179.48461
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              88 08 14 10   11.0  0.053  0.392  0.009  197.   29.     -1.2  0.00   0.10   0.11    0.90  146.   10.0  303.2   10.0
+              88 08 14 11   12.7  0.054  0.417  0.008  204.   30.     -1.1  0.00   0.10   0.10    0.90  151.   10.0  304.8   10.0
+              88 08 14 12   13.8  0.072  0.434  0.008  212.   46.     -2.4  0.00   0.10   0.10    1.30  167.   10.0  306.5   10.0
+ *** AERMOD - VERSION  15181 ***   ***  AERMOD Test Case - Lovett Complex Terrain Study                     ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***                                                                      ***        14:53:25
+                                                                                                                       PAGE  11
+ **MODELOPTs:   RegDFAULT CONC      ELEV      RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

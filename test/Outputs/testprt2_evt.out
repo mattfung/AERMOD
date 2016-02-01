@@ -1,0 +1,958 @@
+CO STARTING
+   TITLEONE  Test case for particle deposition based on Wesely, et. al. (2001)
+   TITLETWO  using Method 2.  Inputs are from App. B for Chromium compounds.
+**           With modifications for wet deposition per Chris Walcek
+   MODELOPT  CONC  DDEP   WDEP  FLAT
+   AVERTIME  1  3  8  24  MONTH  ANNUAL
+   POLLUTID  CHROMIUM
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS.OUT
+CO FINISHED
+ 
+SO STARTING
+   DEPOUNIT  3.6D6   grams/sec   milligrams/sq-m
+   LOCATION  STACK1  POINT  0.0   0.0   0.0
+** Point Source       QS     HS     TS    VS   DS
+** Parameters:       -----  ----   ----  ----  ---
+   SRCPARAM  STACK1  100.0   35.   432.  11.7  2.4
+ 
+** Define inputs for Method 2 particle deposition (from App. B for Chromium):
+**           SrcID   FineMassFraction   Dmm (microns)
+   METHOD_2  STACK1  0.55               1.2
+ 
+** Note that default output units for deposition flux of GRAMS/M**2 are used.
+   SRCGROUP  ALL
+SO FINISHED
+ 
+ME STARTING
+** Note that HOUSTON.SFC file includes a full year of data for Houston, TX
+   SURFFILE  houston.sfc
+   PROFFILE  houston.pfl
+   SURFDATA  722430  1996  HOUSTON
+   UAIRDATA  3937    1996  LAKE_CHARLES
+   PROFBASE  0.0
+ME FINISHED
+ 
+EV STARTING
+   EVENTPER H001H01001   1  ALL        96010117         408.55964
+   EVENTLOC H001H01001 XR=      -86.824089 YR=     -492.403877     0.0000     0.0000     0.0000
+   EVENTPER H002H01001   1  ALL        96011720         386.88401
+   EVENTLOC H002H01001 XR=     -250.000000 YR=      433.012702     0.0000     0.0000     0.0000
+   EVENTPER H003H01001   1  ALL        96052319         384.30612
+   EVENTLOC H003H01001 XR=     -250.000000 YR=      433.012702     0.0000     0.0000     0.0000
+   EVENTPER H004H01001   1  ALL        96011718         372.00143
+   EVENTLOC H004H01001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H005H01001   1  ALL        96011724         369.80450
+   EVENTLOC H005H01001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H006H01001   1  ALL        96011723         369.75557
+   EVENTLOC H006H01001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H001H03001   3  ALL        96011724         377.76311
+   EVENTLOC H001H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H002H03001   3  ALL        96011718         301.59137
+   EVENTLOC H002H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H003H03001   3  ALL        96011615         285.63632
+   EVENTLOC H003H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H004H03001   3  ALL        96051512         273.03888
+   EVENTLOC H004H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H005H03001   3  ALL        96052612         269.87886
+   EVENTLOC H005H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H006H03001   3  ALL        96110624         269.78364
+   EVENTLOC H006H03001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H001H08001   8  ALL        96011724         309.00958
+   EVENTLOC H001H08001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H002H08001   8  ALL        96041216         253.44306
+   EVENTLOC H002H08001 XR=     -250.000000 YR=      433.012702     0.0000     0.0000     0.0000
+   EVENTPER H003H08001   8  ALL        96032416         235.48286
+   EVENTLOC H003H08001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H004H08001   8  ALL        96051516         233.20088
+   EVENTLOC H004H08001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H005H08001   8  ALL        96051416         218.92004
+   EVENTLOC H005H08001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H006H08001   8  ALL        96052616         217.14205
+   EVENTLOC H006H08001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H001H24001  24  ALL        96011724         141.84793
+   EVENTLOC H001H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H002H24001  24  ALL        96110624         131.46523
+   EVENTLOC H002H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H003H24001  24  ALL        96051524         119.98134
+   EVENTLOC H003H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H004H24001  24  ALL        96122224         114.80345
+   EVENTLOC H004H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H005H24001  24  ALL        96102124         111.88738
+   EVENTLOC H005H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+   EVENTPER H006H24001  24  ALL        96052824         109.98109
+   EVENTLOC H006H24001 XR=     -171.010072 YR=      469.846310     0.0000     0.0000     0.0000
+EV FINISHED
+ 
+OU STARTING
+   EVENTOUT  DETAIL
+OU FINISHED
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   1
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ **Model Is Setup For Calculation of Average CONCentration Values.
+ **Model Is Setup For Calculation of Dry DEPosition Values.
+ **Model Is Setup For Calculation of Wet DEPosition Values.
+  
+   --  DEPOSITION LOGIC  --
+ **NO GAS DEPOSITION Data Provided.
+ **PARTICLE DEPOSITION Data Provided.
+ **Model Uses DRY DEPLETION.     DDPLETE  =  T
+ **Model Uses WET DEPLETION.     WETDPLT  =  T
+  
+ **Model Uses RURAL Dispersion Only.
+  
+ **Model Allows User-Specified Options:
+         1. Stack-tip Downwash.
+         2. Model Assumes Receptors on FLAT Terrain.
+         3. Use Calms Processing Routine.
+         4. Use Missing Data Processing Routine.
+         5. No Exponential Decay.
+  
+ **Other Options Specified:
+         CCVR_Sub - Meteorological data includes CCVR substitutions
+         TEMP_Sub - Meteorological data includes TEMP substitutions
+  
+ **Model Assumes No FLAGPOLE Receptor Heights.
+  
+ **The User Specified a Pollutant Type of:  CHROMIUM
+  
+ **Model Calculates  5 Short Term Average(s) of:   1-HR   3-HR   8-HR  24-HR  MONTH
+     and Calculates ANNUAL Averages
+  
+ **This Run is for EVENT Processing.
+ **         and Includes:      1 Source(s);       1 Source Group(s); and      24 Event(s)
+
+                with:      1 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 OPENPIT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  14134
+  
+ **Output Options Selected:
+          Model Outputs Hourly Average Values for Each Source for EVENT Processing (DETAIL Option)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+  Concentration:  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+     Deposition:  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.36000E+07
+                  Output Units   = MILLIGRAMS/SQ-M                         
+  
+ **Detailed Error/Message File:   ERRORS.OUT                                                                                      
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   2
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART. (USER UNITS)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ STACK1        METH2  0.10000E+03       0.0       0.0     0.0    35.00   432.00    11.70     2.40    NO      NO    NO         
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   3
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        STACK1      ,
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   4
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                                *** SOURCE PARTICULATE/GAS DATA ***
+
+
+
+
+        *** SOURCE ID = STACK1      ; SOURCE TYPE = POINT    ***
+
+        FINE PARTICLE MASS FRACTION =
+            0.55000, 
+
+        PARTICLE DIAMETER (MICRONS) =
+            1.20000, 
+
+        PARTICLE DENSITY (G/CM**3)  =
+            1.00000, 
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   5
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                       METEOROLOGICAL DATA PROCESSED BETWEEN START DATE: 1996   1  1  0
+                                                           AND END DATE: 1996  12 22 24
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   6
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H01001    GROUP VALUE =      408.55964 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96010117;  LOCATION (XR,YR,ZELEV,ZFLAG):     -86.82    -492.40       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17      408.55964     408.55964
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     408.55964     408.55964
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 01 17   -9.6  0.949 -9.000 -9.000 -999. 2216.   7932.6  0.15   0.70   0.45    8.80   11.    6.1  290.4    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   7
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H003H03001    GROUP VALUE =      285.63632 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96011615;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 13      292.30363     292.30363
+ 14      286.67022     286.67022
+ 15      277.93511     277.93511
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     285.63632     285.63632
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 16 13   83.2  0.577  0.946  0.005  367. 1056.   -208.0  0.15   0.70   0.26    5.20  162.    6.1  297.0    2.0
+              96 01 16 14   79.3  0.681  1.033  0.005  501. 1345.   -357.8  0.15   0.70   0.26    6.20  160.    6.1  298.1    2.0
+              96 01 16 15   65.9  0.679  1.134  0.005  796. 1342.   -427.0  0.15   0.70   0.28    6.20  161.    6.1  298.1    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   8
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H01001    GROUP VALUE =      386.88401 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96011720;  LOCATION (XR,YR,ZELEV,ZFLAG):    -250.00     433.01       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 20      386.88401     386.88401
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     386.88401     386.88401
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 20  -59.0  1.107 -9.000 -9.000 -999. 2782.   2044.4  0.15   0.70   1.00   10.30  147.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE   9
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H004H01001    GROUP VALUE =      372.00143 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96011718;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 18      372.00143     372.00143
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     372.00143     372.00143
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 18  -45.2  0.880 -9.000 -9.000 -999. 2035.   1340.2  0.15   0.70   0.72    8.20  159.    6.1  294.9    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  10
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H005H01001    GROUP VALUE =      369.80450 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 24      369.80450     369.80450
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     369.80450     369.80450
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 24  -46.8  0.880 -9.000 -9.000 -999. 1981.   1289.7  0.15   0.70   1.00    8.20  159.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  11
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H006H01001    GROUP VALUE =      369.75557 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96011723;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 23      369.75557     369.75557
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     369.75557     369.75557
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 23  -46.9  0.880 -9.000 -9.000 -999. 2008.   1289.7  0.15   0.70   1.00    8.20  161.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  12
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H03001    GROUP VALUE =      377.76311 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22      393.72925     393.72925
+ 23      369.75557     369.75557
+ 24      369.80450     369.80450
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     377.76311     377.76311
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 22  -53.2  0.999 -9.000 -9.000 -999. 2386.   1663.6  0.15   0.70   1.00    9.30  158.    6.1  294.2    2.0
+              96 01 17 23  -46.9  0.880 -9.000 -9.000 -999. 2008.   1289.7  0.15   0.70   1.00    8.20  161.    6.1  294.2    2.0
+              96 01 17 24  -46.8  0.880 -9.000 -9.000 -999. 1981.   1289.7  0.15   0.70   1.00    8.20  159.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  13
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H03001    GROUP VALUE =      301.59137 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96011718;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 16      265.40738     265.40738
+ 17      267.36529     267.36529
+ 18      372.00143     372.00143
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     301.59137     301.59137
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 16   14.6  0.887  0.580  0.007  476. 2086.  -4246.8  0.15   0.70   0.31    8.20  162.    6.1  295.9    2.0
+              96 01 17 17    3.1  1.058  0.348  0.006  479. 2599.  -8888.0  0.15   0.70   0.40    9.80  158.    6.1  294.9    2.0
+              96 01 17 18  -45.2  0.880 -9.000 -9.000 -999. 2035.   1340.2  0.15   0.70   0.72    8.20  159.    6.1  294.9    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  14
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H08001    GROUP VALUE =      309.00958 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 17      267.36529     267.36529
+ 18      372.00143     372.00143
+ 19      189.99652     189.99652
+ 20      146.82360     146.82360
+ 21      362.60047     362.60047
+ 22      393.72925     393.72925
+ 23      369.75557     369.75557
+ 24      369.80450     369.80450
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     309.00958     309.00958
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 17    3.1  1.058  0.348  0.006  479. 2599.  -8888.0  0.15   0.70   0.40    9.80  158.    6.1  294.9    2.0
+              96 01 17 18  -45.2  0.880 -9.000 -9.000 -999. 2035.   1340.2  0.15   0.70   0.72    8.20  159.    6.1  294.9    2.0
+              96 01 17 19  -53.2  0.999 -9.000 -9.000 -999. 2386.   1663.6  0.15   0.70   1.00    9.30  149.    6.1  294.2    2.0
+              96 01 17 20  -59.0  1.107 -9.000 -9.000 -999. 2782.   2044.4  0.15   0.70   1.00   10.30  147.    6.1  294.2    2.0
+              96 01 17 21  -46.8  0.880 -9.000 -9.000 -999. 2062.   1289.7  0.15   0.70   1.00    8.20  158.    6.1  294.2    2.0
+              96 01 17 22  -53.2  0.999 -9.000 -9.000 -999. 2386.   1663.6  0.15   0.70   1.00    9.30  158.    6.1  294.2    2.0
+              96 01 17 23  -46.9  0.880 -9.000 -9.000 -999. 2008.   1289.7  0.15   0.70   1.00    8.20  161.    6.1  294.2    2.0
+              96 01 17 24  -46.8  0.880 -9.000 -9.000 -999. 1981.   1289.7  0.15   0.70   1.00    8.20  159.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  15
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H001H24001    GROUP VALUE =      141.84793 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96011724;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1       14.54545      14.54545
+  2        0.16377       0.16377
+  3        0.33745       0.33745
+  4        0.00065       0.00065
+  5        0.00849       0.00849
+  6        0.00076       0.00076
+  7        0.00010       0.00010
+  8        0.00026       0.00026
+  9       24.47293      24.47293
+ 10       18.78030      18.78030
+ 11      243.13372     243.13372
+ 12       66.36610      66.36610
+ 13      212.98523     212.98523
+ 14        8.77128       8.77128
+ 15       77.29970      77.29970
+ 16      265.40738     265.40738
+ 17      267.36529     267.36529
+ 18      372.00143     372.00143
+ 19      189.99652     189.99652
+ 20      146.82360     146.82360
+ 21      362.60047     362.60047
+ 22      393.72925     393.72925
+ 23      369.75557     369.75557
+ 24      369.80450     369.80450
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     141.84793     141.84793
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 01 17 01  -40.5  0.549 -9.000 -9.000 -999.  975.    367.3  0.15   0.70   1.00    5.20  157.    6.1  292.5    2.0
+              96 01 17 02  -27.7  0.429 -9.000 -9.000 -999.  687.    255.6  0.15   0.70   1.00    4.10  148.    6.1  292.0    2.0
+              96 01 17 03  -27.4  0.370 -9.000 -9.000 -999.  544.    166.5  0.15   0.70   1.00    3.60  159.    6.1  291.4    2.0
+              96 01 17 04  -20.4  0.375 -9.000 -9.000 -999.  552.    232.6  0.15   0.70   1.00    3.60  134.    6.1  291.4    2.0
+              96 01 17 05  -20.4  0.375 -9.000 -9.000 -999.  552.    232.2  0.15   0.70   1.00    3.60  143.    6.1  290.9    2.0
+              96 01 17 06  -20.4  0.375 -9.000 -9.000 -999.  552.    232.2  0.15   0.70   1.00    3.60  137.    6.1  290.9    2.0
+              96 01 17 07  -20.4  0.316 -9.000 -9.000 -999.  428.    138.4  0.15   0.70   1.00    3.10  120.    6.1  291.4    2.0
+              96 01 17 08  -26.5  0.371 -9.000 -9.000 -999.  542.    172.7  0.15   0.70   0.74    3.60  131.    6.1  291.4    2.0
+              96 01 17 09    1.8  0.616  0.125  0.005   39. 1159.  -8888.0  0.15   0.70   0.41    5.70  144.    6.1  292.5    2.0
+              96 01 17 10   13.3  0.500  0.359  0.005  124.  863.   -843.5  0.15   0.70   0.31    4.60  142.    6.1  293.8    2.0
+              96 01 17 11   22.3  0.566  0.511  0.005  213. 1021.   -728.3  0.15   0.70   0.28    5.20  156.    6.1  294.9    2.0
+              96 01 17 12   57.1  0.954  0.824  0.005  351. 2236.  -1361.8  0.15   0.70   0.26    8.80  175.    6.1  296.4    2.0
+              96 01 17 13   30.1  0.674  0.695  0.005  398. 1431.   -908.3  0.15   0.70   0.26    6.20  166.    6.1  296.4    2.0
+              96 01 17 14   28.4  0.834  0.702  0.011  433. 1822.  -1821.6  0.15   0.70   0.26    7.70  138.    6.1  296.4    2.0
+              96 01 17 15   23.3  1.113  0.670  0.008  460. 2807.  -5283.3  0.15   0.70   0.27   10.30  174.    6.1  296.4    2.0
+              96 01 17 16   14.6  0.887  0.580  0.007  476. 2086.  -4246.8  0.15   0.70   0.31    8.20  162.    6.1  295.9    2.0
+              96 01 17 17    3.1  1.058  0.348  0.006  479. 2599.  -8888.0  0.15   0.70   0.40    9.80  158.    6.1  294.9    2.0
+              96 01 17 18  -45.2  0.880 -9.000 -9.000 -999. 2035.   1340.2  0.15   0.70   0.72    8.20  159.    6.1  294.9    2.0
+              96 01 17 19  -53.2  0.999 -9.000 -9.000 -999. 2386.   1663.6  0.15   0.70   1.00    9.30  149.    6.1  294.2    2.0
+              96 01 17 20  -59.0  1.107 -9.000 -9.000 -999. 2782.   2044.4  0.15   0.70   1.00   10.30  147.    6.1  294.2    2.0
+              96 01 17 21  -46.8  0.880 -9.000 -9.000 -999. 2062.   1289.7  0.15   0.70   1.00    8.20  158.    6.1  294.2    2.0
+              96 01 17 22  -53.2  0.999 -9.000 -9.000 -999. 2386.   1663.6  0.15   0.70   1.00    9.30  158.    6.1  294.2    2.0
+              96 01 17 23  -46.9  0.880 -9.000 -9.000 -999. 2008.   1289.7  0.15   0.70   1.00    8.20  161.    6.1  294.2    2.0
+              96 01 17 24  -46.8  0.880 -9.000 -9.000 -999. 1981.   1289.7  0.15   0.70   1.00    8.20  159.    6.1  294.2    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  16
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H003H08001    GROUP VALUE =      235.48286 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96032416;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      118.73694     118.73694
+ 10      231.48999     231.48999
+ 11      272.01673     272.01673
+ 12      271.72127     271.72127
+ 13      236.31145     236.31145
+ 14      269.26162     269.26162
+ 15      237.86255     237.86255
+ 16      246.46234     246.46234
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     235.48286     235.48286
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 03 24 09   17.8  0.619  0.389  0.005  118. 1168.  -1193.3  0.15   0.70   0.29    5.70  150.    6.1  294.2    2.0
+              96 03 24 10   30.4  0.781  0.558  0.005  204. 1652.  -1405.1  0.15   0.70   0.26    7.20  155.    6.1  296.4    2.0
+              96 03 24 11   39.3  0.953  0.673  0.005  279. 2224.  -1979.3  0.15   0.70   0.25    8.80  162.    6.1  297.0    2.0
+              96 03 24 12   44.1  0.889  0.772  0.005  374. 2024.  -1428.6  0.15   0.70   0.25    8.20  162.    6.1  296.4    2.0
+              96 03 24 13   45.1  0.623  0.844  0.005  479. 1272.   -481.5  0.15   0.70   0.25    5.70  155.    6.1  294.9    2.0
+              96 03 24 14   42.7  0.507  0.868  0.006  549.  890.   -273.8  0.15   0.70   0.25    4.60  156.    6.1  293.8    2.0
+              96 03 24 15   37.3  0.506  0.843  0.006  576.  864.   -311.2  0.15   0.70   0.25    4.60  154.    6.1  293.8    2.0
+              96 03 24 16   28.5  0.504  0.781  0.006  597.  859.   -402.4  0.15   0.70   0.26    4.60  155.    6.1  293.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  17
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H08001    GROUP VALUE =      253.44306 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96041216;  LOCATION (XR,YR,ZELEV,ZFLAG):    -250.00     433.01       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      268.86949     268.86949
+ 10      269.19205     269.19205
+ 11      278.64328     278.64328
+ 12      183.64667     183.64667
+ 13      282.66557     282.66557
+ 14      250.39312     250.39312
+ 15      236.14666     236.14666
+ 16      257.98768     257.98768
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     253.44306     253.44306
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 04 12 09   23.6  0.780  0.509  0.005  200. 1649.  -1803.4  0.15   0.70   0.27    7.20  151.    6.1  295.9    2.0
+              96 04 12 10   35.3  0.781  0.666  0.005  300. 1657.  -1213.6  0.15   0.70   0.26    7.20  152.    6.1  297.0    2.0
+              96 04 12 11   43.6  0.676  0.779  0.005  389. 1351.   -635.4  0.15   0.70   0.25    6.20  150.    6.1  297.5    2.0
+              96 04 12 12   94.8  0.735  1.179  0.005  622. 1509.   -376.1  0.15   0.70   0.25    6.70  159.    6.1  297.5    2.0
+              96 04 12 13   97.4  0.683  1.240  0.005  702. 1360.   -293.3  0.15   0.70   0.25    6.20  151.    6.1  298.1    2.0
+              96 04 12 14   46.9  0.571  0.977  0.005  713. 1051.   -355.4  0.15   0.70   0.25    5.20  155.    6.1  296.4    2.0
+              96 04 12 15   41.3  0.782  0.940  0.005  722. 1657.  -1037.5  0.15   0.70   0.25    7.20  155.    6.1  296.4    2.0
+              96 04 12 16   32.1  0.621  0.868  0.005  729. 1207.   -667.8  0.15   0.70   0.26    5.70  153.    6.1  295.9    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  18
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H005H08001    GROUP VALUE =      218.92004 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96051416;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      219.76053     219.76053
+ 10      271.34358     271.34358
+ 11      108.14008     108.14008
+ 12      267.89431     267.89431
+ 13      256.42862     256.42862
+ 14      153.21953     153.21953
+ 15      260.41691     260.41691
+ 16      214.15679     214.15679
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     218.92004     218.92004
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 14 09  108.7  0.520  1.178  0.005  544.  899.   -116.9  0.15   0.70   0.26    4.60  151.    6.1  299.2    2.0
+              96 05 14 10  110.2  0.632  1.248  0.005  639. 1205.   -207.6  0.15   0.70   0.25    5.70  164.    6.1  301.4    2.0
+              96 05 14 11  130.1  0.739  1.403  0.005  769. 1519.   -280.0  0.15   0.70   0.25    6.70  146.    6.1  302.0    2.0
+              96 05 14 12  141.4  0.688  1.567  0.005  984. 1375.   -208.0  0.15   0.70   0.25    6.20  163.    6.1  302.5    2.0
+              96 05 14 13  190.7  0.693  1.806  0.005 1119. 1385.   -157.8  0.15   0.70   0.25    6.20  164.    6.1  303.1    2.0
+              96 05 14 14  195.1  0.745  1.927  0.005 1326. 1540.   -191.2  0.15   0.70   0.25    6.70  172.    6.1  303.8    2.0
+              96 05 14 15  174.4  0.795  1.906  0.006 1436. 1697.   -259.9  0.15   0.70   0.25    7.20  162.    6.1  304.2    2.0
+              96 05 14 16  145.4  0.792  1.837  0.006 1543. 1693.   -308.6  0.15   0.70   0.26    7.20  153.    6.1  303.1    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  19
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H004H03001    GROUP VALUE =      273.03888 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96051512;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      278.79979     278.79979
+ 11      278.89523     278.89523
+ 12      261.42162     261.42162
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     273.03888     273.03888
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 15 10  160.1  0.794  1.509  0.007  777. 1694.   -282.0  0.15   0.70   0.25    7.20  161.    6.1  301.4    2.0
+              96 05 15 11  130.5  0.739  1.462  0.008  865. 1531.   -278.8  0.15   0.70   0.25    6.70  161.    6.1  302.5    2.0
+              96 05 15 12  141.9  0.688  1.549  0.007  947. 1376.   -207.2  0.15   0.70   0.25    6.20  164.    6.1  303.1    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  20
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H004H08001    GROUP VALUE =      233.20088 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96051516;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      193.18642     193.18642
+ 10      278.79979     278.79979
+ 11      278.89523     278.89523
+ 12      261.42162     261.42162
+ 13      203.58673     203.58673
+ 14      238.86338     238.86338
+ 15      214.98996     214.98996
+ 16      195.86388     195.86388
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     233.20088     233.20088
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 15 09  116.1  0.582  1.273  0.010  642. 1065.   -153.3  0.15   0.70   0.26    5.20  150.    6.1  300.4    2.0
+              96 05 15 10  160.1  0.794  1.509  0.007  777. 1694.   -282.0  0.15   0.70   0.25    7.20  161.    6.1  301.4    2.0
+              96 05 15 11  130.5  0.739  1.462  0.008  865. 1531.   -278.8  0.15   0.70   0.25    6.70  161.    6.1  302.5    2.0
+              96 05 15 12  141.9  0.688  1.549  0.007  947. 1376.   -207.2  0.15   0.70   0.25    6.20  164.    6.1  303.1    2.0
+              96 05 15 13  144.8  0.637  1.589  0.007 1002. 1225.   -161.1  0.15   0.70   0.25    5.70  169.    6.1  304.2    2.0
+              96 05 15 14  139.1  0.688  1.591  0.007 1045. 1366.   -210.8  0.15   0.70   0.25    6.20  166.    6.1  304.2    2.0
+              96 05 15 15   91.8  0.787  1.397  0.007 1073. 1671.   -479.2  0.15   0.70   0.25    7.20  167.    6.1  304.2    2.0
+              96 05 15 16   74.8  0.785  1.314  0.007 1094. 1671.   -583.8  0.15   0.70   0.26    7.20  168.    6.1  303.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  21
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H003H24001    GROUP VALUE =      119.98134 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96051524;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.04092       0.04092
+  2        0.00027       0.00027
+  3        0.02383       0.02383
+  4        0.00095       0.00095
+  5        0.01077       0.01077
+  6        0.00904       0.00904
+  7      170.97030     170.97030
+  8      268.62635     268.62635
+  9      193.18642     193.18642
+ 10      278.79979     278.79979
+ 11      278.89523     278.89523
+ 12      261.42162     261.42162
+ 13      203.58673     203.58673
+ 14      238.86338     238.86338
+ 15      214.98996     214.98996
+ 16      195.86388     195.86388
+ 17      269.68843     269.68843
+ 18       98.22418      98.22418
+ 19      101.99946     101.99946
+ 20       13.41518      13.41518
+ 21       81.24182      81.24182
+ 22        8.20191       8.20191
+ 23        1.05403       1.05403
+ 24        0.43766       0.43766
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     119.98134     119.98134
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 15 01  -30.1  0.305 -9.000 -9.000 -999.  407.     85.2  0.15   0.70   1.00    3.10  159.    6.1  297.0    2.0
+              96 05 15 02  -31.2  0.304 -9.000 -9.000 -999.  402.     81.2  0.15   0.70   1.00    3.10  174.    6.1  296.4    2.0
+              96 05 15 03  -31.2  0.304 -9.000 -9.000 -999.  402.     81.0  0.15   0.70   1.00    3.10  156.    6.1  295.9    2.0
+              96 05 15 04  -28.8  0.307 -9.000 -9.000 -999.  407.     90.1  0.15   0.70   1.00    3.10  147.    6.1  295.9    2.0
+              96 05 15 05  -27.2  0.309 -9.000 -9.000 -999.  411.     97.3  0.15   0.70   1.00    3.10  151.    6.1  295.9    2.0
+              96 05 15 06  -34.3  0.365 -9.000 -9.000 -999.  529.    127.9  0.15   0.70   1.00    3.60  148.    6.1  296.4    2.0
+              96 05 15 07    8.7  0.446  0.261  0.011   73.  713.   -919.6  0.15   0.70   0.42    4.10  156.    6.1  297.5    2.0
+              96 05 15 08   35.6  0.569  0.638  0.010  263. 1028.   -466.0  0.15   0.70   0.30    5.20  157.    6.1  298.8    2.0
+              96 05 15 09  116.1  0.582  1.273  0.010  642. 1065.   -153.3  0.15   0.70   0.26    5.20  150.    6.1  300.4    2.0
+              96 05 15 10  160.1  0.794  1.509  0.007  777. 1694.   -282.0  0.15   0.70   0.25    7.20  161.    6.1  301.4    2.0
+              96 05 15 11  130.5  0.739  1.462  0.008  865. 1531.   -278.8  0.15   0.70   0.25    6.70  161.    6.1  302.5    2.0
+              96 05 15 12  141.9  0.688  1.549  0.007  947. 1376.   -207.2  0.15   0.70   0.25    6.20  164.    6.1  303.1    2.0
+              96 05 15 13  144.8  0.637  1.589  0.007 1002. 1225.   -161.1  0.15   0.70   0.25    5.70  169.    6.1  304.2    2.0
+              96 05 15 14  139.1  0.688  1.591  0.007 1045. 1366.   -210.8  0.15   0.70   0.25    6.20  166.    6.1  304.2    2.0
+              96 05 15 15   91.8  0.787  1.397  0.007 1073. 1671.   -479.2  0.15   0.70   0.25    7.20  167.    6.1  304.2    2.0
+              96 05 15 16   74.8  0.785  1.314  0.007 1094. 1671.   -583.8  0.15   0.70   0.26    7.20  168.    6.1  303.8    2.0
+              96 05 15 17   71.1  0.627  1.299  0.007 1113. 1224.   -312.6  0.15   0.70   0.27    5.70  162.    6.1  302.5    2.0
+              96 05 15 18   35.5  0.728  1.034  0.008 1122. 1487.   -978.7  0.15   0.70   0.33    6.70  147.    6.1  301.4    2.0
+              96 05 15 19   -1.2  0.723 -9.000 -9.000 -999. 1476.   8888.0  0.15   0.70   0.54    6.70  147.    6.1  300.4    2.0
+              96 05 15 20  -47.7  0.547 -9.000 -9.000 -999. 1005.    309.0  0.15   0.70   1.00    5.20  159.    6.1  299.2    2.0
+              96 05 15 21  -61.2  0.656 -9.000 -9.000 -999. 1274.    416.6  0.15   0.70   1.00    6.20  156.    6.1  298.8    2.0
+              96 05 15 22  -51.0  0.546 -9.000 -9.000 -999.  982.    287.4  0.15   0.70   1.00    5.20  165.    6.1  298.1    2.0
+              96 05 15 23  -44.8  0.479 -9.000 -9.000 -999.  801.    221.2  0.15   0.70   1.00    4.60  165.    6.1  298.1    2.0
+              96 05 15 24  -44.8  0.479 -9.000 -9.000 -999.  795.    220.7  0.15   0.70   1.00    4.60  151.    6.1  297.5    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  22
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H003H01001    GROUP VALUE =      384.30612 ***
+ ---> AVE. PER.:   1 HRS;  END DATE:  96052319;  LOCATION (XR,YR,ZELEV,ZFLAG):    -250.00     433.01       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19      384.30612     384.30612
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     384.30612     384.30612
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 23 19   -4.7  0.949 -9.000 -9.000 -999. 2211.   8888.0  0.15   0.70   0.51    8.80  154.    6.1  301.4    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  23
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H005H03001    GROUP VALUE =      269.87886 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96052612;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 10      269.44268     269.44268
+ 11      269.20794     269.20794
+ 12      270.98595     270.98595
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     269.87886     269.87886
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 26 10   83.0  0.786  1.177  0.005  706. 1670.   -526.3  0.15   0.70   0.25    7.20  157.    6.1  303.1    2.0
+              96 05 26 11  133.9  0.739  1.514  0.006  932. 1531.   -270.8  0.15   0.70   0.25    6.70  163.    6.1  305.9    2.0
+              96 05 26 12  145.2  0.792  1.627  0.005 1066. 1689.   -307.4  0.15   0.70   0.25    7.20  162.    6.1  306.4    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  24
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H006H08001    GROUP VALUE =      217.14205 ***
+ ---> AVE. PER.:   8 HRS;  END DATE:  96052616;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  9      202.84192     202.84192
+ 10      269.44268     269.44268
+ 11      269.20794     269.20794
+ 12      270.98595     270.98595
+ 13      271.76280     271.76280
+ 14      183.39690     183.39690
+ 15      257.25092     257.25092
+ 16       12.24731      12.24731
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     217.14205     217.14205
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 26 09   86.5  0.734  1.100  0.006  552. 1507.   -410.5  0.15   0.70   0.26    6.70  152.    6.1  303.8    2.0
+              96 05 26 10   83.0  0.786  1.177  0.005  706. 1670.   -526.3  0.15   0.70   0.25    7.20  157.    6.1  303.1    2.0
+              96 05 26 11  133.9  0.739  1.514  0.006  932. 1531.   -270.8  0.15   0.70   0.25    6.70  163.    6.1  305.9    2.0
+              96 05 26 12  145.2  0.792  1.627  0.005 1066. 1689.   -307.4  0.15   0.70   0.25    7.20  162.    6.1  306.4    2.0
+              96 05 26 13  147.0  0.689  1.650  0.006 1098. 1388.   -199.2  0.15   0.70   0.25    6.20  158.    6.1  305.9    2.0
+              96 05 26 14  142.8  0.688  1.649  0.006 1127. 1370.   -204.5  0.15   0.70   0.25    6.20  150.    6.1  307.5    2.0
+              96 05 26 15  128.4  0.738  1.603  0.006 1151. 1520.   -281.0  0.15   0.70   0.25    6.70  164.    6.1  307.5    2.0
+              96 05 26 16  104.6  0.841  1.505  0.005 1170. 1846.   -509.7  0.15   0.70   0.26    7.70  136.    6.1  305.4    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  25
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H006H24001    GROUP VALUE =      109.98109 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96052824;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        2.85984       2.85984
+  2        0.00230       0.00230
+  3        0.00007       0.00007
+  4        0.00232       0.00232
+  5        0.00085       0.00085
+  6        0.98950       0.98950
+  7      142.40064     142.40064
+  8      295.17147     295.17147
+  9      279.13556     279.13556
+ 10      292.65266     292.65266
+ 11      249.92819     249.92819
+ 12      252.41611     252.41611
+ 13      264.98408     264.98408
+ 14      132.72788     132.72788
+ 15        2.06146       2.06146
+ 16      149.87290     149.87290
+ 17      252.96544     252.96544
+ 18      140.32877     140.32877
+ 19      173.57895     173.57895
+ 20        0.32106       0.32106
+ 21        1.75745       1.75745
+ 22        2.14633       2.14633
+ 23        0.03523       0.03523
+ 24        3.20707       3.20707
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     109.98109     109.98109
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 05 28 01  -34.6  0.483 -9.000 -9.000 -999.  805.    291.8  0.15   0.70   1.00    4.60  156.    6.1  300.4    2.0
+              96 05 28 02  -22.7  0.431 -9.000 -9.000 -999.  683.    316.6  0.15   0.70   1.00    4.10  190.    6.1  300.4    2.0
+              96 05 28 03  -13.8  0.262 -9.000 -9.000 -999.  345.    117.0  0.15   0.70   1.00    2.60  190.    6.1  300.4    2.0
+              96 05 28 04  -22.7  0.431 -9.000 -9.000 -999.  680.    317.3  0.15   0.70   1.00    4.10  206.    6.1  300.9    2.0
+              96 05 28 05  -19.8  0.376 -9.000 -9.000 -999.  555.    240.7  0.15   0.70   1.00    3.60  184.    6.1  300.9    2.0
+              96 05 28 06  -19.5  0.376 -9.000 -9.000 -999.  553.    244.6  0.15   0.70   0.77    3.60  160.    6.1  300.9    2.0
+              96 05 28 07   17.3  0.344  0.488  0.005  241.  485.   -210.8  0.15   0.70   0.41    3.10  165.    6.1  301.4    2.0
+              96 05 28 08   53.5  0.458  0.908  0.005  502.  744.   -161.3  0.15   0.70   0.29    4.10  160.    6.1  302.5    2.0
+              96 05 28 09   86.7  0.577  1.193  0.007  704. 1052.   -199.4  0.15   0.70   0.26    5.20  164.    6.1  303.8    2.0
+              96 05 28 10   84.5  0.516  1.262  0.005  856.  893.   -145.7  0.15   0.70   0.25    4.60  157.    6.1  305.4    2.0
+              96 05 28 11   99.1  0.579  1.406  0.007 1010. 1057.   -176.3  0.15   0.70   0.25    5.20  154.    6.1  305.9    2.0
+              96 05 28 12  107.5  0.469  1.511  0.007 1154.  783.    -86.3  0.15   0.70   0.25    4.10  156.    6.1  306.4    2.0
+              96 05 28 13  207.0  0.746  1.977  0.005 1343. 1546.   -180.0  0.15   0.70   0.25    6.70  159.    6.1  306.4    2.0
+              96 05 28 14  200.6  0.694  2.003  0.008 1440. 1395.   -149.7  0.15   0.70   0.25    6.20  174.    6.1  308.1    2.0
+              96 05 28 15  180.5  0.692  1.947  0.007 1469. 1383.   -164.7  0.15   0.70   0.25    6.20  204.    6.1  308.8    2.0
+              96 05 28 16  140.0  0.688  1.796  0.006 1485. 1369.   -208.2  0.15   0.70   0.26    6.20  172.    6.1  308.1    2.0
+              96 05 28 17  106.0  0.684  1.642  0.006 1497. 1358.   -270.0  0.15   0.70   0.27    6.20  163.    6.1  307.0    2.0
+              96 05 28 18   57.3  0.573  1.340  0.006 1504. 1055.   -293.3  0.15   0.70   0.32    5.20  171.    6.1  306.4    2.0
+              96 05 28 19    7.0  0.499  0.664  0.006 1503.  852.  -1590.2  0.15   0.70   0.50    4.60  158.    6.1  304.9    2.0
+              96 05 28 20  -26.3  0.371 -9.000 -9.000 -999.  556.    174.2  0.15   0.70   1.00    3.60  156.    6.1  303.8    2.0
+              96 05 28 21  -41.2  0.480 -9.000 -9.000 -999.  798.    241.0  0.15   0.70   1.00    4.60  156.    6.1  302.5    2.0
+              96 05 28 22  -41.3  0.480 -9.000 -9.000 -999.  798.    240.5  0.15   0.70   1.00    4.60  159.    6.1  302.0    2.0
+              96 05 28 23  -30.5  0.427 -9.000 -9.000 -999.  673.    229.2  0.15   0.70   1.00    4.10  175.    6.1  301.4    2.0
+              96 05 28 24  -34.5  0.483 -9.000 -9.000 -999.  805.    292.4  0.15   0.70   1.00    4.60  157.    6.1  300.9    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  26
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H005H24001    GROUP VALUE =      111.88738 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96102124;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        5.08449       5.08449
+  2       50.89292      50.89292
+  3      110.28535     110.28535
+  4        3.32265       3.32265
+  5        0.85715       0.85715
+  6       11.89498      11.89498
+  7        0.00019       0.00019
+  8        6.31491       6.31491
+  9      282.42892     282.42892
+ 10      122.33746     122.33746
+ 11      278.94164     278.94164
+ 12      274.81085     274.81085
+ 13      275.68584     275.68584
+ 14      237.90013     237.90013
+ 15      232.49737     232.49737
+ 16      209.34043     209.34043
+ 17      246.77183     246.77183
+ 18       13.40674      13.40674
+ 19      172.62303     172.62303
+ 20        2.79552       2.79552
+ 21      145.54568     145.54568
+ 22        0.02858       0.02858
+ 23        0.25348       0.25348
+ 24        1.27691       1.27691
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     111.88738     111.88738
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 10 21 01  -32.5  0.513 -9.000 -9.000 -999.  882.    372.1  0.15   0.70   1.00    4.86  153.    6.1  297.0    2.0
+              96 10 21 02  -30.9  0.581 -9.000 -9.000 -999. 1060.    568.4  0.15   0.70   1.00    5.46  162.    6.1  297.5    2.0
+              96 10 21 03  -33.8  0.635 -9.000 -9.000 -999. 1213.    680.5  0.15   0.70   1.00    5.96  162.    6.1  297.5    2.0
+              96 10 21 04  -24.5  0.460 -9.000 -9.000 -999.  778.    354.9  0.15   0.70   1.00    4.36  161.    6.1  296.4    2.0
+              96 10 21 05  -21.5  0.404 -9.000 -9.000 -999.  621.    275.0  0.15   0.70   1.00    3.86  154.    6.1  297.0    2.0
+              96 10 21 06  -27.4  0.515 -9.000 -9.000 -999.  886.    446.0  0.15   0.70   1.00    4.86  157.    6.1  297.0    2.0
+              96 10 21 07  -25.9  0.278 -9.000 -9.000 -999.  407.     74.1  0.15   0.70   1.00    2.86  146.    6.1  297.0    2.0
+              96 10 21 08   17.6  0.593  0.289  0.009   49. 1095.  -1059.1  0.15   0.70   0.42    5.46  139.    6.1  298.8    2.0
+              96 10 21 09   65.8  0.653  0.746  0.008  226. 1265.   -380.3  0.15   0.70   0.30    5.96  161.    6.1  299.9    2.0
+              96 10 21 10   55.6  0.652  0.920  0.008  502. 1263.   -447.2  0.15   0.70   0.27    5.96  172.    6.1  300.9    2.0
+              96 10 21 11   36.3  0.702  0.872  0.007  657. 1409.   -856.9  0.15   0.70   0.26    6.46  160.    6.1  301.4    2.0
+              96 10 21 12   39.9  0.756  0.962  0.006  800. 1574.   -971.8  0.15   0.70   0.25    6.96  159.    6.1  300.9    2.0
+              96 10 21 13   40.5  0.981  0.987  0.006  851. 2322.  -2088.2  0.15   0.70   0.25    9.06  161.    6.1  301.4    2.0
+              96 10 21 14   37.3  0.980  0.976  0.006  895. 2330.  -2266.0  0.15   0.70   0.26    9.06  155.    6.1  301.4    2.0
+              96 10 21 15   30.5  0.755  0.925  0.006  929. 1647.  -1261.6  0.15   0.70   0.27    6.96  165.    6.1  301.4    2.0
+              96 10 21 16   64.2  0.812  1.213  0.005  996. 1752.   -745.5  0.15   0.70   0.29    7.46  153.    6.1  300.9    2.0
+              96 10 21 17    7.0  0.698  0.582  0.007 1002. 1420.  -4333.4  0.15   0.70   0.38    6.46  162.    6.1  299.9    2.0
+              96 10 21 18  -25.2  0.516 -9.000 -9.000 -999.  927.    486.9  0.15   0.70   0.71    4.86  164.    6.1  299.2    2.0
+              96 10 21 19  -36.5  0.690 -9.000 -9.000 -999. 1373.    805.7  0.15   0.70   1.00    6.46  164.    6.1  298.8    2.0
+              96 10 21 20  -24.4  0.460 -9.000 -9.000 -999.  804.    357.0  0.15   0.70   1.00    4.36  164.    6.1  298.1    2.0
+              96 10 21 21  -55.0  0.686 -9.000 -9.000 -999. 1363.    525.8  0.15   0.70   1.00    6.46  161.    6.1  297.5    2.0
+              96 10 21 22  -25.4  0.402 -9.000 -9.000 -999.  702.    229.3  0.15   0.70   1.00    3.86  175.    6.1  298.1    2.0
+              96 10 21 23  -18.5  0.348 -9.000 -9.000 -999.  499.    205.0  0.15   0.70   1.00    3.36  167.    6.1  298.1    2.0
+              96 10 21 24  -21.5  0.404 -9.000 -9.000 -999.  617.    275.5  0.15   0.70   1.00    3.86  157.    6.1  297.5    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  27
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H006H03001    GROUP VALUE =      269.78364 ***
+ ---> AVE. PER.:   3 HRS;  END DATE:  96110624;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 22      259.72252     259.72252
+ 23      182.96718     182.96718
+ 24      366.66122     366.66122
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     269.78364     269.78364
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 11 06 22  -39.6  0.744 -9.000 -9.000 -999. 1538.    936.1  0.15   0.70   1.00    6.96  157.    6.1  298.1    2.0
+              96 11 06 23  -36.6  0.690 -9.000 -9.000 -999. 1382.    805.7  0.15   0.70   1.00    6.46  157.    6.1  298.8    2.0
+              96 11 06 24  -45.2  0.853 -9.000 -9.000 -999. 1886.   1232.2  0.15   0.70   1.00    7.96  160.    6.1  298.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  28
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H002H24001    GROUP VALUE =      131.46523 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96110624;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        0.00000       0.00000
+  2        0.00370       0.00370
+  3        0.08737       0.08737
+  4        0.08681       0.08681
+  5        0.00001       0.00001
+  6        0.00000       0.00000
+  7        0.00006       0.00006
+  8        0.00750       0.00750
+  9       24.55330      24.55330
+ 10      104.02096     104.02096
+ 11      253.86150     253.86150
+ 12      261.17098     261.17098
+ 13      276.76823     276.76823
+ 14      275.97192     275.97192
+ 15      144.47302     144.47302
+ 16      258.63307     258.63307
+ 17      254.04111     254.04111
+ 18       42.06875      42.06875
+ 19      130.09762     130.09762
+ 20      213.70530     213.70530
+ 21      106.26340     106.26340
+ 22      259.72252     259.72252
+ 23      182.96718     182.96718
+ 24      366.66122     366.66122
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     131.46523     131.46523
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 11 06 01  -20.4  0.214 -9.000 -9.000 -999.  237.     43.2  0.15   0.70   1.00    2.36  140.    6.1  292.0    2.0
+              96 11 06 02  -18.6  0.288 -9.000 -9.000 -999.  371.    116.0  0.15   0.70   1.00    2.86  147.    6.1  293.8    2.0
+              96 11 06 03  -31.9  0.337 -9.000 -9.000 -999.  469.    108.0  0.15   0.70   1.00    3.36  160.    6.1  294.2    2.0
+              96 11 06 04  -31.9  0.337 -9.000 -9.000 -999.  469.    107.8  0.15   0.70   1.00    3.36  160.    6.1  293.8    2.0
+              96 11 06 05  -26.4  0.277 -9.000 -9.000 -999.  352.     72.7  0.15   0.70   1.00    2.86  129.    6.1  292.5    2.0
+              96 11 06 06  -10.7  0.112 -9.000 -9.000 -999.  116.     11.9  0.15   0.70   1.00    1.76  101.    6.1  292.5    2.0
+              96 11 06 07  -18.6  0.288 -9.000 -9.000 -999.  371.    116.0  0.15   0.70   1.00    2.86  119.    6.1  293.8    2.0
+              96 11 06 08   -3.1  0.360 -9.000 -9.000 -999.  519.   1360.7  0.15   0.70   0.47    3.36  117.    6.1  294.9    2.0
+              96 11 06 09   12.0  0.421  0.251  0.015   47.  655.   -560.1  0.15   0.70   0.32    3.86  145.    6.1  296.4    2.0
+              96 11 06 10   23.6  0.647  0.377  0.005   82. 1248.  -1036.7  0.15   0.70   0.28    5.96  149.    6.1  298.8    2.0
+              96 11 06 11   31.1  0.532  0.504  0.016  148.  945.   -435.6  0.15   0.70   0.26    4.86  156.    6.1  299.2    2.0
+              96 11 06 12  113.2  0.711  1.375  0.005  828. 1438.   -286.5  0.15   0.70   0.26    6.46  164.    6.1  301.4    2.0
+              96 11 06 13   36.5  0.862  0.949  0.005  843. 1916.  -1582.7  0.15   0.70   0.26    7.96  160.    6.1  301.4    2.0
+              96 11 06 14   64.5  0.759  1.160  0.005  870. 1605.   -608.2  0.15   0.70   0.26    6.96  159.    6.1  302.0    2.0
+              96 11 06 15   25.9  0.701  0.859  0.005  879. 1416.  -1192.9  0.15   0.70   0.27    6.46  150.    6.1  300.4    2.0
+              96 11 06 16   31.9  0.702  0.925  0.005  892. 1410.   -971.4  0.15   0.70   0.31    6.46  163.    6.1  300.4    2.0
+              96 11 06 17    8.3  0.752  0.592  0.005  895. 1562.  -4584.1  0.15   0.70   0.43    6.96  162.    6.1  299.2    2.0
+              96 11 06 18  -30.8  0.581 -9.000 -9.000 -999. 1096.    570.7  0.15   0.70   1.00    5.46  165.    6.1  298.8    2.0
+              96 11 06 19  -43.6  0.689 -9.000 -9.000 -999. 1368.    673.1  0.15   0.70   1.00    6.46  154.    6.1  298.1    2.0
+              96 11 06 20  -45.4  0.853 -9.000 -9.000 -999. 1886.   1229.7  0.15   0.70   1.00    7.96  151.    6.1  298.1    2.0
+              96 11 06 21  -33.8  0.635 -9.000 -9.000 -999. 1275.    681.9  0.15   0.70   1.00    5.96  157.    6.1  298.1    2.0
+              96 11 06 22  -39.6  0.744 -9.000 -9.000 -999. 1538.    936.1  0.15   0.70   1.00    6.96  157.    6.1  298.1    2.0
+              96 11 06 23  -36.6  0.690 -9.000 -9.000 -999. 1382.    805.7  0.15   0.70   1.00    6.46  157.    6.1  298.8    2.0
+              96 11 06 24  -45.2  0.853 -9.000 -9.000 -999. 1886.   1232.2  0.15   0.70   1.00    7.96  160.    6.1  298.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  29
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+                             *** SOURCE CONTRIBUTIONS FOR EVENT: H004H24001    GROUP VALUE =      114.80345 ***
+ ---> AVE. PER.:  24 HRS;  END DATE:  96122224;  LOCATION (XR,YR,ZELEV,ZFLAG):    -171.01     469.85       0.00       0.00 (M)
+ HR GROUP:ALL      OF STACK1      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  1        3.04850       3.04850
+  2        3.16401       3.16401
+  3        0.84701       0.84701
+  4       47.23581      47.23581
+  5        6.35360       6.35360
+  6        0.00557       0.00557
+  7        0.00657       0.00657
+  8        0.00018       0.00018
+  9        6.52167       6.52167
+ 10        0.00000       0.00000
+ 11      277.27356     277.27356
+ 12      252.82239     252.82239
+ 13        4.69262       4.69262
+ 14      246.37216     246.37216
+ 15      276.32068     276.32068
+ 16      263.94206     263.94206
+ 17       13.22794      13.22794
+ 18      237.90543     237.90543
+ 19       81.60827      81.60827
+ 20      264.22939     264.22939
+ 21      345.47629     345.47629
+ 22       67.79758      67.79758
+ 23       58.72101      58.72101
+ 24      182.90715     182.90715
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ AVE     114.80345     114.80345
+ MET DATA --> YR MO DY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+              96 12 22 01  -25.2  0.459 -9.000 -9.000 -999.  747.    348.6  0.15   0.70   1.00    4.36  159.    6.1  291.4    2.0
+              96 12 22 02  -25.2  0.460 -9.000 -9.000 -999.  748.    349.4  0.15   0.70   1.00    4.36  160.    6.1  292.0    2.0
+              96 12 22 03  -26.2  0.402 -9.000 -9.000 -999.  614.    223.8  0.15   0.70   1.00    3.86  159.    6.1  291.4    2.0
+              96 12 22 04  -31.7  0.581 -9.000 -9.000 -999. 1061.    558.5  0.15   0.70   1.00    5.46  160.    6.1  292.5    2.0
+              96 12 22 05  -28.1  0.515 -9.000 -9.000 -999.  891.    439.0  0.15   0.70   1.00    4.86  167.    6.1  292.5    2.0
+              96 12 22 06  -12.7  0.233 -9.000 -9.000 -999.  365.     90.1  0.15   0.70   1.00    2.36  171.    6.1  292.5    2.0
+              96 12 22 07  -22.0  0.404 -9.000 -9.000 -999.  616.    271.2  0.15   0.70   1.00    3.86  179.    6.1  293.1    2.0
+              96 12 22 08  -12.3  0.234 -9.000 -9.000 -999.  294.     94.1  0.15   0.70   0.71    2.36  177.    6.1  292.5    2.0
+              96 12 22 09    8.5  0.262  0.288  0.005  101.  322.   -191.0  0.15   0.70   0.41    2.36  175.    6.1  292.5    2.0
+              96 12 22 10   12.9  0.265  0.365  0.005  136.  328.   -130.9  0.15   0.70   0.31    2.36  999.    6.1  293.8    2.0
+              96 12 22 11   44.9  0.482  0.687  0.005  262.  804.   -227.0  0.15   0.70   0.28    4.36  162.    6.1  295.9    2.0
+              96 12 22 12   89.5  0.656  1.046  0.005  464. 1275.   -286.5  0.15   0.70   0.27    5.96  165.    6.1  297.5    2.0
+              96 12 22 13   56.4  0.434  0.953  0.005  555.  737.   -131.1  0.15   0.70   0.27    3.86  189.    6.1  297.0    2.0
+              96 12 22 14   25.8  0.701  0.750  0.005  592. 1407.  -1206.4  0.15   0.70   0.27    6.46  156.    6.1  297.0    2.0
+              96 12 22 15   41.3  0.756  0.903  0.005  645. 1574.   -946.7  0.15   0.70   0.28    6.96  160.    6.1  297.0    2.0
+              96 12 22 16   24.0  0.594  0.764  0.005  673. 1129.   -789.9  0.15   0.70   0.33    5.46  158.    6.1  295.9    2.0
+              96 12 22 17   -3.4  0.642 -9.000 -9.000 -999. 1234.   7064.8  0.15   0.70   0.47    5.96  178.    6.1  294.9    2.0
+              96 12 22 18  -40.3  0.744 -9.000 -9.000 -999. 1537.    925.6  0.15   0.70   1.00    6.96  164.    6.1  294.9    2.0
+              96 12 22 19  -43.4  0.799 -9.000 -9.000 -999. 1709.   1063.7  0.15   0.70   1.00    7.46  146.    6.1  294.2    2.0
+              96 12 22 20  -40.4  0.744 -9.000 -9.000 -999. 1549.    923.7  0.15   0.70   1.00    6.96  159.    6.1  294.2    2.0
+              96 12 22 21  -49.3  0.907 -9.000 -9.000 -999. 2067.   1372.8  0.15   0.70   1.00    8.46  156.    6.1  294.2    2.0
+              96 12 22 22  -34.5  0.635 -9.000 -9.000 -999. 1308.    672.8  0.15   0.70   1.00    5.96  167.    6.1  294.2    2.0
+              96 12 22 23  -34.5  0.635 -9.000 -9.000 -999. 1218.    672.8  0.15   0.70   1.00    5.96  168.    6.1  294.2    2.0
+              96 12 22 24  -37.5  0.690 -9.000 -9.000 -999. 1373.    792.0  0.15   0.70   1.00    6.46  159.    6.1  293.8    2.0
+ *** AERMOD - VERSION  15181 ***   ***  Test case for particle deposition based on Wesely, et. al. (2001)   ***        07/23/15
+ *** AERMET - VERSION  14134 ***   ***  using Method 2.  Inputs are from App. B for Chromium compounds.     ***        14:53:21
+                                                                                                                       PAGE  30
+ **MODELOPTs:   NonDFAULT CONC      DDEP      WDEP      FLAT      DRYDPLT   WETDPLT   RURAL
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            0 Warning Message(s)
+ A Total of            1 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+               ***  NONE  ***        
+  
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+
