@@ -1,4 +1,4 @@
-FC=gfortran
+FC=g95
 FCFLAGS=-c -fcheck-bounds -O2 -mtune=native
 LDFLAGS=
 
