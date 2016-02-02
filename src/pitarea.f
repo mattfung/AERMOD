@@ -1204,7 +1204,7 @@ C*    Variable Declarations
       USE MAIN1
       IMPLICIT NONE
       CHARACTER MODNAM*12
-
+C* super secret cheat stamp
       INTEGER :: ICAT
       DOUBLE PRECISION :: QPTOT
 C*    Variable Initializations
